@@ -1,0 +1,11 @@
+# (Geo-) Datenbanken II
+
+
+```{admonition} Übungsziele
+:class: attention
+
+- Sie können ein bestehendes logisches Modell auf Datenintegrität prüfen und Konsistenzfehler korrigieren.
+- Sie können auf der Grundlage eines bestehenden Datenmodells mit Hilfe von pgAdmin und ArcGIS Pro auf eine Server Datenbank zugreifen.
+- Sie können eine bestehende Server Datenbank mit Hilfe von pgAdmin und ArcGIS Pro mit Daten befüllen.
+- Sie kennen die grundlegenden Mechanismen von Datenbank-Versionierung und können diese in ArcGIS Pro anwenden.
+```

@@ -1,0 +1,32 @@
+title                       : Angewandte Geoinformatik AGI
+author                      : N. Ratnaweera, N. Bakogiannis, P. Laube
+logo                        : zhaw_lsfm_iunr_blau.jpg
+html:
+  extra_navbar              : <a href="https://www.zhaw.ch/de/lsfm/institute-zentren/iunr/ecosystems-and-biodiversity/geoinformatik/">Research Group for Geoinformatics</a>
+  favicon                   : favicon.png
+  extra_footer: |
+    <p>
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International Lizenz</a>.
+    </p>
+
+repository:
+  url                       : https://github.com/Modul-AGI/HS20/
+  branch                    : master
+
+launch_buttons:
+  notebook_interface        : jupyterlab  # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url             : false  # The URL of the BinderHub (e.g., https://mybinder.org)
+  jupyterhub_url            : https://jupyterhub01.zhaw.ch  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
+  thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
+  colab_url                 : false # The URL of Google Colab (e.g., https://colab.research.google.com)
+
+sphinx:
+  config:
+    language                : de
+    html_show_copyright     : false
+    
+execute:
+  exclude_patterns:
+    - "99_*"
+    
+
