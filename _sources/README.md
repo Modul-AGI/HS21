@@ -1,3 +1,9 @@
+## Setting up JupyterHub for the students
+
+follow instruction on https://zero-to-jupyterhub.readthedocs.io/
+
+- 2021-09-13: finished [Setting up Kubernetes on Google](https://zero-to-jupyterhub.readthedocs.io/en/latest/kubernetes/google/step-zero-gcp.html), next step: [Setting up Helm](https://zero-to-jupyterhub.readthedocs.io/en/latest/kubernetes/setup-helm.html#setup-helm)
+
 
 ## Technical stuff
 
