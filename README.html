@@ -529,6 +529,13 @@
   <a class="reference internal nav-link" href="#">
    Setting up JupyterHub for the students
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     2021-09-13
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#technical-stuff">
@@ -581,9 +588,20 @@
   <div class="section" id="setting-up-jupyterhub-for-the-students">
 <h1>Setting up JupyterHub for the students<a class="headerlink" href="#setting-up-jupyterhub-for-the-students" title="Link zu dieser Überschrift">¶</a></h1>
 <p>follow instruction on <a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/">https://zero-to-jupyterhub.readthedocs.io/</a></p>
-<ul class="simple">
-<li><p>2021-09-13: finished <a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/en/latest/kubernetes/google/step-zero-gcp.html">Setting up Kubernetes on Google</a>, next step: <a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/en/latest/kubernetes/setup-helm.html#setup-helm">Setting up Helm</a></p></li>
+<div class="section" id="id1">
+<h2>2021-09-13<a class="headerlink" href="#id1" title="Link zu dieser Überschrift">¶</a></h2>
+<ul>
+<li><p>finished <a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/en/latest/kubernetes/google/step-zero-gcp.html">Setting up Kubernetes on Google</a></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>gcloud container clusters create   --machine-type n1-standard-2   --num-nodes 2   --zone europe-west6-a   --cluster-version latest agi-hs21
+kubectl create clusterrolebinding cluster-admin-binding \
+&gt;   --clusterrole=cluster-admin \
+&gt;   --user=nilsratnaweera@hotmail.com
+</pre></div>
+</div>
+</li>
+<li><p>next step: <a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/en/latest/kubernetes/setup-helm.html#setup-helm">Setting up Helm</a></p></li>
 </ul>
+</div>
 </div>
 <div class="section" id="technical-stuff">
 <h1>Technical stuff<a class="headerlink" href="#technical-stuff" title="Link zu dieser Überschrift">¶</a></h1>
