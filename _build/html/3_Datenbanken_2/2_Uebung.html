@@ -1,0 +1,818 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Übungen &#8212; Angewandte Geoinformatik AGI</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Netzwerkanalyse I" href="../4_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html" />
+    <link rel="prev" title="Einleitung" href="1_Einleitung.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/zhaw_lsfm_iunr_blau.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Angewandte Geoinformatik AGI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Einleitung
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS I
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/2_Primitive_Datentypen.html">
+   Aufgabe 1: Primitive Datentypen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/4_Zusammengesetzte_Datentypen.html">
+   Input: Komplexe Datentypen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/5_Listen.html">
+   Aufgabe 2: Listen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/6_Dictionary.html">
+   Aufgabe 3: Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/7_Tabellarische_Daten.html">
+   Aufgabe 4: Tabellarische Daten
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS II
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_2/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_2/2_Conda_Cheatsheet.html">
+   Conda cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_2/3_Python_Module.html">
+   Python Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_2/4_Functions_I.html">
+   Aufgabe 5:
+   <em>
+    Function
+   </em>
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_2/5_Functions_II.html">
+   Aufgabe 6:
+   <em>
+    Function
+   </em>
+   Advanced
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_2/6_Zufallzahlen.html">
+   Aufgabe 7: Zufallszahlen generieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_2/7_Funktionen_in_DataFrames.html">
+   Aufgabe 8: Funktionen in
+   <em>
+    DataFrames
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS III
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/2_For_Loops.html">
+   Aufgabe 9:
+   <em>
+    for loop
+   </em>
+   Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/3_For_Loops.html">
+   Aufgabe 10:
+   <em>
+    for loop
+   </em>
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/4_For_Loops.html">
+   Aufgabe 11:
+   <em>
+    for loops
+   </em>
+   Advanced
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/5_Zeckenstich_Simulation.html">
+   Aufgabe 12: Zeckenstich Simulation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/6_GIS_in_Python.html">
+   Input: GIS in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/7_Raeumliche_Operationen.html">
+   Aufgabe 13: Räumliche Operationen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/8_Spatial_Joins.html">
+   Aufgabe 14: Spatial Join
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Datenbanken I
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Datenbanken_1/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Datenbanken_1/2_Uebung.html">
+   Aufgabe
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Datenbanken II
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Übungen
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Netzwerkanalyse I
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html">
+   Netzwerkanalyse I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_1/2_Vorbereitung.html">
+   Vorbereitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_1/3_QGIS.html">
+   Aufgabe 1: Operationen mit QGIS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_1/4_GRASS_GIS.html">
+   Aufgabe 2: Zentralitätsmasse berechnen
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Netzwerkanalyse II
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_2/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_2/1_Shortest_Path.html">
+   Aufgabe 3: Kürzeste Pfade (shortest path)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_2/2_Travelling_Salesman.html">
+   Aufgabe 4: Traveling Salesman
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Netzwerkanalyse III
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_3/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_3/2_Entsorgungsstelle.html">
+   Aufgabe 5: Entsorgungsstelle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_3/3_OEV-Gueteklassen.html">
+   Aufgabe 6: ÖV-Güteklassen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_3/4_Zentralitaetsmasse.html">
+   Aufgabe 7: Zentralitätsmasse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_3/5_Flaechen_verrechnen.html">
+   Aufgabe 8: Flächen verrechnen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_3/6_Leistungsnachweis.html">
+   Leistungsnachweis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_3/7_Anhang.html">
+   Anhang
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.zhaw.ch/de/lsfm/institute-zentren/iunr/ecosystems-and-biodiversity/geoinformatik/">Research Group for Geoinformatics</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/3_Datenbanken_2/2_Uebung.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datenintegritat-1">
+   Datenintegrität 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-1-datenintegritat-und-konsistenz">
+     Übung 1: Datenintegrität und Konsistenz
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arbeiten-mit-server-datenbanken-in-arcgis-pro-und-pgadmin-2">
+   Arbeiten mit Server Datenbanken in ArcGIS Pro und pgAdmin 2
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-2-datenbankverbindung-zum-server-in-pgadmin-herstellen">
+     Übung 2: Datenbankverbindung zum Server in pgAdmin herstellen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-3-verbindung-zur-postgresql-postgis-datenbank-mit-arcgis-pro-herstellen">
+     Übung 3: Verbindung zur PostgreSQL/PostGIS Datenbank mit ArcGIS Pro herstellen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-4-datenbank-schemata-fur-arcgis-pro-benutzer">
+     Übung 4: Datenbank Schemata für ArcGIS Pro Benutzer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-5-datenbankschema-prufen">
+     Übung 5: Datenbankschema prüfen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-6-datenimport-in-die-datenbank-uber-pgadmin">
+     Übung 6: Datenimport in die Datenbank über pgAdmin
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-7-datenimport-in-die-datenbank-mit-einer-sql-datei">
+     Übung 7: Datenimport in die Datenbank mit einer SQL-Datei
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-8-geometrieimport-in-die-datenbank">
+     Übung 8: Geometrieimport in die Datenbank
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#versionierung-und-mehrbenutzerbetrieb-in-arcgis-pro-18">
+   Versionierung und Mehrbenutzerbetrieb in ArcGIS Pro 18
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="ubungen">
+<h1>Übungen<a class="headerlink" href="#ubungen" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="datenintegritat-1">
+<h2>Datenintegrität 1<a class="headerlink" href="#datenintegritat-1" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="ubung-1-datenintegritat-und-konsistenz">
+<h3>Übung 1: Datenintegrität und Konsistenz<a class="headerlink" href="#ubung-1-datenintegritat-und-konsistenz" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Sie haben den Auftrag ein Datenmodell zur Speicherung von unterschiedlichen Sozialen Schlüssel-Indikatoren für schweizerische Gemeinden zu überprüfen. Hierbei werden jedes Jahr Datenwerte auf Basis einer Gemeinde erhoben. Diese sollen später in der Datenbank gespeichert und ausgewertet werden können. Wichtig hierbei ist, dass die Daten später in einer Karte visualisiert werden können. Deshalb ist es notwendig, dass Gemeinde-Geometrien ebenfalls in der Datenbank gespeichert werden sollen. Ebenfalls ist es sinnvoll bestimmte Indikatoren auch für den gesamten Kanton hochzurechnen und als Karte darzustellen zu können.
+Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gestellt. Leider gibt es in diesem Modell ein paar Konsistenzfehler.</p>
+<div class="figure align-default" id="figure-datenbankschema">
+<img alt="../_images/Übung_Datenbanken2.jpg" src="../_images/Übung_Datenbanken2.jpg" />
+<p class="caption"><span class="caption-number">Abb. 6 </span><span class="caption-text">Datenbankschema</span><a class="headerlink" href="#figure-datenbankschema" title="Link zu diesem Bild">¶</a></p>
+</div>
+<p>Untersuchen Sie das Datenmodell auf Konsistenzfehler und Korrigieren Sie diese. Lesen Sie den Aufgabentext aufmerksam und schauen sich die Abbildung an und entwickeln Sie daraus ein passendes logisches Datenmodell, welches alle Regeln der Datenintegrität einhält. Es muss nicht perfekt sein. Es geht in dieser Übung darum etwas Erfahrung im Lesen von gegebenen Modellen zu bekommen.</p>
+</div>
+</div>
+<div class="section" id="arbeiten-mit-server-datenbanken-in-arcgis-pro-und-pgadmin-2">
+<h2>Arbeiten mit Server Datenbanken in ArcGIS Pro und pgAdmin 2<a class="headerlink" href="#arbeiten-mit-server-datenbanken-in-arcgis-pro-und-pgadmin-2" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="ubung-2-datenbankverbindung-zum-server-in-pgadmin-herstellen">
+<h3>Übung 2: Datenbankverbindung zum Server in pgAdmin herstellen<a class="headerlink" href="#ubung-2-datenbankverbindung-zum-server-in-pgadmin-herstellen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In den nächsten Übungen wollen wir eine Beispiel Datenbank mit dem dort bereits implementierten Datenbankmodell abfragen. Hierzu müssen wir in einem ersten Schritt eine Verbindung zum PostgreSQL/PostGIS Datenbankserver herstellen. Hierfür nutzen wir das Datenbank-Administrations-Werkzeug pgAdmin.</p>
+<ol class="simple">
+<li><p>Starten Sie pgAdmin.</p></li>
+<li><p>Im Dashboard klicken Sie auf NEW Server und geben die folgenden Verbindungsparameter ein:</p></li>
+<li><p>Register General: Name: svma-s-01323_waelder_studentNr. Verwenden Sie dabei die Nr. Ihres zugewiesenen Benutzers (siehe <a class="reference internal" href="#figure-pgadmin1"><span class="std std-numref">Abb. 7</span></a>)</p></li>
+<li><p>Register Connection  (siehe <a class="reference internal" href="#figure-pgadmin2"><span class="std std-numref">Abb. 8</span></a>):</p>
+<ul class="simple">
+<li><p>Host name/address: <a class="reference external" href="http://svma-s-01323.zhaw.ch">svma-s-01323.zhaw.ch</a></p></li>
+<li><p>Port: 5432</p></li>
+<li><p>Maintenance database: waelder</p></li>
+<li><p>Username: studentNr (Verwenden Sie hier Ihren zugewiesenen Anmeldenamen)</p></li>
+<li><p>Passwort: (Verwenden Sie hier Ihr zugewiesenes Passwort)</p></li>
+</ul>
+</li>
+<li><p>Alle anderen Einstellungen können belassen werden. Speichern Sie mit Klick auf Save.</p></li>
+<li><p>Lassen Sie sich nicht davon verunsichern, dass es bereits einige Einträge hat. Da auf dem Server bereits andere Datenbanken installiert sind, sehen Sie auch diese. Navigieren Sie zu unserer Datenbank „waelder“ und verschaffen sich einen Überblick über die vorhandenen Tabellen.</p></li>
+<li><p>Verwenden Sie für alle folgenden Übungen diese Datenbankverbindung, wenn nichts anderes angegeben  (siehe <a class="reference internal" href="#figure-pgadmin3"><span class="std std-numref">Abb. 9</span></a>).</p></li>
+</ol>
+<div class="figure align-default" id="figure-pgadmin1">
+<img alt="3_Datenbanken_2/figures/screenshot_pgadmin.jpg" src="3_Datenbanken_2/figures/screenshot_pgadmin.jpg" />
+<p class="caption"><span class="caption-number">Abb. 7 </span><span class="caption-text">Oberfläche von pgadmin</span><a class="headerlink" href="#figure-pgadmin1" title="Link zu diesem Bild">¶</a></p>
+</div>
+<div class="figure align-default" id="figure-pgadmin2">
+<img alt="3_Datenbanken_2/figures/screenshot_pgadmin2.jpg" src="3_Datenbanken_2/figures/screenshot_pgadmin2.jpg" />
+<p class="caption"><span class="caption-number">Abb. 8 </span><span class="caption-text">Verbindungsdetails (pg admin)</span><a class="headerlink" href="#figure-pgadmin2" title="Link zu diesem Bild">¶</a></p>
+</div>
+<div class="figure align-default" id="figure-pgadmin3">
+<img alt="3_Datenbanken_2/figures/screenshot_pgadmin2.jpg" src="3_Datenbanken_2/figures/screenshot_pgadmin2.jpg" />
+<p class="caption"><span class="caption-number">Abb. 9 </span><span class="caption-text">Dashboard (pgadmin)</span><a class="headerlink" href="#figure-pgadmin3" title="Link zu diesem Bild">¶</a></p>
+</div>
+</div>
+<div class="section" id="ubung-3-verbindung-zur-postgresql-postgis-datenbank-mit-arcgis-pro-herstellen">
+<h3>Übung 3: Verbindung zur PostgreSQL/PostGIS Datenbank mit ArcGIS Pro herstellen<a class="headerlink" href="#ubung-3-verbindung-zur-postgresql-postgis-datenbank-mit-arcgis-pro-herstellen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nachdem die Datenbank erstellt wurde und eine Verbindung über pgadmin eingerichtet wurde, benötigen wir auch eine Verbindung von ArcGIS Pro zu der Datenbank.</p>
+<ol class="simple">
+<li><p>Starten Sie ArcGIS Pro und erstellen ein neues Projekt mit dem Namen „Datenbankzugriff“</p></li>
+<li><p>Öffnen Sie das Catalog-Fenster oder das Register Catalog und wählen Sie „Databases“ (siehe <a class="reference internal" href="#figure-connect1"><span class="std std-numref">Abb. 10</span></a>)</p></li>
+<li><p>Im Kontextmenü (rechte Maustaste) kann eine neue Datenbankverbindung zur Server Datenbank hergestellt werden  (siehe <a class="reference internal" href="#figure-connect2"><span class="std std-numref">Abb. 11</span></a>).</p>
+<ul class="simple">
+<li><p>Databases -&gt; Kontextmenü -&gt; New Database Connection</p></li>
+</ul>
+</li>
+<li><p>Geben Sie im Database Connection Fenster die notwendigen Verbindungsparameter ein  (siehe <a class="reference internal" href="#figure-connect3"><span class="std std-numref">Abb. 12</span></a>).</p>
+<ul class="simple">
+<li><p>Database Platform: PostgreSQL</p></li>
+<li><p>Instance: <a class="reference external" href="http://svma-s-01323.zhaw.ch">svma-s-01323.zhaw.ch</a></p></li>
+<li><p>Authentication Type: Database authentication</p></li>
+<li><p>User Name: studentNr (Verwenden Sie hier Ihren zugewiesenen Anmeldenamen)</p></li>
+<li><p>Password: (Verwenden Sie hier Ihr zugewiesenes Passwort)</p></li>
+<li><p>Database: waelder</p></li>
+</ul>
+</li>
+<li><p>Ein Klick auf OK stellt die Verbindung zur Datenbank her.</p></li>
+<li><p>Sie können der Datenbankverbindung noch einen sinnvollen Namen geben. Es empfiehlt sich eine Kombination aus dem Servernamen, der verbundenen Datenbank und dem Benutzer. Z.B. „svma-s-01323_waelder_student1“</p></li>
+<li><p>Unter dem Eintrag „Databases“ im Catalog gibt es jetzt eine neue Datenbankverbindung zur Datenbank  (siehe <a class="reference internal" href="#figure-connect4"><span class="std std-numref">Abb. 13</span></a>).</p></li>
+</ol>
+<div class="figure align-default" id="figure-connect1">
+<img alt="3_Datenbanken_2/figures/screenshot_connect1.jpg" src="3_Datenbanken_2/figures/screenshot_connect1.jpg" />
+<p class="caption"><span class="caption-number">Abb. 10 </span><span class="caption-text">In ArcGIS Pro -&gt; Database</span><a class="headerlink" href="#figure-connect1" title="Link zu diesem Bild">¶</a></p>
+</div>
+<div class="figure align-default" id="figure-connect2">
+<img alt="3_Datenbanken_2/figures/screenshot_connect2.jpg" src="3_Datenbanken_2/figures/screenshot_connect2.jpg" />
+<p class="caption"><span class="caption-number">Abb. 11 </span><span class="caption-text">New Database Connection (ArcGIS Pro)</span><a class="headerlink" href="#figure-connect2" title="Link zu diesem Bild">¶</a></p>
+</div>
+<div class="figure align-default" id="figure-connect3">
+<img alt="3_Datenbanken_2/figures/screenshot_connect3.jpg" src="3_Datenbanken_2/figures/screenshot_connect3.jpg" />
+<p class="caption"><span class="caption-number">Abb. 12 </span><span class="caption-text">Database Login</span><a class="headerlink" href="#figure-connect3" title="Link zu diesem Bild">¶</a></p>
+</div>
+<div class="figure align-default" id="figure-connect4">
+<img alt="3_Datenbanken_2/figures/screenshot_connect4.jpg" src="3_Datenbanken_2/figures/screenshot_connect4.jpg" />
+<p class="caption"><span class="caption-number">Abb. 13 </span><span class="caption-text">Verbindung hergestellt</span><a class="headerlink" href="#figure-connect4" title="Link zu diesem Bild">¶</a></p>
+</div>
+</div>
+<div class="section" id="ubung-4-datenbank-schemata-fur-arcgis-pro-benutzer">
+<h3>Übung 4: Datenbank Schemata für ArcGIS Pro Benutzer<a class="headerlink" href="#ubung-4-datenbank-schemata-fur-arcgis-pro-benutzer" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nachdem die Datenbank erstellt wurde und alle Verbindungen eingerichtet sind, ist die Datenbank startklar. ArcGIS pro nutzt für die Daten jeweils ein eigenes Schema. Das Schema hat dabei den Namen des Datenbank Admin Users.</p>
+<ol class="simple">
+<li><p>Starten Sie pgAdmin</p></li>
+<li><p>Stellen Sie wieder die Verbindung mit der Datenbank „waelder“ her und öffnen Sie die Eigenschaften mit Klick auf das kleine Plus-Zeichen.</p></li>
+<li><p>Navigieren Sie zum Eintrag Schemas. Dort sind 4 Einträge zu sehen. Ein Schema ist eine Art abgeschlossener Namensraum für die Datenhaltung. Es empfiehlt sich thematisch zusammenpassende Tabellen in einem gemeinsamen Schema zu speichern. Für die meisten Datenbank-Anwendungen genügt es aber alle Tabellen im default Schema „public“ zu erstellen. Für den Zugriff über ArcGIS wurde aber durch das Werkzeug „Create Database User“ ein spezielles Schema mit dem Namen des Database Users erstellt. Dies ist notwendig damit auch ArcGIS Pro auf die Daten zugreifen und diese verwalten kann. Das entsprechende Schema bekommt dabei immer den Namen des Admin Datenbankbenutzers. In diesem Fall „arcgispro_editor“. Sie können dort z.B. auch ein Schema mit Namen „sde“ vom Geodatenbank-Administrator sehen (siehe <a class="reference internal" href="#figure-uebung4-1"><span class="std std-numref">Abb. 14</span></a>).</p></li>
+<li><p>Öffnen Sie das public Schema. Hier gibt es bereits Einträge. Hier werden die zugehörigen Informationen der Datenbank, wie Sichten, Funktionen usw. zugänglich gemacht. Interessant ist zunächst aber nur der Eintrag „Tables (3)“. In Klammern ist immer die Anzahl der vorhandenen Datenbanktabellen angegeben. Wie wir sehen gibt es default-Tabellen, welche bereits erstellt wurden. Die Tabelle „spatial_ref_sys“ enthält z.B. alle Koordinatensysteme. Die Tabelle „sde_spatial_references“ ist eine Hilfstabelle für Koordinatensysteme von ArcGIS Pro. Löschen Sie diese beiden Tabellen NIEMALS. Ohne diese Tabellen sind bestimmte Funktionen nicht mehr ausführbar.  (siehe <a class="reference internal" href="#figure-uebung4-2"><span class="std std-numref">Abb. 15</span></a>)</p></li>
+<li><p>Hinweis, falls Sie einmal selber Tabellen erstellen sollten: Es empfiehlt sich alle räumlichen Tabellen direkt in ArcGIS Pro zu erstellen. Dadurch entscheidet ArcGIS Pro selbstständig über die korrekten Datentypen und Geometrietypen. Alle anderen Tabellen sowie Fremdschlüssel usw. können auch in pgadmin erstellt werden. Alle Tabellen wurden im ArcGIS Pro Schema „arcgispro_editor“ erstellt.</p></li>
+</ol>
+<div class="figure align-default" id="figure-uebung4-1">
+<img alt="3_Datenbanken_2/figures/screenshot_uebung4_1.jpg" src="3_Datenbanken_2/figures/screenshot_uebung4_1.jpg" />
+<p class="caption"><span class="caption-number">Abb. 14 </span><span class="caption-text">DB Schema</span><a class="headerlink" href="#figure-uebung4-1" title="Link zu diesem Bild">¶</a></p>
+</div>
+<div class="figure align-default" id="figure-uebung4-2">
+<img alt="3_Datenbanken_2/figures/screenshot_uebung4_2.jpg" src="3_Datenbanken_2/figures/screenshot_uebung4_2.jpg" />
+<p class="caption"><span class="caption-number">Abb. 15 </span><span class="caption-text">DB Tables</span><a class="headerlink" href="#figure-uebung4-2" title="Link zu diesem Bild">¶</a></p>
+</div>
+</div>
+<div class="section" id="ubung-5-datenbankschema-prufen">
+<h3>Übung 5: Datenbankschema prüfen<a class="headerlink" href="#ubung-5-datenbankschema-prufen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Für die kommenden Übungen nutzen wir die Datenbank „waelder“ auf unserem Server. Den Zugriff haben wir in den vorigen Übungen eingerichtet. Um einen Überblick zu bekommen, lesen Sie das folgende Datenbankschema und machen sich mit den Tabellen, Attributen und Abhängigkeiten vertraut. Da Sie jetzt alle gemeinsam dieselben Tabellen bearbeiten, gibt es in jeder Tabelle jeweils ein Feld „id_erfasser“. Sobald Sie Tabellen mit Daten befüllen, schreiben Sie bitte immer jeweils Ihre studentNr in das Feld „id_erfasser“, damit die Einträge später unterscheidbar sind.</p>
+<div class="figure align-default" id="figure-uebung5">
+<img alt="3_Datenbanken_2/figures/screenshot_uebung5.jpg" src="3_Datenbanken_2/figures/screenshot_uebung5.jpg" />
+<p class="caption"><span class="caption-number">Abb. 16 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung5" title="Link zu diesem Bild">¶</a></p>
+</div>
+</div>
+<div class="section" id="ubung-6-datenimport-in-die-datenbank-uber-pgadmin">
+<h3>Übung 6: Datenimport in die Datenbank über pgAdmin<a class="headerlink" href="#ubung-6-datenimport-in-die-datenbank-uber-pgadmin" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Da jetzt alle Tabellen vorliegen sollen diese noch mit ein paar Beispiel-Daten gefüllt werden. Auch hier bietet es sich an räumliche Objekte (Geometrien) mit Hilfe von ArcGIS Pro zu erfassen. Nicht-räumliche Objekte können meist sogar schneller über SQL importiert werden.</p>
+<ol>
+<li><p>Starten Sie pgAdmin und verbinden mit der Datenbank «waelder» im schema «arcgispro_editor».</p></li>
+<li><p>Öffnen Sie anschliessend den SQL Editor von pgadmin. Sie finden das so genannte Query Tool im Kontextmenü des Schemas oder in der Menüleiste oben unter Tools -&gt; Query Tool</p></li>
+<li><p>Importieren Sie mit Hilfe eines SQL Statements eine Tierart in die Tabelle «tierarten».</p></li>
+<li><p>Da Sie jetzt alle gemeinsam und gleichzeitig Daten in dieselbe Tabelle einfüllen und Sie die Einträge noch unterscheiden wollen, fügen Sie unter id_erfasser jeweils ihre zugewiesene studentNr ein.</p></li>
+<li><p>Benutzen Sie dazu das INSERT Statement und tippen es in das Query Tool (siehe <a class="reference internal" href="#figure-uebung6-1"><span class="std std-numref">Abb. 17</span></a>)</p>
+<ul class="simple">
+<li><p>INSERT INTO arcgispro_editor.tierarten (id_tierart,name_tierart,id_erfasser) Values (DEFAULT,’Bär’, studentNr);</p></li>
+<li><p>Hinweis: DEFAULT ist ein SQL Befehlswort, welches den Zähler für die id_tierart automatisch auf den nächsten freien Wert setzt. So kann die id_tierart automatisch fortlaufend hochnummeriert werden. Sie dürfen natürlich irgendein Tier in die Datenbank einfüllen.</p></li>
+<li><p>Schliessen Sie die Eingabe mit Klick auf Execute (kleiner Blitz) ab.</p></li>
+</ul>
+</li>
+<li><p>HINWEIS: Achten Sie darauf, dass Text immer in einfache Anführungszeichen (Das Zeichen auf der ?-Taste) gesetzt werden muss. Beachten Sie ausserdem die Punktschreibweise, dabei muss der Name des Schemas «arcgispro_editor» immer mit Punkt verbunden vor dem Namen der Tabelle angegeben werden. Jedes Statement wird mit Semikolon abgeschlossen.</p></li>
+<li><p>Lassen Sie sich den Inhalt der Tabelle ausgeben. Dies können Sie über ein SELECT SQL Statement ausführen (siehe <a class="reference internal" href="#figure-uebung6-2"><span class="std std-numref">Abb. 18</span></a>).</p>
+<ul>
+<li><div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">arcgispro_editor</span><span class="p">.</span><span class="n">tierarten</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Sie können erkennen, dass ihr Tier mit Ihrer studentNr als id_erfasser in die Tabelle eingetragen wurde. Vermutlich sehen Sie auch bereits Einträge Ihrer Mit-Studierenden.</p></li>
+<li><p>Navigieren Sie im Browser von pgAdmin zur Tabelle «tierarten».</p></li>
+<li><p>Über das Kontextmenü können ebenfalls die Inhalte der Tabelle angezeigt werden  (siehe <a class="reference internal" href="#figure-uebung6-3"><span class="std std-numref">Abb. 19</span></a>).</p></li>
+<li><p>Es öffnet sich automatisch das Query Tool und die Inhalte der Tabelle werden angezeigt. HINWEIS: Auf diese Weise kann immer nur die komplette Tabelle angezeigt werden. Filter oder sonstige Einschränkungen müssen als SQL Statement abgesetzt werden.</p></li>
+</ol>
+<div class="figure align-default" id="figure-uebung6-1">
+<img alt="3_Datenbanken_2/figures/screenshot_uebung6_1.jpg" src="3_Datenbanken_2/figures/screenshot_uebung6_1.jpg" />
+<p class="caption"><span class="caption-number">Abb. 17 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung6-1" title="Link zu diesem Bild">¶</a></p>
+</div>
+<div class="figure align-default" id="figure-uebung6-2">
+<img alt="3_Datenbanken_2/figures/screenshot_uebung6_2.jpg" src="3_Datenbanken_2/figures/screenshot_uebung6_2.jpg" />
+<p class="caption"><span class="caption-number">Abb. 18 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung6-2" title="Link zu diesem Bild">¶</a></p>
+<div class="legend">
+<div class="figure align-default" id="figure-uebung6-3">
+<img alt="3_Datenbanken_2/figures/screenshot_uebung6_3.jpg" src="3_Datenbanken_2/figures/screenshot_uebung6_3.jpg" />
+<p class="caption"><span class="caption-number">Abb. 19 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung6-3" title="Link zu diesem Bild">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ubung-7-datenimport-in-die-datenbank-mit-einer-sql-datei">
+<h3>Übung 7: Datenimport in die Datenbank mit einer SQL-Datei<a class="headerlink" href="#ubung-7-datenimport-in-die-datenbank-mit-einer-sql-datei" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Jedes SQL Statement kann in einer Datei abgespeichert werden. Dadurch lassen sich bequem z.B. gleich mehrere Daten in die Datenbank einlesen.</p>
+<ol class="simple">
+<li><p>Starten Sie pgAdmin und verbinden mit der Datenbank «waelder» im schema «arcgispro_editor».</p></li>
+<li><p>Öffnen Sie das Query Tool.</p></li>
+<li><p>Laden Sie die Datei «tierarten.sql» <a class="reference external" href="https://moodle.zhaw.ch/mod/resource/view.php?id=1273633">aus dem Moodle</a> und speichern Sie in Ihrem Ordner.</p></li>
+<li><p>Öffnen Sie die Datei in einem beliebigen Texteditor und ändern das Wort «studentNr» in Ihre studentNr ab. Denken Sie sich ausserdem ein paar andere Tierarten aus und schreiben diese ebenfalls in die Datei (siehe <a class="reference internal" href="#figure-uebung7-1"><span class="std std-numref">Abb. 20</span></a>).</p></li>
+<li><p>Über das kleine Ordner Symbol (Im Menü des Query Tools links oben) kann eine SQL-Datei geladen werden. Laden Sie die geänderte «tierarten.sql» Datei in pgAdmin  (siehe <a class="reference internal" href="#figure-uebung7-2"><span class="std std-numref">Abb. 21</span></a>).</p></li>
+<li><p>Select lädt den Inhalt der Datei ins Query Tool  (siehe <a class="reference internal" href="#figure-uebung7-3"><span class="std std-numref">Abb. 22</span></a>).</p></li>
+<li><p>Schliessen Sie die Eingabe mit Klick auf Execute (kleiner Blitz) ab.</p></li>
+<li><p>Schauen Sie sich erneut den Inhalt der Tabelle «tierarten» an. Die Tabelle sollte jetzt die eigenen Tierarten plus ein paar Einträge Ihrer Mit-Studierenden enthalten.</p></li>
+</ol>
+<div class="figure align-default" id="figure-uebung7-1">
+<img alt="3_Datenbanken_2/figures/screenshot_uebung7_1.jpg" src="3_Datenbanken_2/figures/screenshot_uebung7_1.jpg" />
+<p class="caption"><span class="caption-number">Abb. 20 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung7-1" title="Link zu diesem Bild">¶</a></p>
+</div>
+<div class="figure align-default" id="figure-uebung7-2">
+<img alt="3_Datenbanken_2/figures/screenshot_uebung7_2.jpg" src="3_Datenbanken_2/figures/screenshot_uebung7_2.jpg" />
+<p class="caption"><span class="caption-number">Abb. 21 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung7-2" title="Link zu diesem Bild">¶</a></p>
+<div class="legend">
+<div class="figure align-default" id="figure-uebung7-3">
+<img alt="3_Datenbanken_2/figures/screenshot_uebung7_3.jpg" src="3_Datenbanken_2/figures/screenshot_uebung7_3.jpg" />
+<p class="caption"><span class="caption-number">Abb. 22 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung7-3" title="Link zu diesem Bild">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ubung-8-geometrieimport-in-die-datenbank">
+<h3>Übung 8: Geometrieimport in die Datenbank<a class="headerlink" href="#ubung-8-geometrieimport-in-die-datenbank" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Herkömmliche GIS Methoden zum Erstellen und Importieren von Geometrien ins GIS sollten Ihnen aus dem GIS Basic Modul bereits bekannt sein. Auch in ArcGIS Pro können natürlich Geometrien z.B. über ein Shapefile in eine Geodatenbank importiert werden. Ausserdem können Geometrien z.B. aus einem Luftbild digitalisiert und direkt in der Geodatenbank gespeichert werden.</p>
+<ol class="simple">
+<li><p>Laden Sie die Datei «waelder.zip» <a class="reference external" href="https://moodle.zhaw.ch/mod/resource/view.php?id=1273635">aus dem Moodle</a> und entpacken Sie die Dateien. Es handelt sich um ein Shapefile mit einigen Wäldern.</p></li>
+<li><p>Starten Sie ArcGIS Pro und laden das Projekt «Datenbankzugriff».</p></li>
+<li><p>Fügen Sie das Shapefile ein und erfassen Sie mit dem Digitalisierungsmöglichkeiten von ArcGIS Pro zusätzlich ein paar eigene fehlende Wälder.</p></li>
+<li><p>Öffnen Sie die Attributtabelle.</p></li>
+<li><p>Erfassen Sie im Feld «id_erfasser» wiederum Ihre zugewiesene studentNr (Nur die Zahl). Alle weiteren Attribute können Sie beliebig erfassen. Denken Sie sich einfach etwas aus.</p></li>
+<li><p>Importieren Sie die Daten anschliessend folgendermassen in die Feature Class «waelder» in der Datenbank auf dem Server.</p></li>
+<li><p>Kontextmenü der Feature Class «waelder» -&gt; Load Data (siehe <a class="reference internal" href="#figure-uebung8-1"><span class="std std-numref">Abb. 23</span></a>)</p>
+<ul class="simple">
+<li><p>Input Dataset: Shapefile “waelder”</p></li>
+<li><p>Target Dataset: waelder.arcgispro_editor.waelder</p></li>
+<li><p>Schema Type: Use the Field Map to reconcile schema differences (Shapefiles können nur Spaltenbezeichnungen mit 10 Zeichen speichern. Alles andere wird abgeschnitten. Das Attribut «beschreibung» ist deshalb in der Datenbank als «beschreibung» gespeichert, im Shapefile aber nur als «beschreibu». Dies hat zur Folge, dass das Schema beider Feature Classes nicht gleich ist. Aus diesem Grund muss hier explizit die Übereinstimmung der Spalten bestimmt werden. Das gleiche gilt für das Feld «id_erfasser» bzw. «id_erfasse».</p></li>
+</ul>
+</li>
+<li><p>Erstellen Sie eine neue Karte in ArcGIS Pro und laden Sie die Feature Class «waelder» aus der Server Datenbank.</p></li>
+<li><p>Sie haben jetzt die Wälder in die Datenbank importiert.</p></li>
+<li><p>Schauen Sie sich die Wälder auch in pgAdmin an. Machen Sie hierzu eine Select Abfrage im Query Tool. In der Ergebnis Tabelle sehen Sie in der Geometry-Spalte ein kleines Augen-Symbol. Dies öffnet den «Geometry Viewer». Sie sollten auch dort die Geometrien der importierten Wälder sehen.</p></li>
+</ol>
+<div class="figure align-default" id="figure-uebung8-1">
+<img alt="3_Datenbanken_2/figures/screenshot_uebung8_1.jpg" src="3_Datenbanken_2/figures/screenshot_uebung8_1.jpg" />
+<p class="caption"><span class="caption-number">Abb. 23 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung8-1" title="Link zu diesem Bild">¶</a></p>
+</div>
+<div class="figure align-default" id="figure-uebung8-2">
+<img alt="3_Datenbanken_2/figures/screenshot_uebung8_2.jpg" src="3_Datenbanken_2/figures/screenshot_uebung8_2.jpg" />
+<p class="caption"><span class="caption-number">Abb. 24 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung8-2" title="Link zu diesem Bild">¶</a></p>
+<div class="legend">
+<div class="figure align-default" id="figure-uebung8-3">
+<img alt="3_Datenbanken_2/figures/screenshot_uebung8_3.jpg" src="3_Datenbanken_2/figures/screenshot_uebung8_3.jpg" />
+<p class="caption"><span class="caption-number">Abb. 25 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung8-3" title="Link zu diesem Bild">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="versionierung-und-mehrbenutzerbetrieb-in-arcgis-pro-18">
+<h2>Versionierung und Mehrbenutzerbetrieb in ArcGIS Pro 18<a class="headerlink" href="#versionierung-und-mehrbenutzerbetrieb-in-arcgis-pro-18" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./3_Datenbanken_2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="1_Einleitung.html" title="zurück Seite">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">zurück</p>
+                <p class="prevnext-title">Einleitung</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../4_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html" title="weiter Seite">
+            <div class="prevnext-info">
+                <p class="prevnext-label">weiter</p>
+                <p class="prevnext-title">Netzwerkanalyse I</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Durch N. Ratnaweera, N. Bakogiannis, P. Laube<br/>
+        
+          <div class="extra_footer">
+            <p>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International Lizenz</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

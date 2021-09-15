@@ -9,63 +9,22 @@ parts:
     - glob: 2_Coding_in_GIS_2/*
   - caption: Coding in GIS III
     chapters:
-    - glob: 2_Coding_in_GIS_3/*
-     # - file: 2_Coding_in_GIS_1/2_Primitive_Datentypen
-     # - file: 2_Coding_in_GIS_1/3_Zusammengesetzte_Datentypen
-     # - file: 2_Coding_in_GIS_1/4_Listen
-     # - file: 2_Coding_in_GIS_1/5_Dictionary
-     # - file: 2_Coding_in_GIS_1/6_Tabellarische_Daten
-#   - file: 2_Coding_in_GIS_2/1_Coding_in_GIS_2
-#     sections:
-#     - file: 2_Coding_in_GIS_2/2_Conda_Cheatsheet
-#     - file: 2_Coding_in_GIS_2/3_Python_Module
-#     - file: 2_Coding_in_GIS_2/4_Functions_I
-#     - file: 2_Coding_in_GIS_2/5_Functions_II
-#     - file: 2_Coding_in_GIS_2/6_Zufallzahlen
-#     - file: 2_Coding_in_GIS_2/7_Funktionen_in_DataFrames
-#   - file: 2_Coding_in_GIS_3/1_Coding_in_GIS_3
-#     sections:
-#     - file: 2_Coding_in_GIS_3/2_For_Loops
-#     - file: 2_Coding_in_GIS_3/3_For_Loops
-#     - file: 2_Coding_in_GIS_3/4_For_Loops
-#     - file: 2_Coding_in_GIS_3/4_Zeckenstich_Simulation
-#     - file: 2_Coding_in_GIS_3/5_GIS_in_Python
-#     - file: 2_Coding_in_GIS_3/6_Raeumliche_Operationen
-#     - file: 2_Coding_in_GIS_3/6_Spatial_Joins
-#   - file: 2_Coding_in_GIS/4_1_Leistungsnachweis
-#     sections:
-#     - file: 2_Coding_in_GIS/4_2_Vereinigen
-#     - file: 2_Coding_in_GIS/4_3_Zusatzauftraege
-#   - file: 2_Coding_in_GIS/5_0_Anhang
-#     sections:
-#     - file: 2_Coding_in_GIS/5_1_GIS_Demo
-#     - file: 2_Coding_in_GIS/5_2_ArcPy_in_Jupyter
-# - caption: Datenbanken I - III
-#   chapters:
-#   - file: 3_Datenbanken/0_0_Einleitung
-#   - file: 3_Datenbanken/1_1_Datenbanken_1
-#     sections: 
-#     - file: 3_Datenbanken/1_2_Uebung
-#   - file: 3_Datenbanken/2_1_Datenbanken_2
-#     sections: 
-#     - file: 3_Datenbanken/2_2_Uebung
-# - caption: Netzwerkanalyse I - III
-#   chapters:
-#   - file: 4_Netzwerkanalyse/0_0_Einleitung
-#   - file: 4_Netzwerkanalyse/0_1_Vorbereitung
-#   - file: 4_Netzwerkanalyse/1_0_Netzwerkanalyse_I
-#     sections:
-#     - file: 4_Netzwerkanalyse/1_1_QGIS
-#     - file: 4_Netzwerkanalyse/1_2_GRASS_GIS
-#   - file: 4_Netzwerkanalyse/2_0_Netzwerkanalyse_II
-#     sections:
-#     - file: 4_Netzwerkanalyse/2_1_Shortest_Path
-#     - file: 4_Netzwerkanalyse/2_2_Travelling_Salesman
-#   - file: 4_Netzwerkanalyse/3_0_Netzwerkanalyse_III
-#     sections:
-#     - file: 4_Netzwerkanalyse/3_2_Entsorgungsstelle
-#     - file: 4_Netzwerkanalyse/3_3_OEV-Gueteklassen
-#     - file: 4_Netzwerkanalyse/3_4_Zentralitaetsmasse
-#     - file: 4_Netzwerkanalyse/3_5_Flaechen_verrechnen
-#   - file: 4_Netzwerkanalyse/3_6_Leistungsnachweis
-#   - file: 4_Netzwerkanalyse/4_0_Anhang
+    - glob: 2_Coding_in_GIS_3/* # leistungsnachweis und anhang fehlt noch
+  - caption: Datenbanken I
+    chapters:
+    - glob: 3_Datenbanken_1/*
+  - caption: Datenbanken II
+    chapters:
+    - glob: 3_Datenbanken_2/*
+  - caption: Datenbanken III
+    chapters:
+    - glob: 3_Datenbanken_3/*
+  - caption: Netzwerkanalyse I
+    chapters:
+    - glob: 4_Netzwerkanalyse_1/*
+  - caption: Netzwerkanalyse II
+    chapters:
+    - glob: 4_Netzwerkanalyse_2/*
+  - caption: Netzwerkanalyse III
+    chapters:
+    - glob: 4_Netzwerkanalyse_3/*
