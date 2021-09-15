@@ -1,0 +1,644 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verwendung von ArcPy in Jupyter &#8212; Angewandte Geoinformatik AGI</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/zhaw_lsfm_iunr_blau.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Angewandte Geoinformatik AGI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Einleitung
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS I
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/2_Primitive_Datentypen.html">
+   Aufgabe 1: Primitive Datentypen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/4_Zusammengesetzte_Datentypen.html">
+   Input: Komplexe Datentypen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/5_Listen.html">
+   Aufgabe 2: Listen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/6_Dictionary.html">
+   Aufgabe 3: Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/7_Tabellarische_Daten.html">
+   Aufgabe 4: Tabellarische Daten
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS II
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_2/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_2/2_Conda_Cheatsheet.html">
+   Conda cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_2/3_Python_Module.html">
+   Python Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_2/4_Functions_I.html">
+   Aufgabe 5:
+   <em>
+    Function
+   </em>
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_2/5_Functions_II.html">
+   Aufgabe 6:
+   <em>
+    Function
+   </em>
+   Advanced
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_2/6_Zufallzahlen.html">
+   Aufgabe 7: Zufallszahlen generieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_2/7_Funktionen_in_DataFrames.html">
+   Aufgabe 8: Funktionen in
+   <em>
+    DataFrames
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS III
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/2_For_Loops.html">
+   Aufgabe 9:
+   <em>
+    for loop
+   </em>
+   Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/3_For_Loops.html">
+   Aufgabe 10:
+   <em>
+    for loop
+   </em>
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/4_For_Loops.html">
+   Aufgabe 11:
+   <em>
+    for loops
+   </em>
+   Advanced
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/5_Zeckenstich_Simulation.html">
+   Aufgabe 12: Zeckenstich Simulation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/6_GIS_in_Python.html">
+   Input: GIS in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/7_Raeumliche_Operationen.html">
+   Aufgabe 13: Räumliche Operationen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/8_Spatial_Joins.html">
+   Aufgabe 14: Spatial Join
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Datenbanken I
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Datenbanken_1/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Datenbanken_1/2_Uebung.html">
+   Aufgabe
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Datenbanken II
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Datenbanken_2/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Datenbanken_2/2_Uebung.html">
+   Übungen
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Netzwerkanalyse I
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html">
+   Netzwerkanalyse I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_1/2_Vorbereitung.html">
+   Vorbereitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_1/3_QGIS.html">
+   Aufgabe 1: Operationen mit QGIS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_1/4_GRASS_GIS.html">
+   Aufgabe 2: Zentralitätsmasse berechnen
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Netzwerkanalyse II
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_2/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_2/1_Shortest_Path.html">
+   Aufgabe 3: Kürzeste Pfade (shortest path)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_2/2_Travelling_Salesman.html">
+   Aufgabe 4: Traveling Salesman
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Netzwerkanalyse III
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_3/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_3/2_Entsorgungsstelle.html">
+   Aufgabe 5: Entsorgungsstelle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_3/3_OEV-Gueteklassen.html">
+   Aufgabe 6: ÖV-Güteklassen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_3/4_Zentralitaetsmasse.html">
+   Aufgabe 7: Zentralitätsmasse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_3/5_Flaechen_verrechnen.html">
+   Aufgabe 8: Flächen verrechnen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_3/6_Leistungsnachweis.html">
+   Leistungsnachweis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Netzwerkanalyse_3/7_Anhang.html">
+   Anhang
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.zhaw.ch/de/lsfm/institute-zentren/iunr/ecosystems-and-biodiversity/geoinformatik/">Research Group for Geoinformatics</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/2_Coding_in_GIS_Anhaenge/2_ArcPy_in_Jupyter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://jupyterhub01.zhaw.ch/hub/user-redirect/git-pull?repo=https://github.com/Modul-AGI/HS20/&urlpath=lab/tree/HS20/2_Coding_in_GIS_Anhaenge/2_ArcPy_in_Jupyter.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Starten JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schritt-1-arcgis-python-umgebung-klonen">
+   Schritt 1: ArcGIS Python Umgebung Klonen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schritt-2-die-neue-environment-aktivieren">
+   Schritt 2: Die neue Environment aktivieren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schritt-3-weitere-module-installieren">
+   Schritt 3: weitere Module installieren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schritt-4-arcpy-verwenden">
+   Schritt 4:
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     arcpy
+    </span>
+   </code>
+   verwenden
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="verwendung-von-arcpy-in-jupyter">
+<h1>Verwendung von ArcPy in Jupyter<a class="headerlink" href="#verwendung-von-arcpy-in-jupyter" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Um die ganzen Befehle von ArcGIS direkt in Python ansteuern zu können, muss das package <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> installiert werden. Bisher haben wir alle unsere Packages mit conda installiert, z.B.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">geopandas</span>
+</pre></div>
+</div>
+<p>Mit <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> geht dies leider nicht, weil <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> ein kostenpflichtiges Modul ist welches eine ArcGIS Lizenz benötigt. Glücklicherweise nutzt ArcGIS aber auch Conda Environments. Wir müssen also nur bewerkstelligen, das Spyder die gleiche Conda environment verwendet wie ArcGIS. Dazu gehen wir wie folgt vor:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#chap-arcpy-clone"><span class="std std-ref">Schritt 1: ArcGIS Python Umgebung Klonen</span></a></p></li>
+<li><p><a class="reference internal" href="#chap-arcpy-activate"><span class="std std-ref">Schritt 2: Die neue Environment aktivieren</span></a></p></li>
+<li><p><a class="reference internal" href="#chap-arcpy-install-additional"><span class="std std-ref">Schritt 3: weitere Module installieren</span></a></p></li>
+</ol>
+<p>Wenn wir diese Schritte hinter uns bringen, haben wir Zugriff auf ein extrem mächtiges und einfach zugängliches Toolset. Ich habe euch die Anleitung Schritt für Schritt dokumentiert, so sollte es bei allen klappen.</p>
+<div class="section" id="schritt-1-arcgis-python-umgebung-klonen">
+<span id="chap-arcpy-clone"></span><h2>Schritt 1: ArcGIS Python Umgebung Klonen<a class="headerlink" href="#schritt-1-arcgis-python-umgebung-klonen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Zuerst prüfen wir die Python Umgebung in ArcGIS. Diese findet man in ArcGIS unter Project &gt; Python</p>
+<div class="figure align-default" id="arcgis-pythonenv2">
+<img alt="2_Coding_in_GIS_Anhaenge/figures/arcgis_pythonenv2.jpg" src="2_Coding_in_GIS_Anhaenge/figures/arcgis_pythonenv2.jpg" />
+<p class="caption"><span class="caption-text">Hier ist einerseits die Project Environement ersichtlich (1), andererseits steht aber auch, dass diese Environment „read only“ ist (2). Das bedeutet, dass wir keine neuen module installieren können, wenn wir diese Environment benutzen. Wir folgen deshalb den Vorschlag „Clone and activate a new environment“. Dazu klicken wir auf „Manage Environment“ (3). Übrigens: Das ArcGIS Conda benutzt sehen wir an (4).</span><a class="headerlink" href="#arcgis-pythonenv2" title="Link zu diesem Bild">¶</a></p>
+</div>
+<div class="figure align-default" id="arcgis-pythonenv3">
+<img alt="2_Coding_in_GIS_Anhaenge/figures/arcgis_pythonenv3.jpg" src="2_Coding_in_GIS_Anhaenge/figures/arcgis_pythonenv3.jpg" />
+<p class="caption"><span class="caption-text">Klicke hier auf „Clone Default“ um die Umgebung zu kopieren. Das dauert eine Weile, danach kann man die neue Environment auswählen (Klick auf den Button „Active“). Notiert dir den Namen der neuen Environment, speichere das ArcGIS Projekt ab und starte das ArcGIS neu</span><a class="headerlink" href="#arcgis-pythonenv3" title="Link zu diesem Bild">¶</a></p>
+</div>
+</div>
+<div class="section" id="schritt-2-die-neue-environment-aktivieren">
+<span id="chap-arcpy-activate"></span><h2>Schritt 2: Die neue Environment aktivieren<a class="headerlink" href="#schritt-2-die-neue-environment-aktivieren" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Nun haben wir uns eine wunderschöne Python Umgebung parat gemacht und können diese jetzt in CMD aktivieren. Starte dazu Command Prompt / CMD und schaue dir die verfügbaren environments an:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="nb">list</span>
+</pre></div>
+</div>
+<p>Bei mir sieht der output folgendermassen aus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># conda environments:</span>
+<span class="c1">#</span>
+<span class="n">arcgisonline</span>             <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">rata</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">ESRI</span>\<span class="n">conda</span>\<span class="n">envs</span>\<span class="n">arcgisonline</span>
+<span class="n">arcgisonline2</span>            <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">rata</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">ESRI</span>\<span class="n">conda</span>\<span class="n">envs</span>\<span class="n">arcgisonline2</span>
+<span class="n">arcgispro</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">clone</span>      <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">rata</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">ESRI</span>\<span class="n">conda</span>\<span class="n">envs</span>\<span class="n">arcgispro</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">clone</span>
+<span class="n">arcgispro</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">clone1</span>     <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">rata</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">ESRI</span>\<span class="n">conda</span>\<span class="n">envs</span>\<span class="n">arcgispro</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">clone1</span>
+<span class="n">cameratraps</span><span class="o">-</span><span class="n">detector</span>     <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">rata</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">ESRI</span>\<span class="n">conda</span>\<span class="n">envs</span>\<span class="n">cameratraps</span><span class="o">-</span><span class="n">detector</span>
+<span class="n">codingingis</span>              <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">rata</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">ESRI</span>\<span class="n">conda</span>\<span class="n">envs</span>\<span class="n">codingingis</span>
+<span class="n">test</span>                     <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">rata</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">ESRI</span>\<span class="n">conda</span>\<span class="n">envs</span>\<span class="n">test</span>
+<span class="n">arcgispro</span><span class="o">-</span><span class="n">py3</span>         <span class="o">*</span>  <span class="n">C</span><span class="p">:</span>\<span class="n">Program</span> <span class="n">Files</span>\<span class="n">ArcGIS</span>\<span class="n">Pro</span>\<span class="nb">bin</span>\<span class="n">Python</span>\<span class="n">envs</span>\<span class="n">arcgispro</span><span class="o">-</span><span class="n">py3</span>
+<span class="n">root</span>                     <span class="n">C</span><span class="p">:</span>\<span class="n">Program</span> <span class="n">Files</span>\<span class="n">ArcGIS</span>\<span class="n">Pro</span>\<span class="nb">bin</span>\<span class="n">Python</span> 
+</pre></div>
+</div>
+<p>Aktiviere nun die eben erstelle environment mit folgendem code (ersetzte <code class="docutils literal notranslate"><span class="pre">name-der-environmnet</span></code> mit dem tatsächlichen Namen deiner neuen environment aus <a class="reference internal" href="#chap-arcpy-clone"><span class="std std-ref">Schritt 1: ArcGIS Python Umgebung Klonen</span></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">activate</span> <span class="n">name</span><span class="o">-</span><span class="n">der</span><span class="o">-</span><span class="n">environment</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="schritt-3-weitere-module-installieren">
+<span id="chap-arcpy-install-additional"></span><h2>Schritt 3: weitere Module installieren<a class="headerlink" href="#schritt-3-weitere-module-installieren" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Glücklicherweise ist <code class="docutils literal notranslate"><span class="pre">jupyterlab</span></code> bereits in der <code class="docutils literal notranslate"><span class="pre">arcgis</span> <span class="pre">environment</span></code> installiert, dies können wir mit folgendem code überprüfen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="nb">list</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># packages in environment at C:\Users\rata\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone1:</span>
+<span class="c1">#</span>
+<span class="n">affine</span>                    <span class="mf">2.3.0</span>                      <span class="n">py_0</span>    <span class="n">anaconda</span>
+<span class="n">arcgis</span>                    <span class="mf">1.8.2</span>                 <span class="n">py36_1275</span>    <span class="n">esri</span>
+<span class="n">arcgispro</span>                 <span class="mf">2.6</span>                           <span class="mi">0</span>    <span class="n">esri</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="n">jupyterlab</span>                <span class="mf">2.2.9</span>                      <span class="n">py_0</span>    <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+<span class="n">jupyterlab_pygments</span>       <span class="mf">0.1.2</span>              <span class="n">pyh9f0ad1d_0</span>    <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+<span class="n">jupyterlab_server</span>         <span class="mf">1.2.0</span>                      <span class="n">py_0</span>    <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+</pre></div>
+</div>
+<p>Wenn jetzt aber noch module fehlen (wie z.B. <code class="docutils literal notranslate"><span class="pre">geopandas</span></code>), dann können wir diese wie gewohnt (siehe <a class="reference internal" href="../2_Coding_in_GIS_2/3_Python_Module.html#chap-install-module"><span class="std std-ref">Erweiterung installieren</span></a>) installieren.</p>
+</div>
+<div class="section" id="schritt-4-arcpy-verwenden">
+<span id="chap-use-arcpy"></span><h2>Schritt 4: <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> verwenden<a class="headerlink" href="#schritt-4-arcpy-verwenden" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wenn alles gewünschten Module installiert sind können wir nun Jupyter Lab starten (siehe <a class="reference internal" href="../2_Coding_in_GIS_2/2_Conda_Cheatsheet.html#conda-cheet-sheet"><span class="std std-ref">Conda cheat sheet</span></a>).</p>
+<p>Sobald Jupyter Lab gestartet ist, können wir innerhalb einer cell das Modul <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> mit <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">arcpy</span></code>  importieren und nun auch verwenden. Zum Beispiel folgendermassen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">arcpy</span>
+<span class="kn">from</span> <span class="nn">arcpy</span> <span class="kn">import</span> <span class="n">env</span>
+
+<span class="c1"># Set environment settings</span>
+<span class="n">env</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="s2">&quot;C:/data/Habitat_Analysis.gdb&quot;</span>
+
+<span class="c1"># Select suitable vegetation patches from all vegetation</span>
+<span class="n">veg</span> <span class="o">=</span> <span class="s2">&quot;vegtype&quot;</span>
+<span class="n">suitableVeg</span> <span class="o">=</span> <span class="s2">&quot;C:/output/Output.gdb/suitable_vegetation&quot;</span>
+<span class="n">whereClause</span> <span class="o">=</span> <span class="s2">&quot;HABITAT = 1&quot;</span> 
+<span class="n">arcpy</span><span class="o">.</span><span class="n">Select_analysis</span><span class="p">(</span><span class="n">veg</span><span class="p">,</span> <span class="n">suitableVeg</span><span class="p">,</span> <span class="n">whereClause</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Der Syntax ist auf jeder jeweiligen Tool Beschreibung gut dokumentiert (Abschnitt „Code Sample“, z.B. <a class="reference external" href="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/buffer.htm">hier</a>)</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./2_Coding_in_GIS_Anhaenge"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Durch N. Ratnaweera, N. Bakogiannis, P. Laube<br/>
+        
+          <div class="extra_footer">
+            <p>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International Lizenz</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
