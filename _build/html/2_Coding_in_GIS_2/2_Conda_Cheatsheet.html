@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conda cheat sheet &#8212; Angewandte Geoinformatik AGI</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Python Modules" href="3_Python_Module.html" />
+    <link rel="prev" title="Coding in GIS II" href="1_Coding_in_GIS_2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/zhaw_lsfm_iunr_blau.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Angewandte Geoinformatik AGI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Einleitung
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS I
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/0_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/1_Coding_in_GIS_1.html">
+   Coding in GIS I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/2_Primitive_Datentypen.html">
+   Aufgabe 1: Primitive Datentypen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/3_Zusammengesetzte_Datentypen.html">
+   Komplexe Datentypen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/4_Listen.html">
+   Aufgabe 2: Listen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/5_Dictionary.html">
+   Aufgabe 3: Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_1/6_Tabellarische_Daten.html">
+   Aufgabe 4: Tabellarische Daten
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS II
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1_Coding_in_GIS_2.html">
+   Coding in GIS II
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Conda cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_Python_Module.html">
+   Python Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_Functions_I.html">
+   Aufgabe 5:
+   <em>
+    Function
+   </em>
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_Functions_II.html">
+   Aufgabe 6:
+   <em>
+    Function
+   </em>
+   Advanced
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6_Zufallzahlen.html">
+   Aufgabe 7: Zufallszahlen generieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7_Funktionen_in_DataFrames.html">
+   Aufgabe 8: Funktionen in
+   <em>
+    DataFrames
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS III
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/0_Anhang.html">
+   Anhang
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/1_Coding_in_GIS_3.html">
+   Coding in GIS III
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/1_GIS_Demo.html">
+   Demo: Geodaten visualisieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/1_Leistungsnachweis.html">
+   Leistungsnachweis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/2_ArcPy_in_Jupyter.html">
+   Verwendung von ArcPy in Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/2_For_Loops.html">
+   Aufgabe 9:
+   <em>
+    for loop
+   </em>
+   Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/2_Vereinigen.html">
+   Aufgabe 15: Grand Finale
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/3_For_Loops.html">
+   Aufgabe 10:
+   <em>
+    for loop
+   </em>
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/3_Zusatzauftraege.html">
+   Abgabe Leistungsnachweis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/4_For_Loops.html">
+   Aufgabe 11:
+   <em>
+    for loops
+   </em>
+   Advanced
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/4_Zeckenstich_Simulation.html">
+   Aufgabe 12: Zeckenstich Simulation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/5_GIS_in_Python.html">
+   GIS in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/6_Raeumliche_Operationen.html">
+   Aufgabe 13: Räumliche Operationen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Coding_in_GIS_3/6_Spatial_Joins.html">
+   Aufgabe 14: Spatial Join
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.zhaw.ch/de/lsfm/institute-zentren/iunr/ecosystems-and-biodiversity/geoinformatik/">Research Group for Geoinformatics</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/2_Coding_in_GIS_2/2_Conda_Cheatsheet.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://jupyterhub01.zhaw.ch/hub/user-redirect/git-pull?repo=https://github.com/Modul-AGI/HS20/&urlpath=lab/tree/HS20/2_Coding_in_GIS_2/2_Conda_Cheatsheet.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Starten JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="conda-cheat-sheet">
+<span id="conda-cheet-sheet"></span><h1>Conda cheat sheet<a class="headerlink" href="#conda-cheat-sheet" title="Link zu dieser Überschrift">¶</a></h1>
+<p>In der folgenden Tabelle werden die Einzelschritte in der Verwendung von Conda näher beschrieben. Wichtig ist vor allem, wann dieser Schritt nötig ist und wie er ausgeführt wird. Um die Tabelle kompakt zu halten werden gewisse Details als Fussnote verlinkt.</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Schritt</p></th>
+<th class="head"><p>Wann ist dies nötig?</p></th>
+<th class="head"><p>Details zum Vorgehen / Befehl für die Konsole<a class="footnote-reference brackets" href="#konsole" id="id1">1</a></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>1. Conda installieren</strong> (installiert das Program <em>conda</em>)</p></td>
+<td><p>einmalig (ist nicht nötig, wenn ArcGIS Pro installiert ist)</p></td>
+<td><p><a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> (empfohlen) oder <a class="reference external" href="https://www.anaconda.com/products/individual">anaconda</a> herunterladen und installieren</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>2. Systemvariable setzen</strong> (vermittelt der Konsole, wo das Programm <em>conda</em> installiert ist)</p></td>
+<td><p>einmalig und nur, wenn folgender Befehl in der Konsole eine Fehlermeldung verursacht:
+<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">--version</span></code></p></td>
+<td><p>Pfad zur <em>conda</em>-installation <a class="footnote-reference brackets" href="#condapath" id="id2">2</a> in die Umgebungsvariable „Path“ einfügen <a class="footnote-reference brackets" href="#umgebungsvariable" id="id3">3</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>3. <em>Virtual environment</em> erstellen</strong> (erstellt eine neue Arbeitsumgebung)</p></td>
+<td><p>einmal pro Projekt nötig (wobei eine environment auch wiederverwendet werden kann)</p></td>
+<td><p>in der Konsole:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name codingingis
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>4. <em>Virutal environment</em> aktivieren</strong> (schaltet den „Bearbeitungsmodus“ ein)</p></td>
+<td><p>jedes mal nöig wenn ein <strong>Erweiterung installiert</strong> oder <strong>jupyter lab gestartet</strong> werden soll</p></td>
+<td><p>in der Konsole <a class="footnote-reference brackets" href="#linux" id="id4">4</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>activate codingingis
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>5. Jupyter lab installieren</strong> (fügt der virtuellen Umgebung diese IDE hinzu)</p></td>
+<td><p>1x pro <em>environment</em></p></td>
+<td><p>in der Konsole <a class="footnote-reference brackets" href="#activate" id="id5">5</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge jupyterlab
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>6. Jupyter lab starten</strong> (startet die IDE „Jupyter Lab“)</p></td>
+<td><p>jedes mal, wenn am Projekt gearbeitet wird</p></td>
+<td><p>in der Konsole <a class="footnote-reference brackets" href="#activate" id="id6">5</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter lab
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>7. Jupyter lab (JL) beenden</strong> (beendet „JupyterLab“ in der Console)</p></td>
+<td><p>wenn ihr die Konsole wieder braucht</p></td>
+<td><p>Während JL läuft, ist die Konsole blockiert. Um JL zu beenden und die Konsole freizugeben: Tastenkombination <code class="docutils literal notranslate"><span class="pre">CTRL</span> <span class="pre">+</span> <span class="pre">C</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>8. weitere Module <a class="footnote-reference brackets" href="#weiteremodule" id="id7">6</a> installieren</strong> (fügt der <em>environment</em> zB <code class="docutils literal notranslate"><span class="pre">pandas</span></code> hinzu)</p></td>
+<td><p>jedes mal nötig, wenn ein Modul in einer Environment fehlt<a class="footnote-reference brackets" href="#modulfehlt" id="id8">7</a></p></td>
+<td><p>in der Konsole <a class="footnote-reference brackets" href="#activate" id="id9">5</a><a class="footnote-reference brackets" href="#jupyterlabbeenden" id="id10">8</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge pandas
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="konsole"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Mit Konsole ist unter Windows <em>cmd</em> gemeint (Windowstaste &gt; cmd). Unter Linux wird bash, auf Mac der Terminal verwendet.</p>
+</dd>
+<dt class="label" id="condapath"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Wenn <em>conda</em> von ArcGIS Pro verwendet wird, befindet sich die <em>conda</em> installation vermutlich hier: <em>C:\Program Files\ArcGIS\Pro\bin\Python\Scripts</em>. Prüfen, ob dieser Folder existiert und dort <code class="docutils literal notranslate"><span class="pre">conda.exe</span></code> vorhanden ist.</p>
+</dd>
+<dt class="label" id="umgebungsvariable"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Windowstaste &gt; Umgebungsvariable für dieses Konto bearbeiten &gt; Zeile „Path“ auswählen (doppelklick) &gt; Neu &gt; Pfad zur conda installation hinzufügen &gt; mit OK bestätigen &gt; cmd neu starten &gt; <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">--version</span></code> nochmals eingeben.</p>
+</dd>
+<dt class="label" id="linux"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>Unter Linux: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">codingingis</span></code></p>
+</dd>
+<dt class="label" id="activate"><span class="brackets">5</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id6">2</a>,<a href="#id9">3</a>)</span></dt>
+<dd><p>Falls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B <code class="docutils literal notranslate"><span class="pre">activate</span> <span class="pre">codingingis</span></code>).</p>
+</dd>
+<dt class="label" id="weiteremodule"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
+<dd><p>In Coding in GIS I - III brauchen wir die Module <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> und <code class="docutils literal notranslate"><span class="pre">descartes</span></code></p>
+</dd>
+<dt class="label" id="modulfehlt"><span class="brackets"><a class="fn-backref" href="#id8">7</a></span></dt>
+<dd><p>Dies macht sich bemerkbar duch die Fehlermeldung <code class="docutils literal notranslate"><span class="pre">ModuleNotFoundError:</span> <span class="pre">No</span> <span class="pre">module</span> <span class="pre">named</span> <span class="pre">'pandas'</span></code></p>
+</dd>
+<dt class="label" id="jupyterlabbeenden"><span class="brackets"><a class="fn-backref" href="#id10">8</a></span></dt>
+<dd><p>Falls Jupyter Labs läuft und dadurch die Konsole blockiert ist, gibt es folgende Möglichkeiten:</p>
+<ol class="simple">
+<li><p>Jupyter Labs beenden (CTRL + C) &gt; Modul installieren &gt; Jupyter Lab nochmal starten</p></li>
+<li><p>einen neue Konsole starten &gt; <em>environment</em> aktivieren &gt; Modul installieren</p></li>
+<li><p>den Terminal innerhalb von Jupyter Labs verwenden (File &gt; New &gt; Terminal) und dort die <em>environment</em> aktivieren und Modul installieren</p></li>
+</ol>
+</dd>
+</dl>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./2_Coding_in_GIS_2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="1_Coding_in_GIS_2.html" title="zurück Seite">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">zurück</p>
+                <p class="prevnext-title">Coding in GIS II</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="3_Python_Module.html" title="weiter Seite">
+            <div class="prevnext-info">
+                <p class="prevnext-label">weiter</p>
+                <p class="prevnext-title">Python Modules</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Durch N. Ratnaweera, N. Bakogiannis, P. Laube<br/>
+        
+          <div class="extra_footer">
+            <p>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International Lizenz</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
