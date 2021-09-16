@@ -366,6 +366,18 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Admin
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Anleitung_fuer_Dozierende.html">
+   Anleitung für Dozierende
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -556,7 +568,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_76742</span><span class="o">/</span><span class="mf">3475113668.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_97057</span><span class="o">/</span><span class="mf">3475113668.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">sag_hallo</span><span class="p">()</span>
 
 <span class="ne">TypeError</span>: sag_hallo() missing 1 required positional argument: &#39;vorname&#39;
@@ -669,7 +681,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_76742</span><span class="o">/</span><span class="mf">749504737.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_97057</span><span class="o">/</span><span class="mf">749504737.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># Wenn wir jetzt aber die Function ausführen wollen, entsteht die Fehlermeldung,</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># dass &quot;vorname&quot; fehlt (obwohl wir vorname ja schon definiert haben)</span>
 <span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">sag_hallo</span><span class="p">()</span>
@@ -715,16 +727,6 @@
 <div class="section" id="ubung-6-1">
 <h3>Übung 6.1<a class="headerlink" href="#ubung-6-1" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Erstelle eine Funktion namens <code class="docutils literal notranslate"><span class="pre">times</span></code>, die zwei Zahlen miteinander multipliziert.</p>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
-
-<span class="k">def</span> <span class="nf">times</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">times</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -742,16 +744,6 @@
 <h3>Übung 6.2<a class="headerlink" href="#ubung-6-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die eben erstellte Funktion <code class="docutils literal notranslate"><span class="pre">times</span></code> benötigt 2 Argumente (die miteinander multipliziert werden). Wandle den einen in Parameter einen optionalen Parameter um (mit dem Defaultwert <code class="docutils literal notranslate"><span class="pre">1</span></code>).</p>
 <p><strong>Zusatzaufgabe</strong>: Was passiert, wenn du den ersten Parameter in einen optionalen Parameter umwandelst?</p>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
-
-<span class="k">def</span> <span class="nf">times</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">times</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -764,32 +756,10 @@
 </div>
 </div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
-<span class="c1"># (Zusatzaufgabe)</span>
-
-<span class="k">def</span> <span class="nf">times</span><span class="p">(</span><span class="n">x</span>  <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span><span class="n">y</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
-
-  <span class="n">File</span> <span class="s2">&quot;&lt;ipython-input-10-e0d2091c9b0f&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
-    <span class="k">def</span> <span class="nf">times</span><span class="p">(</span><span class="n">x</span>  <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span><span class="n">y</span><span class="p">):</span>
-              <span class="o">^</span>
-<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">non</span><span class="o">-</span><span class="n">default</span> <span class="n">argument</span> <span class="n">follows</span> <span class="n">default</span> <span class="n">argument</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="ubung-6-3">
 <h3>Übung 6.3<a class="headerlink" href="#ubung-6-3" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Erstelle eine Funktion namens <code class="docutils literal notranslate"><span class="pre">bmi</span></code>, die aus Grösse und Gewicht einen BodyMassIndex berechnet (<span class="math notranslate nohighlight">\(BMI=\frac{m}{l^2}\)</span>, <span class="math notranslate nohighlight">\(m\)</span>: Körpermasse in Kilogramm, <span class="math notranslate nohighlight">\(l\)</span>: Körpergrösse in Meter). Das Resultat soll etwa folgendermassen aussehen:</p>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
-
-<span class="k">def</span> <span class="nf">bmi</span><span class="p">(</span><span class="n">groesse_m</span><span class="p">,</span> <span class="n">gewicht_kg</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">gewicht_kg</span> <span class="o">/</span> <span class="p">(</span><span class="n">groesse_m</span><span class="o">*</span><span class="n">groesse_m</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bmi</span><span class="p">(</span><span class="n">groesse_m</span><span class="o">=</span><span class="mf">1.8</span><span class="p">,</span> <span class="n">gewicht_kg</span><span class="o">=</span><span class="mi">88</span><span class="p">)</span>
@@ -810,16 +780,6 @@
 <p class="admonition-title">Tipp</p>
 <p>Nutze dazu <code class="docutils literal notranslate"><span class="pre">sum()</span></code> und <code class="docutils literal notranslate"><span class="pre">len()</span></code> analog <a class="reference internal" href="../2_Coding_in_GIS_1/5_Listen.html#mittelwert"><span class="std std-ref">Übung 2.6</span></a>.</p>
 </div>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
-
-<span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="n">zahlen</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">zahlen</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">zahlen</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meine_zahlen</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span><span class="mi">550</span><span class="p">,</span><span class="mi">1000</span><span class="p">]</span>
@@ -837,16 +797,6 @@
 <div class="section" id="ubung-6-5">
 <h3>Übung 6.5<a class="headerlink" href="#ubung-6-5" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Erstelle eine Funktion <code class="docutils literal notranslate"><span class="pre">celsius_zu_farenheit</span></code>, welche eine beliebige Zahl von Grad Celsius in Grad Kelvin konvertiert. Zur Erinnerung: <em>Temperatur in °F = Temperatur in °C x 1,8 + 32</em>.</p>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
-
-<span class="k">def</span> <span class="nf">celsius_in_farenheit</span><span class="p">(</span><span class="n">celsius</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">celsius</span><span class="o">*</span><span class="mf">1.8</span><span class="o">+</span><span class="mi">32</span>
-</pre></div>
-</div>
-</div>
-</div>
 <p>Das Resultat sollte folgendermassen aussehen:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -864,15 +814,6 @@
 <div class="section" id="ubung-6-6">
 <h3>Übung 6.6<a class="headerlink" href="#ubung-6-6" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Schreibe die letzte Funktion <code class="docutils literal notranslate"><span class="pre">celsius_zu_farenheit</span></code> in der <em>lambda</em> Notation.</p>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
-
-<span class="n">celsius_in_farenheit2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">celsius</span><span class="p">:</span> <span class="n">celsius</span><span class="o">*</span><span class="mf">1.8</span><span class="o">+</span><span class="mi">32</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>

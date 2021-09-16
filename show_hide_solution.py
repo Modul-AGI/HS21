@@ -2,12 +2,9 @@ import nbformat as nbf
 from glob import glob
 import re
 # Collect a list of all notebooks in the content folder
-notebooks_cog1 = glob("./01_*.ipynb", recursive=False) # recursive = True to search in subfolders
-notebooks_cog2 = glob("./02_*.ipynb", recursive=False) # recursive = True to search in subfolders
-notebooks_cog3 = glob("./03_*.ipynb", recursive=False) # recursive = True to search in subfolders
-notebooks_cog4 = glob("./04_*.ipynb", recursive=False) # recursive = True to search in subfolders
-
-# Search through each notebook and look for the text, add a tag if necessary
+notebooks_cog1 = glob("2_Coding_in_GIS_1/*.ipynb", recursive=False) # recursive = True to search in subfolders
+notebooks_cog2 = glob("2_Coding_in_GIS_2/*.ipynb", recursive=False) # recursive = True to search in subfolders
+notebooks_cog3 = glob("2_Coding_in_GIS_3/*.ipynb", recursive=False) # recursive = True to search in subfolders
 
 def musterloesung(notebooks,tag = "remove-cell"):
     # for loops works through each ipynb-file
@@ -36,30 +33,14 @@ notebooks_cog3.sort()
 musterloesung(notebooks_cog1, "remove-cell")
 musterloesung(notebooks_cog2, "remove-cell")
 musterloesung(notebooks_cog3, "remove-cell")
-musterloesung(notebooks_cog4, "remove-cell")
 
 # selectivley add notebooks
 musterloesung(notebooks_cog1, "hide-cell")
+
 musterloesung(notebooks_cog2, "hide-cell")
-
-
-def remove_slidetags(notebooks):
-    # for loops works through each ipynb-file   
-#notebooks = ["./03_06_Raeumliche_Operationen.ipynb"]
-    for ipath in notebooks:
-        ntbk = nbf.read(ipath, nbf.NO_CONVERT)
-        # for loop works through each cell of a given file
-        for cell in ntbk.cells:
-            slideshow = cell.get('metadata', {}).get('slideshow', [])
-            # If the word "Musterlösung" contained in the cell content
-            # removes all tags starting with "remove-" or "hide-"
-            if slideshow:
-                del cell["metadata"]["slideshow"]
-
-            nbf.write(ntbk, ipath)
+musterloesung(notebooks_cog3, "hide-cell")
 
 
 
-#remove_slidetags(glob("./0*_*.ipynb", recursive=False))
 
 

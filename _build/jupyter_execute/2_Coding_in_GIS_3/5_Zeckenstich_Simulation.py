@@ -18,7 +18,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 # 
 # Starte mit einem neuen Jupyter Notebook und lade darin die nötigen Module (`pandas` und `random`), erstellt euch die Funktion `offset_point()` und importiert den Datensatz `zeckenstiche.csv` (s.u.).
 
-# In[11]:
+# In[2]:
 
 
 import pandas as pd

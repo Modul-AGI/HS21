@@ -97,7 +97,7 @@ zeckenstiche = pd.read_csv("data/zeckenstiche.csv")
 # Die *DataFrame* `zeckenstiche` beinhaltet x und y Koordinaten für jeden Unfall in den gleichnamigen Spalten. Wir können die Stiche mit einem Scatterplot räumlich visualisieren. Führe dazu folgenden Code aus. Überlege dir, was die zweite Zeile bewirkt und warum dies sinnvoll ist.
 # 
 
-# In[13]:
+# In[7]:
 
 
 fig = zeckenstiche.plot.scatter("x","y")
@@ -105,7 +105,7 @@ fig = zeckenstiche.plot.scatter("x","y")
 fig.axis("equal")
 
 
-# In[ ]:
+# In[8]:
 
 
 # Musterlösung
@@ -123,7 +123,7 @@ fig.axis("equal")
 # 
 # Um eine einzelne Spalte zu selektieren (z.B. die Spalte "ID"), kann man gleich vorgehen wie bei der Selektion eines Eintrags in einer *Dictionary*. Probiere es aus.
 
-# In[8]:
+# In[9]:
 
 
 # Musterlösung
@@ -137,14 +137,14 @@ zeckenstiche["ID"]
 # 
 # Auch das Erstellen einer neuen Spalte ist identisch mit der Erstellung eines neuen *Dictionary* Eintrags. Erstelle eine neue Spalte "Stichtyp" mit dem Wert "Zecke" auf jeder Zeile (s.u.).
 
-# In[9]:
+# In[10]:
 
 
 # Musterlösung
 zeckenstiche["Stichtyp"] = "Zecke"
 
 
-# In[10]:
+# In[11]:
 
 
 zeckenstiche

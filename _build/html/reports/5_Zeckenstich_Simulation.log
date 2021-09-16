@@ -17,56 +17,80 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-%matplotlib inline
+import pandas as pd
+
+def offset_coordinate(old, distance = 100):
+    import random
+    new = old + random.normalvariate(0,distance)
+    return(new)
+
+zeckenstiche = pd.read_csv("data/zeckenstiche.csv")
+
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m/tmp/ipykernel_76893/352233182.py[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mget_ipython[0m[0;34m([0m[0;34m)[0m[0;34m.[0m[0mrun_line_magic[0m[0;34m([0m[0;34m'matplotlib'[0m[0;34m,[0m [0;34m'inline'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+[0;32m/tmp/ipykernel_97228/3244007270.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      6[0m     [0;32mreturn[0m[0;34m([0m[0mnew[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      7[0m [0;34m[0m[0m
+[0;32m----> 8[0;31m [0mzeckenstiche[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mread_csv[0m[0;34m([0m[0;34m"data/zeckenstiche.csv"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
-[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/IPython/core/interactiveshell.py[0m in [0;36mrun_line_magic[0;34m(self, magic_name, line, _stack_depth)[0m
-[1;32m   2346[0m                 [0mkwargs[0m[0;34m[[0m[0;34m'local_ns'[0m[0;34m][0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mget_local_scope[0m[0;34m([0m[0mstack_depth[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   2347[0m             [0;32mwith[0m [0mself[0m[0;34m.[0m[0mbuiltin_trap[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 2348[0;31m                 [0mresult[0m [0;34m=[0m [0mfn[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   2349[0m             [0;32mreturn[0m [0mresult[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   2350[0m [0;34m[0m[0m
+[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/pandas/util/_decorators.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
+[1;32m    309[0m                     [0mstacklevel[0m[0;34m=[0m[0mstacklevel[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    310[0m                 )
+[0;32m--> 311[0;31m             [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    312[0m [0;34m[0m[0m
+[1;32m    313[0m         [0;32mreturn[0m [0mwrapper[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/decorator.py[0m in [0;36mfun[0;34m(*args, **kw)[0m
-[1;32m    230[0m             [0;32mif[0m [0;32mnot[0m [0mkwsyntax[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    231[0m                 [0margs[0m[0;34m,[0m [0mkw[0m [0;34m=[0m [0mfix[0m[0;34m([0m[0margs[0m[0;34m,[0m [0mkw[0m[0;34m,[0m [0msig[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 232[0;31m             [0;32mreturn[0m [0mcaller[0m[0;34m([0m[0mfunc[0m[0;34m,[0m [0;34m*[0m[0;34m([0m[0mextras[0m [0;34m+[0m [0margs[0m[0;34m)[0m[0;34m,[0m [0;34m**[0m[0mkw[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    233[0m     [0mfun[0m[0;34m.[0m[0m__name__[0m [0;34m=[0m [0mfunc[0m[0;34m.[0m[0m__name__[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    234[0m     [0mfun[0m[0;34m.[0m[0m__doc__[0m [0;34m=[0m [0mfunc[0m[0;34m.[0m[0m__doc__[0m[0;34m[0m[0;34m[0m[0m
+[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/pandas/io/parsers/readers.py[0m in [0;36mread_csv[0;34m(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)[0m
+[1;32m    584[0m     [0mkwds[0m[0;34m.[0m[0mupdate[0m[0;34m([0m[0mkwds_defaults[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    585[0m [0;34m[0m[0m
+[0;32m--> 586[0;31m     [0;32mreturn[0m [0m_read[0m[0;34m([0m[0mfilepath_or_buffer[0m[0;34m,[0m [0mkwds[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    587[0m [0;34m[0m[0m
+[1;32m    588[0m [0;34m[0m[0m
 
-[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/IPython/core/magic.py[0m in [0;36m<lambda>[0;34m(f, *a, **k)[0m
-[1;32m    185[0m     [0;31m# but it's overkill for just that one bit of state.[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    186[0m     [0;32mdef[0m [0mmagic_deco[0m[0;34m([0m[0marg[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 187[0;31m         [0mcall[0m [0;34m=[0m [0;32mlambda[0m [0mf[0m[0;34m,[0m [0;34m*[0m[0ma[0m[0;34m,[0m [0;34m**[0m[0mk[0m[0;34m:[0m [0mf[0m[0;34m([0m[0;34m*[0m[0ma[0m[0;34m,[0m [0;34m**[0m[0mk[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    188[0m [0;34m[0m[0m
-[1;32m    189[0m         [0;32mif[0m [0mcallable[0m[0;34m([0m[0marg[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/pandas/io/parsers/readers.py[0m in [0;36m_read[0;34m(filepath_or_buffer, kwds)[0m
+[1;32m    480[0m [0;34m[0m[0m
+[1;32m    481[0m     [0;31m# Create the parser.[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 482[0;31m     [0mparser[0m [0;34m=[0m [0mTextFileReader[0m[0;34m([0m[0mfilepath_or_buffer[0m[0;34m,[0m [0;34m**[0m[0mkwds[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    483[0m [0;34m[0m[0m
+[1;32m    484[0m     [0;32mif[0m [0mchunksize[0m [0;32mor[0m [0miterator[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/IPython/core/magics/pylab.py[0m in [0;36mmatplotlib[0;34m(self, line)[0m
-[1;32m     97[0m             [0mprint[0m[0;34m([0m[0;34m"Available matplotlib backends: %s"[0m [0;34m%[0m [0mbackends_list[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     98[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 99[0;31m             [0mgui[0m[0;34m,[0m [0mbackend[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mshell[0m[0;34m.[0m[0menable_matplotlib[0m[0;34m([0m[0margs[0m[0;34m.[0m[0mgui[0m[0;34m.[0m[0mlower[0m[0;34m([0m[0;34m)[0m [0;32mif[0m [0misinstance[0m[0;34m([0m[0margs[0m[0;34m.[0m[0mgui[0m[0;34m,[0m [0mstr[0m[0;34m)[0m [0;32melse[0m [0margs[0m[0;34m.[0m[0mgui[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    100[0m             [0mself[0m[0;34m.[0m[0m_show_matplotlib_backend[0m[0;34m([0m[0margs[0m[0;34m.[0m[0mgui[0m[0;34m,[0m [0mbackend[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    101[0m [0;34m[0m[0m
+[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/pandas/io/parsers/readers.py[0m in [0;36m__init__[0;34m(self, f, engine, **kwds)[0m
+[1;32m    809[0m             [0mself[0m[0;34m.[0m[0moptions[0m[0;34m[[0m[0;34m"has_index_names"[0m[0;34m][0m [0;34m=[0m [0mkwds[0m[0;34m[[0m[0;34m"has_index_names"[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m    810[0m [0;34m[0m[0m
+[0;32m--> 811[0;31m         [0mself[0m[0;34m.[0m[0m_engine[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_make_engine[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mengine[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    812[0m [0;34m[0m[0m
+[1;32m    813[0m     [0;32mdef[0m [0mclose[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/IPython/core/interactiveshell.py[0m in [0;36menable_matplotlib[0;34m(self, gui)[0m
-[1;32m   3515[0m         """
-[1;32m   3516[0m         [0;32mfrom[0m [0mIPython[0m[0;34m.[0m[0mcore[0m [0;32mimport[0m [0mpylabtools[0m [0;32mas[0m [0mpt[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 3517[0;31m         [0;32mfrom[0m [0mmatplotlib_inline[0m[0;34m.[0m[0mbackend_inline[0m [0;32mimport[0m [0mconfigure_inline_support[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   3518[0m         [0mgui[0m[0;34m,[0m [0mbackend[0m [0;34m=[0m [0mpt[0m[0;34m.[0m[0mfind_gui_and_backend[0m[0;34m([0m[0mgui[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0mpylab_gui_select[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   3519[0m [0;34m[0m[0m
+[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/pandas/io/parsers/readers.py[0m in [0;36m_make_engine[0;34m(self, engine)[0m
+[1;32m   1038[0m             )
+[1;32m   1039[0m         [0;31m# error: Too many arguments for "ParserBase"[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1040[0;31m         [0;32mreturn[0m [0mmapping[0m[0;34m[[0m[0mengine[0m[0;34m][0m[0;34m([0m[0mself[0m[0;34m.[0m[0mf[0m[0;34m,[0m [0;34m**[0m[0mself[0m[0;34m.[0m[0moptions[0m[0;34m)[0m  [0;31m# type: ignore[call-arg][0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1041[0m [0;34m[0m[0m
+[1;32m   1042[0m     [0;32mdef[0m [0m_failover_to_python[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/matplotlib_inline/backend_inline.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      4[0m [0;31m# Distributed under the terms of the BSD 3-Clause License.[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      5[0m [0;34m[0m[0m
-[0;32m----> 6[0;31m [0;32mimport[0m [0mmatplotlib[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      7[0m from matplotlib.backends.backend_agg import (  # noqa
-[1;32m      8[0m     [0mnew_figure_manager[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py[0m in [0;36m__init__[0;34m(self, src, **kwds)[0m
+[1;32m     49[0m [0;34m[0m[0m
+[1;32m     50[0m         [0;31m# open handles[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 51[0;31m         [0mself[0m[0;34m.[0m[0m_open_handles[0m[0;34m([0m[0msrc[0m[0;34m,[0m [0mkwds[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     52[0m         [0;32massert[0m [0mself[0m[0;34m.[0m[0mhandles[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     53[0m [0;34m[0m[0m
 
-[0;31mModuleNotFoundError[0m: No module named 'matplotlib'
-ModuleNotFoundError: No module named 'matplotlib'
+[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/pandas/io/parsers/base_parser.py[0m in [0;36m_open_handles[0;34m(self, src, kwds)[0m
+[1;32m    220[0m         [0mLet[0m [0mthe[0m [0mreaders[0m [0mopen[0m [0mIOHandles[0m [0mafter[0m [0mthey[0m [0mare[0m [0mdone[0m [0;32mwith[0m [0mtheir[0m [0mpotential[0m [0mraises[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    221[0m         """
+[0;32m--> 222[0;31m         self.handles = get_handle(
+[0m[1;32m    223[0m             [0msrc[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    224[0m             [0;34m"r"[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/pandas/io/common.py[0m in [0;36mget_handle[0;34m(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)[0m
+[1;32m    700[0m         [0;32mif[0m [0mioargs[0m[0;34m.[0m[0mencoding[0m [0;32mand[0m [0;34m"b"[0m [0;32mnot[0m [0;32min[0m [0mioargs[0m[0;34m.[0m[0mmode[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    701[0m             [0;31m# Encoding[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 702[0;31m             handle = open(
+[0m[1;32m    703[0m                 [0mhandle[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    704[0m                 [0mioargs[0m[0;34m.[0m[0mmode[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'data/zeckenstiche.csv'
+FileNotFoundError: [Errno 2] No such file or directory: 'data/zeckenstiche.csv'
 

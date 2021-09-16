@@ -125,126 +125,6 @@ type(bern_flaeche)
 
 # ## Übungen
 # 
-# Bei primitiven Datentypen handelt es sich um die kleinste Einheit der Programmiersprache, sie werden deshalb auch "atomare Datentypen" genannt. Alle komplexeren Datentypen (Tabellarische Daten, Bilder, Geodaten) basieren auf diesen einfachen Strukturen. Die für uns wichtigsten Datentypen lauten: *Boolean*, *String*, *Integer* und *Float*. Das sind ähnliche Datentypen wie ihr bereits aus R kennt:
-# 
-# ````{list-table}
-# :header-rows: 1
-# 
-# * - Python
-#   - R
-#   - Beschreibung
-#   - Beispiel
-#   - in Python
-# * - Boolean
-#   - Logical
-#   - Logische Werte ja / nein
-#   - Wahr / Falsch
-#   - ```python
-#     regen = True
-#     ```
-# * - String
-#   - Character
-#   - Textinformation
-#   - Bern, Luzern
-#   - ```python
-#     stadt = "Bern"
-#     ```
-# * - Integer
-#   - Integer
-#   - Zahl ohne Nachkommastelle
-#   - Anzahl Einwohner
-#   - ```python
-#     bern = 133115
-#     ```
-# * - Float
-#   - Double
-#   - Zahl mit Nachkommastelle
-#   - Temperatur
-#   - ```python
-#     temp = 22.5
-#     ```
-# ````
-
-# ### Boolean
-# 
-# Hierbei handelt es sich um den einfachsten Datentyp. Er beinhaltet nur zwei Zustände: Wahr oder Falsch. In Python werden diese mit `True` oder `False` definiert (diese Schreibweise muss genau beachtet werden). Beispielsweise sind das Antworten auf geschlossene Fragen.
-# 
-
-# In[8]:
-
-
-regen = True # "es regnet"
-
-sonne = False # "die Sonne scheint nicht"
-
-type(sonne)
-
-
-# Um zu prüfen, ob ein bestimmter Wert `True` oder `False` ist verwendet man `is True`. Will man also fragen ob es regnet, wir dies folgendermassen formuliert:
-
-# In[9]:
-
-
-# regnet es?
-regen is True
-
-
-# Ob die Sonne scheint, lautet folgendermassen (natürlich müssen dazu die Variabel `sonne` bereits existieren):
-
-# In[10]:
-
-
-# scheint die Sonne?
-sonne is True
-
-
-# ### String
-# 
-# In sogenannten *Strings* werden Textinformationen gespeichert. Beispielsweise können das die Namen von Ortschaften sein.
-
-# In[11]:
-
-
-stadt = "Bern"
-land = "Schweiz"
-
-type(stadt)
-
-
-# Strings können mit `+` miteinander verbunden werden
-
-# In[12]:
-
-
-stadt + " ist die Hauptstadt der " + land
-
-
-# ### Integer
-# 
-# In *Integer* werden ganzzahlige Werte gespeichert, beispielsweise die Anzahl Einwohner einer Stadt. 
-
-# In[13]:
-
-
-bern_einwohner = 133115
-
-type(bern_einwohner)
-
-
-# ### Float
-# 
-# Als `Float` werden Zahlen mit Nachkommastellen gespeichert, wie zum Beispiel die Temperatur in Grad Celsius.
-
-# In[14]:
-
-
-bern_flaeche = 51.62
-
-type(bern_flaeche)
-
-
-# ## Übungen
-# 
 # % Variablen erstellen
 # ### Übung 1.1
 # 
@@ -252,7 +132,7 @@ type(bern_flaeche)
 # 
 # 
 
-# In[15]:
+# In[8]:
 
 
 # Musterlösung
@@ -268,7 +148,7 @@ type(vorname) # es handelt sich um den Datentyp "str", also String (Text)
 # 
 # "Klebe" Vor- und Nachname mit einem Leerschlag dazwischen zusammen.
 
-# In[16]:
+# In[9]:
 
 
 # Musterlösung
@@ -281,7 +161,7 @@ vorname+" "+nachname
 # 
 # Erstelle eine Variabel `groesse_cm` mit deiner Körpergrösse in Zentimeter. Was ist das für ein Datentyp?
 
-# In[17]:
+# In[10]:
 
 
 # Musterlösung
@@ -296,7 +176,7 @@ type(groesse_cm) # es handelt sich hierbei um den Datentyp "integer"
 # Ermittle deine Grösse in Fuss auf der Basis von `groesse_cm` (1 Fuss entspricht 30.48 cm). Was ist das für ein Datentyp?
 # 
 
-# In[18]:
+# In[11]:
 
 
 # Musterlösung
@@ -310,7 +190,7 @@ type(groesse_fuss) # es handelt sich um den Datentyp "float"
 # 
 # Erstelle eine boolsche Variable blond und setzte sie auf `True` wenn diese Eigenschaft auf dich zutrifft und `False` falls nicht. 
 
-# In[19]:
+# In[12]:
 
 
 # Musterlösung
@@ -323,7 +203,7 @@ blond = False
 # 
 # Erstelle eine Variabel `einwohner` mit der Einwohnerzahl der Schweiz (8'603'900, per31. Dezember 2019). Erstelle eine zweite Variabel `flaeche` (ohne Umlaute!) mit der Flächengrösse der Schweiz (41'285 km$^2$). Berechne nun die Einwohnerdichte.
 
-# In[20]:
+# In[13]:
 
 
 # Musterlösung
@@ -341,7 +221,7 @@ dichte
 # 
 # Erstelle eine Variabel `gewicht_kg` (kg) und `groesse_cm` (m) und berechne aufgrund von `gewicht_kg` und `groesse_m` ein BodyMassIndex ($BMI=\frac{m}{l^2}$, $m$: Körpermasse in Kilogramm, $l$: Körpergrösse in Meter).
 
-# In[21]:
+# In[14]:
 
 
 # Musterlösung

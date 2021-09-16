@@ -648,38 +648,10 @@
 <div class="section" id="ubung-7-1">
 <h3>Übung 7.1<a class="headerlink" href="#ubung-7-1" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Bevor wir mit Koordinaten arbeiten wollt ihr euch zuerst mit dem Modul <code class="docutils literal notranslate"><span class="pre">random</span></code> vertraut machen. Importiere das Modul <code class="docutils literal notranslate"><span class="pre">random</span></code> und generiere eine Zufallszahl zwischen -100 und +100 aus einer uniformen Verteilung sowie aus einer Normalverteilung mit Mittelwert 100 und Standartabweichung 20.</p>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
-
-<span class="kn">import</span> <span class="nn">random</span>
-
-<span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-
-<span class="n">random</span><span class="o">.</span><span class="n">normalvariate</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>115.36479372811071
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="ubung-7-2">
 <h3>Übung 7.2<a class="headerlink" href="#ubung-7-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Nun wollen wir uns den Koordinaten zuwenden. Erstelle als erstes zwei Dummykoordinaten <code class="docutils literal notranslate"><span class="pre">x_start</span></code> und <code class="docutils literal notranslate"><span class="pre">y_start</span></code> mit jeweils dem Wert <code class="docutils literal notranslate"><span class="pre">0</span></code>. Diese sollen als „Ursprungskoordinaten“ dienen.</p>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
-
-<span class="n">x_start</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">y_start</span> <span class="o">=</span> <span class="mi">0</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="ubung-7-3">
 <h3>Übung 7.3<a class="headerlink" href="#ubung-7-3" title="Link zu dieser Überschrift">¶</a></h3>
@@ -694,40 +666,10 @@ Generiere danach eine zweite Zufallszahl (auf die gleiche Art) und weise diese <
 <p class="caption"><span class="caption-number">Abb. 2 </span><span class="caption-text">Normalverteilung und die Anteile innerhalb von 1 Standartabweichung (Mittelwert <span class="math notranslate nohighlight">\(\mu\)</span> minus Standartabweichung <span class="math notranslate nohighlight">\(\sigma\)</span>), 2 Standartabweichungen (<span class="math notranslate nohighlight">\(\mu - 2\times\sigma)\)</span> und 2 Standartabweichungen (<span class="math notranslate nohighlight">\(\mu - 3\times\sigma)\)</span>. Quelle: <a class="reference external" href="https://www.cobocards.com/">cobocards</a></span><a class="headerlink" href="#id2" title="Link zu diesem Bild">¶</a></p>
 </div>
 </div>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
-
-<span class="c1"># Normalverteilte Werte mit Mittelwert 0 und Standartabweichung 100  </span>
-<span class="c1"># Achtung: bei dieser Standartabweichung sind ca 30% der Werte &gt; 100!</span>
-<span class="n">x_offset</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">normalvariate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">y_offset</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">normalvariate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-
-<span class="n">x_offset</span>
-<span class="n">y_offset</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>145.71995856903638
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="ubung-7-4">
 <h3>Übung 7.4<a class="headerlink" href="#ubung-7-4" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Addiere nun die Zufallszahlen <code class="docutils literal notranslate"><span class="pre">x_offset</span></code> und <code class="docutils literal notranslate"><span class="pre">y_offset</span></code> <strong>jeweils</strong> zu den Dummykoordinaten <code class="docutils literal notranslate"><span class="pre">x_start</span></code> und <code class="docutils literal notranslate"><span class="pre">y_start</span></code> und weise diese neuen Koordinaten <code class="docutils literal notranslate"><span class="pre">x_neu</span></code> und <code class="docutils literal notranslate"><span class="pre">y_neu</span></code> zu. Die neuen Werte stellen die leicht verschobenen Ursprungskoordinaten dar. In meinem Fall sind diese um 10.2 Meter nach Osten (positiver Wert) bzw. 4.4 Meter nach Süden (negativer Wert) verschoben worden.</p>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
-
-<span class="n">x_neu</span> <span class="o">=</span> <span class="n">x_start</span><span class="o">+</span><span class="n">x_offset</span>
-<span class="n">y_neu</span> <span class="o">=</span> <span class="n">y_start</span><span class="o">+</span><span class="n">y_offset</span>
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_neu</span>
@@ -780,26 +722,6 @@ Generiere danach eine zweite Zufallszahl (auf die gleiche Art) und weise diese <
 <span id="ex-offset-function"></span><h3>Übung 7.5<a class="headerlink" href="#ubung-7-5" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Nun haben wir das zufällige Verschieben eines Einzelpunktes am Beispiel einer Dummykoordinaten (<code class="docutils literal notranslate"><span class="pre">0</span></code>/<code class="docutils literal notranslate"><span class="pre">0</span></code>) durchgespielt. In der nächsten Aufgabe (<a class="reference internal" href="7_Funktionen_in_DataFrames.html#chap-offset-dataframe"><span class="std std-ref">Aufgabe 8: Funktionen in DataFrames</span></a>) werden wir <em>alle</em> unsere Zeckenstichkoordinaten auf diese Weise zufällig verschieben um einen Simulierten Zeckenstichdatensatz ähnlich wie <a class="reference internal" href="#arcgiszecken"><span class="std std-numref">Abb. 1</span></a> zu erhalten.</p>
 <p>Dafür brauchen wir die eben erarbeiteten Einzelschritte als Funktion, um diese auf alle Zeckenstiche anwenden zu können. <strong>Erstelle jetzt eine Funktion namens <code class="docutils literal notranslate"><span class="pre">offset_coordinate</span></code> welche als Input eine <code class="docutils literal notranslate"><span class="pre">x</span></code> oder <code class="docutils literal notranslate"><span class="pre">y</span></code>-Achsenwert annimmt und eine leicht verschobene Wert zurück gibt.</strong> Integriere die Standartabweichung der Verteilung als optionalen Parameter mit einem Standartwert von 100.</p>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
-
-<span class="k">def</span> <span class="nf">offset_coordinate</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">distance</span> <span class="o">=</span> <span class="mi">100</span><span class="p">):</span>
-    <span class="n">new</span> <span class="o">=</span> <span class="n">old</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">normalvariate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">distance</span><span class="p">)</span>
-
-    <span class="k">return</span><span class="p">(</span><span class="n">new</span><span class="p">)</span>
-
-
-<span class="n">offset_coordinate</span><span class="p">(</span><span class="n">x_start</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42.93099869002511
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="ubung-7-6">
 <span id="offset-vis"></span><h3>Übung 7.6<a class="headerlink" href="#ubung-7-6" title="Link zu dieser Überschrift">¶</a></h3>
