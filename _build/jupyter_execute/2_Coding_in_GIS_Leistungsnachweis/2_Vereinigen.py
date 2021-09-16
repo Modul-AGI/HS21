@@ -20,7 +20,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 # Lade die benötigten Module (siehe {ref}`chap-modules-import`): 
 
-# In[2]:
+# In[32]:
 
 
 # Benötigten Module laden #####################
@@ -32,7 +32,7 @@ from matplotlib import pyplot as plt
 
 # Definiere die benötigte *Function* (siehe {ref}`ex-offset-function`):
 
-# In[3]:
+# In[33]:
 
 
 # Notwendige Functions definieren #############
@@ -45,7 +45,7 @@ def offset_coordinate(old, distance = 100):
 
 # Importiere die notwendigen Datensätze (siehe {ref}`ex-import-zeckenstiche` und {ref}`ex-import-wald` sowie {numref}`table-datensaetze`):
 
-# In[4]:
+# In[34]:
 
 
 # Daten Importieren ###########################

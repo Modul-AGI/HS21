@@ -24,6 +24,17 @@
 # 
 # ```
 # 
+# Noch ein paar Hinweise:
+# 
+# - Die Musterlösungen zu allen Aufgaben stehen bereit. Wir werden diese bald einblenden
+# - Wenn sich im Fliesstext Programmiercode befindet, wird er in `dieser Festschriftart` dargestellt
+# - Englische Begriffe, deren Übersetzung eher verwirrend als nützlich wären, werden *in dieser Weise* hervorgehoben
+# - Da viele von euch bereits Erfahrung in R haben, stelle ich immer wieder den Bezug zu dieser Programmiersprache her.
+# - Alleinstehende Codezeilen werden folgendermassen dargestellt:
+# - ```python
+#   print("Coding in GIS!")
+#   ```
+# 
 # 
 # 
 # ```{admonition} Übungsziele

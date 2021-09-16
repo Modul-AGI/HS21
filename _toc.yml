@@ -1,5 +1,7 @@
 format: jb-book
 root: index
+defaults:  
+  titlesonly: True
 parts:
   - caption: Coding in GIS I
     chapters:
@@ -28,3 +30,6 @@ parts:
   - caption: Netzwerkanalyse III
     chapters:
     - glob: 4_Netzwerkanalyse_3/*
+  - caption: Admin
+    chapters:
+    - file: Anleitung_fuer_Dozierende.md
