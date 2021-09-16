@@ -5,31 +5,31 @@ defaults:
 parts:
   - caption: Coding in GIS I
     chapters:
-    - glob: 2_Coding_in_GIS_1/*
+    - glob: B_Coding_in_GIS_1/*
   - caption: Coding in GIS II
     chapters:
-    - glob: 2_Coding_in_GIS_2/*
+    - glob: B_Coding_in_GIS_2/*
   - caption: Coding in GIS III
     chapters:
-    - glob: 2_Coding_in_GIS_3/* # leistungsnachweis und anhang fehlt noch
+    - glob: B_Coding_in_GIS_3/* # leistungsnachweis und anhang fehlt noch
   - caption: Datenbanken I
     chapters:
-    - glob: 3_Datenbanken_1/*
+    - glob: C_Datenbanken_1/*
   - caption: Datenbanken II
     chapters:
-    - glob: 3_Datenbanken_2/*
+    - glob: C_Datenbanken_2/*
   - caption: Datenbanken III
     chapters:
-    - glob: 3_Datenbanken_3/*
+    - glob: C_Datenbanken_3/*
   - caption: Netzwerkanalyse I
     chapters:
-    - glob: 4_Netzwerkanalyse_1/*
+    - glob: D_Netzwerkanalyse_1/*
   - caption: Netzwerkanalyse II
     chapters:
-    - glob: 4_Netzwerkanalyse_2/*
+    - glob: D_Netzwerkanalyse_2/*
   - caption: Netzwerkanalyse III
     chapters:
-    - glob: 4_Netzwerkanalyse_3/*
+    - glob: D_Netzwerkanalyse_3/*
   - caption: Admin
     chapters:
     - file: Anleitung_fuer_Dozierende.md
