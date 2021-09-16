@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suche &#8212; Angewandte Geoinformatik AGI</title>
+    <title>Anleitung für Dozierende &#8212; Angewandte Geoinformatik AGI</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -33,7 +33,6 @@
     
   <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -44,16 +43,19 @@
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
-    <link rel="search" title="Suche" href="#" />
-  <script src="searchindex.js" defer></script>
-  
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="prev" title="Anhang" href="4_Netzwerkanalyse_3/7_Anhang.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
-
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -75,7 +77,7 @@
       <h1 class="site-logo" id="site-title">Angewandte Geoinformatik AGI</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="#" method="get">
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -366,9 +368,9 @@
   Admin
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Anleitung_fuer_Dozierende.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Anleitung für Dozierende
   </a>
  </li>
@@ -405,6 +407,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Anleitung_fuer_Dozierende.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -416,7 +435,9 @@
                 data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
                     class="fab fa-github"></i>Repository</button></a>
         
-        
+        <a class="edit-button" href="https://github.com/Modul-AGI/HS21/edit/main/Anleitung_fuer_Dozierende.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Bearbeite diese Seite"><i class="fas fa-pencil-alt"></i>vorschlagen zu bearbeiten</button></a>
     </div>
 </div>
 
@@ -434,6 +455,46 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#text">
+   Text
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tabellen">
+   Tabellen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bilder">
+   Bilder
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ohne-bildunterschrift-und-querverweis">
+     Ohne Bildunterschrift und Querverweis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mit-bildunterschfit-und-allenfalls-querverweis">
+     Mit Bildunterschfit und allenfalls Querverweis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ubungsziele">
+   Übungsziele
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -442,26 +503,126 @@
         
               <div>
                 
-  <h1 id="search-documentation">Suche</h1>
-  <div id="fallback" class="admonition warning">
-  <script>$('#fallback').hide();</script>
-  <p>
-    Bitte aktivieren Sie JavaScript, wenn Sie die Suchfunktion nutzen wollen.
-  </p>
-  </div>
-  <p>
-    Searching for multiple words only shows matches that contain
-    all words.
-  </p>
-  <form action="" method="get">
-    <input type="text" name="q" aria-labelledby="search-documentation" value="" />
-    <input type="submit" value="suchen" />
-    <span id="search-progress" style="padding-left: 10px"></span>
-  </form>
-  
-  <div id="search-results">
-  
-  </div>
+  <div class="section" id="anleitung-fur-dozierende">
+<h1>Anleitung für Dozierende<a class="headerlink" href="#anleitung-fur-dozierende" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Um Änderungen an diesem Dokument machen zu können, braucht man erstmal einen Github Account. Dieser ist gratis und kann hier erstellt werden: <a class="reference external" href="https://github.com/signup">https://github.com/signup</a></p>
+<p>Meldet nach der Erstellung euren Github Nutzername an Nils: Er wird euch auf dem Repository („Repo“) freischalten.</p>
+<p>Danach könnt ihr bestehende Einträge zu verändern und auch neue Inhalte hinzufügen. Um inhalte zu verändern navigiert ihr auf der Webseite (<a class="reference external" href="http://modul-agi.github.io">modul-agi.github.io</a>) zum entsprechenden Eintrag und klickt dort auf Github Logo oben rechts (Katzen-Symbol) &gt; <em>Vorschlagen zum bearbeiten</em>. Nun könnt ihr eure Änderungen im Online Editor auf <a class="reference external" href="http://Github.com">Github.com</a> vornehmen. Anders als mit Word, arbeiten wir hier in einer Markup Sprache, d.h. wir programmieren quasi den Inhalt in einem Textfile.</p>
+<div class="section" id="text">
+<h2>Text<a class="headerlink" href="#text" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><p>Kursiv: Wörter, die mit * umgeben werden, sind Kursiv (also <code class="docutils literal notranslate"><span class="pre">*kursiv*</span></code> wird zu <em>kursiv</em>)</p></li>
+<li><p>Fett: Wörter die mit doppelten * umgeben werden, sind Fett (also <code class="docutils literal notranslate"><span class="pre">**fett**</span></code> wird zu <strong>fett</strong>)</p></li>
+<li><p>Hyperlinks: Um einen hyperlink wird folgenermassen erstellt: <code class="docutils literal notranslate"><span class="pre">[angezeigter</span> <span class="pre">text](www.example.com)</span></code> (wird zu <a class="reference external" href="https://www.example.com">angezeigter text</a>)</p></li>
+<li><p>Überschriften: Überschriften werden mit vorangestelltem <code class="docutils literal notranslate"><span class="pre">#</span></code> erstellt (Unterkapitel mit <code class="docutils literal notranslate"><span class="pre">##</span></code>, <code class="docutils literal notranslate"><span class="pre">###</span></code> etc)</p></li>
+</ul>
+</div>
+<div class="section" id="tabellen">
+<h2>Tabellen<a class="headerlink" href="#tabellen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Um eine Tabelle einzufügen muss man nachstehender Konvention folgen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{list-table} Beschreibung der Tabelle (optional)
+:header-rows: 1
+:name: meinetabelle1
+
+* - Title Spalte 1
+  - Titel Spalte 2
+* - Inhalt erste Zeile
+  - und noch ein weiterer Inhalt
+```
+</pre></div>
+</div>
+<p>Dies sieht dann so aus:</p>
+<table class="table" id="meinetabelle1">
+<caption><span class="caption-number">Tab. 3 </span><span class="caption-text">Beschreibung der Tabelle (optional)</span><a class="headerlink" href="#meinetabelle1" title="Link zu dieser Tabelle">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Title Spalte 1</p></th>
+<th class="head"><p>Titel Spalte 2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Inhalt erste Zeile</p></td>
+<td><p>und noch ein weiterer Inhalt</p></td>
+</tr>
+</tbody>
+</table>
+<p>Hinweise:</p>
+<ul class="simple">
+<li><p>Um einen Querverweis auf die obige Tabelle zu machen verwendet man folgende Konvention: <code class="docutils literal notranslate"><span class="pre">{numref}`meinetabelle1`</span> </code>, dies wird dann in <a class="reference internal" href="#meinetabelle1"><span class="std std-numref">Tab. 3</span></a> konvertiert.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:name:</span></code> sollte dabei für jede Tabelle angepasst werden und eindeutig sein</p></li>
+<li><p>Diese sogenannten „Backticks“ sind auf der Tastatur rechts neben dem Fragezeichen, dabei muss Schift gedrückt gehalten und mit einem Leerschlag abgeschlossen werden.</p></li>
+</ul>
+</div>
+<div class="section" id="bilder">
+<h2>Bilder<a class="headerlink" href="#bilder" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Um Bilder einzufügen muss man diese erstmals auf Github hochladen. Dafür wählt man auf <a class="reference external" href="http://Github.com">Github.com</a> den „Parent Folder“ des Dokuments, wo das Bild hin soll und dort dann <em>Add file &gt; Upload file</em>. Dann kann man das Bild auf zwei verschiedene Arten ins Dokument einfügen, je nach dem ob man Bildunterschriften / Querverweise braucht oder nicht.</p>
+<div class="section" id="ohne-bildunterschrift-und-querverweis">
+<h3>Ohne Bildunterschrift und Querverweis<a class="headerlink" href="#ohne-bildunterschrift-und-querverweis" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wenn man das Bild ohne Bildunterschrift einfügen möchte ist das Einfügen sehr knackig und sehr ähnlich, wie wenn man URLs einfügt: <code class="docutils literal notranslate"><span class="pre">![](bild.jpg)</span></code>. Dabei ist der Pfad relativ zum Dokument zu verstehen.</p>
+</div>
+<div class="section" id="mit-bildunterschfit-und-allenfalls-querverweis">
+<h3>Mit Bildunterschfit und allenfalls Querverweis<a class="headerlink" href="#mit-bildunterschfit-und-allenfalls-querverweis" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Um ein Bild mit Bildunterschfit einzufügen und auch die Möglichkeit zu haben, darauf zu verlinken (Querverweis), ist es etwas komplizierter und ähnlich wie bei Tabellen. Aauch hier sollte <code class="docutils literal notranslate"><span class="pre">:name:</span></code> für jede Abbildung angepasst werden und eindeutig sein:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{figure} zhaw_lsfm_iunr_blau.jpg
+:name: zhaw-logo
+
+Logo der ZHAW
+```
+</pre></div>
+</div>
+<p>Wird dann zu:</p>
+<div class="figure align-default" id="zhaw-logo">
+<img alt="_images/zhaw_lsfm_iunr_blau.jpg" src="_images/zhaw_lsfm_iunr_blau.jpg" />
+<p class="caption"><span class="caption-number">Abb. 32 </span><span class="caption-text">Logo der ZHAW</span><a class="headerlink" href="#zhaw-logo" title="Link zu diesem Bild">¶</a></p>
+</div>
+<p>Genau wie auf Tabellen verweist man folgendermasssen auf Bilder im Text: <code class="docutils literal notranslate"><span class="pre">{numref}`zhaw-logo`</span> </code> (dies wird dann zu <a class="reference internal" href="#zhaw-logo"><span class="std std-numref">Abb. 32</span></a>).</p>
+</div>
+</div>
+<div class="section" id="ubungsziele">
+<h2>Übungsziele<a class="headerlink" href="#ubungsziele" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Um „Übungsziele“ festzu legen verwendet man folgender Syntax:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{admonition} Übungsziele
+:class: attention
+- Ziel 1
+- Ziel 2
+- Ziel 3
+```
+</pre></div>
+</div>
+<p>Dies wird dann zu:</p>
+<div class="attention admonition">
+<p class="admonition-title">Übungsziele</p>
+<ul class="simple">
+<li><p>Ziel 1</p></li>
+<li><p>Ziel 2</p></li>
+<li><p>Ziel 3</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -472,6 +633,15 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="4_Netzwerkanalyse_3/7_Anhang.html" title="zurück Seite">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">zurück</p>
+                <p class="prevnext-title">Anhang</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         

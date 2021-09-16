@@ -50,7 +50,6 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="Input: GIS in Python" href="6_GIS_in_Python.html" />
@@ -365,12 +364,24 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Admin
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Anleitung_fuer_Dozierende.html">
+   Anleitung für Dozierende
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  <a href="https://www.zhaw.ch/de/lsfm/institute-zentren/iunr/ecosystems-and-biodiversity/geoinformatik/">Research Group for Geoinformatics</a>
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 </div>
 
 </div>
@@ -416,6 +427,21 @@
 
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Modul-AGI/HS21/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
+                    class="fab fa-github"></i>Repository</button></a>
+        
+        <a class="edit-button" href="https://github.com/Modul-AGI/HS21/edit/main/2_Coding_in_GIS_3/5_Zeckenstich_Simulation.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Bearbeite diese Seite"><i class="fas fa-pencil-alt"></i>vorschlagen zu bearbeiten</button></a>
+    </div>
+</div>
+
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -424,23 +450,6 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        
-        <a class="jupyterhub-button" href="https://jupyterhub01.zhaw.ch/hub/user-redirect/git-pull?repo=https://github.com/Modul-AGI/HS20/&urlpath=lab/tree/HS20/2_Coding_in_GIS_3/5_Zeckenstich_Simulation.ipynb&branch=master"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Starten JupyterHub" data-toggle="tooltip"
-                data-placement="left"><img class="jupyterhub-button-logo"
-                    src="../_static/images/logo_jupyterhub.svg"
-                    alt="Interact on JupyterHub">JupyterHub</button></a>
-        
-        
-        
-    </div>
-</div>
 
         </div>
 
@@ -533,61 +542,61 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2563</span><span class="o">/</span><span class="mf">3244007270.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2565</span><span class="o">/</span><span class="mf">3244007270.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="k">return</span><span class="p">(</span><span class="n">new</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> 
 <span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/zeckenstiche.csv&quot;</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">312</span> 
 <span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
 <span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">585</span> 
 <span class="ne">--&gt; </span><span class="mi">586</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">587</span> 
 <span class="g g-Whitespace">    </span><span class="mi">588</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
 <span class="g g-Whitespace">    </span><span class="mi">480</span> 
 <span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="c1"># Create the parser.</span>
 <span class="ne">--&gt; </span><span class="mi">482</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">483</span> 
 <span class="g g-Whitespace">    </span><span class="mi">484</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
 <span class="g g-Whitespace">    </span><span class="mi">809</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
 <span class="g g-Whitespace">    </span><span class="mi">810</span> 
 <span class="ne">--&gt; </span><span class="mi">811</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">812</span> 
 <span class="g g-Whitespace">    </span><span class="mi">813</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1038</span>             <span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
 <span class="ne">-&gt; </span><span class="mi">1040</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
 <span class="g g-Whitespace">   </span><span class="mi">1041</span> 
 <span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
 <span class="g g-Whitespace">     </span><span class="mi">49</span> 
 <span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="c1"># open handles</span>
 <span class="ne">---&gt; </span><span class="mi">51</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
 <span class="g g-Whitespace">     </span><span class="mi">53</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
 <span class="g g-Whitespace">    </span><span class="mi">227</span>             <span class="n">memory_map</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
 <span class="g g-Whitespace">    </span><span class="mi">228</span>             <span class="n">storage_options</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
 <span class="ne">--&gt; </span><span class="mi">229</span>             <span class="n">errors</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
 <span class="g g-Whitespace">    </span><span class="mi">230</span>         <span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">231</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.11/x64/lib/python3.7/site-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
 <span class="g g-Whitespace">    </span><span class="mi">705</span>                 <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">706</span>                 <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
 <span class="ne">--&gt; </span><span class="mi">707</span>                 <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -836,12 +845,6 @@
         
           Durch N. Ratnaweera, N. Bakogiannis, P. Laube<br/>
         
-          <div class="extra_footer">
-            <p>
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International Lizenz</a>.
-</p>
-
-          </div>
       </p>
     </div>
   </footer>

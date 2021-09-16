@@ -50,7 +50,6 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
     <link rel="next" title="Einleitung" href="2_Coding_in_GIS_1/1_Einleitung.html" />
@@ -364,12 +363,24 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Admin
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Anleitung_fuer_Dozierende.html">
+   Anleitung für Dozierende
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  <a href="https://www.zhaw.ch/de/lsfm/institute-zentren/iunr/ecosystems-and-biodiversity/geoinformatik/">Research Group for Geoinformatics</a>
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 </div>
 
 </div>
@@ -415,6 +426,21 @@
 
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Modul-AGI/HS21/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
+                    class="fab fa-github"></i>Repository</button></a>
+        
+        <a class="edit-button" href="https://github.com/Modul-AGI/HS21/edit/main/index.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Bearbeite diese Seite"><i class="fas fa-pencil-alt"></i>vorschlagen zu bearbeiten</button></a>
+    </div>
+</div>
+
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -423,23 +449,6 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        
-        <a class="jupyterhub-button" href="https://jupyterhub01.zhaw.ch/hub/user-redirect/git-pull?repo=https://github.com/Modul-AGI/HS20/&urlpath=lab/tree/HS20/index.ipynb&branch=master"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Starten JupyterHub" data-toggle="tooltip"
-                data-placement="left"><img class="jupyterhub-button-logo"
-                    src="_static/images/logo_jupyterhub.svg"
-                    alt="Interact on JupyterHub">JupyterHub</button></a>
-        
-        
-        
-    </div>
-</div>
 
         </div>
 
@@ -457,19 +466,9 @@
   <div class="section" id="einleitung">
 <h1>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Willkommen im Kurs <em><a class="reference external" href="https://studienplaner.lsfm.zhaw.ch/module/angewandte-geoinformatik">Angewandte Geoinformatik</a></em> der Zürcher Hochschule für Angewandte Wissenschaften (ZHAW).</p>
-<p>Noch ein paar Hinweise zur Handhabung dieses Dokumentes:</p>
-<ul>
-<li><p>Die Musterlösungen zu allen Aufgaben stehen bereit. Wir werden diese bald einblenden</p></li>
-<li><p>Wenn sich im Fliesstext Programmiercode befindet, wird er in <code class="docutils literal notranslate"><span class="pre">dieser</span> <span class="pre">Festschriftart</span></code> dargestellt</p></li>
-<li><p>Englische Begriffe, deren Übersetzung eher verwirrend als nützlich wären, werden <em>in dieser Weise</em> hervorgehoben</p></li>
-<li><p>Da viele von euch bereits Erfahrung in R haben, stelle ich immer wieder den Bezug zu dieser Programmiersprache her.</p></li>
-<li><p>Alleinstehende Codezeilen werden folgendermassen dargestellt:</p></li>
-<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Coding in GIS!&quot;</span><span class="p">)</span>
-</pre></div>
+<p>Der gesamte Quellcode um dieses Buch zu erstellen ist in dem folgenden github-repo verfügbar: <a class="reference external" href="https://github.com/Modul-AGI/">github.com/Modul-AGI</a>.</p>
+<div class="toctree-wrapper compound">
 </div>
-</li>
-<li><p>Der gesamte Quellcode um dieses Buch zu erstellen ist in dem folgenden github-repo verfügbar: <a class="reference external" href="https://github.com/Modul-AGI/">github.com/Modul-AGI</a>.</p></li>
-</ul>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -539,12 +538,6 @@
         
           Durch N. Ratnaweera, N. Bakogiannis, P. Laube<br/>
         
-          <div class="extra_footer">
-            <p>
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International Lizenz</a>.
-</p>
-
-          </div>
       </p>
     </div>
   </footer>
