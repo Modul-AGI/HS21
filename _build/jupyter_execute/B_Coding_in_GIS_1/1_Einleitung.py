@@ -15,15 +15,24 @@
 # 
 # * - Datensatz (inkl. Link)
 #   - Beschreibung
-# * - [zeckenstiche.csv](https://raw.githubusercontent.com/modul-agi/hs20/master/02_Coding_in_GIS/data/zeckenstiche.csv)
+# * - [zeckenstiche.csv](https://raw.githubusercontent.com/Modul-AGI/HS21/main/B_Coding_in_GIS_1/data/zeckenstiche.csv)
 #   - Eine CSV mit 10 Zeckenstich-Meldungen im Kanton Zürich
-# * - [zeckenstiche_full.csv](https://raw.githubusercontent.com/modul-agi/hs20/master/02_Coding_in_GIS/data/zeckenstiche_full.csv)
+# * - [zeckenstiche_full.csv](https://raw.githubusercontent.com/Modul-AGI/HS21/main/B_Coding_in_GIS_1/data/zeckenstiche_full.csv)
 #   - Eine CSV mit 1'076 Zeckenstich-Meldungen im Kanton Zürich
-# * - [wald.gpkg](https://raw.githubusercontent.com/modul-agi/hs20/master/02_Coding_in_GIS/data/wald.gpkg)
+# * - [wald.gpkg](https://github.com/Modul-AGI/HS21/raw/main/B_Coding_in_GIS_1/data/wald.gpkg)
 #   - Ein Geodatensatz mit einem flächendeckenden (lückenlosen) Polygon, welche den Kanton Zürich in "Wald" und "nicht Wald" unterscheidet
 # 
 # ```
 # 
+# ```{admonition} Übungsziele
+# :class: attention
+# - JupyterLabs aufstarten, kennenlernen und bei Bedarf personalisieren
+# - Python kennen lernen, erste Interaktionen
+# - Die wichtigsten Datentypen in Python kennen lernen (`bool`, `str`, `int`, `float`, `list`, `dict`)
+# - Pandas DataFrames kennen lernen und einfache Manipulationen durchführen
+# ```
+
+# <!--
 # Noch ein paar Hinweise:
 # 
 # - Die Musterlösungen zu allen Aufgaben stehen bereit. Wir werden diese bald einblenden
@@ -35,14 +44,11 @@
 #   print("Coding in GIS!")
 #   ```
 # 
+# -->
 # 
+
+# Die Slides zur heutigen Vorlesung findet ihr hier: 
 # 
-# ```{admonition} Übungsziele
-# :class: attention
-# - JupyterLabs aufstarten, kennenlernen und bei Bedarf personalisieren
-# - Python kennen lernen, erste Interaktionen
-# - Die wichtigsten Datentypen in Python kennen lernen (`bool`, `str`, `int`, `float`, `list`, `dict`)
-# - Pandas DataFrames kennen lernen und einfache Manipulationen durchführen
-# ```
+# <iframe src="https://modul-agi.github.io/slides/Coding_in_GIS_I" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="100%" allowfullscreen></iframe>
 # 
-# 
+# In einem neuen Fenster öffnen: [modul-agi.github.io/slides](https://modul-agi.github.io/slides)

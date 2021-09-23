@@ -16,3 +16,9 @@
 # - *Functions* kennenlernen und beherrschen
 # - *Function* auf eine ganze Spalte einer DataFrame anwenden können.
 # ```
+
+# Die Slides zur heutigen Vorlesung findet ihr hier: 
+# 
+# <iframe src="https://modul-agi.github.io/slides/Coding_in_GIS_II" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="100%" allowfullscreen></iframe>
+# 
+# In einem neuen Fenster öffnen: [modul-agi.github.io/slides](https://modul-agi.github.io/slides)

@@ -1,8 +1,6 @@
-# Aufgabe
+# Übung
 
-## Ausgangslage
 
-Die Gärten und Grünanlagen prägen das Bild des Campus Grüental. Eine grosse Vielfalt an verschiedenen einheimischen und exotischen Pflanzenarten lädt zum Verweilen ein. Mitarbeiter und Studierende nutzen den grünen Raum zur Erholung, zum Miteinander und zum Lernen. Nicht nur in den Sommermonaten ist das offene Areal des Campus ein Erlebnis für alle. Für die individuelle Pflege und Wartung der Gärten bedarf es sehr guter Planung. Als Datenbank Spezialist werden Sie beauftragt eine Datenbanklösung zur Verwaltung der Campus Pflanzenwelt zu entwickeln.
 
 ## Anforderungen Pflanzendatenbank
 
@@ -11,9 +9,9 @@ Sie sind ein Datenbank-Spezialist und werden vom Garten-Team der ZHAW beauftragt
 Hierbei müssen folgende Anforderungen eingehalten werden:
 
 Die Pflanzen müssen mit Familie, Gattung, Art und Sorte erfasst werden. Zusätzlich braucht es Informationen darüber, ob es sich um eine einheimische Pflanze handelt oder nicht. Als weitere Information muss es die Möglichkeit geben die Wuchsform, wie z.B. Staude, Strauch oder Baum zu erfassen. Zu einigen Pflanzen sollen Hinweise zur Pflege oder sonstige Bemerkungen eingegeben werden können.
-Zu Lernzwecken sollen einzelnen Pflanzen verschiedenen Pflanzen Lernparcours zugeordnet werden können. Hierzu werden einzelne Pflanzen ausgewählt und einem Kurs zugeordnet. Jede Pflanze kann dabei zu verschiedenen Lernparcours gehören und ein Lernparcours kann unterschiedlich viele Pflanzen beinhalten.
+Zu Lernzwecken sollen Pflanzen verschiedenen Pflanzenlernparcours zugeordnet werden können. Hierzu werden einzelne Pflanzen ausgewählt und einem Kurs zugeordnet. Jede Pflanze kann dabei zu verschiedenen Lernparcours gehören und ein Lernparcours kann unterschiedlich viele Pflanzen beinhalten.
 
-Jede Pflanze auf dem Campus muss verortet werden. Dies bedeutet das jeder Pflanze auf dem Campus eine genaue Lage zugewiesen werden kann. Es reicht in dieser ersten Version aus die jeweilige Pflanze als Punkt darzustellen. Flächenartige Gewächse wie Stauden oder Gräser können als Punkt zusammengefasst werden. Linienartige Pflanzen wie Hecken können vernachlässigt werden und brauchen nicht aufgenommen zu werden. Für jede Pflanze ist zusätzlich zur genauen (Punkt-)Lage wichtig zu wissen auf welcher gärtnerischen Fläche (Beet) sich die Pflanze befindet. Zur besseren Planung müssen die Gärtner später abfragen können, welche Pflanzen auf welchem Beet stehen. Für die Flächen ist es ausreichend einen Namen zu erfassen.
+Jede Pflanze auf dem Campus muss verortet werden. Dies bedeutet, dass jeder Pflanze auf dem Campus eine genaue Lage zugewiesen werden kann. Es reicht in dieser ersten Version aus die jeweilige Pflanze als Punkt darzustellen. Flächenartige Gewächse wie Stauden oder Gräser können als Punkt zusammengefasst werden. Linienartige Pflanzen wie Hecken können vernachlässigt werden und brauchen nicht aufgenommen zu werden. Für jede Pflanze ist zusätzlich zur genauen (Punkt-)Lage wichtig zu wissen auf welcher gärtnerischen Fläche (Beet) sich die Pflanze befindet. Zur besseren Planung müssen die Gärtner später abfragen können, welche Pflanzen auf welchem Beet stehen. Für die Flächen ist es ausreichend einen Namen und eine ID zu erfassen.
 
 ## Aufgabenstellung
 
@@ -21,7 +19,7 @@ Jede Pflanze auf dem Campus muss verortet werden. Dies bedeutet das jeder Pflanz
 
 Lesen Sie die Aufgabenstellung gewissenhaft. Skizzieren Sie ein erstes Textmodell (stichwortartig) bei welchem Sie bereits erste Objekte identifizieren und Attribute und Beziehungen ableiten. Überlegen Sie sich, ob es offene Fragen oder Unklarheiten gibt. Sie haben anschliessend die Gelegenheit den Auftraggeber über eventuell ungeklärte Anforderungen zu befragen, um ihr Textmodell zu vervollständigen.
 
-### Schritt 2
+### Schritt 2 (optional)
 
 Sind alle offenen Fragen geklärt und das Textmodell fertig, entwickeln Sie aus ihrem Textmodell ein konzeptuelles Modell. Identifizieren Sie alle notwendigen Objekte mit den zugehörigen Attributen und zeigen Sie die Kardinalitäten der Objekte untereinander auf. Nutzen Sie hierbei die ER-Modellierung, wie in den Vorlesungsfolien aufgezeigt.
 

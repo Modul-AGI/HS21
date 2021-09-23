@@ -35,7 +35,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 # % : von einer *Dictionary* zu einer *DataFrame*
 # ### Übung 4.1
 # 
-# Importiere `pandas` und nutze die Funktion `DataFrame` um `people` in eine DataFrame umzuwandeln (siehe dazu das beispiel oben). Weise den Output der Variable `people_df` zu und schaue es dir im *Variable Explorer* an. 
+# Importiere `pandas` und nutze die Funktion `DataFrame` um `people` in eine DataFrame umzuwandeln (siehe dazu das Beispiel oben). Weise den Output der Variable `people_df` zu und schaue es dir im *Variable Explorer* an. 
 # 
 
 # In[4]:
@@ -48,11 +48,21 @@ import pandas as pd
 people_df = pd.DataFrame(people)
 
 
-# % : *DataFrame* in csv umwandeln
 # (ex-to-csv)=
 # ### Übung 4.2
 
 # In der Praxis kommen Tabellarische Daten meist als "csv" Dateien daher. Wir können aus unserer eben erstellten DataFrame sehr einfach eine csv Datei erstellen. Führe das mit folgendem Code aus und suche anschliessend die erstellte csv-Datei.
+# 
+# ````{admonition} Achtung!
+# :class: tip
+# 
+# Wo wird die csv abgespeichert? Findest du sie im File Explorer? Um diese Frage zu beantworten musst du wissen, was deine sogenannte "Working Directory" ist. Dies kannst du mit folgendem Befehl klären (dies ist gerade auch für die Übung {ref}`ex-import-zeckenstiche` wichtig.)
+# 
+# ``` python
+# import os
+# os.getcwd()
+# ```
+# ````
 
 # In[5]:
 
@@ -72,23 +82,6 @@ people_df.to_csv("people.csv")
 # ich habe die Daten in einem Unterordner "data" abgespeichert
 zeckenstiche = pd.read_csv("data/zeckenstiche.csv")
 
-
-# ````{admonition} Achtung!
-# :class: tip
-# - Wenn du auf dem JupyterHub Server arbeitest dann ist dein Arbeitsverzeichnis ebenfalls *auf dem Server*. Das heisst, du musst "zeckenstiche.csv" auf den Server hochladen. Dies kannst du mit dem Button "Upload Files" im Tab "File Browser" bewerkstelligen (s.u.).
-# 
-# ```{image} figures/upload.jpg
-# :name: label
-# ```
-# 
-# - Der Code (`pd.read_csv("data/zeckenstiche.csv")`) funktioniert nur, wenn "zeckenstiche.csv" in einem Ordner "data" im aktuellen Arbeitsverzeichnis (*Current Working Directory*) abgespeichert ist. Wenn du nicht sicher bist, wo dein aktuelles Arbeitsverzeichnis liegt, kannst du dies mit der Funktion `os.getcwd()` (**get** **c**urrent **w**orking **d**irectory) herausfinden (s.u.).
-# ``` python
-# import os
-# os.getcwd()
-# ```
-# ````
-# 
-# 
 
 # % : Koordinaten räumlich darstellen
 # (ex-scatterplot)=

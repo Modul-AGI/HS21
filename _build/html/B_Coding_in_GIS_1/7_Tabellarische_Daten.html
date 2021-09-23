@@ -102,12 +102,17 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="2_Primitive_Datentypen.html">
+  <a class="reference internal" href="2_Enwicklungsumgebung.html">
+   Entwicklungsumgebung (IDE)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_Primitive_Datentypen.html">
    Aufgabe 1: Primitive Datentypen
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="4_Zusammengesetzte_Datentypen.html">
+  <a class="reference internal" href="4_Komplexe_Datentypen.html">
    Input: Komplexe Datentypen
   </a>
  </li>
@@ -177,6 +182,11 @@
    <em>
     DataFrames
    </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/Readme.html">
+   Some notes
   </a>
  </li>
 </ul>
@@ -252,7 +262,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../C_Datenbanken_1/2_Uebung.html">
-   Aufgabe
+   Übung
   </a>
  </li>
 </ul>
@@ -270,6 +280,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../C_Datenbanken_2/2_Uebung.html">
    Übungen
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Datenbanken III
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_Datenbanken_3/1_Einleitung.html">
+   Einleitung
   </a>
  </li>
 </ul>
@@ -588,11 +610,19 @@
 <h2>Übungen<a class="headerlink" href="#ubungen" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="ubung-4-1">
 <h3>Übung 4.1<a class="headerlink" href="#ubung-4-1" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Importiere <code class="docutils literal notranslate"><span class="pre">pandas</span></code> und nutze die Funktion <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> um <code class="docutils literal notranslate"><span class="pre">people</span></code> in eine DataFrame umzuwandeln (siehe dazu das beispiel oben). Weise den Output der Variable <code class="docutils literal notranslate"><span class="pre">people_df</span></code> zu und schaue es dir im <em>Variable Explorer</em> an.</p>
+<p>Importiere <code class="docutils literal notranslate"><span class="pre">pandas</span></code> und nutze die Funktion <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> um <code class="docutils literal notranslate"><span class="pre">people</span></code> in eine DataFrame umzuwandeln (siehe dazu das Beispiel oben). Weise den Output der Variable <code class="docutils literal notranslate"><span class="pre">people_df</span></code> zu und schaue es dir im <em>Variable Explorer</em> an.</p>
 </div>
 <div class="section" id="ubung-4-2">
 <span id="ex-to-csv"></span><h3>Übung 4.2<a class="headerlink" href="#ubung-4-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>In der Praxis kommen Tabellarische Daten meist als „csv“ Dateien daher. Wir können aus unserer eben erstellten DataFrame sehr einfach eine csv Datei erstellen. Führe das mit folgendem Code aus und suche anschliessend die erstellte csv-Datei.</p>
+<div class="tip admonition">
+<p class="admonition-title">Achtung!</p>
+<p>Wo wird die csv abgespeichert? Findest du sie im File Explorer? Um diese Frage zu beantworten musst du wissen, was deine sogenannte „Working Directory“ ist. Dies kannst du mit folgendem Befehl klären (dies ist gerade auch für die Übung <a class="reference internal" href="#ex-import-zeckenstiche"><span class="std std-ref">Übung 4.3</span></a> wichtig.)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">people_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;people.csv&quot;</span><span class="p">)</span>
@@ -612,20 +642,6 @@
 </div>
 </div>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Achtung!</p>
-<ul class="simple">
-<li><p>Wenn du auf dem JupyterHub Server arbeitest dann ist dein Arbeitsverzeichnis ebenfalls <em>auf dem Server</em>. Das heisst, du musst „zeckenstiche.csv“ auf den Server hochladen. Dies kannst du mit dem Button „Upload Files“ im Tab „File Browser“ bewerkstelligen (s.u.).</p></li>
-</ul>
-<img alt="../_images/upload.jpg" id="label" src="../_images/upload.jpg" />
-<ul class="simple">
-<li><p>Der Code (<code class="docutils literal notranslate"><span class="pre">pd.read_csv(&quot;data/zeckenstiche.csv&quot;)</span></code>) funktioniert nur, wenn „zeckenstiche.csv“ in einem Ordner „data“ im aktuellen Arbeitsverzeichnis (<em>Current Working Directory</em>) abgespeichert ist. Wenn du nicht sicher bist, wo dein aktuelles Arbeitsverzeichnis liegt, kannst du dies mit der Funktion <code class="docutils literal notranslate"><span class="pre">os.getcwd()</span></code> (<strong>get</strong> <strong>c</strong>urrent <strong>w</strong>orking <strong>d</strong>irectory) herausfinden (s.u.).</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="ubung-4-4">
 <span id="ex-scatterplot"></span><h3>Übung 4.4<a class="headerlink" href="#ubung-4-4" title="Link zu dieser Überschrift">¶</a></h3>
@@ -642,7 +658,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2681088.05, 2681174.95, 1250644.15, 1250728.85)
 </pre></div>
 </div>
-<img alt="../_images/7_Tabellarische_Daten_13_1.png" src="../_images/7_Tabellarische_Daten_13_1.png" />
+<img alt="../_images/7_Tabellarische_Daten_12_1.png" src="../_images/7_Tabellarische_Daten_12_1.png" />
 </div>
 </div>
 </div>

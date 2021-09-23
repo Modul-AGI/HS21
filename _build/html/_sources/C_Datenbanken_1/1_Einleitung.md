@@ -1,6 +1,11 @@
 # Einleitung
 
 
+## Ausgangslage
+
+Die Gärten und Grünanlagen prägen das Bild des Campus Grüental. Eine grosse Vielfalt an verschiedenen einheimischen und exotischen Pflanzenarten lädt zum Verweilen ein. Mitarbeiter und Studierende nutzen den grünen Raum zur Erholung, zum Miteinander und zum Lernen. Nicht nur in den Sommermonaten ist das offene Areal des Campus ein Erlebnis für alle. Für die individuelle Pflege und Wartung der Gärten bedarf es sehr guter Planung. Als Datenbank Spezialist werden Sie beauftragt eine Datenbanklösung zur Verwaltung der Campus Pflanzenwelt zu entwickeln.
+
+
 ```{admonition} Übungsziele
 :class: attention
 - Sie lernen ein vorgegebenes Textmodell zu lesen, zu interpretieren und dazu die richtigen Fragen zu stellen, um fehlende Antworten zu bekommen.

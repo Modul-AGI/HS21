@@ -102,7 +102,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_1/2_Primitive_Datentypen.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/2_Enwicklungsumgebung.html">
+   Entwicklungsumgebung (IDE)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/3_Primitive_Datentypen.html">
    Aufgabe 1: Primitive Datentypen
   </a>
  </li>
@@ -179,6 +184,11 @@
    </em>
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/Readme.html">
+   Some notes
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -252,7 +262,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../C_Datenbanken_1/2_Uebung.html">
-   Aufgabe
+   Übung
   </a>
  </li>
 </ul>
@@ -270,6 +280,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../C_Datenbanken_2/2_Uebung.html">
    Übungen
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Datenbanken III
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_Datenbanken_3/1_Einleitung.html">
+   Einleitung
   </a>
  </li>
 </ul>
@@ -537,7 +559,7 @@
 <p>In <a class="reference internal" href="6_GIS_in_Python.html#chap-pythongis"><span class="std std-ref">Input: GIS in Python</span></a> habt ihr euch mit den GIS-Funktionalitäten von <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> vertraut gemacht. Eine ganz zentrale Funktion in GIS sind die sogenannten „Spatial Joins“. Dabei werden Attribute von einem Geodatensatz auf einen anderen Geodatensatz aufgrund einer räumlichen Beziehung der beiden Datensätze übertragen. Konkret auf unsere Zeckenstiche bedeutet dies: Jedem Zeckenstich sollte die Eigenschaft „Wald: ja“ / „Wald: nein“ aus <code class="docutils literal notranslate"><span class="pre">wald</span></code> zugewiesen werden. Am einfachsten lässt sich dies in einer Darstellung erklären:</p>
 <div class="figure align-default" id="spatialjoin">
 <img alt="../_images/spatialjoin.jpg" src="../_images/spatialjoin.jpg" />
-<p class="caption"><span class="caption-number">Abb. 4 </span><span class="caption-text">„Spatial Join“ zwischen <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> und <code class="docutils literal notranslate"><span class="pre">wald</span></code>. In diesem Spatial Join wurde die Geometrie von <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> übernommen, das heisst das Resultat des Joins ist ein Punkt-Layer.</span><a class="headerlink" href="#spatialjoin" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 6 </span><span class="caption-text">„Spatial Join“ zwischen <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> und <code class="docutils literal notranslate"><span class="pre">wald</span></code>. In diesem Spatial Join wurde die Geometrie von <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> übernommen, das heisst das Resultat des Joins ist ein Punkt-Layer.</span><a class="headerlink" href="#spatialjoin" title="Link zu diesem Bild">¶</a></p>
 </div>
 <p>In Python wird ein <em>Spatial Join</em> zwischen <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> und <code class="docutils literal notranslate"><span class="pre">wald</span></code> wie folgt durchgeführt (wichtig ist dabei auch die Reihenfolge der Argumente: <code class="docutils literal notranslate"><span class="pre">left_df</span></code> bestimmt den Geometrietyp des Outputs):</p>
 <div class="cell docutils container">

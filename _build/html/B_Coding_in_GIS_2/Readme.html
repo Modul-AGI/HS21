@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Angewandte Geoinformatik AGI</title>
+    <title>Some notes &#8212; Angewandte Geoinformatik AGI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -102,7 +102,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_1/2_Primitive_Datentypen.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/2_Enwicklungsumgebung.html">
+   Entwicklungsumgebung (IDE)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/3_Primitive_Datentypen.html">
    Aufgabe 1: Primitive Datentypen
   </a>
  </li>
@@ -132,7 +137,7 @@
   Coding in GIS II
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_Einleitung.html">
    Einleitung
@@ -177,6 +182,11 @@
    <em>
     DataFrames
    </em>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Some notes
   </a>
  </li>
 </ul>
@@ -252,7 +262,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../C_Datenbanken_1/2_Uebung.html">
-   Aufgabe
+   Übung
   </a>
  </li>
 </ul>
@@ -270,6 +280,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../C_Datenbanken_2/2_Uebung.html">
    Übungen
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Datenbanken III
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_Datenbanken_3/1_Einleitung.html">
+   Einleitung
   </a>
  </li>
 </ul>
@@ -456,14 +478,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhalt
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -472,7 +486,9 @@
         
               <div>
                 
-  <p>Conda ist mitterweile mit ArcGIS mit installiert und befindet sich hier: <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\ArcGIS\Pro\bin\Python\Scripts\conda.exe</span></code></p>
+  <div class="section" id="some-notes">
+<h1>Some notes<a class="headerlink" href="#some-notes" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Conda ist mitterweile mit ArcGIS mit installiert und befindet sich hier: <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\ArcGIS\Pro\bin\Python\Scripts\conda.exe</span></code></p>
 <p>Dieser Pfad ist aber in den Umgebungsvariabeln nicht gesetzt und deshalb von cmd nicht direkt zugreifbar. Sobald man aber in den besagten ordner wechselt
 (<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">C:\Program</span> <span class="pre">Files\ArcGIS\Pro\bin\Python\Scripts\</span></code>) und dort z.B. <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">--v</span></code> ausführt, klappt es. Nur: wenn man von dort aus jupyter lab / notebook startet ist dort auch das homeverzeichnis, was sehr unpraktisch sein kann (z.B. keine Schreibrechte). Deshalb macht es mehr sinn, den Pfad in die PATH Umgebungsvariablen hinzu zu fügen:</p>
 <p>rechtsklick auf das windows zeichen –&gt; system –&gt; systemumgebungsvariablen bearbeiten –&gt; tab „erweitert“ –&gt;
@@ -486,6 +502,7 @@ root                     C:\Program Files\ArcGIS\Pro\bin\Python
 <p>Dabei handlet es sich einereseits um die python environment, die innerhalb von arcgis verwendet wird und nicht modifiziert werden kann (<code class="docutils literal notranslate"><span class="pre">arcgispro-py3</span></code>). Wenn innerhalb von ArcGIS diese environment geklont wird, befindet sich diese neue environment hier: TBD. Wahrscheinlich kann man nur so sicherstellen, das arcpy installiert wird. Wenn direkt mit Conda eine neue environment erstellt wird, landet diese hier:
 <code class="docutils literal notranslate"><span class="pre">C:\Users\rata\AppData\Local\ESRI\conda\envs\myfirstenv</span></code></p>
 <p>Um den Pfad</p>
+</div>
 
     <script type="text/x-thebe-config">
     {

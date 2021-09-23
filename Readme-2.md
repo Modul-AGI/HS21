@@ -1,5 +1,6 @@
 
 
+# Some notes
 
 Conda ist mitterweile mit ArcGIS mit installiert und befindet sich hier: `C:\Program Files\ArcGIS\Pro\bin\Python\Scripts\conda.exe`
 
