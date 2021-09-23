@@ -1,0 +1,784 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aufgabe 14: Spatial Join &#8212; Angewandte Geoinformatik AGI</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Einleitung" href="../C_Datenbanken_1/1_Einleitung.html" />
+    <link rel="prev" title="Aufgabe 13: Räumliche Operationen" href="7_Raeumliche_Operationen.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/zhaw_lsfm_iunr_blau.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Angewandte Geoinformatik AGI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Einleitung
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS I
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/2_Primitive_Datentypen.html">
+   Aufgabe 1: Primitive Datentypen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/4_Zusammengesetzte_Datentypen.html">
+   Input: Komplexe Datentypen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/5_Listen.html">
+   Aufgabe 2: Listen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/6_Dictionary.html">
+   Aufgabe 3: Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/7_Tabellarische_Daten.html">
+   Aufgabe 4: Tabellarische Daten
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS II
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/2_Conda_Cheatsheet.html">
+   Conda cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/3_Python_Module.html">
+   Python Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/4_Functions_I.html">
+   Aufgabe 5:
+   <em>
+    Function
+   </em>
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/5_Functions_II.html">
+   Aufgabe 6:
+   <em>
+    Function
+   </em>
+   Advanced
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/6_Zufallzahlen.html">
+   Aufgabe 7: Zufallszahlen generieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/7_Funktionen_in_DataFrames.html">
+   Aufgabe 8: Funktionen in
+   <em>
+    DataFrames
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS III
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2_For_Loops.html">
+   Aufgabe 9:
+   <em>
+    for loop
+   </em>
+   Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_For_Loops.html">
+   Aufgabe 10:
+   <em>
+    for loop
+   </em>
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_For_Loops.html">
+   Aufgabe 11:
+   <em>
+    for loops
+   </em>
+   Advanced
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_Zeckenstich_Simulation.html">
+   Aufgabe 12: Zeckenstich Simulation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6_GIS_in_Python.html">
+   Input: GIS in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7_Raeumliche_Operationen.html">
+   Aufgabe 13: Räumliche Operationen
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Aufgabe 14: Spatial Join
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Datenbanken I
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_Datenbanken_1/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_Datenbanken_1/2_Uebung.html">
+   Aufgabe
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Datenbanken II
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_Datenbanken_2/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_Datenbanken_2/2_Uebung.html">
+   Übungen
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Netzwerkanalyse I
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html">
+   Netzwerkanalyse I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_1/2_Vorbereitung.html">
+   Vorbereitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_1/3_QGIS.html">
+   Aufgabe 1: Operationen mit QGIS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_1/4_GRASS_GIS.html">
+   Aufgabe 2: Zentralitätsmasse berechnen
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Netzwerkanalyse II
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_2/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_2/1_Shortest_Path.html">
+   Aufgabe 3: Kürzeste Pfade (shortest path)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_2/2_Travelling_Salesman.html">
+   Aufgabe 4: Traveling Salesman
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Netzwerkanalyse III
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_3/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_3/2_Entsorgungsstelle.html">
+   Aufgabe 5: Entsorgungsstelle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_3/3_OEV-Gueteklassen.html">
+   Aufgabe 6: ÖV-Güteklassen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_3/4_Zentralitaetsmasse.html">
+   Aufgabe 7: Zentralitätsmasse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_3/5_Flaechen_verrechnen.html">
+   Aufgabe 8: Flächen verrechnen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_3/6_Leistungsnachweis.html">
+   Leistungsnachweis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_3/7_Anhang.html">
+   Anhang
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Admin
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Anleitung_fuer_Dozierende.html">
+   Anleitung für Dozierende
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/B_Coding_in_GIS_3/8_Spatial_Joins.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Modul-AGI/HS21/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
+                    class="fab fa-github"></i>Repository</button></a>
+        
+        <a class="edit-button" href="https://github.com/Modul-AGI/HS21/edit/main/B_Coding_in_GIS_3/8_Spatial_Joins.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Bearbeite diese Seite"><i class="fas fa-pencil-alt"></i>vorschlagen zu bearbeiten</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theorie">
+   Theorie
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wie-funktioniert-ein-spatial-join">
+     Wie funktioniert ein
+     <em>
+      Spatial Join
+     </em>
+     ?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ubungen">
+   Übungen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-14-1">
+     Übung 14.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-14-2">
+     Übung 14.2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="aufgabe-14-spatial-join">
+<span id="chap-spatialjoin"></span><h1>Aufgabe 14: Spatial Join<a class="headerlink" href="#aufgabe-14-spatial-join" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="theorie">
+<h2>Theorie<a class="headerlink" href="#theorie" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In dieser Aufgabe wollen wir für jeden Zeckenstich ermitteln, ob er sich im Wald befindet oder nicht. Den Wald Layer kennt ihr bereits aus dem Block „Datenqualität und Unsicherheit“ und wir haben ihn in <a class="reference internal" href="6_GIS_in_Python.html#chap-pythongis-formate"><span class="std std-ref">Geodatenformate</span></a> kurz angeschaut. Nutzen wir hier nochmal die Gelegenheit, um den Wald und die Zeckenstiche (siehe <a class="reference internal" href="../B_Coding_in_GIS_1/1_Einleitung.html#table-datensaetze"><span class="std std-numref">Tab. 1</span></a>) als Geodaten einzulesen und in einer grossem Plot zu visualisieren.</p>
+<p>Wie ihr schon in vorherigen Plots von mir bemerkt hat, nutze ich manchmal <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> aus <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> (importiert mit alias <code class="docutils literal notranslate"><span class="pre">plt</span></code>) wenn ich etwas mehr flexibiltät haben möchte in meinen plots. Wir werden diese Visualisierungtechnik nicht weiter in diesem Kurs, kopiert einfach den entsprechenden Code in euer Notebook.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="n">zeckenstiche_gpd</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;data/zeckenstiche.gpkg&quot;</span><span class="p">)</span>
+<span class="n">wald</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;data/wald.gpkg&quot;</span><span class="p">)</span>
+
+<span class="c1"># Subplots mit 1 Zeile und 1 Spalte</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">wald</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Lightgray&quot;</span><span class="p">,</span><span class="s2">&quot;Green&quot;</span><span class="p">],</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span>
+<span class="n">zeckenstiche_gpd</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/8_Spatial_Joins_1_1.png" src="../_images/8_Spatial_Joins_1_1.png" />
+</div>
+</div>
+<div class="section" id="wie-funktioniert-ein-spatial-join">
+<h3>Wie funktioniert ein <em>Spatial Join</em>?<a class="headerlink" href="#wie-funktioniert-ein-spatial-join" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In <a class="reference internal" href="6_GIS_in_Python.html#chap-pythongis"><span class="std std-ref">Input: GIS in Python</span></a> habt ihr euch mit den GIS-Funktionalitäten von <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> vertraut gemacht. Eine ganz zentrale Funktion in GIS sind die sogenannten „Spatial Joins“. Dabei werden Attribute von einem Geodatensatz auf einen anderen Geodatensatz aufgrund einer räumlichen Beziehung der beiden Datensätze übertragen. Konkret auf unsere Zeckenstiche bedeutet dies: Jedem Zeckenstich sollte die Eigenschaft „Wald: ja“ / „Wald: nein“ aus <code class="docutils literal notranslate"><span class="pre">wald</span></code> zugewiesen werden. Am einfachsten lässt sich dies in einer Darstellung erklären:</p>
+<div class="figure align-default" id="spatialjoin">
+<img alt="../_images/spatialjoin.jpg" src="../_images/spatialjoin.jpg" />
+<p class="caption"><span class="caption-number">Abb. 4 </span><span class="caption-text">„Spatial Join“ zwischen <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> und <code class="docutils literal notranslate"><span class="pre">wald</span></code>. In diesem Spatial Join wurde die Geometrie von <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> übernommen, das heisst das Resultat des Joins ist ein Punkt-Layer.</span><a class="headerlink" href="#spatialjoin" title="Link zu diesem Bild">¶</a></p>
+</div>
+<p>In Python wird ein <em>Spatial Join</em> zwischen <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> und <code class="docutils literal notranslate"><span class="pre">wald</span></code> wie folgt durchgeführt (wichtig ist dabei auch die Reihenfolge der Argumente: <code class="docutils literal notranslate"><span class="pre">left_df</span></code> bestimmt den Geometrietyp des Outputs):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gpd</span><span class="o">.</span><span class="n">sjoin</span><span class="p">(</span><span class="n">left_df</span> <span class="o">=</span> <span class="n">zeckenstiche_gpd</span><span class="p">,</span> <span class="n">right_df</span> <span class="o">=</span> <span class="n">wald</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>accuracy</th>
+      <th>x</th>
+      <th>y</th>
+      <th>geometry</th>
+      <th>index_right</th>
+      <th>Shape_Area</th>
+      <th>Wald_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2550</td>
+      <td>439.128951</td>
+      <td>2681116</td>
+      <td>1250648</td>
+      <td>POINT (2681116.000 1250648.000)</td>
+      <td>0</td>
+      <td>2.380876e+08</td>
+      <td>nein</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10437</td>
+      <td>301.748542</td>
+      <td>2681092</td>
+      <td>1250672</td>
+      <td>POINT (2681092.000 1250672.000)</td>
+      <td>0</td>
+      <td>2.380876e+08</td>
+      <td>nein</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>9174</td>
+      <td>301.748542</td>
+      <td>2681128</td>
+      <td>1250683</td>
+      <td>POINT (2681128.000 1250683.000)</td>
+      <td>0</td>
+      <td>2.380876e+08</td>
+      <td>nein</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>8773</td>
+      <td>301.748542</td>
+      <td>2681111</td>
+      <td>1250683</td>
+      <td>POINT (2681111.000 1250683.000)</td>
+      <td>0</td>
+      <td>2.380876e+08</td>
+      <td>nein</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2764</td>
+      <td>301.748529</td>
+      <td>2681131</td>
+      <td>1250692</td>
+      <td>POINT (2681131.000 1250692.000)</td>
+      <td>0</td>
+      <td>2.380876e+08</td>
+      <td>nein</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2513</td>
+      <td>301.748529</td>
+      <td>2681171</td>
+      <td>1250711</td>
+      <td>POINT (2681171.000 1250711.000)</td>
+      <td>1</td>
+      <td>7.963237e+07</td>
+      <td>ja</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>9185</td>
+      <td>301.748542</td>
+      <td>2681107</td>
+      <td>1250712</td>
+      <td>POINT (2681107.000 1250712.000)</td>
+      <td>1</td>
+      <td>7.963237e+07</td>
+      <td>ja</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>28521</td>
+      <td>301.748542</td>
+      <td>2681124</td>
+      <td>1250720</td>
+      <td>POINT (2681124.000 1250720.000)</td>
+      <td>1</td>
+      <td>7.963237e+07</td>
+      <td>ja</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>26745</td>
+      <td>301.748542</td>
+      <td>2681117</td>
+      <td>1250725</td>
+      <td>POINT (2681117.000 1250725.000)</td>
+      <td>1</td>
+      <td>7.963237e+07</td>
+      <td>ja</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>27391</td>
+      <td>301.748542</td>
+      <td>2681138</td>
+      <td>1250725</td>
+      <td>POINT (2681138.000 1250725.000)</td>
+      <td>1</td>
+      <td>7.963237e+07</td>
+      <td>ja</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="ubungen">
+<h2>Übungen<a class="headerlink" href="#ubungen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="ubung-14-1">
+<span id="ex-import-wald"></span><h3>Übung 14.1<a class="headerlink" href="#ubung-14-1" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Lade das File „wald.gpgk“ (siehe <a class="reference internal" href="../B_Coding_in_GIS_1/1_Einleitung.html#table-datensaetze"><span class="std std-numref">Tab. 1</span></a>) herunter und speichere es in deiner Workings Directory. Importiere den Datensatz und speichere ihn in der Variable <code class="docutils literal notranslate"><span class="pre">wald</span></code>.</p>
+<p>Schau dir <code class="docutils literal notranslate"><span class="pre">wald</span></code> an (mit <code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">.plot()</span></code> etc.)</p>
+</div>
+<div class="section" id="ubung-14-2">
+<span id="ex-spatialjoin"></span><h3>Übung 14.2<a class="headerlink" href="#ubung-14-2" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Führe einen SpatialJoin zwischen <code class="docutils literal notranslate"><span class="pre">wald</span></code> und <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> durch. Vertausche die Reihenfolge (<code class="docutils literal notranslate"><span class="pre">left_df</span></code>, <code class="docutils literal notranslate"><span class="pre">right_df</span></code>) und schaue dir den Output an. Was ist hier passiert?</p>
+<div class="attention admonition">
+<p class="admonition-title">Wichtig!</p>
+<p>Melde dich bei den Betreuern wenn der <em>SpatialJoin</em> bei dir nicht funktioniert und du eine Fehlermeldung bekommst. In diesem Fall kann es sein, dass du auf dem <a class="reference external" href="https://jupyterhub01.zhaw.ch">Server</a> arbeiten musst (siehe {ref}(chap-intro-cig1)).</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./B_Coding_in_GIS_3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="7_Raeumliche_Operationen.html" title="zurück Seite">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">zurück</p>
+                <p class="prevnext-title">Aufgabe 13: Räumliche Operationen</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../C_Datenbanken_1/1_Einleitung.html" title="weiter Seite">
+            <div class="prevnext-info">
+                <p class="prevnext-label">weiter</p>
+                <p class="prevnext-title">Einleitung</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Durch N. Ratnaweera, N. Bakogiannis, P. Laube<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
