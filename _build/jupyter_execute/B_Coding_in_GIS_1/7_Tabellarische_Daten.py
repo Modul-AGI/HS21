@@ -52,23 +52,33 @@ people_df = pd.DataFrame(people)
 # ### Übung 4.2
 
 # In der Praxis kommen Tabellarische Daten meist als "csv" Dateien daher. Wir können aus unserer eben erstellten DataFrame sehr einfach eine csv Datei erstellen. Führe das mit folgendem Code aus und suche anschliessend die erstellte csv-Datei.
-# 
-# ````{admonition} Achtung!
-# :class: tip
-# 
-# Wo wird die csv abgespeichert? Findest du sie im File Explorer? Um diese Frage zu beantworten musst du wissen, was deine sogenannte "Working Directory" ist. Dies kannst du mit folgendem Befehl klären (dies ist gerade auch für die Übung {ref}`ex-import-zeckenstiche` wichtig.)
-# 
-# ``` python
-# import os
-# os.getcwd()
-# ```
-# ````
 
 # In[5]:
 
 
 people_df.to_csv("people.csv")
 
+
+# ````{admonition} Achtung!
+# :class: tip
+# 
+# Wo wird die csv abgespeichert? Um diese Frage zu beantworten musst du wissen, was deine sogenannte "Working Directory" ist. Dies kannst du mit folgendem Befehl klären (dies ist gerade auch für die {ref}`ex-import-zeckenstiche` wichtig).
+# 
+# ``` python
+# import os
+# os.getcwd()
+# ```
+# 
+# Die aktuelle Working Directory habt ihr euch euch nicht selbst ausgesucht. Um diese selbst zu bestimmen gehen wir wie folgt vor: 
+# 
+# 1. Schliesst Jupyter Notebook
+# 2. Beendet auch 
+# 3. Navigiert in den gewünschten folder mit dem Befehl `cd` (z.B. `cd C:\Users\rata\zhaw\AGI\Coding_in_GIS\`)
+# 4. Startet Juypter Notebook mit dem Befehl `jupyter notebook` neu
+# ````
+# 
+# 
+# 
 
 # % : CSV als *DataFrame* importieren
 # (ex-import-zeckenstiche)=

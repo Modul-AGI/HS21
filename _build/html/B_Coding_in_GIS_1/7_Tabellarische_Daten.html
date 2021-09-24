@@ -102,8 +102,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="2_Enwicklungsumgebung.html">
-   Entwicklungsumgebung (IDE)
+  <a class="reference internal" href="2_Python-Command-Prompt.html">
+   Python Command Prompt
   </a>
  </li>
  <li class="toctree-l1">
@@ -113,12 +113,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="4_Komplexe_Datentypen.html">
-   Input: Komplexe Datentypen
+   Einstieg in komplexe Datentypen
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="5_Listen.html">
    Aufgabe 2: Listen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5b_JupyterNotebook.html">
+   Entwicklungsumgebung: Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
@@ -182,11 +187,6 @@
    <em>
     DataFrames
    </em>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/Readme.html">
-   Some notes
   </a>
  </li>
 </ul>
@@ -615,20 +615,27 @@
 <div class="section" id="ubung-4-2">
 <span id="ex-to-csv"></span><h3>Übung 4.2<a class="headerlink" href="#ubung-4-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>In der Praxis kommen Tabellarische Daten meist als „csv“ Dateien daher. Wir können aus unserer eben erstellten DataFrame sehr einfach eine csv Datei erstellen. Führe das mit folgendem Code aus und suche anschliessend die erstellte csv-Datei.</p>
-<div class="tip admonition">
-<p class="admonition-title">Achtung!</p>
-<p>Wo wird die csv abgespeichert? Findest du sie im File Explorer? Um diese Frage zu beantworten musst du wissen, was deine sogenannte „Working Directory“ ist. Dies kannst du mit folgendem Befehl klären (dies ist gerade auch für die Übung <a class="reference internal" href="#ex-import-zeckenstiche"><span class="std std-ref">Übung 4.3</span></a> wichtig.)</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">people_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;people.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Achtung!</p>
+<p>Wo wird die csv abgespeichert? Um diese Frage zu beantworten musst du wissen, was deine sogenannte „Working Directory“ ist. Dies kannst du mit folgendem Befehl klären (dies ist gerade auch für die <a class="reference internal" href="#ex-import-zeckenstiche"><span class="std std-ref">Übung 4.3</span></a> wichtig).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Die aktuelle Working Directory habt ihr euch euch nicht selbst ausgesucht. Um diese selbst zu bestimmen gehen wir wie folgt vor:</p>
+<ol class="simple">
+<li><p>Schliesst Jupyter Notebook</p></li>
+<li><p>Beendet auch</p></li>
+<li><p>Navigiert in den gewünschten folder mit dem Befehl <code class="docutils literal notranslate"><span class="pre">cd</span></code> (z.B. <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">C:\Users\rata\zhaw\AGI\Coding_in_GIS\</span></code>)</p></li>
+<li><p>Startet Juypter Notebook mit dem Befehl <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> neu</p></li>
+</ol>
 </div>
 </div>
 <div class="section" id="ubung-4-3">
@@ -658,7 +665,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2681088.05, 2681174.95, 1250644.15, 1250728.85)
 </pre></div>
 </div>
-<img alt="../_images/7_Tabellarische_Daten_12_1.png" src="../_images/7_Tabellarische_Daten_12_1.png" />
+<img alt="../_images/7_Tabellarische_Daten_13_1.png" src="../_images/7_Tabellarische_Daten_13_1.png" />
 </div>
 </div>
 </div>

@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Input: Komplexe Datentypen
+# # Einstieg in komplexe Datentypen
 # 
+
 # Im letzten Kapitel haben wir primitive Datentypen angeschaut. Diese stellen eine gute Basis dar, in der Praxis haben wir aber meistens nicht *einen* Temperaturwert, sondern eine Liste von Temperaturwerten. Wir haben nicht *einen* Vornamen sondern eine Tabelle mit Vor- und Nachnamen. Dafür gibt es in Python komplexere Datenstrukturen die als Gefässe für primitive Datentypen betrachtet werden können.  Auch hier finden wir viele Ähnlichkeiten mit R:
 # 
 
@@ -42,3 +43,5 @@
 #   - sind ähnlich wie *Dicts*, verfügen aber nicht über `keys` und `values`
 #   - jeder Wert wird nur 1x gespeichert (Duplikate werden automatisch entfernt)
 #   - sie werden mit geschweiften Klammern erstellt: `myset = {3,2,2}`
+
+# 

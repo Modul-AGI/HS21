@@ -14,7 +14,7 @@
 # 
 # ```{tip}
 # :class: dropdown
-# Als Platzhaltervariabel nutze ich wenn immer möglich das Singulär und für den Iterator das Plural von dem Objekt, über das ich iteriere. `for bandmitglied in band`, `for vogel in vögel` usw, dies hilft mir den Überblick im *loop* zu bewahren.
+# Als Platzhaltervariabel nutze ich wenn immer möglich das Singulär und für den Iterator das Plural von dem Objekt, über das ich iteriere. `for bandmitglied in band`, `for vogel in voegel` usw, dies hilft mir den Überblick im *loop* zu bewahren.
 # ```
 
 # In[1]:
@@ -30,8 +30,10 @@ for bandmitglied in band:
         print("---")
 
 
-# DIESER TEIL IST ENTFERNT, TOO MUCH INFORMATION 
 # 
+
+# ````{admonition} Ein weiteres fakultatives Beispiel
+# :class: dropdown
 # Ein anderes Beispiel:  Der Abschluss vom Lied "Bitch" (Meredith Brooks) geht folgendermassen:
 # 
 # ```
@@ -44,14 +46,20 @@ for bandmitglied in band:
 # Das sind also 3 *Uuhh*'s pro Zeile, und dies 4 mal wiederholt. Um dies in einem verschachtelten *for loop* abzubilden müssen wir etwas kreativ sein.
 # 
 # ```python
-# # der äussere Loop ist verantwortlich für die vier Zeilen
-# for i in range(4):
-#     
+# 
+# for i in range(4): # dieser äussere Loop ist verantwortlich für die 4 Zeilen
 #     zeile = []
-#     for j in range(3):
+#     for j in range(3): # dieser innere Loop ist verantwortlich für die 3 Wörter
 #         zeile.append("Uuhh")
 #     print(zeile)
+# 
+# ['Uuhh', 'Uuhh', 'Uuhh']
+# ['Uuhh', 'Uuhh', 'Uuhh']
+# ['Uuhh', 'Uuhh', 'Uuhh']
+# ['Uuhh', 'Uuhh', 'Uuhh']
 # ```
+# 
+# ````
 
 # ### Verkürzte Schreibweise
 # 
@@ -125,3 +133,43 @@ for katze in katzen:
 #         resultat = i+j
 #         addition.append(resultat)
 # ```
+
+# % : Loops mit functions kombinieren
+# ### Übung 11.2 (fakultativ, für Fortgeschrittene!)
+# 
+# Versuche die Monte Carlo Simulation für die Annäherung an Pi (aus der ersten Übung "Datenqualität und Unsicherheit) mit einer Funktion und einem For Loop zu lösen.
+# 
+# Zur Erinnerung, die Vorgehensweise für die Annäherung an Pi geht folgendermassen:
+# 
+# 1. Zufallskoordinaten (`x`, `y`) zwischen 0 und 1 erstellen
+# 2. Distanz zum Ursprung (0) mit der Formel $\sqrt(x^2+y^2)$ berechnen
+# 3. Bestimmen ob sich der Punkt innerhalb des Kreisviertels befindet ($d < 1$)
+# 4. Schritte 1 & 2 mehrfach wiederholen
+# 5. Anteil der Punkte *innerhalb* des Kreisviertels mit 4 Multiplizieren
+# 
+# Tipps:
+# 
+# - Für die Erstellung der Zufallspunkte brauchst du die Funktion `random()` aus dem modul `random`
+# - Schritte 1 - 3 werden am sinnvollsten ein eine Funktion verpakt, welche keine Argumente benötigt
+# - Schritt 4 löst du am besten mit einer `For loop` mit `range(100)` (für 100 Wiederholungen)
+# 
+# 
+
+# In[5]:
+
+
+# Musterlösung
+
+import random
+def get_pi(): 
+    x = random.random()
+    y = random.random()
+    pythagoras = (x**2+y**2)**0.5
+    return(pythagoras>1)
+
+get_pi()
+
+res = [get_pi() for x in range(1000000)]
+
+(len(res)-sum(res))/len(res)*4
+
