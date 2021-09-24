@@ -43,6 +43,8 @@
     <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -102,18 +104,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_1/2_Primitive_Datentypen.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/2_Python-Command-Prompt.html">
+   Python Command Prompt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/3_Primitive_Datentypen.html">
    Aufgabe 1: Primitive Datentypen
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_1/4_Zusammengesetzte_Datentypen.html">
-   Input: Komplexe Datentypen
+  <a class="reference internal" href="../B_Coding_in_GIS_1/4_Komplexe_Datentypen.html">
+   Einstieg in komplexe Datentypen
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../B_Coding_in_GIS_1/5_Listen.html">
    Aufgabe 2: Listen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/5b_JupyterNotebook.html">
+   Entwicklungsumgebung: Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
@@ -503,6 +515,11 @@
      Übung 11.1
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-11-2-fakultativ-fur-fortgeschrittene">
+     Übung 11.2 (fakultativ, für Fortgeschrittene!)
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -526,7 +543,7 @@
 <p>Wir können verschiedene <em>for loops</em> auch ineinander verschachteln (englisch: <em>nested loops</em>). Das ist vor allem dann nützlich, wenn alle Kombinationen aus zwei Datensätzen miteinander verrechnet werden müssen. Angenommen du willst die drei Mitglieder deiner Band (bestehend aus <em>Il Buono</em>, <em>Il Brutto</em>, <em>Il Cattivo</em>) deinen Eltern vorstellen und auch umgekehrt deine Eltern deiner Band vorstellen. Für so was eignen sich zwei verschachtelte <em>for Loops</em> hervorragend:</p>
 <div class="dropdown admonition tip">
 <p class="admonition-title">Tipp</p>
-<p>Als Platzhaltervariabel nutze ich wenn immer möglich das Singulär und für den Iterator das Plural von dem Objekt, über das ich iteriere. <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">bandmitglied</span> <span class="pre">in</span> <span class="pre">band</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">vogel</span> <span class="pre">in</span> <span class="pre">vögel</span></code> usw, dies hilft mir den Überblick im <em>loop</em> zu bewahren.</p>
+<p>Als Platzhaltervariabel nutze ich wenn immer möglich das Singulär und für den Iterator das Plural von dem Objekt, über das ich iteriere. <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">bandmitglied</span> <span class="pre">in</span> <span class="pre">band</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">vogel</span> <span class="pre">in</span> <span class="pre">voegel</span></code> usw, dies hilft mir den Überblick im <em>loop</em> zu bewahren.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -564,6 +581,30 @@ Il Cattivo das ist Mama
 </div>
 </div>
 </div>
+<div class="dropdown admonition">
+<p class="admonition-title">Ein weiteres fakultatives Beispiel</p>
+<p>Ein anderes Beispiel:  Der Abschluss vom Lied „Bitch“ (Meredith Brooks) geht folgendermassen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Uuhh</span><span class="p">,</span> <span class="n">uuhh</span><span class="p">,</span> <span class="n">uuhh</span>
+<span class="n">Uuhh</span><span class="p">,</span> <span class="n">uuhh</span><span class="p">,</span> <span class="n">uuhh</span>
+<span class="n">Uuhh</span><span class="p">,</span> <span class="n">uuhh</span><span class="p">,</span> <span class="n">uuhh</span>
+<span class="n">Uuhh</span><span class="p">,</span> <span class="n">uuhh</span><span class="p">,</span> <span class="n">uuhh</span>
+</pre></div>
+</div>
+<p>Das sind also 3 <em>Uuhh</em>’s pro Zeile, und dies 4 mal wiederholt. Um dies in einem verschachtelten <em>for loop</em> abzubilden müssen wir etwas kreativ sein.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span> <span class="c1"># dieser äussere Loop ist verantwortlich für die 4 Zeilen</span>
+    <span class="n">zeile</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span> <span class="c1"># dieser innere Loop ist verantwortlich für die 3 Wörter</span>
+        <span class="n">zeile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Uuhh&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">zeile</span><span class="p">)</span>
+
+<span class="p">[</span><span class="s1">&#39;Uuhh&#39;</span><span class="p">,</span> <span class="s1">&#39;Uuhh&#39;</span><span class="p">,</span> <span class="s1">&#39;Uuhh&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Uuhh&#39;</span><span class="p">,</span> <span class="s1">&#39;Uuhh&#39;</span><span class="p">,</span> <span class="s1">&#39;Uuhh&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Uuhh&#39;</span><span class="p">,</span> <span class="s1">&#39;Uuhh&#39;</span><span class="p">,</span> <span class="s1">&#39;Uuhh&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Uuhh&#39;</span><span class="p">,</span> <span class="s1">&#39;Uuhh&#39;</span><span class="p">,</span> <span class="s1">&#39;Uuhh&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="verkurzte-schreibweise">
 <h3>Verkürzte Schreibweise<a class="headerlink" href="#verkurzte-schreibweise" title="Link zu dieser Überschrift">¶</a></h3>
@@ -589,7 +630,7 @@ Il Cattivo das ist Mama
 </div>
 </div>
 <p>Diese verkürzte Schreibweise heisst in Python <em>list comprehension</em> und sie ist äusserst praktisch, wenn man sie beherrscht. Das Beherrschen ist aber nicht zentral, es reicht schon wenn ihr eine solche Schreibweise wieder erkennt und richtig interpretieren könnt (im Sinne von „<em>Aha, hier wird also in einem Loop eine Liste erstellt</em>“). In der folgenden Darstellung seht ihr farblich, welche Elemente sich in der verkürzten Schreibweise wo wiederfinden und welche Elemente gar nicht wiederverwendet werden.</p>
-<p><img alt="list" src="B_Coding_in_GIS_3/figures/list_comprehension.jpg" /></p>
+<p><img alt="list" src="../_images/list_comprehension.jpg" /></p>
 </div>
 </div>
 <div class="section" id="ubungen">
@@ -603,6 +644,24 @@ Il Cattivo das ist Mama
 <span class="o">....</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="ubung-11-2-fakultativ-fur-fortgeschrittene">
+<h3>Übung 11.2 (fakultativ, für Fortgeschrittene!)<a class="headerlink" href="#ubung-11-2-fakultativ-fur-fortgeschrittene" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Versuche die Monte Carlo Simulation für die Annäherung an Pi (aus der ersten Übung „Datenqualität und Unsicherheit) mit einer Funktion und einem For Loop zu lösen.</p>
+<p>Zur Erinnerung, die Vorgehensweise für die Annäherung an Pi geht folgendermassen:</p>
+<ol class="simple">
+<li><p>Zufallskoordinaten (<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>) zwischen 0 und 1 erstellen</p></li>
+<li><p>Distanz zum Ursprung (0) mit der Formel <span class="math notranslate nohighlight">\(\sqrt(x^2+y^2)\)</span> berechnen</p></li>
+<li><p>Bestimmen ob sich der Punkt innerhalb des Kreisviertels befindet (<span class="math notranslate nohighlight">\(d &lt; 1\)</span>)</p></li>
+<li><p>Schritte 1 &amp; 2 mehrfach wiederholen</p></li>
+<li><p>Anteil der Punkte <em>innerhalb</em> des Kreisviertels mit 4 Multiplizieren</p></li>
+</ol>
+<p>Tipps:</p>
+<ul class="simple">
+<li><p>Für die Erstellung der Zufallspunkte brauchst du die Funktion <code class="docutils literal notranslate"><span class="pre">random()</span></code> aus dem modul <code class="docutils literal notranslate"><span class="pre">random</span></code></p></li>
+<li><p>Schritte 1 - 3 werden am sinnvollsten ein eine Funktion verpakt, welche keine Argumente benötigt</p></li>
+<li><p>Schritt 4 löst du am besten mit einer <code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">loop</span></code> mit <code class="docutils literal notranslate"><span class="pre">range(100)</span></code> (für 100 Wiederholungen)</p></li>
+</ul>
 </div>
 </div>
 </div>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Input: Komplexe Datentypen &#8212; Angewandte Geoinformatik AGI</title>
+    <title>Automatisierung mit ModelBuilder &#8212; Angewandte Geoinformatik AGI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,8 +52,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="Aufgabe 2: Listen" href="5_Listen.html" />
-    <link rel="prev" title="Aufgabe 1: Primitive Datentypen" href="2_Primitive_Datentypen.html" />
+    <link rel="next" title="Leistungsnachweis" href="7_Leistungsnachweis.html" />
+    <link rel="prev" title="Unschärfe des Waldrandes" href="5_Unschaerfe-des-Waldrandes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -92,37 +92,89 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Coding in GIS I
+  Datenqualität und Unsicherheit
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_Einleitung.html">
-   Einleitung
+   Unsicherheit
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="2_Primitive_Datentypen.html">
-   Aufgabe 1: Primitive Datentypen
+  <a class="reference internal" href="2_Datengrundlage.html">
+   Datengrundlage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_Datenvorverarbeitung.html">
+   Datenvorverarbeitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_Unsicherheit-Zeckenstandorte.html">
+   Unsicherheit der gemeldeten Zeckenstichstandorte
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_Unschaerfe-des-Waldrandes.html">
+   Unschärfe des Waldrandes
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Input: Komplexe Datentypen
+   Automatisierung mit ModelBuilder
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="5_Listen.html">
+  <a class="reference internal" href="7_Leistungsnachweis.html">
+   Leistungsnachweis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS I
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/2_Python-Command-Prompt.html">
+   Python Command Prompt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/3_Primitive_Datentypen.html">
+   Aufgabe 1: Primitive Datentypen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/4_Komplexe_Datentypen.html">
+   Einstieg in komplexe Datentypen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/5_Listen.html">
    Aufgabe 2: Listen
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="6_Dictionary.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/5b_JupyterNotebook.html">
+   Entwicklungsumgebung: Jupyter Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/6_Dictionary.html">
    Aufgabe 3: Dictionaries
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="7_Tabellarische_Daten.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/7_Tabellarische_Daten.html">
    Aufgabe 4: Tabellarische Daten
   </a>
  </li>
@@ -252,7 +304,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../C_Datenbanken_1/2_Uebung.html">
-   Aufgabe
+   Übung
   </a>
  </li>
 </ul>
@@ -270,6 +322,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../C_Datenbanken_2/2_Uebung.html">
    Übungen
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Datenbanken III
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_Datenbanken_3/1_Einleitung.html">
+   Einleitung
   </a>
  </li>
 </ul>
@@ -416,9 +480,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/B_Coding_in_GIS_1/4_Zusammengesetzte_Datentypen.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/A_Unsicherheit/6_Automatisieren-Modelbuilder.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -436,7 +500,7 @@
                 data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
                     class="fab fa-github"></i>Repository</button></a>
         
-        <a class="edit-button" href="https://github.com/Modul-AGI/HS21/edit/main/B_Coding_in_GIS_1/4_Zusammengesetzte_Datentypen.ipynb"><button
+        <a class="edit-button" href="https://github.com/Modul-AGI/HS21/edit/main/A_Unsicherheit/6_Automatisieren-Modelbuilder.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Bearbeite diese Seite"><i class="fas fa-pencil-alt"></i>vorschlagen zu bearbeiten</button></a>
     </div>
@@ -456,6 +520,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ubung-12-waldrand-fuzzy-modell-in-modelbuilder-erstellen">
+   Übung 12: Waldrand-Fuzzy-Modell in ModelBuilder erstellen
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -464,66 +541,30 @@
         
               <div>
                 
-  <div class="section" id="input-komplexe-datentypen">
-<h1>Input: Komplexe Datentypen<a class="headerlink" href="#input-komplexe-datentypen" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Im letzten Kapitel haben wir primitive Datentypen angeschaut. Diese stellen eine gute Basis dar, in der Praxis haben wir aber meistens nicht <em>einen</em> Temperaturwert, sondern eine Liste von Temperaturwerten. Wir haben nicht <em>einen</em> Vornamen sondern eine Tabelle mit Vor- und Nachnamen. Dafür gibt es in Python komplexere Datenstrukturen die als Gefässe für primitive Datentypen betrachtet werden können.  Auch hier finden wir viele Ähnlichkeiten mit R:</p>
-<table class="table">
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Python</p></th>
-<th class="head"><p>R</p></th>
-<th class="head"><p>Beschreibung</p></th>
-<th class="head"><p>Beispiel</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>List</p></td>
-<td><p>(Vector)</p></td>
-<td><p>werden über die Position abgerufen</p></td>
-<td><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hexerei</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
+  <div class="section" id="automatisierung-mit-modelbuilder">
+<h1>Automatisierung mit ModelBuilder<a class="headerlink" href="#automatisierung-mit-modelbuilder" title="Link zu dieser Überschrift">¶</a></h1>
+<p>ModelBuilder ist eine visuelle Programmiersprache für die Erstellung von Geoverarbeitungs-Workflows. ModelBuilder wird zum Modellieren und Automatisieren von räumlichen Analysen und Datenverwaltungs-prozessen verwendet. Du kannst Geoverarbeitungsmodelle in ModelBuilder erstellen und ändern, wo ein Modell als ein Schema dargestellt wird, das Sequenzen von Prozessen und Geoverarbeitungswerkzeugen verkettet, indem die Ausgabe eines Prozesses als die Eingabe eines anderen Prozesses verwendet wird.</p>
+<p>Mache Dich auf der Online Hilfe von ArcGIS Pro mit den Möglichkeiten des ModelBuilders vertraut:</p>
+<p><a class="reference external" href="https://pro.arcgis.com/en/pro-app/help/analysis/geoprocessing/modelbuilder/what-is-modelbuilder-.htm">What is ModelBuilder</a></p>
+<div class="section" id="ubung-12-waldrand-fuzzy-modell-in-modelbuilder-erstellen">
+<h2>Übung 12: Waldrand-Fuzzy-Modell in ModelBuilder erstellen<a class="headerlink" href="#ubung-12-waldrand-fuzzy-modell-in-modelbuilder-erstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Erstelle ein Modell mit ModelBuilder in dem die 5 Prozesse von Übung 9 bis 11 automatisiert ausgeführt werden können. Das Modell kann anschliessend wie ein normales Werkzeug aufgerufen werden. Als Modellparameter müssen die Fuzzy Tallness Distanzen resp. Werte angepasst sowie ein neuer Output Datensatz erstellt werden können.
+Vorgehen</p>
+<ol class="simple">
+<li><p>Gehe in das Menüband Analysis</p></li>
+<li><p>Wähle den Button ModelBuilder. Damit wird ein neues, noch leeres Modell erstellt.</p></li>
+<li><p>Gehe im Catalog Pane &gt; Toolboxes &gt; Unsicherheit.tbx und benenne das Modell sinnvoll (Name und Label). Hinweis: keine Sonderzeichen und Leerschläge erlaubt.</p></li>
+<li><p>Gehe im Catalog Pane in das Register History</p></li>
+<li><p>Füge die letzten 5 Prozesse (Übungen 9 bis 11) nacheinander mittels Drag und Drop dem neuen Modell hinzu.</p></li>
+<li><p>Klicke im Modell mit rechter Maustaste auf das Tool Reclassify und wähle im Kontextmenü Create Variable &gt; From Parameter &gt; Reclassification</p></li>
+<li><p>Klicke mit rechter Maustaste auf die soeben erstellte Modellvariable und wähle im Kontextmenü Parameter. Diese Modellvariable erscheint nun beim Aufrufen des Modells als veränderbarer Parameter, d.h. die Fuzzy Tallness Distanzen und Werte können angepasst werden.</p></li>
+<li><p>Klicke mit rechter Maustaste auf den Final Output und definiere ihn ebenfalls als Modellparameter.</p></li>
+<li><p>Speichere das Modell via Menüband ModelBuilder &gt; Save</p></li>
+<li><p>Gehe im Catalog auf Toolboxes &gt; Unsicherheit.tbx &gt; und öffne Dein Modell mittels Doppelklick.</p></li>
+<li><p>Gebe die Modellparameter ein (Fuzzy Tallness Distanzen &amp; Werte und Output Dataset) und führe das Modell mit Run aus.</p></li>
+</ol>
+<p>Mit Hilfe von solchen Modellen kannst Du deine Geoverarbeitungsketten auf einfache Art und Weise automatisieren ☺.</p>
 </div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>Dict</p></td>
-<td><p>List</p></td>
-<td><p>werden über ein Schlüsselwort abgerufen</p></td>
-<td><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">langenscheidt</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;trump&quot;</span><span class="p">:</span><span class="s2">&quot;erdichten&quot;</span><span class="p">}</span>
-</pre></div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>DataFrame</p></td>
-<td><p>Dataframe</p></td>
-<td><p>Tabellarische Daten</p></td>
-<td><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">langenscheidt</span><span class="p">)</span>
-</pre></div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-<p>In Python gibt es noch weitere komplexe Datentypen wie <em>Tuples</em> und <em>Sets</em>. Diese spielen in unserem Kurs aber eine untergeordnete Rolle. Ich erwähne an dieser Stelle zwei häufig genannte Typen, damit ihr sie schon mal gehört habt:</p>
-<ul class="simple">
-<li><p><em>Tuples</em>:</p>
-<ul>
-<li><p>sind ähnlich wie <em>Lists</em>, nur können sie nachträglich nicht verändert werden. Das heisst, es ist nach der Erstellung keine Ergänzung von neuen Werten oder Löschung von bestehenden Werten möglich.</p></li>
-<li><p>sie werden mit runden Klammern erstellt: <code class="docutils literal notranslate"><span class="pre">mytuple</span> <span class="pre">=</span> <span class="pre">(2,2,1)</span></code></p></li>
-</ul>
-</li>
-<li><p><em>Sets</em></p>
-<ul>
-<li><p>sind ähnlich wie <em>Dicts</em>, verfügen aber nicht über <code class="docutils literal notranslate"><span class="pre">keys</span></code> und <code class="docutils literal notranslate"><span class="pre">values</span></code></p></li>
-<li><p>jeder Wert wird nur 1x gespeichert (Duplikate werden automatisch entfernt)</p></li>
-<li><p>sie werden mit geschweiften Klammern erstellt: <code class="docutils literal notranslate"><span class="pre">myset</span> <span class="pre">=</span> <span class="pre">{3,2,2}</span></code></p></li>
-</ul>
-</li>
-</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -539,7 +580,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./B_Coding_in_GIS_1"
+            path: "./A_Unsicherheit"
         },
         predefinedOutput: true
     }
@@ -556,19 +597,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="2_Primitive_Datentypen.html" title="zurück Seite">
+        <a class="left-prev" href="5_Unschaerfe-des-Waldrandes.html" title="zurück Seite">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">zurück</p>
-                <p class="prevnext-title">Aufgabe 1: Primitive Datentypen</p>
+                <p class="prevnext-title">Unschärfe des Waldrandes</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="5_Listen.html" title="weiter Seite">
+        <a class="right-next" href="7_Leistungsnachweis.html" title="weiter Seite">
             <div class="prevnext-info">
                 <p class="prevnext-label">weiter</p>
-                <p class="prevnext-title">Aufgabe 2: Listen</p>
+                <p class="prevnext-title">Leistungsnachweis</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

@@ -1,7 +1,7 @@
 (chap-netzwerk-multikriterien)=
 # Aufgabe 8: Flächen verrechnen
 
-In dieser Übung verschneiden wir die Informationen aus Entsorgungsstellen (abfall_raster.tif), ÖV-Güteklassen (oev_raster.tif), und Zentralitätsmass (centrality_raster.tif), die wir in den vorherigen Übungen berechnet und in Raster überführt haben. Durch die Verschneidung können wir den Optimalen Wohnort eruieren. Diese Methode ist auch als Multikriterienevaluation bekannt und kennt ihr bereits vom GIS «Basic» Modul.
+In dieser Übung verschneiden wir die Informationen aus Entsorgungsstellen (abfall_raster.tif), ÖV-Güteklassen (oev_raster.tif), und Zentralitätsmass (centrality_raster.tif), die wir in den vorherigen Übungen berechnet und in Raster überführt haben. Durch die Verschneidung können wir den Optimalen Wohnort eruieren. Diese Methode ist auch als Multikriterienevaluation bekannt und kennt ihr bereits vom GIS "Basic" Modul.
 In einem ersten Schritt müssen wir alle drei Rasterdatensätze auf eine einheitliche Skala (z.B. 0 – 100) bringen um sie anschliessend miteinander verrechnen zu können. Dafür brauchen wir die Minimum- und Maximumwerte der drei Raster Datensätzen Güteklassen oev_raster.tif, centrality_raster.tif, abfall_raster.tif. Gehen Sie dafür in die Properties -> Information von jedem Layer und notieren Sie sich die minimalen und maximalen Zellenwerte.
 
 ## Übung 8.1: Rasterdatensätze skalieren
