@@ -98,7 +98,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../A_Unsicherheit/1_Einleitung.html">
-   Unsicherheit
+   Einleitung
   </a>
  </li>
  <li class="toctree-l1">
@@ -718,9 +718,9 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 <h3>Übung 6: Datenimport in die Datenbank über pgAdmin<a class="headerlink" href="#ubung-6-datenimport-in-die-datenbank-uber-pgadmin" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Da jetzt alle Tabellen vorliegen sollen diese noch mit ein paar Beispiel-Daten gefüllt werden. Auch hier bietet es sich an räumliche Objekte (Geometrien) mit Hilfe von ArcGIS Pro zu erfassen. Nicht-räumliche Objekte können meist sogar schneller über SQL importiert werden.</p>
 <ol>
-<li><p>Starten Sie pgAdmin und verbinden mit der Datenbank «waelder» im schema «arcgispro_editor».</p></li>
+<li><p>Starten Sie pgAdmin und verbinden mit der Datenbank „waelder“ im schema „arcgispro_editor“.</p></li>
 <li><p>Öffnen Sie anschliessend den SQL Editor von pgadmin. Sie finden das so genannte Query Tool im Kontextmenü des Schemas oder in der Menüleiste oben unter Tools -&gt; Query Tool</p></li>
-<li><p>Importieren Sie mit Hilfe eines SQL Statements eine Tierart in die Tabelle «tierarten».</p></li>
+<li><p>Importieren Sie mit Hilfe eines SQL Statements eine Tierart in die Tabelle „tierarten“.</p></li>
 <li><p>Da Sie jetzt alle gemeinsam und gleichzeitig Daten in dieselbe Tabelle einfüllen und Sie die Einträge noch unterscheiden wollen, fügen Sie unter id_erfasser jeweils ihre zugewiesene studentNr ein.</p></li>
 <li><p>Benutzen Sie dazu das INSERT Statement und tippen es in das Query Tool (siehe <a class="reference internal" href="#figure-uebung6-1"><span class="std std-numref">Abb. 21</span></a>)</p>
 <ul class="simple">
@@ -729,7 +729,7 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 <li><p>Schliessen Sie die Eingabe mit Klick auf Execute (kleiner Blitz) ab.</p></li>
 </ul>
 </li>
-<li><p>HINWEIS: Achten Sie darauf, dass Text immer in einfache Anführungszeichen (Das Zeichen auf der ?-Taste) gesetzt werden muss. Beachten Sie ausserdem die Punktschreibweise, dabei muss der Name des Schemas «arcgispro_editor» immer mit Punkt verbunden vor dem Namen der Tabelle angegeben werden. Jedes Statement wird mit Semikolon abgeschlossen.</p></li>
+<li><p>HINWEIS: Achten Sie darauf, dass Text immer in einfache Anführungszeichen (Das Zeichen auf der ?-Taste) gesetzt werden muss. Beachten Sie ausserdem die Punktschreibweise, dabei muss der Name des Schemas „arcgispro_editor“ immer mit Punkt verbunden vor dem Namen der Tabelle angegeben werden. Jedes Statement wird mit Semikolon abgeschlossen.</p></li>
 <li><p>Lassen Sie sich den Inhalt der Tabelle ausgeben. Dies können Sie über ein SELECT SQL Statement ausführen (siehe <a class="reference internal" href="#figure-uebung6-2"><span class="std std-numref">Abb. 22</span></a>).</p>
 <ul>
 <li><div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">arcgispro_editor</span><span class="p">.</span><span class="n">tierarten</span><span class="p">;</span>
@@ -739,7 +739,7 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 </ul>
 </li>
 <li><p>Sie können erkennen, dass ihr Tier mit Ihrer studentNr als id_erfasser in die Tabelle eingetragen wurde. Vermutlich sehen Sie auch bereits Einträge Ihrer Mit-Studierenden.</p></li>
-<li><p>Navigieren Sie im Browser von pgAdmin zur Tabelle «tierarten».</p></li>
+<li><p>Navigieren Sie im Browser von pgAdmin zur Tabelle „tierarten“.</p></li>
 <li><p>Über das Kontextmenü können ebenfalls die Inhalte der Tabelle angezeigt werden  (siehe <a class="reference internal" href="#figure-uebung6-3"><span class="std std-numref">Abb. 23</span></a>).</p></li>
 <li><p>Es öffnet sich automatisch das Query Tool und die Inhalte der Tabelle werden angezeigt. HINWEIS: Auf diese Weise kann immer nur die komplette Tabelle angezeigt werden. Filter oder sonstige Einschränkungen müssen als SQL Statement abgesetzt werden.</p></li>
 </ol>
@@ -762,14 +762,14 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 <h3>Übung 7: Datenimport in die Datenbank mit einer SQL-Datei<a class="headerlink" href="#ubung-7-datenimport-in-die-datenbank-mit-einer-sql-datei" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Jedes SQL Statement kann in einer Datei abgespeichert werden. Dadurch lassen sich bequem z.B. gleich mehrere Daten in die Datenbank einlesen.</p>
 <ol class="simple">
-<li><p>Starten Sie pgAdmin und verbinden mit der Datenbank «waelder» im schema «arcgispro_editor».</p></li>
+<li><p>Starten Sie pgAdmin und verbinden mit der Datenbank „waelder“ im schema „arcgispro_editor“.</p></li>
 <li><p>Öffnen Sie das Query Tool.</p></li>
-<li><p>Laden Sie die Datei «tierarten.sql» <a class="reference external" href="https://moodle.zhaw.ch/mod/resource/view.php?id=1273633">aus dem Moodle</a> und speichern Sie in Ihrem Ordner.</p></li>
-<li><p>Öffnen Sie die Datei in einem beliebigen Texteditor und ändern das Wort «studentNr» in Ihre studentNr ab. Denken Sie sich ausserdem ein paar andere Tierarten aus und schreiben diese ebenfalls in die Datei (siehe <a class="reference internal" href="#figure-uebung7-1"><span class="std std-numref">Abb. 24</span></a>).</p></li>
-<li><p>Über das kleine Ordner Symbol (Im Menü des Query Tools links oben) kann eine SQL-Datei geladen werden. Laden Sie die geänderte «tierarten.sql» Datei in pgAdmin  (siehe <a class="reference internal" href="#figure-uebung7-2"><span class="std std-numref">Abb. 25</span></a>).</p></li>
+<li><p>Laden Sie die Datei „tierarten.sql“ <a class="reference external" href="https://moodle.zhaw.ch/mod/resource/view.php?id=1273633">aus dem Moodle</a> und speichern Sie in Ihrem Ordner.</p></li>
+<li><p>Öffnen Sie die Datei in einem beliebigen Texteditor und ändern das Wort „studentNr“ in Ihre studentNr ab. Denken Sie sich ausserdem ein paar andere Tierarten aus und schreiben diese ebenfalls in die Datei (siehe <a class="reference internal" href="#figure-uebung7-1"><span class="std std-numref">Abb. 24</span></a>).</p></li>
+<li><p>Über das kleine Ordner Symbol (Im Menü des Query Tools links oben) kann eine SQL-Datei geladen werden. Laden Sie die geänderte „tierarten.sql“ Datei in pgAdmin  (siehe <a class="reference internal" href="#figure-uebung7-2"><span class="std std-numref">Abb. 25</span></a>).</p></li>
 <li><p>Select lädt den Inhalt der Datei ins Query Tool  (siehe <a class="reference internal" href="#figure-uebung7-3"><span class="std std-numref">Abb. 26</span></a>).</p></li>
 <li><p>Schliessen Sie die Eingabe mit Klick auf Execute (kleiner Blitz) ab.</p></li>
-<li><p>Schauen Sie sich erneut den Inhalt der Tabelle «tierarten» an. Die Tabelle sollte jetzt die eigenen Tierarten plus ein paar Einträge Ihrer Mit-Studierenden enthalten.</p></li>
+<li><p>Schauen Sie sich erneut den Inhalt der Tabelle „tierarten“ an. Die Tabelle sollte jetzt die eigenen Tierarten plus ein paar Einträge Ihrer Mit-Studierenden enthalten.</p></li>
 </ol>
 <div class="figure align-default" id="figure-uebung7-1">
 <img alt="../_images/screenshot_uebung7_1.jpg" src="../_images/screenshot_uebung7_1.jpg" />
@@ -790,22 +790,22 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 <h3>Übung 8: Geometrieimport in die Datenbank<a class="headerlink" href="#ubung-8-geometrieimport-in-die-datenbank" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Herkömmliche GIS Methoden zum Erstellen und Importieren von Geometrien ins GIS sollten Ihnen aus dem GIS Basic Modul bereits bekannt sein. Auch in ArcGIS Pro können natürlich Geometrien z.B. über ein Shapefile in eine Geodatenbank importiert werden. Ausserdem können Geometrien z.B. aus einem Luftbild digitalisiert und direkt in der Geodatenbank gespeichert werden.</p>
 <ol class="simple">
-<li><p>Laden Sie die Datei «waelder.zip» <a class="reference external" href="https://moodle.zhaw.ch/mod/resource/view.php?id=1273635">aus dem Moodle</a> und entpacken Sie die Dateien. Es handelt sich um ein Shapefile mit einigen Wäldern.</p></li>
-<li><p>Starten Sie ArcGIS Pro und laden das Projekt «Datenbankzugriff».</p></li>
+<li><p>Laden Sie die Datei „waelder.zip“ <a class="reference external" href="https://moodle.zhaw.ch/mod/resource/view.php?id=1273635">aus dem Moodle</a> und entpacken Sie die Dateien. Es handelt sich um ein Shapefile mit einigen Wäldern.</p></li>
+<li><p>Starten Sie ArcGIS Pro und laden das Projekt „Datenbankzugriff“.</p></li>
 <li><p>Fügen Sie das Shapefile ein und erfassen Sie mit dem Digitalisierungsmöglichkeiten von ArcGIS Pro zusätzlich ein paar eigene fehlende Wälder.</p></li>
 <li><p>Öffnen Sie die Attributtabelle.</p></li>
-<li><p>Erfassen Sie im Feld «id_erfasser» wiederum Ihre zugewiesene studentNr (Nur die Zahl). Alle weiteren Attribute können Sie beliebig erfassen. Denken Sie sich einfach etwas aus.</p></li>
-<li><p>Importieren Sie die Daten anschliessend folgendermassen in die Feature Class «waelder» in der Datenbank auf dem Server.</p></li>
-<li><p>Kontextmenü der Feature Class «waelder» -&gt; Load Data (siehe <a class="reference internal" href="#figure-uebung8-1"><span class="std std-numref">Abb. 27</span></a>)</p>
+<li><p>Erfassen Sie im Feld „id_erfasser“ wiederum Ihre zugewiesene studentNr (Nur die Zahl). Alle weiteren Attribute können Sie beliebig erfassen. Denken Sie sich einfach etwas aus.</p></li>
+<li><p>Importieren Sie die Daten anschliessend folgendermassen in die Feature Class „waelder“ in der Datenbank auf dem Server.</p></li>
+<li><p>Kontextmenü der Feature Class „waelder“ -&gt; Load Data (siehe <a class="reference internal" href="#figure-uebung8-1"><span class="std std-numref">Abb. 27</span></a>)</p>
 <ul class="simple">
 <li><p>Input Dataset: Shapefile “waelder”</p></li>
 <li><p>Target Dataset: waelder.arcgispro_editor.waelder</p></li>
-<li><p>Schema Type: Use the Field Map to reconcile schema differences (Shapefiles können nur Spaltenbezeichnungen mit 10 Zeichen speichern. Alles andere wird abgeschnitten. Das Attribut «beschreibung» ist deshalb in der Datenbank als «beschreibung» gespeichert, im Shapefile aber nur als «beschreibu». Dies hat zur Folge, dass das Schema beider Feature Classes nicht gleich ist. Aus diesem Grund muss hier explizit die Übereinstimmung der Spalten bestimmt werden. Das gleiche gilt für das Feld «id_erfasser» bzw. «id_erfasse».</p></li>
+<li><p>Schema Type: Use the Field Map to reconcile schema differences (Shapefiles können nur Spaltenbezeichnungen mit 10 Zeichen speichern. Alles andere wird abgeschnitten. Das Attribut „beschreibung“ ist deshalb in der Datenbank als „beschreibung“ gespeichert, im Shapefile aber nur als „beschreibu“. Dies hat zur Folge, dass das Schema beider Feature Classes nicht gleich ist. Aus diesem Grund muss hier explizit die Übereinstimmung der Spalten bestimmt werden. Das gleiche gilt für das Feld „id_erfasser“ bzw. „id_erfasse“.</p></li>
 </ul>
 </li>
-<li><p>Erstellen Sie eine neue Karte in ArcGIS Pro und laden Sie die Feature Class «waelder» aus der Server Datenbank.</p></li>
+<li><p>Erstellen Sie eine neue Karte in ArcGIS Pro und laden Sie die Feature Class „waelder“ aus der Server Datenbank.</p></li>
 <li><p>Sie haben jetzt die Wälder in die Datenbank importiert.</p></li>
-<li><p>Schauen Sie sich die Wälder auch in pgAdmin an. Machen Sie hierzu eine Select Abfrage im Query Tool. In der Ergebnis Tabelle sehen Sie in der Geometry-Spalte ein kleines Augen-Symbol. Dies öffnet den «Geometry Viewer». Sie sollten auch dort die Geometrien der importierten Wälder sehen.</p></li>
+<li><p>Schauen Sie sich die Wälder auch in pgAdmin an. Machen Sie hierzu eine Select Abfrage im Query Tool. In der Ergebnis Tabelle sehen Sie in der Geometry-Spalte ein kleines Augen-Symbol. Dies öffnet den „Geometry Viewer“. Sie sollten auch dort die Geometrien der importierten Wälder sehen.</p></li>
 </ol>
 <div class="figure align-default" id="figure-uebung8-1">
 <img alt="../_images/screenshot_uebung8_1.jpg" src="../_images/screenshot_uebung8_1.jpg" />

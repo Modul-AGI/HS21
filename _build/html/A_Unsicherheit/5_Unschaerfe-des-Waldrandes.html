@@ -98,7 +98,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_Einleitung.html">
-   Unsicherheit
+   Einleitung
   </a>
  </li>
  <li class="toctree-l1">
@@ -565,7 +565,7 @@
 <h1>Unschärfe des Waldrandes<a class="headerlink" href="#unscharfe-des-waldrandes" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Neuere Forschungen haben ergeben, dass sich Zecken vermehrt im Waldrandbereich aufhalten und dadurch insbesondere dort das Risiko von einer Zecke gestochen zu werden besonders hoch ist. Deshalb sind wir interessiert daran, ob Zeckenstiche von App-Nutzern auch vermehrt im Bereich des Waldrandes gemeldet wurden. Im Gegensatz zu den vorherigen Übungen, welche die Erfassungsgenauigkeit von Punktdaten untersuchte, liegt der Fokus nun auf der Unschärfe des Waldrands. Wie wird ein Waldrand überhaupt definiert? Handelt es sich um eine scharf abgegrenzte Linie? Falls ja, wo liegt diese Linie exakt? Sind die Baumkronen, die Krautschicht oder die einzelnen Stämme ausschlaggebend? Oder handelt es sich beim Waldrand um einen Bereich mit einem bestimmten Abstand von einer zu definierenden Waldrandlinie? Wie würdest Du in der untenstehenden Abbildung den Waldrand festlegen und wie würdest Du dies GIS-technisch umsetzen?</p>
 <div class="figure align-default" id="waldrand">
-<img alt="A_Unsicherheit/img/waldrand.png" src="A_Unsicherheit/img/waldrand.png" />
+<img alt="../_images/waldrand.png" src="../_images/waldrand.png" />
 <p class="caption"><span class="caption-number">Abb. 1 </span><span class="caption-text">Bildquelle: K. Spörri (2013) in Waldrandaufwertung im Kt. Aargau (Forschungsgruppe Vegetationsökologie, ZHAW)</span><a class="headerlink" href="#waldrand" title="Link zu diesem Bild">¶</a></p>
 </div>
 <div class="section" id="ubung-7-waldrandlinie-aus-waldpolygon-erstellen">
@@ -574,14 +574,14 @@
 <p><a class="reference external" href="https://pro.arcgis.com/en/pro-app/tool-reference/data-management/polygon-to-line.htm">Polygon To Line</a></p>
 <p>Betrachte das Resultat und überlege Dir wie genau entspricht die digitale Waldrandlinie dem Waldrand in der Realität? Kann das Objekt Waldrand überhaupt grenzscharf abgebildet werden (vgl. rote Linie in Abbildung)?</p>
 <div class="figure align-default" id="zecken-sim3">
-<img alt="A_Unsicherheit/img/zeckenstiche-sim3.png" src="A_Unsicherheit/img/zeckenstiche-sim3.png" />
+<img alt="../_images/zeckenstiche-sim3.png" src="../_images/zeckenstiche-sim3.png" />
 <p class="caption"><span class="caption-number">Abb. 2 </span><span class="caption-text">Rote Linie: abgeleitete Waldrandlinie / orange Punkte: Stichstandorte original / blaue Punkte: Stichstandorte 40 Monte Carlo Runs</span><a class="headerlink" href="#zecken-sim3" title="Link zu diesem Bild">¶</a></p>
 </div>
 </div>
 <div class="section" id="ubung-8-waldrandbereich-festlegen">
 <h2>Übung 8: Waldrandbereich festlegen<a class="headerlink" href="#ubung-8-waldrandbereich-festlegen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wir gehen davon aus, dass ein Waldrand kaum mit einer grenzscharfen Linie repräsentiert werden kann. In der Realität entspricht ein Waldrand wohl eher einem bestimmten Bereich. Der Waldrand an sich hat eine Unschärfe (Vagueness). In der GIS-Welt wird solche Unschärfe oft mit einem Puffer mit einem zu definierenden Abstand zu einer Linie (Waldrandlinie) abgebildet.</p>
-<p>Erstelle basierend auf der in Übung 7 erstellten Waldrandlinie nun den Waldrandbereich mit einem äusseren und inneren Abstand von 25 Metern zu ihr. Benutze hierfür das Dir bereits bekannte Geoverarbeitungs-werkzeug «Buffer». Achte bei der Umsetzung auf die korrekte Festlegung der Werkzeugparameter.</p>
+<p>Erstelle basierend auf der in Übung 7 erstellten Waldrandlinie nun den Waldrandbereich mit einem äusseren und inneren Abstand von 25 Metern zu ihr. Benutze hierfür das Dir bereits bekannte Geoverarbeitungs-werkzeug „Buffer“. Achte bei der Umsetzung auf die korrekte Festlegung der Werkzeugparameter.</p>
 <p><a class="reference external" href="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/buffer.htm">Buffer</a></p>
 <p>Optional
 Analog wie in Übungen 3 bis 5 könntest Du nun untersuchen, welchen Einfluss die Unschärfe des Waldrandes darauf hat, ob Zeckenstichstandorte im Waldrandbereich liegen oder nicht.</p>
@@ -599,11 +599,11 @@ Abstand zu Waldrandlinie:</p>
 </div></blockquote>
 </li>
 </ul>
-<p><img alt="" src="A_Unsicherheit/img/unsicherheit.png" /></p>
+<p><img alt="" src="../_images/unsicherheit.png" /></p>
 <p>Berechne nun als ersten Schritt für den gesamten Untersuchungsraum den Abstand zur nächstgelegenen Waldrandlinie. Nutze hierfür das Geoverarbeitungswerkzeug Euclidean Distance. Lege die Output Cell Size auf 1 Meter fest und definiere in den Environments das Output Coordinate System und den Raum in dem diese globale Rasterfunktion ausgeführt wird (Extent = Untersuchungsgebiet).</p>
 <p><a class="reference external" href="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/euclidean-distance.htm">Euclidean Distance</a></p>
 <p>Die Ausführung dieser Rasterfunktion kann einige Minuten dauern.</p>
-<p><img alt="" src="A_Unsicherheit/img/euclidean-distance.png" /></p>
+<p><img alt="" src="../_images/euclidean-distance.png" /></p>
 </div>
 <div class="section" id="ubung-10-zuweisung-der-fuzzy-tallness-werte">
 <h2>Übung 10: Zuweisung der Fuzzy Tallness Werte<a class="headerlink" href="#ubung-10-zuweisung-der-fuzzy-tallness-werte" title="Link zu dieser Überschrift">¶</a></h2>

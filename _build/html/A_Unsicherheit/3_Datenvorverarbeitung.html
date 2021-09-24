@@ -98,7 +98,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_Einleitung.html">
-   Unsicherheit
+   Einleitung
   </a>
  </li>
  <li class="toctree-l1">
@@ -532,7 +532,7 @@
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ubung-1-daten-erkunden-und-neues-resultate-feature-dataset-erstellen">
-   Übung 1: Daten erkunden und neues «Resultate» Feature Dataset erstellen
+   Übung 1: Daten erkunden und neues „Resultate“ Feature Dataset erstellen
   </a>
  </li>
 </ul>
@@ -548,14 +548,14 @@
                 
   <div class="section" id="datenvorverarbeitung">
 <h1>Datenvorverarbeitung<a class="headerlink" href="#datenvorverarbeitung" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Da der/die App Nutzer(in) den exakten Standort des Zeckenstichs nur mit eingeschränkter Positions-genauigkeit erfassen kann (abhängig von Zoomstufe in der Karte und individueller räumlicher Orientierungs-kompetenz), wird davon ausgegangen, dass die erfassten Standorte über eine Unsicherheit verfügen. Um die Auswirkung dieser Unsicherheit auf den Anteil im Wald liegender Stiche simulieren zu können, wurden die 1076 Originalkoordinaten in 40 Monte Carlo Durchgängen (Runs) zufälliger in einem Bereich +/-100 Meter versetzt, bildlich gesprochen wurden die Punkte etwas «verschüttelt». Diese Zufallskoordinaten wurden in Excel generiert. Untenstehende Abbildung zeigt beispielhaft für Zeckenstichstandort mit ID 1 (blauer Stern = Originalstandort) die 40 zufälligen Standorte (rote Punkte).</p>
-<p><img alt="" src="A_Unsicherheit/img/zeckenstiche-sim.png" /></p>
+<p>Da der/die App Nutzer(in) den exakten Standort des Zeckenstichs nur mit eingeschränkter Positions-genauigkeit erfassen kann (abhängig von Zoomstufe in der Karte und individueller räumlicher Orientierungs-kompetenz), wird davon ausgegangen, dass die erfassten Standorte über eine Unsicherheit verfügen. Um die Auswirkung dieser Unsicherheit auf den Anteil im Wald liegender Stiche simulieren zu können, wurden die 1076 Originalkoordinaten in 40 Monte Carlo Durchgängen (Runs) zufälliger in einem Bereich +/-100 Meter versetzt, bildlich gesprochen wurden die Punkte etwas „verschüttelt“. Diese Zufallskoordinaten wurden in Excel generiert. Untenstehende Abbildung zeigt beispielhaft für Zeckenstichstandort mit ID 1 (blauer Stern = Originalstandort) die 40 zufälligen Standorte (rote Punkte).</p>
+<p><img alt="" src="../_images/zeckenstiche-sim.png" /></p>
 <p>Folgende Abbildung zeigt exemplarisch wie diese künstliche simulierte Ungenauigkeit eines Punktes Auswirkungen darauf hat, ob ein Punkt sich innerhalb oder ausserhalb des Waldes befindet (orange: Originalstandort). Bei 6 von 40 Durchgängen befindet sich der Standort (ID 15611) innerhalb des Waldes. Die Frage, welche beantwortet werden soll, lautet nun: Wie gross ist die Wahrscheinlichkeit, dass sich der mit einer bekannten Ungenauigkeit erfasste Zeckenstichstandort tatsächlich innerhalb des Waldes befindet? (vgl. Kap. 3 Unsicherheit der gemeldeten Zeckenstiche)</p>
-<p><img alt="" src="A_Unsicherheit/img/zeckenstiche-sim2.png" /></p>
+<p><img alt="" src="../_images/zeckenstiche-sim2.png" /></p>
 <p>Bezüglich Unsicherheit von Geodaten stellt sich auch die Frage, wie genau kann überhaupt die Waldrandgrenze mittels einer Polygongrenze abgebildet werden? Handelt es sich um ein Objekt, welches eineindeutig klar definiert werden kann (grenzscharf) oder verfügt die Waldrandgrenze selber über eine Unschärfe? (vgl. Kap. 4 Unschärfe des Waldrandes)</p>
 </div>
 <div class="section" id="ubung-1-daten-erkunden-und-neues-resultate-feature-dataset-erstellen">
-<h1>Übung 1: Daten erkunden und neues «Resultate» Feature Dataset erstellen<a class="headerlink" href="#ubung-1-daten-erkunden-und-neues-resultate-feature-dataset-erstellen" title="Link zu dieser Überschrift">¶</a></h1>
+<h1>Übung 1: Daten erkunden und neues „Resultate“ Feature Dataset erstellen<a class="headerlink" href="#ubung-1-daten-erkunden-und-neues-resultate-feature-dataset-erstellen" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Downloade das Package, speichere es lokal auf Deinem Computer und entpacke die Datei. Öffne anschliessend das Projekt-File (*.aprx), erkunde die Daten und mache Dich mit ihnen vertraut.</p>
 <p>Erstelle anschliessend in der Projekt-Geodatenbank Unsicherheit.gdb ein neues Feature Dataset mit dem Namen Resultate. Weise dem neuen Feature Dataset das Koordinatensystem CH1903+ LV95 zu.</p>
 <p>In diesem neuen Feature Dataset sollen nachfolgend alle neu erstellten (Zwischen-)Resultate abgelegt werden.</p>
