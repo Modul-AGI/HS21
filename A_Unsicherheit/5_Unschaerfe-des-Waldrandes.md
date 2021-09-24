@@ -32,7 +32,7 @@ Rote Linie: abgeleitete Waldrandlinie / orange Punkte: Stichstandorte original /
 
 Wir gehen davon aus, dass ein Waldrand kaum mit einer grenzscharfen Linie repräsentiert werden kann. In der Realität entspricht ein Waldrand wohl eher einem bestimmten Bereich. Der Waldrand an sich hat eine Unschärfe (Vagueness). In der GIS-Welt wird solche Unschärfe oft mit einem Puffer mit einem zu definierenden Abstand zu einer Linie (Waldrandlinie) abgebildet. 
 
-Erstelle basierend auf der in Übung 7 erstellten Waldrandlinie nun den Waldrandbereich mit einem äusseren und inneren Abstand von 25 Metern zu ihr. Benutze hierfür das Dir bereits bekannte Geoverarbeitungs-werkzeug «Buffer». Achte bei der Umsetzung auf die korrekte Festlegung der Werkzeugparameter.
+Erstelle basierend auf der in Übung 7 erstellten Waldrandlinie nun den Waldrandbereich mit einem äusseren und inneren Abstand von 25 Metern zu ihr. Benutze hierfür das Dir bereits bekannte Geoverarbeitungs-werkzeug "Buffer". Achte bei der Umsetzung auf die korrekte Festlegung der Werkzeugparameter.
 
 [Buffer](https://pro.arcgis.com/en/pro-app/tool-reference/analysis/buffer.htm)
 

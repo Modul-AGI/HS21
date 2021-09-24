@@ -1,6 +1,6 @@
 ## Datenvorverarbeitung
 
-Da der/die App Nutzer(in) den exakten Standort des Zeckenstichs nur mit eingeschränkter Positions-genauigkeit erfassen kann (abhängig von Zoomstufe in der Karte und individueller räumlicher Orientierungs-kompetenz), wird davon ausgegangen, dass die erfassten Standorte über eine Unsicherheit verfügen. Um die Auswirkung dieser Unsicherheit auf den Anteil im Wald liegender Stiche simulieren zu können, wurden die 1076 Originalkoordinaten in 40 Monte Carlo Durchgängen (Runs) zufälliger in einem Bereich +/-100 Meter versetzt, bildlich gesprochen wurden die Punkte etwas «verschüttelt». Diese Zufallskoordinaten wurden in Excel generiert. Untenstehende Abbildung zeigt beispielhaft für Zeckenstichstandort mit ID 1 (blauer Stern = Originalstandort) die 40 zufälligen Standorte (rote Punkte).
+Da der/die App Nutzer(in) den exakten Standort des Zeckenstichs nur mit eingeschränkter Positions-genauigkeit erfassen kann (abhängig von Zoomstufe in der Karte und individueller räumlicher Orientierungs-kompetenz), wird davon ausgegangen, dass die erfassten Standorte über eine Unsicherheit verfügen. Um die Auswirkung dieser Unsicherheit auf den Anteil im Wald liegender Stiche simulieren zu können, wurden die 1076 Originalkoordinaten in 40 Monte Carlo Durchgängen (Runs) zufälliger in einem Bereich +/-100 Meter versetzt, bildlich gesprochen wurden die Punkte etwas "verschüttelt". Diese Zufallskoordinaten wurden in Excel generiert. Untenstehende Abbildung zeigt beispielhaft für Zeckenstichstandort mit ID 1 (blauer Stern = Originalstandort) die 40 zufälligen Standorte (rote Punkte).
 
 ![](img/zeckenstiche-sim.png)
 
@@ -11,7 +11,7 @@ Folgende Abbildung zeigt exemplarisch wie diese künstliche simulierte Ungenauig
 Bezüglich Unsicherheit von Geodaten stellt sich auch die Frage, wie genau kann überhaupt die Waldrandgrenze mittels einer Polygongrenze abgebildet werden? Handelt es sich um ein Objekt, welches eineindeutig klar definiert werden kann (grenzscharf) oder verfügt die Waldrandgrenze selber über eine Unschärfe? (vgl. Kap. 4 Unschärfe des Waldrandes)
 
 
-## Übung 1: Daten erkunden und neues «Resultate» Feature Dataset erstellen
+## Übung 1: Daten erkunden und neues "Resultate" Feature Dataset erstellen
 
 Downloade das Package, speichere es lokal auf Deinem Computer und entpacke die Datei. Öffne anschliessend das Projekt-File (*.aprx), erkunde die Daten und mache Dich mit ihnen vertraut.
 

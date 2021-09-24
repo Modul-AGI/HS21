@@ -7,7 +7,7 @@ Als Packages aufbereitete ArcGIS Pro Projekte können als File anderen Personen 
 
 [Create a project package](https://pro.arcgis.com/en/pro-app/help/sharing/overview/project-package.htm)
 
-Das ArcGIS Pro Projekt «Unsicherheit» beinhaltet eine Geodatenbank mit folgenden Feature Classes:
+Das ArcGIS Pro Projekt "Unsicherheit" beinhaltet eine Geodatenbank mit folgenden Feature Classes:
 
 - Feature Dataset Grundlagendaten
     - Untersuchungsgebiet (Polygon)
