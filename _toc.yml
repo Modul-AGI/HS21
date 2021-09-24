@@ -3,6 +3,9 @@ root: index
 defaults:  
   titlesonly: True
 parts:
+  - caption: Datenqualität und Unsicherheit
+    chapters:
+    - glob: A_Unsicherheit/*
   - caption: Coding in GIS I
     chapters:
     - glob: B_Coding_in_GIS_1/*

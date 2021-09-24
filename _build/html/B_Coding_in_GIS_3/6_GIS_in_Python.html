@@ -92,6 +92,48 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Datenqualität und Unsicherheit
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/1_Einleitung.html">
+   Unsicherheit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/2_Datengrundlage.html">
+   Datengrundlage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/3_Datenvorverarbeitung.html">
+   Datenvorverarbeitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/4_Unsicherheit-Zeckenstandorte.html">
+   Unsicherheit der gemeldeten Zeckenstichstandorte
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/5_Unschaerfe-des-Waldrandes.html">
+   Unschärfe des Waldrandes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/6_Automatisieren-Modelbuilder.html">
+   Automatisierung mit ModelBuilder
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/7_Leistungsnachweis.html">
+   Leistungsnachweis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Coding in GIS I
  </span>
 </p>
@@ -103,7 +145,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../B_Coding_in_GIS_1/2_Python-Command-Prompt.html">
-   Entwicklungsumgebung (IDE)
+   Python Command Prompt
   </a>
  </li>
  <li class="toctree-l1">
@@ -117,13 +159,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_1/4b_JupyterNotebook.html">
-   Entwicklungsumgebung: Jupyter Notebook
+  <a class="reference internal" href="../B_Coding_in_GIS_1/5_Listen.html">
+   Aufgabe 2: Listen
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_1/5_Listen.html">
-   Aufgabe 2: Listen
+  <a class="reference internal" href="../B_Coding_in_GIS_1/5b_JupyterNotebook.html">
+   Entwicklungsumgebung: Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
@@ -650,10 +692,11 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
 
-<span class="n">zeckenstiche_gpd</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">zeckenstiche</span><span class="p">,</span> <span class="c1"># die Basis-DataFrame / die &quot;Attributtabelle&quot;</span>
-                                    <span class="c1"># die Geometrie Spalte:</span>
-                                    <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">zeckenstiche</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">zeckenstiche</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]),</span>
-                                    <span class="n">crs</span> <span class="o">=</span> <span class="mi">2056</span><span class="p">)</span> <span class="c1"># EPSG Code des Koordinatenbezugssystem</span>
+<span class="n">zeckenstiche_gpd</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span>
+    <span class="n">zeckenstiche</span><span class="p">,</span>                                                      <span class="c1"># die DataFrame (&quot;Attributtabelle&quot;)</span>
+    <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">zeckenstiche</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">zeckenstiche</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]),</span> <span class="c1"># die Geometrie Spalte</span>
+    <span class="n">crs</span> <span class="o">=</span> <span class="mi">2056</span>                                                         <span class="c1"># das Koordinatenbezugssystem (EPSG Code)</span>
+    <span class="p">)</span> 
 </pre></div>
 </div>
 </div>
@@ -807,7 +850,7 @@
 </ul>
 <div class="figure align-default" id="geopandas-types">
 <img alt="../_images/Geopandas_types.jpg" src="../_images/Geopandas_types.jpg" />
-<p class="caption"><span class="caption-number">Abb. 5 </span><span class="caption-text">Die drei Hierarchien in Geopandas: Eine <em>GeoDataFrame</em> verfügt immer über eine Geometrie-Spalte, welche sich eine <em>GeoSeries</em> nennt. Diese wiederum besteht aus Einzelgeometrien, sogenannten <em>Geometries</em>.</span><a class="headerlink" href="#geopandas-types" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 7 </span><span class="caption-text">Die drei Hierarchien in Geopandas: Eine <em>GeoDataFrame</em> verfügt immer über eine Geometrie-Spalte, welche sich eine <em>GeoSeries</em> nennt. Diese wiederum besteht aus Einzelgeometrien, sogenannten <em>Geometries</em>.</span><a class="headerlink" href="#geopandas-types" title="Link zu diesem Bild">¶</a></p>
 </div>
 </div>
 <div class="section" id="koordinatenbezugssystem">
@@ -859,7 +902,7 @@
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
 <span class="ne">DriverError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_7069</span><span class="o">/</span><span class="mf">2334884498.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_29134</span><span class="o">/</span><span class="mf">2334884498.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">wald</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;data/wald.gpkg&quot;</span><span class="p">)</span> <span class="c1"># &lt;- importiert das File &quot;wald.gpkg&quot;</span>

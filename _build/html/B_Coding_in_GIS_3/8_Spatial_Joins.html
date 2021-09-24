@@ -92,6 +92,48 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Datenqualität und Unsicherheit
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/1_Einleitung.html">
+   Unsicherheit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/2_Datengrundlage.html">
+   Datengrundlage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/3_Datenvorverarbeitung.html">
+   Datenvorverarbeitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/4_Unsicherheit-Zeckenstandorte.html">
+   Unsicherheit der gemeldeten Zeckenstichstandorte
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/5_Unschaerfe-des-Waldrandes.html">
+   Unschärfe des Waldrandes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/6_Automatisieren-Modelbuilder.html">
+   Automatisierung mit ModelBuilder
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/7_Leistungsnachweis.html">
+   Leistungsnachweis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Coding in GIS I
  </span>
 </p>
@@ -103,7 +145,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../B_Coding_in_GIS_1/2_Python-Command-Prompt.html">
-   Entwicklungsumgebung (IDE)
+   Python Command Prompt
   </a>
  </li>
  <li class="toctree-l1">
@@ -117,13 +159,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_1/4b_JupyterNotebook.html">
-   Entwicklungsumgebung: Jupyter Notebook
+  <a class="reference internal" href="../B_Coding_in_GIS_1/5_Listen.html">
+   Aufgabe 2: Listen
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_1/5_Listen.html">
-   Aufgabe 2: Listen
+  <a class="reference internal" href="../B_Coding_in_GIS_1/5b_JupyterNotebook.html">
+   Entwicklungsumgebung: Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
@@ -559,7 +601,7 @@
 <p>In <a class="reference internal" href="6_GIS_in_Python.html#chap-pythongis"><span class="std std-ref">Input: GIS in Python</span></a> habt ihr euch mit den GIS-Funktionalitäten von <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> vertraut gemacht. Eine ganz zentrale Funktion in GIS sind die sogenannten „Spatial Joins“. Dabei werden Attribute von einem Geodatensatz auf einen anderen Geodatensatz aufgrund einer räumlichen Beziehung der beiden Datensätze übertragen. Konkret auf unsere Zeckenstiche bedeutet dies: Jedem Zeckenstich sollte die Eigenschaft „Wald: ja“ / „Wald: nein“ aus <code class="docutils literal notranslate"><span class="pre">wald</span></code> zugewiesen werden. Am einfachsten lässt sich dies in einer Darstellung erklären:</p>
 <div class="figure align-default" id="spatialjoin">
 <img alt="../_images/spatialjoin.jpg" src="../_images/spatialjoin.jpg" />
-<p class="caption"><span class="caption-number">Abb. 6 </span><span class="caption-text">„Spatial Join“ zwischen <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> und <code class="docutils literal notranslate"><span class="pre">wald</span></code>. In diesem Spatial Join wurde die Geometrie von <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> übernommen, das heisst das Resultat des Joins ist ein Punkt-Layer.</span><a class="headerlink" href="#spatialjoin" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 8 </span><span class="caption-text">„Spatial Join“ zwischen <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> und <code class="docutils literal notranslate"><span class="pre">wald</span></code>. In diesem Spatial Join wurde die Geometrie von <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> übernommen, das heisst das Resultat des Joins ist ein Punkt-Layer.</span><a class="headerlink" href="#spatialjoin" title="Link zu diesem Bild">¶</a></p>
 </div>
 <p>In Python wird ein <em>Spatial Join</em> zwischen <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> und <code class="docutils literal notranslate"><span class="pre">wald</span></code> wie folgt durchgeführt (wichtig ist dabei auch die Reihenfolge der Argumente: <code class="docutils literal notranslate"><span class="pre">left_df</span></code> bestimmt den Geometrietyp des Outputs):</p>
 <div class="cell docutils container">

@@ -92,6 +92,48 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Datenqualität und Unsicherheit
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/1_Einleitung.html">
+   Unsicherheit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/2_Datengrundlage.html">
+   Datengrundlage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/3_Datenvorverarbeitung.html">
+   Datenvorverarbeitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/4_Unsicherheit-Zeckenstandorte.html">
+   Unsicherheit der gemeldeten Zeckenstichstandorte
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/5_Unschaerfe-des-Waldrandes.html">
+   Unschärfe des Waldrandes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/6_Automatisieren-Modelbuilder.html">
+   Automatisierung mit ModelBuilder
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/7_Leistungsnachweis.html">
+   Leistungsnachweis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Coding in GIS I
  </span>
 </p>
@@ -563,7 +605,7 @@
 Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gestellt. Leider gibt es in diesem Modell ein paar Konsistenzfehler.</p>
 <div class="figure align-default" id="figure-datenbankschema">
 <img alt="../_images/Übung_Datenbanken2.jpg" src="../_images/Übung_Datenbanken2.jpg" />
-<p class="caption"><span class="caption-number">Abb. 8 </span><span class="caption-text">Datenbankschema</span><a class="headerlink" href="#figure-datenbankschema" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 10 </span><span class="caption-text">Datenbankschema</span><a class="headerlink" href="#figure-datenbankschema" title="Link zu diesem Bild">¶</a></p>
 </div>
 <p>Untersuchen Sie das Datenmodell auf Konsistenzfehler und Korrigieren Sie diese. Lesen Sie den Aufgabentext aufmerksam und schauen sich die Abbildung an und entwickeln Sie daraus ein passendes logisches Datenmodell, welches alle Regeln der Datenintegrität einhält. Es muss nicht perfekt sein. Es geht in dieser Übung darum etwas Erfahrung im Lesen von gegebenen Modellen zu bekommen.</p>
 </div>
@@ -576,8 +618,8 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 <ol class="simple">
 <li><p>Starten Sie pgAdmin.</p></li>
 <li><p>Im Dashboard klicken Sie auf NEW Server und geben die folgenden Verbindungsparameter ein:</p></li>
-<li><p>Register General: Name: svma-s-01323_waelder_studentNr. Verwenden Sie dabei die Nr. Ihres zugewiesenen Benutzers (siehe <a class="reference internal" href="#figure-pgadmin1"><span class="std std-numref">Abb. 9</span></a>)</p></li>
-<li><p>Register Connection  (siehe <a class="reference internal" href="#figure-pgadmin2"><span class="std std-numref">Abb. 10</span></a>):</p>
+<li><p>Register General: Name: svma-s-01323_waelder_studentNr. Verwenden Sie dabei die Nr. Ihres zugewiesenen Benutzers (siehe <a class="reference internal" href="#figure-pgadmin1"><span class="std std-numref">Abb. 11</span></a>)</p></li>
+<li><p>Register Connection  (siehe <a class="reference internal" href="#figure-pgadmin2"><span class="std std-numref">Abb. 12</span></a>):</p>
 <ul class="simple">
 <li><p>Host name/address: <a class="reference external" href="http://svma-s-01323.zhaw.ch">svma-s-01323.zhaw.ch</a></p></li>
 <li><p>Port: 5432</p></li>
@@ -588,19 +630,19 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 </li>
 <li><p>Alle anderen Einstellungen können belassen werden. Speichern Sie mit Klick auf Save.</p></li>
 <li><p>Lassen Sie sich nicht davon verunsichern, dass es bereits einige Einträge hat. Da auf dem Server bereits andere Datenbanken installiert sind, sehen Sie auch diese. Navigieren Sie zu unserer Datenbank „waelder“ und verschaffen sich einen Überblick über die vorhandenen Tabellen.</p></li>
-<li><p>Verwenden Sie für alle folgenden Übungen diese Datenbankverbindung, wenn nichts anderes angegeben  (siehe <a class="reference internal" href="#figure-pgadmin3"><span class="std std-numref">Abb. 11</span></a>).</p></li>
+<li><p>Verwenden Sie für alle folgenden Übungen diese Datenbankverbindung, wenn nichts anderes angegeben  (siehe <a class="reference internal" href="#figure-pgadmin3"><span class="std std-numref">Abb. 13</span></a>).</p></li>
 </ol>
 <div class="figure align-default" id="figure-pgadmin1">
 <img alt="C_Datenbanken_2/figures/screenshot_pgadmin.jpg" src="C_Datenbanken_2/figures/screenshot_pgadmin.jpg" />
-<p class="caption"><span class="caption-number">Abb. 9 </span><span class="caption-text">Oberfläche von pgadmin</span><a class="headerlink" href="#figure-pgadmin1" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 11 </span><span class="caption-text">Oberfläche von pgadmin</span><a class="headerlink" href="#figure-pgadmin1" title="Link zu diesem Bild">¶</a></p>
 </div>
 <div class="figure align-default" id="figure-pgadmin2">
 <img alt="C_Datenbanken_2/figures/screenshot_pgadmin2.jpg" src="C_Datenbanken_2/figures/screenshot_pgadmin2.jpg" />
-<p class="caption"><span class="caption-number">Abb. 10 </span><span class="caption-text">Verbindungsdetails (pg admin)</span><a class="headerlink" href="#figure-pgadmin2" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 12 </span><span class="caption-text">Verbindungsdetails (pg admin)</span><a class="headerlink" href="#figure-pgadmin2" title="Link zu diesem Bild">¶</a></p>
 </div>
 <div class="figure align-default" id="figure-pgadmin3">
 <img alt="C_Datenbanken_2/figures/screenshot_pgadmin2.jpg" src="C_Datenbanken_2/figures/screenshot_pgadmin2.jpg" />
-<p class="caption"><span class="caption-number">Abb. 11 </span><span class="caption-text">Dashboard (pgadmin)</span><a class="headerlink" href="#figure-pgadmin3" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 13 </span><span class="caption-text">Dashboard (pgadmin)</span><a class="headerlink" href="#figure-pgadmin3" title="Link zu diesem Bild">¶</a></p>
 </div>
 </div>
 <div class="section" id="ubung-3-verbindung-zur-postgresql-postgis-datenbank-mit-arcgis-pro-herstellen">
@@ -608,13 +650,13 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 <p>Nachdem die Datenbank erstellt wurde und eine Verbindung über pgadmin eingerichtet wurde, benötigen wir auch eine Verbindung von ArcGIS Pro zu der Datenbank.</p>
 <ol class="simple">
 <li><p>Starten Sie ArcGIS Pro und erstellen ein neues Projekt mit dem Namen „Datenbankzugriff“</p></li>
-<li><p>Öffnen Sie das Catalog-Fenster oder das Register Catalog und wählen Sie „Databases“ (siehe <a class="reference internal" href="#figure-connect1"><span class="std std-numref">Abb. 12</span></a>)</p></li>
-<li><p>Im Kontextmenü (rechte Maustaste) kann eine neue Datenbankverbindung zur Server Datenbank hergestellt werden  (siehe <a class="reference internal" href="#figure-connect2"><span class="std std-numref">Abb. 13</span></a>).</p>
+<li><p>Öffnen Sie das Catalog-Fenster oder das Register Catalog und wählen Sie „Databases“ (siehe <a class="reference internal" href="#figure-connect1"><span class="std std-numref">Abb. 14</span></a>)</p></li>
+<li><p>Im Kontextmenü (rechte Maustaste) kann eine neue Datenbankverbindung zur Server Datenbank hergestellt werden  (siehe <a class="reference internal" href="#figure-connect2"><span class="std std-numref">Abb. 15</span></a>).</p>
 <ul class="simple">
 <li><p>Databases -&gt; Kontextmenü -&gt; New Database Connection</p></li>
 </ul>
 </li>
-<li><p>Geben Sie im Database Connection Fenster die notwendigen Verbindungsparameter ein  (siehe <a class="reference internal" href="#figure-connect3"><span class="std std-numref">Abb. 14</span></a>).</p>
+<li><p>Geben Sie im Database Connection Fenster die notwendigen Verbindungsparameter ein  (siehe <a class="reference internal" href="#figure-connect3"><span class="std std-numref">Abb. 16</span></a>).</p>
 <ul class="simple">
 <li><p>Database Platform: PostgreSQL</p></li>
 <li><p>Instance: <a class="reference external" href="http://svma-s-01323.zhaw.ch">svma-s-01323.zhaw.ch</a></p></li>
@@ -626,23 +668,23 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 </li>
 <li><p>Ein Klick auf OK stellt die Verbindung zur Datenbank her.</p></li>
 <li><p>Sie können der Datenbankverbindung noch einen sinnvollen Namen geben. Es empfiehlt sich eine Kombination aus dem Servernamen, der verbundenen Datenbank und dem Benutzer. Z.B. „svma-s-01323_waelder_student1“</p></li>
-<li><p>Unter dem Eintrag „Databases“ im Catalog gibt es jetzt eine neue Datenbankverbindung zur Datenbank  (siehe <a class="reference internal" href="#figure-connect4"><span class="std std-numref">Abb. 15</span></a>).</p></li>
+<li><p>Unter dem Eintrag „Databases“ im Catalog gibt es jetzt eine neue Datenbankverbindung zur Datenbank  (siehe <a class="reference internal" href="#figure-connect4"><span class="std std-numref">Abb. 17</span></a>).</p></li>
 </ol>
 <div class="figure align-default" id="figure-connect1">
 <img alt="../_images/screenshot_connect1.jpg" src="../_images/screenshot_connect1.jpg" />
-<p class="caption"><span class="caption-number">Abb. 12 </span><span class="caption-text">In ArcGIS Pro -&gt; Database</span><a class="headerlink" href="#figure-connect1" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 14 </span><span class="caption-text">In ArcGIS Pro -&gt; Database</span><a class="headerlink" href="#figure-connect1" title="Link zu diesem Bild">¶</a></p>
 </div>
 <div class="figure align-default" id="figure-connect2">
 <img alt="../_images/screenshot_connect2.jpg" src="../_images/screenshot_connect2.jpg" />
-<p class="caption"><span class="caption-number">Abb. 13 </span><span class="caption-text">New Database Connection (ArcGIS Pro)</span><a class="headerlink" href="#figure-connect2" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 15 </span><span class="caption-text">New Database Connection (ArcGIS Pro)</span><a class="headerlink" href="#figure-connect2" title="Link zu diesem Bild">¶</a></p>
 </div>
 <div class="figure align-default" id="figure-connect3">
 <img alt="../_images/screenshot_connect3.jpg" src="../_images/screenshot_connect3.jpg" />
-<p class="caption"><span class="caption-number">Abb. 14 </span><span class="caption-text">Database Login</span><a class="headerlink" href="#figure-connect3" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 16 </span><span class="caption-text">Database Login</span><a class="headerlink" href="#figure-connect3" title="Link zu diesem Bild">¶</a></p>
 </div>
 <div class="figure align-default" id="figure-connect4">
 <img alt="../_images/screenshot_connect4.jpg" src="../_images/screenshot_connect4.jpg" />
-<p class="caption"><span class="caption-number">Abb. 15 </span><span class="caption-text">Verbindung hergestellt</span><a class="headerlink" href="#figure-connect4" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 17 </span><span class="caption-text">Verbindung hergestellt</span><a class="headerlink" href="#figure-connect4" title="Link zu diesem Bild">¶</a></p>
 </div>
 </div>
 <div class="section" id="ubung-4-datenbank-schemata-fur-arcgis-pro-benutzer">
@@ -651,17 +693,17 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 <ol class="simple">
 <li><p>Starten Sie pgAdmin</p></li>
 <li><p>Stellen Sie wieder die Verbindung mit der Datenbank „waelder“ her und öffnen Sie die Eigenschaften mit Klick auf das kleine Plus-Zeichen.</p></li>
-<li><p>Navigieren Sie zum Eintrag Schemas. Dort sind 4 Einträge zu sehen. Ein Schema ist eine Art abgeschlossener Namensraum für die Datenhaltung. Es empfiehlt sich thematisch zusammenpassende Tabellen in einem gemeinsamen Schema zu speichern. Für die meisten Datenbank-Anwendungen genügt es aber alle Tabellen im default Schema „public“ zu erstellen. Für den Zugriff über ArcGIS wurde aber durch das Werkzeug „Create Database User“ ein spezielles Schema mit dem Namen des Database Users erstellt. Dies ist notwendig damit auch ArcGIS Pro auf die Daten zugreifen und diese verwalten kann. Das entsprechende Schema bekommt dabei immer den Namen des Admin Datenbankbenutzers. In diesem Fall „arcgispro_editor“. Sie können dort z.B. auch ein Schema mit Namen „sde“ vom Geodatenbank-Administrator sehen (siehe <a class="reference internal" href="#figure-uebung4-1"><span class="std std-numref">Abb. 16</span></a>).</p></li>
-<li><p>Öffnen Sie das public Schema. Hier gibt es bereits Einträge. Hier werden die zugehörigen Informationen der Datenbank, wie Sichten, Funktionen usw. zugänglich gemacht. Interessant ist zunächst aber nur der Eintrag „Tables (3)“. In Klammern ist immer die Anzahl der vorhandenen Datenbanktabellen angegeben. Wie wir sehen gibt es default-Tabellen, welche bereits erstellt wurden. Die Tabelle „spatial_ref_sys“ enthält z.B. alle Koordinatensysteme. Die Tabelle „sde_spatial_references“ ist eine Hilfstabelle für Koordinatensysteme von ArcGIS Pro. Löschen Sie diese beiden Tabellen NIEMALS. Ohne diese Tabellen sind bestimmte Funktionen nicht mehr ausführbar.  (siehe <a class="reference internal" href="#figure-uebung4-2"><span class="std std-numref">Abb. 17</span></a>)</p></li>
+<li><p>Navigieren Sie zum Eintrag Schemas. Dort sind 4 Einträge zu sehen. Ein Schema ist eine Art abgeschlossener Namensraum für die Datenhaltung. Es empfiehlt sich thematisch zusammenpassende Tabellen in einem gemeinsamen Schema zu speichern. Für die meisten Datenbank-Anwendungen genügt es aber alle Tabellen im default Schema „public“ zu erstellen. Für den Zugriff über ArcGIS wurde aber durch das Werkzeug „Create Database User“ ein spezielles Schema mit dem Namen des Database Users erstellt. Dies ist notwendig damit auch ArcGIS Pro auf die Daten zugreifen und diese verwalten kann. Das entsprechende Schema bekommt dabei immer den Namen des Admin Datenbankbenutzers. In diesem Fall „arcgispro_editor“. Sie können dort z.B. auch ein Schema mit Namen „sde“ vom Geodatenbank-Administrator sehen (siehe <a class="reference internal" href="#figure-uebung4-1"><span class="std std-numref">Abb. 18</span></a>).</p></li>
+<li><p>Öffnen Sie das public Schema. Hier gibt es bereits Einträge. Hier werden die zugehörigen Informationen der Datenbank, wie Sichten, Funktionen usw. zugänglich gemacht. Interessant ist zunächst aber nur der Eintrag „Tables (3)“. In Klammern ist immer die Anzahl der vorhandenen Datenbanktabellen angegeben. Wie wir sehen gibt es default-Tabellen, welche bereits erstellt wurden. Die Tabelle „spatial_ref_sys“ enthält z.B. alle Koordinatensysteme. Die Tabelle „sde_spatial_references“ ist eine Hilfstabelle für Koordinatensysteme von ArcGIS Pro. Löschen Sie diese beiden Tabellen NIEMALS. Ohne diese Tabellen sind bestimmte Funktionen nicht mehr ausführbar.  (siehe <a class="reference internal" href="#figure-uebung4-2"><span class="std std-numref">Abb. 19</span></a>)</p></li>
 <li><p>Hinweis, falls Sie einmal selber Tabellen erstellen sollten: Es empfiehlt sich alle räumlichen Tabellen direkt in ArcGIS Pro zu erstellen. Dadurch entscheidet ArcGIS Pro selbstständig über die korrekten Datentypen und Geometrietypen. Alle anderen Tabellen sowie Fremdschlüssel usw. können auch in pgadmin erstellt werden. Alle Tabellen wurden im ArcGIS Pro Schema „arcgispro_editor“ erstellt.</p></li>
 </ol>
 <div class="figure align-default" id="figure-uebung4-1">
 <img alt="../_images/screenshot_uebung4_1.jpg" src="../_images/screenshot_uebung4_1.jpg" />
-<p class="caption"><span class="caption-number">Abb. 16 </span><span class="caption-text">DB Schema</span><a class="headerlink" href="#figure-uebung4-1" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 18 </span><span class="caption-text">DB Schema</span><a class="headerlink" href="#figure-uebung4-1" title="Link zu diesem Bild">¶</a></p>
 </div>
 <div class="figure align-default" id="figure-uebung4-2">
 <img alt="../_images/screenshot_uebung4_2.jpg" src="../_images/screenshot_uebung4_2.jpg" />
-<p class="caption"><span class="caption-number">Abb. 17 </span><span class="caption-text">DB Tables</span><a class="headerlink" href="#figure-uebung4-2" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 19 </span><span class="caption-text">DB Tables</span><a class="headerlink" href="#figure-uebung4-2" title="Link zu diesem Bild">¶</a></p>
 </div>
 </div>
 <div class="section" id="ubung-5-datenbankschema-prufen">
@@ -669,7 +711,7 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 <p>Für die kommenden Übungen nutzen wir die Datenbank „waelder“ auf unserem Server. Den Zugriff haben wir in den vorigen Übungen eingerichtet. Um einen Überblick zu bekommen, lesen Sie das folgende Datenbankschema und machen sich mit den Tabellen, Attributen und Abhängigkeiten vertraut. Da Sie jetzt alle gemeinsam dieselben Tabellen bearbeiten, gibt es in jeder Tabelle jeweils ein Feld „id_erfasser“. Sobald Sie Tabellen mit Daten befüllen, schreiben Sie bitte immer jeweils Ihre studentNr in das Feld „id_erfasser“, damit die Einträge später unterscheidbar sind.</p>
 <div class="figure align-default" id="figure-uebung5">
 <img alt="../_images/screenshot_uebung5.jpg" src="../_images/screenshot_uebung5.jpg" />
-<p class="caption"><span class="caption-number">Abb. 18 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung5" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 20 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung5" title="Link zu diesem Bild">¶</a></p>
 </div>
 </div>
 <div class="section" id="ubung-6-datenimport-in-die-datenbank-uber-pgadmin">
@@ -680,7 +722,7 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 <li><p>Öffnen Sie anschliessend den SQL Editor von pgadmin. Sie finden das so genannte Query Tool im Kontextmenü des Schemas oder in der Menüleiste oben unter Tools -&gt; Query Tool</p></li>
 <li><p>Importieren Sie mit Hilfe eines SQL Statements eine Tierart in die Tabelle «tierarten».</p></li>
 <li><p>Da Sie jetzt alle gemeinsam und gleichzeitig Daten in dieselbe Tabelle einfüllen und Sie die Einträge noch unterscheiden wollen, fügen Sie unter id_erfasser jeweils ihre zugewiesene studentNr ein.</p></li>
-<li><p>Benutzen Sie dazu das INSERT Statement und tippen es in das Query Tool (siehe <a class="reference internal" href="#figure-uebung6-1"><span class="std std-numref">Abb. 19</span></a>)</p>
+<li><p>Benutzen Sie dazu das INSERT Statement und tippen es in das Query Tool (siehe <a class="reference internal" href="#figure-uebung6-1"><span class="std std-numref">Abb. 21</span></a>)</p>
 <ul class="simple">
 <li><p>INSERT INTO arcgispro_editor.tierarten (id_tierart,name_tierart,id_erfasser) Values (DEFAULT,’Bär’, studentNr);</p></li>
 <li><p>Hinweis: DEFAULT ist ein SQL Befehlswort, welches den Zähler für die id_tierart automatisch auf den nächsten freien Wert setzt. So kann die id_tierart automatisch fortlaufend hochnummeriert werden. Sie dürfen natürlich irgendein Tier in die Datenbank einfüllen.</p></li>
@@ -688,7 +730,7 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 </ul>
 </li>
 <li><p>HINWEIS: Achten Sie darauf, dass Text immer in einfache Anführungszeichen (Das Zeichen auf der ?-Taste) gesetzt werden muss. Beachten Sie ausserdem die Punktschreibweise, dabei muss der Name des Schemas «arcgispro_editor» immer mit Punkt verbunden vor dem Namen der Tabelle angegeben werden. Jedes Statement wird mit Semikolon abgeschlossen.</p></li>
-<li><p>Lassen Sie sich den Inhalt der Tabelle ausgeben. Dies können Sie über ein SELECT SQL Statement ausführen (siehe <a class="reference internal" href="#figure-uebung6-2"><span class="std std-numref">Abb. 20</span></a>).</p>
+<li><p>Lassen Sie sich den Inhalt der Tabelle ausgeben. Dies können Sie über ein SELECT SQL Statement ausführen (siehe <a class="reference internal" href="#figure-uebung6-2"><span class="std std-numref">Abb. 22</span></a>).</p>
 <ul>
 <li><div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">arcgispro_editor</span><span class="p">.</span><span class="n">tierarten</span><span class="p">;</span>
 </pre></div>
@@ -698,20 +740,20 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 </li>
 <li><p>Sie können erkennen, dass ihr Tier mit Ihrer studentNr als id_erfasser in die Tabelle eingetragen wurde. Vermutlich sehen Sie auch bereits Einträge Ihrer Mit-Studierenden.</p></li>
 <li><p>Navigieren Sie im Browser von pgAdmin zur Tabelle «tierarten».</p></li>
-<li><p>Über das Kontextmenü können ebenfalls die Inhalte der Tabelle angezeigt werden  (siehe <a class="reference internal" href="#figure-uebung6-3"><span class="std std-numref">Abb. 21</span></a>).</p></li>
+<li><p>Über das Kontextmenü können ebenfalls die Inhalte der Tabelle angezeigt werden  (siehe <a class="reference internal" href="#figure-uebung6-3"><span class="std std-numref">Abb. 23</span></a>).</p></li>
 <li><p>Es öffnet sich automatisch das Query Tool und die Inhalte der Tabelle werden angezeigt. HINWEIS: Auf diese Weise kann immer nur die komplette Tabelle angezeigt werden. Filter oder sonstige Einschränkungen müssen als SQL Statement abgesetzt werden.</p></li>
 </ol>
 <div class="figure align-default" id="figure-uebung6-1">
 <img alt="../_images/screenshot_uebung6_1.jpg" src="../_images/screenshot_uebung6_1.jpg" />
-<p class="caption"><span class="caption-number">Abb. 19 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung6-1" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 21 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung6-1" title="Link zu diesem Bild">¶</a></p>
 </div>
 <div class="figure align-default" id="figure-uebung6-2">
 <img alt="../_images/screenshot_uebung6_2.jpg" src="../_images/screenshot_uebung6_2.jpg" />
-<p class="caption"><span class="caption-number">Abb. 20 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung6-2" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 22 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung6-2" title="Link zu diesem Bild">¶</a></p>
 <div class="legend">
 <div class="figure align-default" id="figure-uebung6-3">
 <img alt="../_images/screenshot_uebung6_3.jpg" src="../_images/screenshot_uebung6_3.jpg" />
-<p class="caption"><span class="caption-number">Abb. 21 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung6-3" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 23 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung6-3" title="Link zu diesem Bild">¶</a></p>
 </div>
 </div>
 </div>
@@ -723,23 +765,23 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 <li><p>Starten Sie pgAdmin und verbinden mit der Datenbank «waelder» im schema «arcgispro_editor».</p></li>
 <li><p>Öffnen Sie das Query Tool.</p></li>
 <li><p>Laden Sie die Datei «tierarten.sql» <a class="reference external" href="https://moodle.zhaw.ch/mod/resource/view.php?id=1273633">aus dem Moodle</a> und speichern Sie in Ihrem Ordner.</p></li>
-<li><p>Öffnen Sie die Datei in einem beliebigen Texteditor und ändern das Wort «studentNr» in Ihre studentNr ab. Denken Sie sich ausserdem ein paar andere Tierarten aus und schreiben diese ebenfalls in die Datei (siehe <a class="reference internal" href="#figure-uebung7-1"><span class="std std-numref">Abb. 22</span></a>).</p></li>
-<li><p>Über das kleine Ordner Symbol (Im Menü des Query Tools links oben) kann eine SQL-Datei geladen werden. Laden Sie die geänderte «tierarten.sql» Datei in pgAdmin  (siehe <a class="reference internal" href="#figure-uebung7-2"><span class="std std-numref">Abb. 23</span></a>).</p></li>
-<li><p>Select lädt den Inhalt der Datei ins Query Tool  (siehe <a class="reference internal" href="#figure-uebung7-3"><span class="std std-numref">Abb. 24</span></a>).</p></li>
+<li><p>Öffnen Sie die Datei in einem beliebigen Texteditor und ändern das Wort «studentNr» in Ihre studentNr ab. Denken Sie sich ausserdem ein paar andere Tierarten aus und schreiben diese ebenfalls in die Datei (siehe <a class="reference internal" href="#figure-uebung7-1"><span class="std std-numref">Abb. 24</span></a>).</p></li>
+<li><p>Über das kleine Ordner Symbol (Im Menü des Query Tools links oben) kann eine SQL-Datei geladen werden. Laden Sie die geänderte «tierarten.sql» Datei in pgAdmin  (siehe <a class="reference internal" href="#figure-uebung7-2"><span class="std std-numref">Abb. 25</span></a>).</p></li>
+<li><p>Select lädt den Inhalt der Datei ins Query Tool  (siehe <a class="reference internal" href="#figure-uebung7-3"><span class="std std-numref">Abb. 26</span></a>).</p></li>
 <li><p>Schliessen Sie die Eingabe mit Klick auf Execute (kleiner Blitz) ab.</p></li>
 <li><p>Schauen Sie sich erneut den Inhalt der Tabelle «tierarten» an. Die Tabelle sollte jetzt die eigenen Tierarten plus ein paar Einträge Ihrer Mit-Studierenden enthalten.</p></li>
 </ol>
 <div class="figure align-default" id="figure-uebung7-1">
 <img alt="../_images/screenshot_uebung7_1.jpg" src="../_images/screenshot_uebung7_1.jpg" />
-<p class="caption"><span class="caption-number">Abb. 22 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung7-1" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 24 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung7-1" title="Link zu diesem Bild">¶</a></p>
 </div>
 <div class="figure align-default" id="figure-uebung7-2">
 <img alt="../_images/screenshot_uebung7_2.jpg" src="../_images/screenshot_uebung7_2.jpg" />
-<p class="caption"><span class="caption-number">Abb. 23 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung7-2" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 25 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung7-2" title="Link zu diesem Bild">¶</a></p>
 <div class="legend">
 <div class="figure align-default" id="figure-uebung7-3">
 <img alt="../_images/screenshot_uebung7_3.jpg" src="../_images/screenshot_uebung7_3.jpg" />
-<p class="caption"><span class="caption-number">Abb. 24 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung7-3" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 26 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung7-3" title="Link zu diesem Bild">¶</a></p>
 </div>
 </div>
 </div>
@@ -754,7 +796,7 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 <li><p>Öffnen Sie die Attributtabelle.</p></li>
 <li><p>Erfassen Sie im Feld «id_erfasser» wiederum Ihre zugewiesene studentNr (Nur die Zahl). Alle weiteren Attribute können Sie beliebig erfassen. Denken Sie sich einfach etwas aus.</p></li>
 <li><p>Importieren Sie die Daten anschliessend folgendermassen in die Feature Class «waelder» in der Datenbank auf dem Server.</p></li>
-<li><p>Kontextmenü der Feature Class «waelder» -&gt; Load Data (siehe <a class="reference internal" href="#figure-uebung8-1"><span class="std std-numref">Abb. 25</span></a>)</p>
+<li><p>Kontextmenü der Feature Class «waelder» -&gt; Load Data (siehe <a class="reference internal" href="#figure-uebung8-1"><span class="std std-numref">Abb. 27</span></a>)</p>
 <ul class="simple">
 <li><p>Input Dataset: Shapefile “waelder”</p></li>
 <li><p>Target Dataset: waelder.arcgispro_editor.waelder</p></li>
@@ -767,15 +809,15 @@ Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gest
 </ol>
 <div class="figure align-default" id="figure-uebung8-1">
 <img alt="../_images/screenshot_uebung8_1.jpg" src="../_images/screenshot_uebung8_1.jpg" />
-<p class="caption"><span class="caption-number">Abb. 25 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung8-1" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 27 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung8-1" title="Link zu diesem Bild">¶</a></p>
 </div>
 <div class="figure align-default" id="figure-uebung8-2">
 <img alt="../_images/screenshot_uebung8_2.jpg" src="../_images/screenshot_uebung8_2.jpg" />
-<p class="caption"><span class="caption-number">Abb. 26 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung8-2" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 28 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung8-2" title="Link zu diesem Bild">¶</a></p>
 <div class="legend">
 <div class="figure align-default" id="figure-uebung8-3">
 <img alt="../_images/screenshot_uebung8_3.jpg" src="../_images/screenshot_uebung8_3.jpg" />
-<p class="caption"><span class="caption-number">Abb. 27 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung8-3" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 29 </span><span class="caption-text">Database Schema</span><a class="headerlink" href="#figure-uebung8-3" title="Link zu diesem Bild">¶</a></p>
 </div>
 </div>
 </div>

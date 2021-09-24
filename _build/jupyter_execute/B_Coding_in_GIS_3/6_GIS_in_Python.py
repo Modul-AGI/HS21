@@ -34,10 +34,11 @@ zeckenstiche
 
 import geopandas as gpd
 
-zeckenstiche_gpd = gpd.GeoDataFrame(zeckenstiche, # die Basis-DataFrame / die "Attributtabelle"
-                                    # die Geometrie Spalte:
-                                    geometry=gpd.points_from_xy(zeckenstiche['x'], zeckenstiche['y']),
-                                    crs = 2056) # EPSG Code des Koordinatenbezugssystem
+zeckenstiche_gpd = gpd.GeoDataFrame(
+    zeckenstiche,                                                      # die DataFrame ("Attributtabelle")
+    geometry=gpd.points_from_xy(zeckenstiche['x'], zeckenstiche['y']), # die Geometrie Spalte
+    crs = 2056                                                         # das Koordinatenbezugssystem (EPSG Code)
+    ) 
 
 
 # Nun sehen wir, dass die neue `geometry` Spalte die Punkt-Geometrie enthält.

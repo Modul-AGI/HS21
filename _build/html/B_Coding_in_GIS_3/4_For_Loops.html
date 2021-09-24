@@ -662,31 +662,6 @@ Il Cattivo das ist Mama
 <li><p>Schritte 1 - 3 werden am sinnvollsten ein eine Funktion verpakt, welche keine Argumente benötigt</p></li>
 <li><p>Schritt 4 löst du am besten mit einer <code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">loop</span></code> mit <code class="docutils literal notranslate"><span class="pre">range(100)</span></code> (für 100 Wiederholungen)</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
-
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="k">def</span> <span class="nf">get_pi</span><span class="p">():</span> 
-    <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
-    <span class="n">pythagoras</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">pythagoras</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">get_pi</span><span class="p">()</span>
-
-<span class="n">res</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_pi</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)]</span>
-
-<span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="o">-</span><span class="nb">sum</span><span class="p">(</span><span class="n">res</span><span class="p">))</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.141216
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
