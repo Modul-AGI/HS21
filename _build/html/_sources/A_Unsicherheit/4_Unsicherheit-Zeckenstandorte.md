@@ -38,7 +38,7 @@ Hinweis: beachte die Werte im Feld *Join_ID*
 
 Erstelle anschliessend ein Balkendiagramm welches die unterschiedlichen prozentualen Anteile der Stiche innerhalb des Waldes pro Run symbolisiert. Gehe hierfür in das Menüband Standalone Table und wähle Create Chart.  
 
-![](img/bar-chart.png)
+![](figures/bar-chart.png)
 
 Beachte die Werte und deren Spannweite. Was bedeuten die Werte? Was für Aussagen bezüglich Unsicherheit (Genauigkeit) können bei den Stichdaten gemacht werden?
 

@@ -5,7 +5,7 @@ Neuere Forschungen haben ergeben, dass sich Zecken vermehrt im Waldrandbereich a
 
 
 
-```{figure} img/waldrand.png
+```{figure} figures/waldrand.png
 :name: waldrand
 
 Bildquelle: K. Spörri (2013) in Waldrandaufwertung im Kt. Aargau (Forschungsgruppe Vegetationsökologie, ZHAW)
@@ -21,7 +21,7 @@ Die Waldrandlinie kann mit Hilfe des Geoverarbeitungswerkzeug Polygon to Line he
 Betrachte das Resultat und überlege Dir wie genau entspricht die digitale Waldrandlinie dem Waldrand in der Realität? Kann das Objekt Waldrand überhaupt grenzscharf abgebildet werden (vgl. rote Linie in Abbildung)?
 
 
-```{figure} img/zeckenstiche-sim3.png
+```{figure} figures/zeckenstiche-sim3.png
 :name: zecken-sim3
 
 Rote Linie: abgeleitete Waldrandlinie / orange Punkte: Stichstandorte original / blaue Punkte: Stichstandorte 40 Monte Carlo Runs
@@ -49,7 +49,7 @@ Abstand zu Waldrandlinie:
 - 20 bis 30 = 0.4
 - > 30 Meter = 0
 
-![](img/unsicherheit.png)
+![](figures/unsicherheit.png)
 
 Berechne nun als ersten Schritt für den gesamten Untersuchungsraum den Abstand zur nächstgelegenen Waldrandlinie. Nutze hierfür das Geoverarbeitungswerkzeug Euclidean Distance. Lege die Output Cell Size auf 1 Meter fest und definiere in den Environments das Output Coordinate System und den Raum in dem diese globale Rasterfunktion ausgeführt wird (Extent = Untersuchungsgebiet).
 
@@ -57,7 +57,7 @@ Berechne nun als ersten Schritt für den gesamten Untersuchungsraum den Abstand 
 
 Die Ausführung dieser Rasterfunktion kann einige Minuten dauern.
 
-![](img/euclidean-distance.png)
+![](figures/euclidean-distance.png)
  
 ## Übung 10: Zuweisung der Fuzzy Tallness Werte
 
