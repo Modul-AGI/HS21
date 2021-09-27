@@ -22,7 +22,7 @@ monte_carlo_join2 = gpd.read_file("data/monte_carlo_join2.gpkg")
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_2002/3648836419.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_2052/3648836419.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mmonte_carlo_join2[0m [0;34m=[0m [0mgpd[0m[0;34m.[0m[0mread_file[0m[0;34m([0m[0;34m"data/monte_carlo_join2.gpkg"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;31mNameError[0m: name 'gpd' is not defined
