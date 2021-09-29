@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -71,10 +71,6 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
-      
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
       
       <img src="../_static/zhaw_lsfm_iunr_blau.jpg" class="logo" alt="logo">
       
@@ -533,29 +529,49 @@
               <div>
                 
   <div class="section" id="entwicklungsumgebung-jupyter-notebook">
-<h1>Entwicklungsumgebung: Jupyter Notebook<a class="headerlink" href="#entwicklungsumgebung-jupyter-notebook" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Bisher haben wir ohne Enwicklungsumgebung (IDE) gearbeitet, was auf die Dauer sehr mühsam sein kann. Erstens wird unser Code nirgens gespeichert und zweitens haben wir auch keine Autovervollständigung.</p>
-<p>Deshalb arbeiten wir von nun an in einer ordentlichen Entwicklungsumgebung, und zwar in Jupyter Notebook. Jupyter Notebook ist eine unter <em>Data Scientists</em> sehr beliebte Entwicklungsumgebung. Sie hat zwei Eigenheiten, die anfänglich zu etwas verwirrung sorgen können. Jupyter Notebook:</p>
+<span id="chap-jupyternotebook"></span><h1>Entwicklungsumgebung: Jupyter Notebook<a class="headerlink" href="#entwicklungsumgebung-jupyter-notebook" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Bisher haben wir ohne Enwicklungsumgebung (IDE) gearbeitet, was auf die Dauer sehr mühsam sein kann. Erstens wird unser Code nirgens gespeichert und zweitens wir bei der Entwicklung des Codes wenig unterstützt (z.B. keine Autovervollständigung).</p>
+<p>Deshalb arbeiten wir von nun an in einer ordentlichen Entwicklungsumgebung, und zwar in Jupyter Notebook. Jupyter Notebook ist eine unter <em>Data Scientists</em> sehr beliebte Entwicklungsumgebung. Sie hat zwei Eigenheiten, die anfänglich zu etwas verwirrung sorgen können. Jupyter Notebook wird:</p>
 <ol class="simple">
-<li><p>ist ein Python Modul (und wird also über den „Command Prompt“ gestartet)</p></li>
-<li><p>wird über den Webbrowser bedient</p></li>
+<li><p>mit dem „Command Prompt“ gestartet</p></li>
+<li><p>über den Webbrowser bedient</p></li>
 </ol>
 <p>Um Jupyter Notebook zu starten verlässt ihr Python im Command Prompt in dem ihr <code class="docutils literal notranslate"><span class="pre">exit()</span></code> oder <code class="docutils literal notranslate"><span class="pre">quit()</span></code> eintippt und mit Enter bestätigt. Danach könnt ihr mit dem Befehl <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> eben diesen starten.</p>
-<p>Wie wir sehen können, ist unser aktuelles Arbeitsverzeichnis <code class="docutils literal notranslate"><span class="pre">C:\\Users\\bako\\AppData\\Local\\ESRI\\conda\\envs\\arcgispro-py3-clone2</span></code> nicht ideal.</p>
 <div class="figure align-default" id="cwd">
 <img alt="../_images/chdir.jpg" src="../_images/chdir.jpg" />
-<p class="caption"><span class="caption-number">Abb. 5 </span><span class="caption-text">Aktuelles Arbeitsverzeichnis</span><a class="headerlink" href="#cwd" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 5 </span><span class="caption-text">Beendet den Python mit dem Befehl <code class="docutils literal notranslate"><span class="pre">quit()</span></code> oder <code class="docutils literal notranslate"><span class="pre">exit()</span></code></span><a class="headerlink" href="#cwd" title="Link zu diesem Bild">¶</a></p>
 </div>
-<p>Um in ein geeigneteres Verzeichnis zu wechseln, können wir den Befehl <code class="docutils literal notranslate"><span class="pre">cd</span></code> <em>(change directory)</em> verwenden, gefolgt von dem Pfad zu dem von uns gewünschten Verzeichnis. In meinem Fall werde ich auf den Desktop wechseln <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">C:\Users\bako\Desktop</span></code>. Ihr könnt etwas Ähnliches tun und das Verzeichnis an den von euch bevorzugten Ort ändern. Jetzt sind wir bereit, das Jupyter Notebook zu starten.</p>
+<div class="attention admonition">
+<p class="admonition-title">Hinweis</p>
+<ul class="simple">
+<li><p>Jupyter Notebook wird nun in eurem Browser angezeigt, das Programm läuft aber in eurer Konsole. Das heisst:</p>
+<ul>
+<li><p>ihr düft die Konsole nicht schliessen, während ihr mit Jupyter Notebook arbeitet</p></li>
+<li><p>um Jupyter Notebook zu beenden verwendet ihr in der Konsole die Tastenkombination <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">C</span></code></p></li>
+</ul>
+</li>
+<li><p>Beachtet den Pfad, der in Python Command Prompt dargestellt wird (in <a class="reference internal" href="#cwd"><span class="std std-numref">Abb. 5</span></a> wird der Pfad <code class="docutils literal notranslate"><span class="pre">C:\Users\bako\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone2</span></code> angezeigt)</p>
+<ul>
+<li><p>Dieser Pfad ist das „Arbeitsverzeichnis“, in welchem Jupyter Notebook gestartet wird</p></li>
+<li><p>Dieser Pfad ist nicht sinnvoll, wir werden ihn in einem nächsten Schritt ändern.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Wie erwähnt ist das automatisch gewählte Arbeitsverzeichnis (im Beispiel <code class="docutils literal notranslate"><span class="pre">C:\Users\bako\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone2</span></code>) nicht ideal. Es macht viel mehr Sinn, ein vertrautes Verzeichnis zu wählen (z.B. den Desktop oder wo ihr eure Unterrichtsunterlagen abspeichert). Dieses Verzeichnis müssen wir wählen, <em>bevor</em> wir Jupyter Notebook starten. Schliesst deshalb Jupyter Notebook wieder in dem ihr in der Konsole die Tastenkombination <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">C</span></code> verwendet.</p>
+<p>Wählt nun ein sinvolleres Verzeichnis und Kopiert dessen Pfad aus dem File Explorer. Gebt nun in der Konsole den Befehl <code class="docutils literal notranslate"><span class="pre">cd</span></code> <em>(change directory)</em>, gefolgt von dem Pfad zu dem von uns gewünschten Verzeichnis. Im Beispiel werden wir auf den Desktop wechseln <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">C:\Users\bako\Desktop</span></code> (siehe <a class="reference internal" href="#notebook"><span class="std std-numref">Abb. 6</span></a>).</p>
+<p>Nun sollte sich der angezeigte Pfad (vor dem <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>) in eurer Konsole ändern. <strong>Ist dies nicht der Fall, hat das Wechseln des Verzeichnisses nicht funktioniert</strong>. War das wechseln des Verzeichnisses erfolgreich, könnt ihr erneut Jupyter Notebook starten: Im Unterschied zu vorher sollten die Dateien, die Ihr nun seht (siehe <a class="reference internal" href="#newfile"><span class="std std-numref">Abb. 7</span></a>) vertrauter sein.</p>
 <div class="figure align-default" id="notebook">
 <img alt="../_images/notebook.jpg" src="../_images/notebook.jpg" />
-<p class="caption"><span class="caption-number">Abb. 6 </span><span class="caption-text">Jupyter notebook öffnen</span><a class="headerlink" href="#notebook" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 6 </span><span class="caption-text">Jupyter notebook starten</span><a class="headerlink" href="#notebook" title="Link zu diesem Bild">¶</a></p>
 </div>
-<p>Nachdem wir auf der Startseite von Jupyter gelandet sind, können wir nun eine neue Python Datei öffnen.</p>
+<p>Öffnet nun ein neues Jupyter Notebook File in dem ihr auf <em>New &gt; Python 3</em> klickt (siehe <a class="reference internal" href="#notebook"><span class="std std-numref">Abb. 6</span></a>).</p>
 <div class="figure align-default" id="newfile">
 <img alt="../_images/newFile.png" src="../_images/newFile.png" />
-<p class="caption"><span class="caption-number">Abb. 7 </span><span class="caption-text">Öffnen einer neuen Python Datei</span><a class="headerlink" href="#newfile" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 7 </span><span class="caption-text">Öffnen eines neuen Jupyter Notebook Files</span><a class="headerlink" href="#newfile" title="Link zu diesem Bild">¶</a></p>
 </div>
+<p>Das Bedienen eines Jupyter Notebook lässt sich nicht gut in Worte fassen. Wir wollen diese deshalb in einer kurzen Demo vorzeigen, alternativ (falls du selbständig arbeitest) kannst du dir auch nachstehenden Video anschauen (v.a. Minuten 11:00 - 15:00 sowie 16:40 bis 18:30):</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DKiI6NfSIe8?start=668" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
     <script type="text/x-thebe-config">
@@ -610,7 +626,7 @@
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         

@@ -1,19 +1,19 @@
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
-    record_timing=False,
-  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/client.py", line 1117, in execute
+  File "/home/nils/miniconda3/envs/agi-jb/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/home/nils/miniconda3/envs/agi-jb/lib/python3.9/site-packages/nbclient/client.py", line 1117, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/util.py", line 78, in wrapped
+  File "/home/nils/miniconda3/envs/agi-jb/lib/python3.9/site-packages/nbclient/util.py", line 78, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/util.py", line 57, in just_run
+  File "/home/nils/miniconda3/envs/agi-jb/lib/python3.9/site-packages/nbclient/util.py", line 57, in just_run
     return loop.run_until_complete(coro)
-  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+  File "/home/nils/miniconda3/envs/agi-jb/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
     return future.result()
-  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/client.py", line 559, in async_execute
-    cell, index, execution_count=self.code_cells_executed + 1
-  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/client.py", line 862, in async_execute_cell
+  File "/home/nils/miniconda3/envs/agi-jb/lib/python3.9/site-packages/nbclient/client.py", line 558, in async_execute
+    await self.async_execute_cell(
+  File "/home/nils/miniconda3/envs/agi-jb/lib/python3.9/site-packages/nbclient/client.py", line 862, in async_execute_cell
     self._check_raise_for_error(cell, exec_reply)
-  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/client.py", line 765, in _check_raise_for_error
+  File "/home/nils/miniconda3/envs/agi-jb/lib/python3.9/site-packages/nbclient/client.py", line 765, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -27,26 +27,26 @@ zeckenstiche
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mValueError[0m                                Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1901/4265754613.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0;31m# Musterlösung[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/tmp/ipykernel_32923/4265754613.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;31m# Musterlösung[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      2[0m [0;34m[0m[0m
 [0;32m----> 3[0;31m [0mzeckenstiche[0m[0;34m[[0m[0;34m"x_sim"[0m[0;34m][0m [0;34m=[0m [0mzeckenstiche[0m[0;34m[[0m[0;34m"x"[0m[0;34m][0m[0;34m.[0m[0mapply[0m[0;34m([0m[0moffset_coordinate[0m[0;34m,[0m [0mdistance[0m [0;34m=[0m [0mzeckenstiche[0m[0;34m[[0m[0;34m"accuracy"[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      4[0m [0mzeckenstiche[0m[0;34m[[0m[0;34m"y_sim"[0m[0;34m][0m [0;34m=[0m [0mzeckenstiche[0m[0;34m[[0m[0;34m"y"[0m[0;34m][0m[0;34m.[0m[0mapply[0m[0;34m([0m[0moffset_coordinate[0m[0;34m,[0m [0mdistance[0m [0;34m=[0m [0mzeckenstiche[0m[0;34m[[0m[0;34m"accuracy"[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      5[0m [0;34m[0m[0m
 
-[0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/core/frame.py[0m in [0;36m__setitem__[0;34m(self, key, value)[0m
+[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/pandas/core/frame.py[0m in [0;36m__setitem__[0;34m(self, key, value)[0m
 [1;32m   3600[0m             [0mself[0m[0;34m.[0m[0m_setitem_array[0m[0;34m([0m[0mkey[0m[0;34m,[0m [0mvalue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m   3601[0m         [0;32melif[0m [0misinstance[0m[0;34m([0m[0mvalue[0m[0;34m,[0m [0mDataFrame[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0;32m-> 3602[0;31m             [0mself[0m[0;34m.[0m[0m_set_item_frame_value[0m[0;34m([0m[0mkey[0m[0;34m,[0m [0mvalue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m   3603[0m         elif (
 [1;32m   3604[0m             [0mis_list_like[0m[0;34m([0m[0mvalue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/core/frame.py[0m in [0;36m_set_item_frame_value[0;34m(self, key, value)[0m
+[0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/pandas/core/frame.py[0m in [0;36m_set_item_frame_value[0;34m(self, key, value)[0m
 [1;32m   3727[0m             [0mlen_cols[0m [0;34m=[0m [0;36m1[0m [0;32mif[0m [0mis_scalar[0m[0;34m([0m[0mcols[0m[0;34m)[0m [0;32melse[0m [0mlen[0m[0;34m([0m[0mcols[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m   3728[0m             [0;32mif[0m [0mlen_cols[0m [0;34m!=[0m [0mlen[0m[0;34m([0m[0mvalue[0m[0;34m.[0m[0mcolumns[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0;32m-> 3729[0;31m                 [0;32mraise[0m [0mValueError[0m[0;34m([0m[0;34m"Columns must be same length as key"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m   3730[0m [0;34m[0m[0m
-[1;32m   3731[0m             [0;31m# align right-hand-side columns if self.columns[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   3731[0m             [0;31m# align right-hand-side columns if self.columns[0m[0;34m[0m[0;34m[0m[0m
 
 [0;31mValueError[0m: Columns must be same length as key
 ValueError: Columns must be same length as key

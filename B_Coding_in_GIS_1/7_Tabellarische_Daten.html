@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -71,10 +71,6 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
-      
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
       
       <img src="../_static/zhaw_lsfm_iunr_blau.jpg" class="logo" alt="logo">
       
@@ -670,23 +666,13 @@
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Achtung!</p>
-<p>Wo wird die csv abgespeichert? Um diese Frage zu beantworten musst du wissen, was deine sogenannte „Working Directory“ ist. Dies kannst du mit folgendem Befehl klären (dies ist gerade auch für die <a class="reference internal" href="#ex-import-zeckenstiche"><span class="std std-ref">Übung 4.3</span></a> wichtig).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Die aktuelle Working Directory habt ihr euch euch nicht selbst ausgesucht. Um diese selbst zu bestimmen gehen wir wie folgt vor:</p>
-<ol class="simple">
-<li><p>Schliesst Jupyter Notebook</p></li>
-<li><p>Beendet auch</p></li>
-<li><p>Navigiert in den gewünschten folder mit dem Befehl <code class="docutils literal notranslate"><span class="pre">cd</span></code> (z.B. <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">C:\Users\rata\zhaw\AGI\Coding_in_GIS\</span></code>)</p></li>
-<li><p>Startet Juypter Notebook mit dem Befehl <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> neu</p></li>
-</ol>
+<p>Falls ihr nicht wisst, wo das csv abgespeichet ist solltet ihr das Kapitel „<a class="reference internal" href="5b_JupyterNotebook.html#chap-jupyternotebook"><span class="std std-ref">Entwicklungsumgebung: Jupyter Notebook</span></a>“ nochmals durchlesen.</p>
+<p>Die <em>Working Directory</em> zu kennen ist wichtig, besonders auch für die nächste Aufgabe. Falls ihr die aktuelle Working Directory neu setzen und dafür Jupyter Notebook schliessen müsst, denkt daran die Notebook vorgängig zu speichern und im File Explorer aufzusuchen.</p>
 </div>
 </div>
 <div class="section" id="ubung-4-3">
 <span id="ex-import-zeckenstiche"></span><h3>Übung 4.3<a class="headerlink" href="#ubung-4-3" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Genau so einfach ist es eine csv zu importieren. Lade die Datei „zeckenstiche.csv“ (siehe <a class="reference internal" href="1_Einleitung.html#table-datensaetze"><span class="std std-numref">Tab. 1</span></a>) herunter und speichere es im aktuellen Arbeitsverzeichnis ab. Importiere mit folgendem Code die Datei „zeckenstiche.csv“. Schau dir <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> nach dem importieren im „Variable Inspector“ an.</p>
+<p>Genau so einfach ist es eine csv zu importieren. Lade die Datei „zeckenstiche.csv“ (siehe <a class="reference internal" href="1_Einleitung.html#table-datensaetze"><span class="std std-numref">Tab. 1</span></a>) herunter und speichere es im aktuellen Arbeitsverzeichnis ab. Importiere mit folgendem Code die Datei „zeckenstiche.csv“.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ich habe die Daten in einem Unterordner &quot;data&quot; abgespeichert</span>
@@ -698,12 +684,14 @@
 </div>
 <div class="section" id="ubung-4-4">
 <span id="ex-scatterplot"></span><h3>Übung 4.4<a class="headerlink" href="#ubung-4-4" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Die <em>DataFrame</em> <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> beinhaltet x und y Koordinaten für jeden Unfall in den gleichnamigen Spalten. Wir können die Stiche mit einem Scatterplot räumlich visualisieren. Führe dazu folgenden Code aus. Überlege dir, was die zweite Zeile bewirkt und warum dies sinnvoll ist.</p>
+<p>Die <em>DataFrame</em> <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> beinhaltet x und y Koordinaten für jeden Unfall in den gleichnamigen Spalten. Wir können die Stiche mit einem Scatterplot räumlich visualisieren. Führe dazu folgenden Code aus.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">zeckenstiche</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
 
 <span class="n">fig</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span>
+<span class="c1"># &quot;equal&quot; stellt sicher, das die x und y Achsen gleich skaliert sind</span>
+<span class="c1"># dies ist sinnvoll, da es sich ja um Schweizer Koordinaten (Meter) handelt</span>
 </pre></div>
 </div>
 </div>
@@ -895,7 +883,7 @@
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
