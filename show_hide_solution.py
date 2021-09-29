@@ -1,58 +1,80 @@
 import nbformat as nbf
 from glob import glob
 import re
+import os
+import pandas as pd
 # Collect a list of all notebooks in the content folder
-notebooks_cog1 = glob("B_Coding_in_GIS_1/*.ipynb", recursive=False) # recursive = True to search in subfolders
-notebooks_cog2 = glob("B_Coding_in_GIS_2/*.ipynb", recursive=False) # recursive = True to search in subfolders
-notebooks_cog3 = glob("B_Coding_in_GIS_3/*.ipynb", recursive=False) # recursive = True to search in subfolders
 
 
-
-
-def musterloesung(notebooks,tag = "remove-cell"):
+def add_tag(notebook,tag = "remove-cell", keyword = "# Musterlösung"):
     """
     takes 2 arguments: "notebook" and "tag"
-    The first argument is a list of paths to the notebooks that should be processed
+    The first argument is a SINGLE notebook that should be processed
     the second argument is a single tag or a list of tags, which should be appended to each cell
     possible arguments for tags:
-    - hide-cell: hides the whole code cell (both inputs and outputs)
-    - remove-cell: removes the whole code cell (both inputs and outputs)
+    - "hide-cell": hides the code cell (both inputs and outputs) with the option that readers can reveal them if they wish
+    - "remove-cell": removes the whole code cell (both inputs and outputs) without the option of revealing them
+    - "" (empty string): just removes the current tags 
     see: https://jupyterbook.org/interactive/hiding.html?highlight=hide%20cell
 
     """
-    # for loops works through each ipynb-file
-    for ipath in notebooks:
-        print(tag + " for all cells in "+ipath)
-        ntbk = nbf.read(ipath, nbf.NO_CONVERT)
-        # for loop works through each cell of a given file
-        for cell in ntbk.cells:
-            cell_tags = cell.get('metadata', {}).get('tags', [])
-            # If the word "Musterlösung" contained in the cell content
-            if "# Musterlösung" in cell["source"]:
-                # removes all tags starting with "remove-" or "hide-"
-                cell_tags = [i for i in cell_tags if not re.match("remove|hide-.+",i)]
-                # if argument "tag" is not empty, append the given cell tag to the cell
-                if tag != "": cell_tags.append(tag)    
-                if len(cell_tags) > 0:
-                    cell['metadata']['tags'] = cell_tags
-                    print("changed cell metadata!")
+    ntbk = nbf.read(notebook, nbf.NO_CONVERT)
+    # for loop works through each cell of a given file
+    for cell in ntbk.cells:
+        cell_tags = cell.get('metadata', {}).get('tags', [])
+        # If the word "Musterlösung" contained in the cell content
+        if keyword in cell["source"]:
+            # creats a new list of tags
+            #cell_tags = [i for i in cell_tags if not re.match("|".join(tag), i)]
+            cell_tags = [i for i in cell_tags if not re.match("remove|hide-.+",i)]
+            # if argument "tag" is not empty, append the given cell tag to the cell
+            if tag != "": cell_tags.append(tag)    
+            if len(cell_tags) > 0:
+                cell['metadata']['tags'] = cell_tags
+                print("changed cell metadata!")
 
-        nbf.write(ntbk, ipath)
+    nbf.write(ntbk, notebook)
 
-# Sort all the notebooks in order (so they can easily be selected / unselected)
-notebooks_cog1.sort()
-notebooks_cog2.sort()
-notebooks_cog3.sort()
 
-# first, remove all cells that contain musterlösung
-musterloesung(notebooks_cog1, "remove-cell")
-musterloesung(notebooks_cog2, "remove-cell")
-musterloesung(notebooks_cog3, "remove-cell")
+def glob_dict(coding_in_gis_dir, globpattern_files):
+    notebooks = glob(os.path.join(coding_in_gis_dir, globpattern_files))
+    dirs = [os.path.dirname(x) for x in notebooks]
+    pathnames = [os.path.basename(x) for x in notebooks]
 
-# selectivley add notebooks
-musterloesung(notebooks_cog1, "hide-cell")
-musterloesung(notebooks_cog2, "hide-cell")
-musterloesung(notebooks_cog3, "hide-cell")
+    filenr = [float(re.findall("_(\d*?)/", x)[0]+"."+re.findall("/(\d*?)_", x)[0]) for x in notebooks]
+
+
+    mydict = {
+        "notebook":notebooks,
+        "dir":dirs, 
+        "filenr": filenr
+        }
+    return(mydict)
+
+
+
+def get_notebooks(globpattern_dirs = "[A-Z]_Coding_in_GIS_[1-9]", globpattern_files = "*.ipynb"):
+    coding_in_gis_dirs = glob(globpattern_dirs)
+
+    files_dict = [glob_dict(x, globpattern_files) for x in coding_in_gis_dirs]
+
+    files_df_list = [pd.DataFrame(x) for x in files_dict]
+    files_df = pd.concat(files_df_list)
+    files_df = files_df.sort_values(by = "filenr")
+
+    return(files_df)
+
+notebooks_df = get_notebooks()
+
+
+notebooks_df = notebooks_df.assign(tag = lambda x: ["hide-cell" if y <1.3 else "remove-cell" for y in x["filenr"]])
+
+for index, row in notebooks_df.iterrows():
+    add_tag(row["notebook"], row["tag"])
+
+
+
+
 
 
 
