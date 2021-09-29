@@ -666,10 +666,36 @@
 <li><p>Erstelle eine zweite Variable <code class="docutils literal notranslate"><span class="pre">nachnamen</span></code> bestehend aus einer <em>List</em> mit 3 Nachnamen</p></li>
 <li><p>Erstelle eine Variable <code class="docutils literal notranslate"><span class="pre">groessen</span></code> bestehend aus einer <em>List</em> mit 3 Grössenangaben in Zentimeter.</p></li>
 </ol>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">vornamen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Christopher&quot;</span><span class="p">,</span> <span class="s2">&quot;Henning&quot;</span><span class="p">,</span> <span class="s2">&quot;Severin&quot;</span><span class="p">]</span>
+<span class="n">nachnamen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Annen&quot;</span><span class="p">,</span><span class="s2">&quot;May&quot;</span><span class="p">,</span> <span class="s2">&quot;Kantereit&quot;</span><span class="p">]</span>
+
+<span class="n">groessen</span> <span class="o">=</span> <span class="p">[</span><span class="mi">174</span><span class="p">,</span> <span class="mi">182</span><span class="p">,</span> <span class="mi">162</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="ubung-2-2">
 <h3>Übung 2.2<a class="headerlink" href="#ubung-2-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wie erhältst du den ersten Eintrag in der Variable <code class="docutils literal notranslate"><span class="pre">vornamen</span></code>?</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">vornamen</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Christopher&#39;
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="ubung-2-3">
 <h3>Übung 2.3<a class="headerlink" href="#ubung-2-3" title="Link zu dieser Überschrift">¶</a></h3>
@@ -681,22 +707,90 @@
 </div>
 </div>
 </div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">nachnamen</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Huck&quot;</span><span class="p">)</span>
+
+<span class="n">groessen</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">177</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="ubung-2-4">
 <h3>Übung 2.4<a class="headerlink" href="#ubung-2-4" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ermittle die Summe aller Werte in <code class="docutils literal notranslate"><span class="pre">groessen</span></code>. Tip: Nutze dazu <code class="docutils literal notranslate"><span class="pre">sum()</span></code></p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="nb">sum</span><span class="p">(</span><span class="n">groessen</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>695
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="ubung-2-5">
 <h3>Übung 2.5<a class="headerlink" href="#ubung-2-5" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ermittle die Anzahl Werte in <code class="docutils literal notranslate"><span class="pre">groessen</span></code> . Tip: Nutze dazu <code class="docutils literal notranslate"><span class="pre">len()</span></code></p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">groessen</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="ubung-2-6">
 <span id="mittelwert"></span><h3>Übung 2.6<a class="headerlink" href="#ubung-2-6" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Berechne die durchschnittliche Grösse aller Personen in <code class="docutils literal notranslate"><span class="pre">groessen</span></code>. Tip: Nutze dazu <code class="docutils literal notranslate"><span class="pre">len()</span></code> und <code class="docutils literal notranslate"><span class="pre">sum()</span></code>.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="nb">sum</span><span class="p">(</span><span class="n">groessen</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">groessen</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>173.75
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="ubung-2-7">
 <h3>Übung 2.7<a class="headerlink" href="#ubung-2-7" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ermittle nun noch die Minimum- und Maximumwerte aus <code class="docutils literal notranslate"><span class="pre">groessen</span></code> (finde die dazugehörige Funktion selber heraus).</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="nb">min</span><span class="p">(</span><span class="n">groessen</span><span class="p">)</span>
+<span class="nb">max</span><span class="p">(</span><span class="n">groessen</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>182
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
