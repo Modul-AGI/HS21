@@ -48,7 +48,6 @@ Hinweise:
 - `:name:` sollte dabei für jede Tabelle angepasst werden und eindeutig sein
 - Diese sogenannten "Backticks" sind auf der Tastatur rechts neben dem Fragezeichen, dabei muss Schift gedrückt gehalten und mit einem Leerschlag abgeschlossen werden.
 
-[^backticks]: 
 
 ### Bilder 
 

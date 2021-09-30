@@ -67,7 +67,8 @@ def get_notebooks(globpattern_dirs = "[A-Z]_Coding_in_GIS_[1-9]", globpattern_fi
 notebooks_df = get_notebooks()
 
 
-notebooks_df = notebooks_df.assign(tag = lambda x: ["hide-cell" if y <1.3 else "remove-cell" for y in x["filenr"]])
+notebooks_df = notebooks_df.assign(tag = lambda x: ["hide-cell" if y <= 1.8 else "remove-cell" for y in x["filenr"]])
+
 
 for index, row in notebooks_df.iterrows():
     add_tag(row["notebook"], row["tag"])
