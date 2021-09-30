@@ -31,7 +31,7 @@ my_symmdiff = gpd.overlay(zeckenstiche_envelope_gdf, zeckenstiche_buffer_gdf, ho
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mIntCastingNaNError[0m                        Traceback (most recent call last)
-[0;32m/tmp/ipykernel_15894/3920510690.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_42296/3920510690.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      5[0m [0mzeckenstiche_envelope_gdf[0m [0;34m=[0m [0mgpd[0m[0;34m.[0m[0mGeoDataFrame[0m[0;34m([0m[0mgeometry[0m [0;34m=[0m [0mgpd[0m[0;34m.[0m[0mGeoSeries[0m[0;34m([0m[0mzeckenstiche_envelope[0m[0;34m)[0m[0;34m,[0m [0mcrs[0m [0;34m=[0m [0;36m2056[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      6[0m [0;34m[0m[0m
 [0;32m----> 7[0;31m [0mmy_union[0m [0;34m=[0m [0mgpd[0m[0;34m.[0m[0moverlay[0m[0;34m([0m[0mzeckenstiche_envelope_gdf[0m[0;34m,[0m [0mzeckenstiche_buffer_gdf[0m[0;34m,[0m [0mhow[0m [0;34m=[0m [0;34m"union"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m

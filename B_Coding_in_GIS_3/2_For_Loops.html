@@ -186,22 +186,27 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/1_Einleitung.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/01_Einleitung.html">
    Einleitung
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/2_Conda_Cheatsheet.html">
-   Conda cheat sheet
+  <a class="reference internal" href="../B_Coding_in_GIS_2/02_Conda.html">
+   Conda
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/3_Python_Module.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/03_JupyterLab.html">
+   JupyterLab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/04_Python_Module.html">
    Python Modules
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/4_Functions_I.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/05_Functions_I.html">
    Aufgabe 5:
    <em>
     Function
@@ -210,7 +215,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/5_Functions_II.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/07_Functions_II.html">
    Aufgabe 6:
    <em>
     Function
@@ -219,13 +224,18 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/6_Zufallzahlen.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/08_If_else.html">
+   Aufgabe 7: If / Else
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/09_Zufallzahlen.html">
    Aufgabe 7: Zufallszahlen generieren
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/7_Funktionen_in_DataFrames.html">
-   Aufgabe 8: Funktionen in
+  <a class="reference internal" href="../B_Coding_in_GIS_2/10_Funktionen_in_DataFrames.html">
+   Aufgabe 9: Funktionen in
    <em>
     DataFrames
    </em>
@@ -596,7 +606,7 @@
 <h2>Theorie<a class="headerlink" href="#theorie" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="die-grundform">
 <h3>Die Grundform<a class="headerlink" href="#die-grundform" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Nirgends ist der Aspekt der Automatisierung so sichtbar wie in <em>for loops</em>. Loops sind „Schleifen“ wo eine Aufgabe beliebig lange wiederholt wird. Auch <em>for loops</em> sind im Grunde genommen simple. Auf den ersten Blick sieht eine <em>for loop</em> aus wie eine <em>Function</em> definition (siehe <a class="reference internal" href="../B_Coding_in_GIS_2/4_Functions_I.html#function-basics"><span class="std std-ref">Aufgabe 5: Function Basics</span></a> und <a class="reference internal" href="../B_Coding_in_GIS_2/5_Functions_II.html#function-advanced"><span class="std std-ref">Aufgabe 6: Function Advanced</span></a>). Im folgenden Beispiel seht ihr ein minimales Beispiel einer <em>for loop</em>.</p>
+<p>Nirgends ist der Aspekt der Automatisierung so sichtbar wie in <em>for loops</em>. Loops sind „Schleifen“ wo eine Aufgabe beliebig lange wiederholt wird. Auch <em>for loops</em> sind im Grunde genommen simple. Auf den ersten Blick sieht eine <em>for loop</em> aus wie eine <em>Function</em> definition (siehe <a class="reference internal" href="../B_Coding_in_GIS_2/05_Functions_I.html#function-basics"><span class="std std-ref">Aufgabe 5: Function Basics</span></a> und <a class="reference internal" href="../B_Coding_in_GIS_2/07_Functions_II.html#function-advanced"><span class="std std-ref">Aufgabe 6: Function Advanced</span></a>). Im folgenden Beispiel seht ihr ein minimales Beispiel einer <em>for loop</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">platzhalter</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span>
@@ -693,7 +703,7 @@ Who likes to party?
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="print"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Mit <code class="docutils literal notranslate"><span class="pre">print</span></code> können wir Variabeln in die Konsole „ausdrucken“ lassen. Innerhalb von <code class="docutils literal notranslate"><span class="pre">print</span></code> können dazu verschiedene Variablen kommagetrennt aufgeführt werden, ohne sie mit <code class="docutils literal notranslate"><span class="pre">+</span></code> verbinden zu müssen wie damals in <a class="reference internal" href="../B_Coding_in_GIS_2/4_Functions_I.html#function-basics"><span class="std std-ref">Aufgabe 5: Function Basics</span></a>.</p>
+<dd><p>Mit <code class="docutils literal notranslate"><span class="pre">print</span></code> können wir Variabeln in die Konsole „ausdrucken“ lassen. Innerhalb von <code class="docutils literal notranslate"><span class="pre">print</span></code> können dazu verschiedene Variablen kommagetrennt aufgeführt werden, ohne sie mit <code class="docutils literal notranslate"><span class="pre">+</span></code> verbinden zu müssen wie damals in <a class="reference internal" href="../B_Coding_in_GIS_2/05_Functions_I.html#function-basics"><span class="std std-ref">Aufgabe 5: Function Basics</span></a>.</p>
 </dd>
 </dl>
 </div>

@@ -7,12 +7,7 @@
 Sie haben den Auftrag ein Datenmodell zur Speicherung von unterschiedlichen Sozialen Schlüssel-Indikatoren für schweizerische Gemeinden zu überprüfen. Hierbei werden jedes Jahr Datenwerte auf Basis einer Gemeinde erhoben. Diese sollen später in der Datenbank gespeichert und ausgewertet werden können. Wichtig hierbei ist, dass die Daten später in einer Karte visualisiert werden können. Deshalb ist es notwendig, dass Gemeinde-Geometrien ebenfalls in der Datenbank gespeichert werden sollen. Ebenfalls ist es sinnvoll bestimmte Indikatoren auch für den gesamten Kanton hochzurechnen und als Karte darzustellen zu können.
 Sie bekommen als erste Grundlage folgendes Datenbankmodell vom Auftraggeber gestellt. Leider gibt es in diesem Modell ein paar Konsistenzfehler.
 
-```{figure} figures/Übung_Datenbanken2.jpg
----
-name: figure-datenbankschema
----
-Datenbankschema
-```
+![](figures/Übung_Datenbanken2.jpg)
 
 Untersuchen Sie das Datenmodell auf Konsistenzfehler und Korrigieren Sie diese. Lesen Sie den Aufgabentext aufmerksam und schauen sich die Abbildung an und entwickeln Sie daraus ein passendes logisches Datenmodell, welches alle Regeln der Datenintegrität einhält. Es muss nicht perfekt sein. Es geht in dieser Übung darum etwas Erfahrung im Lesen von gegebenen Modellen zu bekommen.
 
@@ -35,25 +30,11 @@ In den nächsten Übungen wollen wir eine Beispiel Datenbank mit dem dort bereit
 6. Lassen Sie sich nicht davon verunsichern, dass es bereits einige Einträge hat. Da auf dem Server bereits andere Datenbanken installiert sind, sehen Sie auch diese. Navigieren Sie zu unserer Datenbank "waelder" und verschaffen sich einen Überblick über die vorhandenen Tabellen.
 7. Verwenden Sie für alle folgenden Übungen diese Datenbankverbindung, wenn nichts anderes angegeben  (siehe {numref}`figure-pgadmin3`).
 
-```{figure} figures/screenshot_pgadmin.jpg
----
-name: figure-pgadmin1
----
-Oberfläche von pgadmin
-```
+![](figures/screenshot_pgadmin.jpg)
 
-```{figure} figures/screenshot_pgadmin2.jpg
----
-name: figure-pgadmin2
----
-Verbindungsdetails (pg admin)
-```
-```{figure} figures/screenshot_pgadmin2.jpg
----
-name: figure-pgadmin3
----
-Dashboard (pgadmin)
-```
+![](figures/screenshot_pgadmin2.jpg)
+
+![](figures/screenshot_pgadmin2.jpg)
 
 ### Übung 3: Verbindung zur PostgreSQL/PostGIS Datenbank mit ArcGIS Pro herstellen
 
@@ -74,30 +55,13 @@ Nachdem die Datenbank erstellt wurde und eine Verbindung über pgadmin eingerich
 6. Sie können der Datenbankverbindung noch einen sinnvollen Namen geben. Es empfiehlt sich eine Kombination aus dem Servernamen, der verbundenen Datenbank und dem Benutzer. Z.B. "svma-s-01323_waelder_student1"
 7. Unter dem Eintrag "Databases" im Catalog gibt es jetzt eine neue Datenbankverbindung zur Datenbank  (siehe {numref}`figure-connect4`).
 
-```{figure} figures/screenshot_connect1.jpg
----
-name: figure-connect1
----
-In ArcGIS Pro -> Database
-```
-```{figure} figures/screenshot_connect2.jpg
----
-name: figure-connect2
----
-New Database Connection (ArcGIS Pro)
-```
-```{figure} figures/screenshot_connect3.jpg
----
-name: figure-connect3
----
-Database Login
-```
-```{figure} figures/screenshot_connect4.jpg
----
-name: figure-connect4
----
-Verbindung hergestellt
-```
+![](figures/screenshot_connect1.jpg)
+
+![](figures/screenshot_connect2.jpg)
+
+![](figures/screenshot_connect3.jpg)
+
+![](figures/screenshot_connect4.jpg)
 
 ### Übung 4: Datenbank Schemata für ArcGIS Pro Benutzer
 
@@ -109,29 +73,15 @@ Nachdem die Datenbank erstellt wurde und alle Verbindungen eingerichtet sind, is
 4. Öffnen Sie das public Schema. Hier gibt es bereits Einträge. Hier werden die zugehörigen Informationen der Datenbank, wie Sichten, Funktionen usw. zugänglich gemacht. Interessant ist zunächst aber nur der Eintrag "Tables (3)". In Klammern ist immer die Anzahl der vorhandenen Datenbanktabellen angegeben. Wie wir sehen gibt es default-Tabellen, welche bereits erstellt wurden. Die Tabelle "spatial_ref_sys" enthält z.B. alle Koordinatensysteme. Die Tabelle "sde_spatial_references" ist eine Hilfstabelle für Koordinatensysteme von ArcGIS Pro. Löschen Sie diese beiden Tabellen NIEMALS. Ohne diese Tabellen sind bestimmte Funktionen nicht mehr ausführbar.  (siehe {numref}`figure-uebung4-2`)
 5. Hinweis, falls Sie einmal selber Tabellen erstellen sollten: Es empfiehlt sich alle räumlichen Tabellen direkt in ArcGIS Pro zu erstellen. Dadurch entscheidet ArcGIS Pro selbstständig über die korrekten Datentypen und Geometrietypen. Alle anderen Tabellen sowie Fremdschlüssel usw. können auch in pgadmin erstellt werden. Alle Tabellen wurden im ArcGIS Pro Schema "arcgispro_editor" erstellt.
 
-```{figure} figures/screenshot_uebung4_1.jpg
----
-name: figure-uebung4-1
----
-DB Schema
-```
-```{figure} figures/screenshot_uebung4_2.jpg
----
-name: figure-uebung4-2
----
-DB Tables
-```
+![](figures/screenshot_uebung4_1.jpg)
+
+![](figures/screenshot_uebung4_2.jpg)
 
 ### Übung 5: Datenbankschema prüfen
 
 Für die kommenden Übungen nutzen wir die Datenbank "waelder" auf unserem Server. Den Zugriff haben wir in den vorigen Übungen eingerichtet. Um einen Überblick zu bekommen, lesen Sie das folgende Datenbankschema und machen sich mit den Tabellen, Attributen und Abhängigkeiten vertraut. Da Sie jetzt alle gemeinsam dieselben Tabellen bearbeiten, gibt es in jeder Tabelle jeweils ein Feld "id_erfasser". Sobald Sie Tabellen mit Daten befüllen, schreiben Sie bitte immer jeweils Ihre studentNr in das Feld "id_erfasser", damit die Einträge später unterscheidbar sind.
 
-```{figure} figures/screenshot_uebung5.jpg
----
-name: figure-uebung5
----
-Database Schema
-```
+![](figures/screenshot_uebung5.jpg)
 
 ### Übung 6: Datenimport in die Datenbank über pgAdmin
 
@@ -155,23 +105,11 @@ Da jetzt alle Tabellen vorliegen sollen diese noch mit ein paar Beispiel-Daten g
 10. Über das Kontextmenü können ebenfalls die Inhalte der Tabelle angezeigt werden  (siehe {numref}`figure-uebung6-3`).
 11. Es öffnet sich automatisch das Query Tool und die Inhalte der Tabelle werden angezeigt. HINWEIS: Auf diese Weise kann immer nur die komplette Tabelle angezeigt werden. Filter oder sonstige Einschränkungen müssen als SQL Statement abgesetzt werden.
 
-```{figure} figures/screenshot_uebung6_1.jpg
----
-name: figure-uebung6-1
----
-Database Schema
-```
-```{figure} figures/screenshot_uebung6_2.jpg
----
-name: figure-uebung6-2
----
-Database Schema
-``````{figure} figures/screenshot_uebung6_3.jpg
----
-name: figure-uebung6-3
----
-Database Schema
-```
+![](figures/screenshot_uebung6_1.jpg)
+
+![](figures/screenshot_uebung6_2.jpg)
+
+![](figures/screenshot_uebung6_3.jpg)
 
 ### Übung 7: Datenimport in die Datenbank mit einer SQL-Datei
 
@@ -184,23 +122,12 @@ Jedes SQL Statement kann in einer Datei abgespeichert werden. Dadurch lassen sic
 6. Select lädt den Inhalt der Datei ins Query Tool  (siehe {numref}`figure-uebung7-3`).
 7. Schliessen Sie die Eingabe mit Klick auf Execute (kleiner Blitz) ab.
 8. Schauen Sie sich erneut den Inhalt der Tabelle "tierarten" an. Die Tabelle sollte jetzt die eigenen Tierarten plus ein paar Einträge Ihrer Mit-Studierenden enthalten.
-```{figure} figures/screenshot_uebung7_1.jpg
----
-name: figure-uebung7-1
----
-Database Schema
-```
-```{figure} figures/screenshot_uebung7_2.jpg
----
-name: figure-uebung7-2
----
-Database Schema
-``````{figure} figures/screenshot_uebung7_3.jpg
----
-name: figure-uebung7-3
----
-Database Schema
-```
+
+![](figures/screenshot_uebung7_1.jpg)
+
+![](figures/screenshot_uebung7_2.jpg)
+
+![](figures/screenshot_uebung7_3.jpg)
 
 ### Übung 8: Geometrieimport in die Datenbank
 
@@ -220,21 +147,10 @@ Herkömmliche GIS Methoden zum Erstellen und Importieren von Geometrien ins GIS 
 9. Sie haben jetzt die Wälder in die Datenbank importiert.
 10. Schauen Sie sich die Wälder auch in pgAdmin an. Machen Sie hierzu eine Select Abfrage im Query Tool. In der Ergebnis Tabelle sehen Sie in der Geometry-Spalte ein kleines Augen-Symbol. Dies öffnet den "Geometry Viewer". Sie sollten auch dort die Geometrien der importierten Wälder sehen.
 
-```{figure} figures/screenshot_uebung8_1.jpg
----
-name: figure-uebung8-1
----
-Database Schema
-```
-```{figure} figures/screenshot_uebung8_2.jpg
----
-name: figure-uebung8-2
----
-Database Schema
-``````{figure} figures/screenshot_uebung8_3.jpg
----
-name: figure-uebung8-3
----
-Database Schema
-```
+![](figures/screenshot_uebung8_1.jpg)
+
+![](figures/screenshot_uebung8_2.jpg)
+
+![](figures/screenshot_uebung8_3.jpg)
+
 ## Versionierung und Mehrbenutzerbetrieb in ArcGIS Pro 18

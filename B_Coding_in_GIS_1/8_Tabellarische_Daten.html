@@ -52,7 +52,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="Einleitung" href="../B_Coding_in_GIS_2/1_Einleitung.html" />
+    <link rel="next" title="Einleitung" href="../B_Coding_in_GIS_2/01_Einleitung.html" />
     <link rel="prev" title="Aufgabe 3: Dictionaries" href="7_Dictionary.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -186,22 +186,27 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/1_Einleitung.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/01_Einleitung.html">
    Einleitung
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/2_Conda_Cheatsheet.html">
-   Conda cheat sheet
+  <a class="reference internal" href="../B_Coding_in_GIS_2/02_Conda.html">
+   Conda
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/3_Python_Module.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/03_JupyterLab.html">
+   JupyterLab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/04_Python_Module.html">
    Python Modules
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/4_Functions_I.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/05_Functions_I.html">
    Aufgabe 5:
    <em>
     Function
@@ -210,7 +215,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/5_Functions_II.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/07_Functions_II.html">
    Aufgabe 6:
    <em>
     Function
@@ -219,13 +224,18 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/6_Zufallzahlen.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/08_If_else.html">
+   Aufgabe 7: If / Else
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/09_Zufallzahlen.html">
    Aufgabe 7: Zufallszahlen generieren
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/7_Funktionen_in_DataFrames.html">
-   Aufgabe 8: Funktionen in
+  <a class="reference internal" href="../B_Coding_in_GIS_2/10_Funktionen_in_DataFrames.html">
+   Aufgabe 9: Funktionen in
    <em>
     DataFrames
    </em>
@@ -653,6 +663,17 @@
 <div class="section" id="ubung-4-1">
 <h3>Übung 4.1<a class="headerlink" href="#ubung-4-1" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Importiere <code class="docutils literal notranslate"><span class="pre">pandas</span></code> und nutze die Funktion <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> um <code class="docutils literal notranslate"><span class="pre">people</span></code> in eine DataFrame umzuwandeln (siehe dazu das Beispiel oben). Weise den Output der Variable <code class="docutils literal notranslate"><span class="pre">people_df</span></code> zu und schau dir <code class="docutils literal notranslate"><span class="pre">people_df</span></code> an.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+
+<span class="n">people_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">people</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="ubung-4-2">
 <span id="ex-to-csv"></span><h3>Übung 4.2<a class="headerlink" href="#ubung-4-2" title="Link zu dieser Überschrift">¶</a></h3>
@@ -706,10 +727,42 @@
 <div class="section" id="ubung-4-5">
 <span id="ex-sel-col"></span><h3>Übung 4.5<a class="headerlink" href="#ubung-4-5" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Um eine einzelne Spalte zu selektieren (z.B. die Spalte „ID“), kann man gleich vorgehen wie bei der Selektion eines Eintrags in einer <em>Dictionary</em>. Probiere es aus.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">zeckenstiche</span><span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     2550
+1    10437
+2     9174
+3     8773
+4     2764
+5     2513
+6     9185
+7    28521
+8    26745
+9    27391
+Name: ID, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="ubung-4-6">
 <span id="ex-new-col"></span><h3>Übung 4.6<a class="headerlink" href="#ubung-4-6" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Auch das Erstellen einer neuen Spalte ist identisch mit der Erstellung eines neuen <em>Dictionary</em> Eintrags. Erstelle eine neue Spalte „Stichtyp“ mit dem Wert „Zecke“ auf jeder Zeile (s.u.).</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+<span class="n">zeckenstiche</span><span class="p">[</span><span class="s2">&quot;Stichtyp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Zecke&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeckenstiche</span>
@@ -870,7 +923,7 @@
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../B_Coding_in_GIS_2/1_Einleitung.html" title="weiter Seite">
+        <a class="right-next" href="../B_Coding_in_GIS_2/01_Einleitung.html" title="weiter Seite">
             <div class="prevnext-info">
                 <p class="prevnext-label">weiter</p>
                 <p class="prevnext-title">Einleitung</p>

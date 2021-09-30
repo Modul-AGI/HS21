@@ -184,22 +184,27 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/1_Einleitung.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/01_Einleitung.html">
    Einleitung
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/2_Conda_Cheatsheet.html">
-   Conda cheat sheet
+  <a class="reference internal" href="../B_Coding_in_GIS_2/02_Conda.html">
+   Conda
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/3_Python_Module.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/03_JupyterLab.html">
+   JupyterLab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/04_Python_Module.html">
    Python Modules
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/4_Functions_I.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/05_Functions_I.html">
    Aufgabe 5:
    <em>
     Function
@@ -208,7 +213,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/5_Functions_II.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/07_Functions_II.html">
    Aufgabe 6:
    <em>
     Function
@@ -217,13 +222,18 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/6_Zufallzahlen.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/08_If_else.html">
+   Aufgabe 7: If / Else
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/09_Zufallzahlen.html">
    Aufgabe 7: Zufallszahlen generieren
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/7_Funktionen_in_DataFrames.html">
-   Aufgabe 8: Funktionen in
+  <a class="reference internal" href="../B_Coding_in_GIS_2/10_Funktionen_in_DataFrames.html">
+   Aufgabe 9: Funktionen in
    <em>
     DataFrames
    </em>
@@ -588,7 +598,7 @@
 <p>Um an diesen Punkt zu kommen habt ihr euch diverse Werkzeuge aneignen müssen (<em>Functions</em>, <em>For Loops</em>, <em>GIS</em>) und habt dazu Übungen gelöst. Die nachstehenden Code Blöcke nutzen Elemente aus diesen Übungen um auf den gleichen Stand zu kommen, mit der ihr im Themenblock „Datenqualität und Unsicherheiten“ in die Übung gestartet seid. Ihr hattet damals (a) Simulierte Zeckenstich-Daten und (b) einen Layer Waldinformation im Projektgebiet.</p>
 <p>Kopiere die Code Blöcke in ein frisches Notebook und versuche den Code zu verstehen - sie sollten dir sehr bekannt vorkommen. Schau, ob du gewisse Teile an deine Umgebung anpassen musst.</p>
 <hr class="docutils" />
-<p>Lade die benötigten Module (siehe <a class="reference internal" href="../B_Coding_in_GIS_2/3_Python_Module.html#chap-modules-import"><span class="std std-ref">Erweiterung laden</span></a>):</p>
+<p>Lade die benötigten Module (siehe <a class="reference internal" href="../B_Coding_in_GIS_2/04_Python_Module.html#chap-modules-import"><span class="std std-ref">Erweiterung laden</span></a>):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Benötigten Module laden #####################</span>
@@ -600,7 +610,7 @@
 </div>
 </div>
 </div>
-<p>Definiere die benötigte <em>Function</em> (siehe <a class="reference internal" href="../B_Coding_in_GIS_2/6_Zufallzahlen.html#ex-offset-function"><span class="std std-ref">Übung 7.5</span></a>):</p>
+<p>Definiere die benötigte <em>Function</em> (siehe <a class="reference internal" href="../B_Coding_in_GIS_2/09_Zufallzahlen.html#ex-offset-function"><span class="std std-ref">Übung 8.5</span></a>):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Notwendige Functions definieren #############</span>
@@ -626,7 +636,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_44499</span><span class="o">/</span><span class="mf">2233830470.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_42392</span><span class="o">/</span><span class="mf">2233830470.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Daten Importieren ###########################</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/zeckenstiche.csv&quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">wald</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;data/wald.gpkg&quot;</span><span class="p">)</span>
@@ -917,7 +927,7 @@ dtype: int64
 <div class="dropdown admonition tip">
 <p class="admonition-title">Tipp</p>
 <p>Schau dir <a class="reference internal" href="../B_Coding_in_GIS_1/8_Tabellarische_Daten.html#ex-sel-col"><span class="std std-ref">Übung 4.5</span></a> und <a class="reference internal" href="../B_Coding_in_GIS_1/8_Tabellarische_Daten.html#ex-new-col"><span class="std std-ref">Übung 4.6</span></a> an wenn du nicht mehr weisst, wie man Spalten selektiert / erstellt.</p>
-<p>Für Profis: in die gleiche Familie wie <code class="docutils literal notranslate"><span class="pre">apply</span></code> (siehe <a class="reference internal" href="../B_Coding_in_GIS_2/7_Funktionen_in_DataFrames.html#ex-apply"><span class="std std-ref">Übung 8.3</span></a>) gehört die Funktion <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.assign.html"><code class="docutils literal notranslate"><span class="pre">assign</span></code></a>. Diese eignet sich wunderbar für die Erstellung von <code class="docutils literal notranslate"><span class="pre">ja_anteil</span></code>, vor allem in Kombination mit einer <code class="docutils literal notranslate"><span class="pre">lamba</span></code>-<em>function</em> (siehe <a class="reference internal" href="../B_Coding_in_GIS_2/5_Functions_II.html#chap-functions-lambda"><span class="std std-ref">Lambda-Function</span></a>).</p>
+<p>Für Profis: in die gleiche Familie wie <code class="docutils literal notranslate"><span class="pre">apply</span></code> (siehe <a class="reference internal" href="../B_Coding_in_GIS_2/10_Funktionen_in_DataFrames.html#ex-apply"><span class="std std-ref">Übung 9.3</span></a>) gehört die Funktion <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.assign.html"><code class="docutils literal notranslate"><span class="pre">assign</span></code></a>. Diese eignet sich wunderbar für die Erstellung von <code class="docutils literal notranslate"><span class="pre">ja_anteil</span></code>, vor allem in Kombination mit einer <code class="docutils literal notranslate"><span class="pre">lamba</span></code>-<em>function</em> (siehe <a class="reference internal" href="../B_Coding_in_GIS_2/07_Functions_II.html#chap-functions-lambda"><span class="std std-ref">Lambda-Function</span></a>).</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

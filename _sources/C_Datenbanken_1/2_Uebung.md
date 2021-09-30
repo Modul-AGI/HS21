@@ -28,9 +28,4 @@ Sind alle offenen Fragen geklärt und das Textmodell fertig, entwickeln Sie aus 
 Zum Abschluss erstellen Sie auf der Grundlage ihres konzeptuellen Modells das erforderliche logische Modell. Leiten Sie aus den identifizierten Objekten, Attributen und Kardinalitäten die benötigten Tabellen und Schlüsselattribute ab. Achten Sie im Speziellen darauf wo es räumliche Tabellen sind und wo es sich um Sachdatentabellen handelt. Markieren Sie ausserdem auch alle Schlüssel-Attribute (Primärschlüssel und Fremdschlüssel).
 
 
-```{figure} figures/Musterloesung_Pflanzendatenbank.jpg
----
-name: musterloesung-pflanzendatenbank
----
-Musterlösung Pflanzendatenkbank
-```
+![](figures/Musterloesung_Pflanzendatenbank.jpg)
