@@ -49,7 +49,7 @@ def glob_dict(coding_in_gis_dir, globpattern_files):
         "dir":dirs, 
         "filenr": filenr
         }
-    return(mydict)
+    return mydict
 
 
 
@@ -62,7 +62,8 @@ def get_notebooks(globpattern_dirs = "[A-Z]_Coding_in_GIS_[1-9]", globpattern_fi
     files_df = pd.concat(files_df_list)
     files_df = files_df.sort_values(by = "filenr")
 
-    return(files_df)
+    return files_df 
+    
 
 notebooks_df = get_notebooks()
 
