@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aufgabe 13: Räumliche Operationen &#8212; Angewandte Geoinformatik AGI</title>
+    <title>Aufgabe 14: Räumliche Operationen &#8212; Angewandte Geoinformatik AGI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -230,7 +231,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../B_Coding_in_GIS_2/09_Zufallzahlen.html">
-   Aufgabe 7: Zufallszahlen generieren
+   Aufgabe 8: Zufallszahlen generieren
   </a>
  </li>
  <li class="toctree-l1">
@@ -255,7 +256,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2_For_Loops.html">
-   Aufgabe 9:
+   Aufgabe 10:
    <em>
     for loop
    </em>
@@ -264,7 +265,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3_For_Loops.html">
-   Aufgabe 10:
+   Aufgabe 11:
    <em>
     for loop
    </em>
@@ -273,7 +274,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="4_For_Loops.html">
-   Aufgabe 11:
+   Aufgabe 12:
    <em>
     for loops
    </em>
@@ -282,7 +283,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="5_Zeckenstich_Simulation.html">
-   Aufgabe 12: Zeckenstich Simulation
+   Aufgabe 13: Zeckenstich Simulation
   </a>
  </li>
  <li class="toctree-l1">
@@ -292,7 +293,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Aufgabe 13: Räumliche Operationen
+   Aufgabe 14: Räumliche Operationen
   </a>
  </li>
  <li class="toctree-l1">
@@ -568,38 +569,38 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-13-1">
-     Übung 13.1
+    <a class="reference internal nav-link" href="#ubung-14-1">
+     Übung 14.1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-13-2">
-     Übung 13.2
+    <a class="reference internal nav-link" href="#ubung-14-2">
+     Übung 14.2
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-13-3">
-     Übung 13.3
+    <a class="reference internal nav-link" href="#ubung-14-3">
+     Übung 14.3
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-13-4">
-     Übung 13.4
+    <a class="reference internal nav-link" href="#ubung-14-4">
+     Übung 14.4
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-13-5">
-     Übung 13.5
+    <a class="reference internal nav-link" href="#ubung-14-5">
+     Übung 14.5
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-13-6">
-     Übung 13.6
+    <a class="reference internal nav-link" href="#ubung-14-6">
+     Übung 14.6
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-13-7">
-     Übung 13.7
+    <a class="reference internal nav-link" href="#ubung-14-7">
+     Übung 14.7
     </a>
    </li>
   </ul>
@@ -615,8 +616,8 @@
         
               <div>
                 
-  <div class="section" id="aufgabe-13-raumliche-operationen">
-<span id="chap-raeumliche-operationen"></span><h1>Aufgabe 13: Räumliche Operationen<a class="headerlink" href="#aufgabe-13-raumliche-operationen" title="Link zu dieser Überschrift">¶</a></h1>
+  <div class="section" id="aufgabe-14-raumliche-operationen">
+<span id="chap-raeumliche-operationen"></span><h1>Aufgabe 14: Räumliche Operationen<a class="headerlink" href="#aufgabe-14-raumliche-operationen" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="theorie">
 <h2>Theorie<a class="headerlink" href="#theorie" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Was bringt uns diese <em>Geo</em> Erweiterung? Mit <em>GeoDataFrames</em> sind nun alle räumliche Operationen möglich, die wir bereits aus ArcGIS kennen aber mit einfachen <em>DataFrames</em> noch nicht möglich waren. Ich möchte dies an ein paar Beispielen Demonstrieren.</p>
@@ -787,16 +788,16 @@
 <div class="section" id="ubungen">
 <h2>Übungen<a class="headerlink" href="#ubungen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Nun ist es Zeit, dass ihr selbst mit <em>GeoDataFrames</em> Hand anlegt. Achtet dabei immer auf die Datentypen eurer Daten (mit <code class="docutils literal notranslate"><span class="pre">type</span></code>) und konsultiert dazu <a class="reference internal" href="6_GIS_in_Python.html#chap-pythongis-datenstruktur"><span class="std std-ref">Aufbau von GeoDataFrames</span></a>. Zudem ist Geopandas gut dokumentiert, es lohnt ich diese immer wieder zu konsultieren: <a class="reference external" href="https://geopandas.org">geopandas.org</a></p>
-<div class="section" id="ubung-13-1">
-<h3>Übung 13.1<a class="headerlink" href="#ubung-13-1" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="ubung-14-1">
+<h3>Übung 14.1<a class="headerlink" href="#ubung-14-1" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Importiere <em>Geopandas</em> und wandle <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> in eine <em>GeoDataFrame</em> um (<code class="docutils literal notranslate"><span class="pre">zeckenstiche_gpd</span></code>). Vergiss nicht, das Koordinatenbezugssystem festzulegen!</p>
 </div>
-<div class="section" id="ubung-13-2">
-<h3>Übung 13.2<a class="headerlink" href="#ubung-13-2" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="ubung-14-2">
+<h3>Übung 14.2<a class="headerlink" href="#ubung-14-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Buffere die Zeckenstiche um eine Distanz von 12 Meter und speichere den Output in der Variabel <code class="docutils literal notranslate"><span class="pre">zeckenstiche_buffer</span></code>. Visualisiere die gebufferten Punkte in einem Plot.</p>
 </div>
-<div class="section" id="ubung-13-3">
-<h3>Übung 13.3<a class="headerlink" href="#ubung-13-3" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="ubung-14-3">
+<h3>Übung 14.3<a class="headerlink" href="#ubung-14-3" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Extrahiere die Umrisse von <code class="docutils literal notranslate"><span class="pre">zeckenstiche_buffer</span></code> und speichere diese in <code class="docutils literal notranslate"><span class="pre">zeckenstiche_buffer_outline</span></code>. Visualisiere anschliessend diese Umrisse.</p>
 <div class="cell tag_remove_input docutils container">
 <div class="cell_output docutils container">
@@ -807,8 +808,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="ubung-13-4">
-<h3>Übung 13.4<a class="headerlink" href="#ubung-13-4" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="ubung-14-4">
+<h3>Übung 14.4<a class="headerlink" href="#ubung-14-4" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Nutze nachstehenden Code um zwei Datensätze im gleichen Plot darzustellen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -828,16 +829,16 @@
 </div>
 </div>
 </div>
-<div class="section" id="ubung-13-5">
-<h3>Übung 13.5<a class="headerlink" href="#ubung-13-5" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="ubung-14-5">
+<h3>Übung 14.5<a class="headerlink" href="#ubung-14-5" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Berechne das „Envelope“ von <code class="docutils literal notranslate"><span class="pre">zeckenstiche_gpd</span></code> anhand der obigen Beispielen. Speichere den Output als <code class="docutils literal notranslate"><span class="pre">zeckenstiche_envelope</span></code>.</p>
 <div class="dropdown admonition tip">
 <p class="admonition-title">Tipp</p>
-<p>Denk daran, dass du zuerst noch einen Union machen musst (siehe <a class="reference internal" href="#chap-raeumliche-operationen"><span class="std std-ref">Aufgabe 13: Räumliche Operationen</span></a>)</p>
+<p>Denk daran, dass du zuerst noch einen Union machen musst (siehe <a class="reference internal" href="#chap-raeumliche-operationen"><span class="std std-ref">Aufgabe 14: Räumliche Operationen</span></a>)</p>
 </div>
 </div>
-<div class="section" id="ubung-13-6">
-<h3>Übung 13.6<a class="headerlink" href="#ubung-13-6" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="ubung-14-6">
+<h3>Übung 14.6<a class="headerlink" href="#ubung-14-6" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Führe die Overlay Operationen <em>Union</em> und <em>Symetrical Difference</em> zwischen <code class="docutils literal notranslate"><span class="pre">zeckenstiche_envelope</span></code> und <code class="docutils literal notranslate"><span class="pre">zeckenstiche_buffer</span></code> durch. Schaue dir dazu die entsprechende <a class="reference external" href="https://geopandas.org/set_operations.html#set-operations-with-overlay">Geopandas Hilfeseite</a> an.</p>
 <div class="dropdown admonition tip">
 <p class="admonition-title">Tipp</p>
@@ -868,8 +869,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="ubung-13-7">
-<h3>Übung 13.7<a class="headerlink" href="#ubung-13-7" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="ubung-14-7">
+<h3>Übung 14.7<a class="headerlink" href="#ubung-14-7" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Exportiere <code class="docutils literal notranslate"><span class="pre">zeckenstiche_gpd</span></code> als „Geopackage“ mit dem Namen „zeckenstiche.gpkg“. Lese nochmal <a class="reference internal" href="6_GIS_in_Python.html#chap-pythongis-formate"><span class="std std-ref">Geodatenformate</span></a> wenn du nicht mehr weisst, wie das geht. Versuche anschliessend, „zeckenstiche.gpgk“ wieder einzulesen.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">

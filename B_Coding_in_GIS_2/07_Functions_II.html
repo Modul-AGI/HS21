@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -232,7 +233,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09_Zufallzahlen.html">
-   Aufgabe 7: Zufallszahlen generieren
+   Aufgabe 8: Zufallszahlen generieren
   </a>
  </li>
  <li class="toctree-l1">
@@ -642,7 +643,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_42016</span><span class="o">/</span><span class="mf">3475113668.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_26940</span><span class="o">/</span><span class="mf">3475113668.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">sag_hallo</span><span class="p">()</span>
 
 <span class="ne">TypeError</span>: sag_hallo() missing 1 required positional argument: &#39;vorname&#39;
@@ -776,7 +777,7 @@ gruezi2(nachname, anrede)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_42016</span><span class="o">/</span><span class="mf">749504737.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_26940</span><span class="o">/</span><span class="mf">749504737.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># Wenn wir jetzt aber die Function ausführen wollen, entsteht die Fehlermeldung,</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># dass &quot;vorname&quot; fehlt (obwohl wir vorname ja schon definiert haben)</span>
 <span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">sag_hallo</span><span class="p">()</span>
@@ -794,22 +795,54 @@ gruezi2(nachname, anrede)
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
-<div class="card-body docutils">
+<div class="card-header docutils">
 <p class="card-text">Herkömmliche Weise:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sag_hallo</span><span class="p">(</span><span class="n">vorname</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s2">&quot;Hallo &quot;</span><span class="o">+</span><span class="n">vorname</span>
-</pre></div>
 </div>
+<div class="card-body docutils">
+<pre>
+def <span class = "grp1">sag_hallo</span>(<span class = "grp2">vorname</span>)<span class = "grp4">:</span>
+    return <span class = "grp3">"Hi "+vorname</span>
+</pre>
 </div>
 </div>
 </div>
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
-<div class="card-body docutils">
+<div class="card-header docutils">
 <p class="card-text">Verkürzt mit <code class="docutils literal notranslate"><span class="pre">lambda</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sag_hallo</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">vorname</span><span class="p">:</span> <span class="s2">&quot;Hallo &quot;</span><span class="o">+</span><span class="n">vorname</span>
-</pre></div>
 </div>
+<div class="card-body docutils">
+<pre>
+<span class = "grp1">sag_hallo</span> = lambda <span class = "grp2">vorname</span><span class = "grp4">:</span> <span class = "grp3">"Hi "+vorname</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Hier die beiden schreibweisen noch mit farblicher Kennzeichnung, um die Entsprechungen hervorzuheben:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Herkömmliche Weise:</p>
+</div>
+<div class="card-body docutils">
+<pre class = "showcol">
+<del>def</del> <span class = "grp1">sag_hallo</span>(<span class = "grp2">vorname</span>)<span class = "grp4">:</span>
+    <del>return</del> <span class = "grp3">"Hi "+vorname</span>
+</pre>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Verkürzt mit <code class="docutils literal notranslate"><span class="pre">lambda</span></code>:</p>
+</div>
+<div class="card-body docutils">
+<pre class = "showcol">
+<span class = "grp1">sag_hallo</span> = lambda <span class = "grp2">vorname</span><span class = "grp4">:</span> <span class = "grp3">"Hi "+vorname</span>
 </div>
 </div>
 </div>
@@ -870,15 +903,15 @@ gruezi2(nachname, anrede)
 </div>
 <div class="section" id="ubung-6-4">
 <h3>Übung 6.4<a class="headerlink" href="#ubung-6-4" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Erstelle eine Funktion <code class="docutils literal notranslate"><span class="pre">mean()</span></code>, welche den Mittelwert aus einer Liste (<code class="docutils literal notranslate"><span class="pre">List</span></code>) von Zahlen berechnet. Das Resultat sollte folgendermassen aussehen:</p>
+<p>Erstelle eine Funktion <code class="docutils literal notranslate"><span class="pre">mittelwert()</span></code>, welche den Mittelwert aus einer Liste (<code class="docutils literal notranslate"><span class="pre">List</span></code>) von Zahlen berechnet. Das Resultat sollte folgendermassen aussehen:</p>
 <div class="dropdown admonition tip">
 <p class="admonition-title">Tipp</p>
 <p>Nutze dazu <code class="docutils literal notranslate"><span class="pre">sum()</span></code> und <code class="docutils literal notranslate"><span class="pre">len()</span></code> analog <a class="reference internal" href="../B_Coding_in_GIS_1/5_Listen.html#mittelwert"><span class="std std-ref">Übung 2.6</span></a>.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meine_zahlen</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span><span class="mi">550</span><span class="p">,</span><span class="mi">1000</span><span class="p">]</span>
-<span class="n">mean</span><span class="p">(</span><span class="n">meine_zahlen</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meine_zahlen</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">550</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]</span>
+<span class="n">mittelwert</span><span class="p">(</span><span class="n">meine_zahlen</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

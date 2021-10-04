@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -230,7 +231,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09_Zufallzahlen.html">
-   Aufgabe 7: Zufallszahlen generieren
+   Aufgabe 8: Zufallszahlen generieren
   </a>
  </li>
  <li class="toctree-l1">
@@ -575,7 +576,7 @@
 <span id="chap-conda"></span><h1>Conda<a class="headerlink" href="#conda" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="was-ist-conda">
 <h2>Was ist Conda?<a class="headerlink" href="#was-ist-conda" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Conda ist ein<a class="footnote-reference brackets" href="#pip" id="id1">1</a> Verwaltungssystem für Python<a class="footnote-reference brackets" href="#id13" id="id2">2</a> Bibliotheken welches unter Windows, macOS und Linux läuft. Mit Conda lassen sich diese sog. Libraries und deren Abhängigkeiten schnell installieren, ausführen und aktualisieren. Ein zusätzliches, wichtiges Feature von Conda ist die Verwaltung von sogenannten „Virtuellen Umgebungen“. Diese Umgebungen ermöglichen es, dass Package Installationen in abgeschottenen „Container“ erfolgt. Das heisst, dass man unterschiedliche Versionen des gleichen Packages installieren kann, ohne das dies Probleme bereitet.</p>
+<p>Conda ist ein (von im Wesentlichen zwei<a class="footnote-reference brackets" href="#pip" id="id1">1</a>) Verwaltungssystem für Python<a class="footnote-reference brackets" href="#id13" id="id2">2</a> Bibliotheken welches unter Windows, macOS und Linux läuft. Mit Conda lassen sich diese Libraries und deren Abhängigkeiten schnell installieren, ausführen und aktualisieren. Ein zusätzliches, wichtiges Feature von Conda ist die Verwaltung von sogenannten „Virtuellen Umgebungen“. Diese Umgebungen ermöglichen es, dass Package Installationen in abgeschottenen „Container“ erfolgt. Das heisst, dass man unterschiedliche Versionen des gleichen Packages installieren kann, ohne das dies Probleme bereitet.</p>
 </div>
 <div class="section" id="conda-installieren">
 <h2>Conda installieren<a class="headerlink" href="#conda-installieren" title="Link zu dieser Überschrift">¶</a></h2>
@@ -584,7 +585,7 @@
 <div class="section" id="conda-environment-erstellen">
 <h2>Conda environment erstellen<a class="headerlink" href="#conda-environment-erstellen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wenn man den <a class="reference internal" href="../B_Coding_in_GIS_1/2_Python-Command-Prompt.html#chap-python-command-prompt"><span class="std std-ref">Python Command Prompt</span></a> startet, ist Conda bereits aktiviert. Dies daran erkennbar, dass vor dem Pfad (<code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3</span></code>) noch etwas in Klammern steht (<code class="docutils literal notranslate"><span class="pre">arcgispro-py3</span></code>, siehe <a class="reference internal" href="#python-cmd3"><span class="std std-numref">Abb. 8</span></a>).</p>
-<p><code class="docutils literal notranslate"><span class="pre">arcgispro-py3</span></code> ist der Name der Conda Environment, die automatisch aktiviert wurde. Gleichzeitig ist dies die „default Python environment“, welche ArcGIS Pro jeweils nutzt (siehe <a class="reference internal" href="#arcgis-conda"><span class="std std-numref">Abb. 9</span></a>). Dabei macht ArcGIS folgenden Hinweis: <em>Note: Cannot modify the default Python environment (arcigspro-py3). Clone then activate a new environment first.</em></p>
+<p><code class="docutils literal notranslate"><span class="pre">arcgispro-py3</span></code> ist der Name der Conda Environment, die automatisch aktiviert wurde. Gleichzeitig ist dies die „default Python environment“, welche ArcGIS Pro jeweils nutzt (siehe <a class="reference internal" href="#arcgis-conda"><span class="std std-numref">Abb. 9</span></a>). Das heisst, diese Environment wird verwendet wenn man Python innerhalb von ArcGIS nutzen möchte und hat gewisse Libraries vorinstalliert. Dabei macht ArcGIS aber folgenden Hinweis: <em>Note: Cannot modify the default Python environment (arcigspro-py3). Clone then activate a new environment first.</em> Genau diese Freiheit wollen wir aber haben und erstellen deswegen eine eigene Environment.</p>
 <p>Um eine neue Environment mit dem Namen <code class="docutils literal notranslate"><span class="pre">agi-env</span></code> zu erstellen und aktivieren geht man wie folgt vor:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">agi</span><span class="o">-</span><span class="n">env</span>           <span class="c1"># erstellt die Environment</span>
 <span class="n">activate</span> <span class="n">agi</span><span class="o">-</span><span class="n">env</span>                      <span class="c1"># linux: conda activate agi-env</span>
@@ -602,7 +603,7 @@
 </div>
 <div class="section" id="conda-packages-installieren">
 <h2>Conda packages installieren<a class="headerlink" href="#conda-packages-installieren" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Jetzt wo wir eine eigene Conda environment erstellt haben (<code class="docutils literal notranslate"><span class="pre">agi-env</span></code>) müssen wir diese auch befüllen. Aktuell ist sie nämlich noch ziemlich leer, wie ihr mit <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> sehen könnt (versucht es aus!).</p>
+<p>Jetzt wo wir eine eigene Conda environment erstellt haben (<code class="docutils literal notranslate"><span class="pre">agi-env</span></code>) müssen wir diese mit Libraries befüllen. Aktuell ist sie nämlich noch ziemlich leer, wie ihr mit <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> sehen könnt (versucht es aus!).</p>
 <p>Letzte woche hatten wir die Packages <a class="reference internal" href="../B_Coding_in_GIS_1/8_Tabellarische_Daten.html#chap-dataframes"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></span></a> sowie <a class="reference internal" href="../B_Coding_in_GIS_1/6_JupyterNotebook.html#chap-jupyternotebook"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></span></a> gebraucht. Diese Packages waren in der Environment <code class="docutils literal notranslate"><span class="pre">arcgispro-py3</span></code> bereits vorinstalliert. Wir installieren diese nun selbst und nutzen die gewonnene Freiheit um statt <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> das Package <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> zu installieren (<code class="docutils literal notranslate"><span class="pre">lab</span></code> ist der Nachfolger von <code class="docutils literal notranslate"><span class="pre">notebook</span></code>).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyterlab</span>   <span class="c1"># installiert jupyter lab </span>
  <span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">pandas</span>       <span class="c1"># installiert pandas</span>

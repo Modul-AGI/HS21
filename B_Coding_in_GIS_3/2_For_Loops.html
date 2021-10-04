@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aufgabe 9: for loop Einführung &#8212; Angewandte Geoinformatik AGI</title>
+    <title>Aufgabe 10: for loop Einführung &#8212; Angewandte Geoinformatik AGI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -52,7 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="Aufgabe 10: for loop Basics" href="3_For_Loops.html" />
+    <link rel="next" title="Aufgabe 11: for loop Basics" href="3_For_Loops.html" />
     <link rel="prev" title="Einleitung" href="1_Einleitung.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -230,7 +231,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../B_Coding_in_GIS_2/09_Zufallzahlen.html">
-   Aufgabe 7: Zufallszahlen generieren
+   Aufgabe 8: Zufallszahlen generieren
   </a>
  </li>
  <li class="toctree-l1">
@@ -255,7 +256,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Aufgabe 9:
+   Aufgabe 10:
    <em>
     for loop
    </em>
@@ -264,7 +265,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3_For_Loops.html">
-   Aufgabe 10:
+   Aufgabe 11:
    <em>
     for loop
    </em>
@@ -273,7 +274,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="4_For_Loops.html">
-   Aufgabe 11:
+   Aufgabe 12:
    <em>
     for loops
    </em>
@@ -282,7 +283,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="5_Zeckenstich_Simulation.html">
-   Aufgabe 12: Zeckenstich Simulation
+   Aufgabe 13: Zeckenstich Simulation
   </a>
  </li>
  <li class="toctree-l1">
@@ -292,7 +293,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="7_Raeumliche_Operationen.html">
-   Aufgabe 13: Räumliche Operationen
+   Aufgabe 14: Räumliche Operationen
   </a>
  </li>
  <li class="toctree-l1">
@@ -563,28 +564,28 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-9-1">
-     Übung 9.1
+    <a class="reference internal nav-link" href="#ubung-10-1">
+     Übung 10.1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-9-2">
-     Übung 9.2
+    <a class="reference internal nav-link" href="#ubung-10-2">
+     Übung 10.2
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-9-3">
-     Übung 9.3
+    <a class="reference internal nav-link" href="#ubung-10-3">
+     Übung 10.3
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-9-4">
-     Übung 9.4
+    <a class="reference internal nav-link" href="#ubung-10-4">
+     Übung 10.4
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-9-5">
-     Übung 9.5
+    <a class="reference internal nav-link" href="#ubung-10-5">
+     Übung 10.5
     </a>
    </li>
   </ul>
@@ -600,8 +601,8 @@
         
               <div>
                 
-  <div class="section" id="aufgabe-9-for-loop-einfuhrung">
-<span id="forloops-1"></span><h1>Aufgabe 9: <em>for loop</em> Einführung<a class="headerlink" href="#aufgabe-9-for-loop-einfuhrung" title="Link zu dieser Überschrift">¶</a></h1>
+  <div class="section" id="aufgabe-10-for-loop-einfuhrung">
+<span id="forloops-1"></span><h1>Aufgabe 10: <em>for loop</em> Einführung<a class="headerlink" href="#aufgabe-10-for-loop-einfuhrung" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="theorie">
 <h2>Theorie<a class="headerlink" href="#theorie" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="die-grundform">
@@ -654,17 +655,17 @@ Iteration 2
 </div>
 <div class="section" id="der-platzhalter">
 <h3>Der Platzhalter<a class="headerlink" href="#der-platzhalter" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Die Platzhaltervariabel liegt immer zwischen <code class="docutils literal notranslate"><span class="pre">for</span></code> und <code class="docutils literal notranslate"><span class="pre">in</span></code>, den Namen dieser Variabel könnt ihr frei wählen. Ich habe sie im obigen Beispiel <code class="docutils literal notranslate"><span class="pre">platzhalter</span></code> genannt. Speziell an dieser Variabel ist, dass sie während der Dauer des <em>Loops</em> ihren Wert verändert. Mehr dazu in <a class="reference internal" href="3_For_Loops.html#forloops-2"><span class="std std-ref">Aufgabe 10: for loop Basics</span></a>.</p>
+<p>Die Platzhaltervariabel liegt immer zwischen <code class="docutils literal notranslate"><span class="pre">for</span></code> und <code class="docutils literal notranslate"><span class="pre">in</span></code>, den Namen dieser Variabel könnt ihr frei wählen. Ich habe sie im obigen Beispiel <code class="docutils literal notranslate"><span class="pre">platzhalter</span></code> genannt. Speziell an dieser Variabel ist, dass sie während der Dauer des <em>Loops</em> ihren Wert verändert. Mehr dazu in <a class="reference internal" href="3_For_Loops.html#forloops-2"><span class="std std-ref">Aufgabe 11: for loop Basics</span></a>.</p>
 </div>
 </div>
 <div class="section" id="ubungen">
 <h2>Übungen<a class="headerlink" href="#ubungen" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="ubung-9-1">
-<h3>Übung 9.1<a class="headerlink" href="#ubung-9-1" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="ubung-10-1">
+<h3>Übung 10.1<a class="headerlink" href="#ubung-10-1" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Kopiere den ersten der beiden <em>Loops</em> und lasse ihn bei dir laufen. Spiele mit den Werten rum, um ein Gefühl für <em>For Loops</em> zu bekommen: Ergänze die Liste mit weiteren Zahlen, verändere den Namen der Platzhaltervariabel und verändere den Text, der in <code class="docutils literal notranslate"><span class="pre">print</span></code> ausgegeben wird.</p>
 </div>
-<div class="section" id="ubung-9-2">
-<span id="for-gruss"></span><h3>Übung 9.2<a class="headerlink" href="#ubung-9-2" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="ubung-10-2">
+<span id="for-gruss"></span><h3>Übung 10.2<a class="headerlink" href="#ubung-10-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Konstruiere eine Liste bestehend aus 3 Namen und nenne diese Liste <code class="docutils literal notranslate"><span class="pre">namen</span></code>. Erstelle danach einen <em>for loop</em>, mit welcher jede Person in der Liste gegrüsst wird. Nutze dafür <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Der Output könnte etwa so aussehen</span>
 
@@ -674,12 +675,12 @@ Iteration 2
 </pre></div>
 </div>
 </div>
-<div class="section" id="ubung-9-3">
-<h3>Übung 9.3<a class="headerlink" href="#ubung-9-3" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="ubung-10-3">
+<h3>Übung 10.3<a class="headerlink" href="#ubung-10-3" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Kopiere den zweiten <em>For Loop</em> (der mit <code class="docutils literal notranslate"><span class="pre">range</span></code>) und spiele hier mit den Werten herum. Verändere den <em>For Loop</em> so, dass er über die Werte von -5 bis +5 iteriert.</p>
 </div>
-<div class="section" id="ubung-9-4">
-<h3>Übung 9.4<a class="headerlink" href="#ubung-9-4" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="ubung-10-4">
+<h3>Übung 10.4<a class="headerlink" href="#ubung-10-4" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Bis jetzt haben unsere <em>Loops</em> nicht viel Arbeiten müssen. Erstelle nun einen <em>For Loop</em>, welcher für die Werte -5 bis +5 folgendes ausgibt:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Das</span> <span class="n">Quadrat</span> <span class="n">von</span> <span class="o">-</span><span class="mi">5</span> <span class="n">ist</span> <span class="mi">25</span>
 <span class="n">Das</span> <span class="n">Quadrat</span> <span class="n">von</span> <span class="o">-</span><span class="mi">4</span> <span class="n">ist</span> <span class="mi">16</span>
@@ -687,8 +688,8 @@ Iteration 2
 </pre></div>
 </div>
 </div>
-<div class="section" id="ubung-9-5">
-<h3>Übung 9.5<a class="headerlink" href="#ubung-9-5" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="ubung-10-5">
+<span id="chap-forloops-ex-party"></span><h3>Übung 10.5<a class="headerlink" href="#ubung-10-5" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Bisher haben wir die Platzhaltervariabel immer in unserem <em>Loop</em> wiederverwendet. Das müssen wir aber gar nicht, wir können den <em>for loop</em> einfach nutzen um etwas x mal zu wiederholen. Erstellen einen <em>for loop</em> der folgende beiden Sätze 5x wiederholt:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Who likes to party?
 We like to party!
@@ -752,7 +753,7 @@ Who likes to party?
         <a class="right-next" href="3_For_Loops.html" title="weiter Seite">
             <div class="prevnext-info">
                 <p class="prevnext-label">weiter</p>
-                <p class="prevnext-title">Aufgabe 10: <em>for loop</em> Basics</p>
+                <p class="prevnext-title">Aufgabe 11: <em>for loop</em> Basics</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

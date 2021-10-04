@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -230,7 +231,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09_Zufallzahlen.html">
-   Aufgabe 7: Zufallszahlen generieren
+   Aufgabe 8: Zufallszahlen generieren
   </a>
  </li>
  <li class="toctree-l1">
@@ -540,15 +541,9 @@
                 
   <div class="section" id="jupyterlab">
 <h1>JupyterLab<a class="headerlink" href="#jupyterlab" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Wie bereits erwähnt ist JupyterLab der Nachfolger von Jupyter Notebook. Idealerweise hätten wir bereits letzte Woche JupyterLab verwendet, leider ist dieses Modul aber in der Standart Environment von ArcGIS (<code class="docutils literal notranslate"><span class="pre">arcgispro-py3</span></code>) nicht verfügbar.</p>
-<p>In der Handhabung ist JupyterLab sehr ähnlich wie Jupyter Notebook. Tatsächlich heissen die Dateien, die mit JupyterLab erstellt werden ebenfalls <em>Jupyter Notebook</em>: Ihr könnt also die *.ipynb Files von letzter Woche auch mit JuypterLab öffnen. Optisch gesehen ist der Hauptunterschied, dass JupyterLabs über eine <em>Sidebar</em> verfügt, wo verschiedene Tabs zur Verfügung stehen:</p>
-<ul class="simple">
-<li><p>File browser</p></li>
-<li><p>Running Terminals and Kernels</p></li>
-<li><p>Table of Content</p></li>
-<li><p>Extension Manager</p></li>
-</ul>
-<p>Eine praktische Funktionalität ist der Extension Manager. Hiermit kann JupyterLabs mit <em>Extensions</em> erweitert werden. Beispielsweise empfehle ich die Extension „jupyterlab-variableinspector“ (<code class="docutils literal notranslate"><span class="pre">&#64;lckr/jupyterlab_variableinspector</span></code>).</p>
+<p>Installiert zuerst JupyterLab nach der Anleitung in Kapitel „<a class="reference internal" href="02_Conda.html#chap-conda"><span class="std std-ref">Conda</span></a>“ und startet die IDE mit dem Befehl <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code>. Wie dort bereits erwähnt ist JupyterLab der Nachfolger von Jupyter Notebook. Idealerweise hätten wir bereits letzte Woche JupyterLab verwendet, leider ist dieses Modul aber in der Standart Environment von ArcGIS (<code class="docutils literal notranslate"><span class="pre">arcgispro-py3</span></code>) nicht verfügbar.</p>
+<p>In der Handhabung ist JupyterLab sehr ähnlich wie Jupyter Notebook. Tatsächlich bleibt das Dateiformat genau das gleiche: Auch mit JuypterLab erstellt man *.ipynb Files die nach wie vor „Jupyter Notebooks“ heissen. Optisch gesehen ist der Hauptunterschied, dass JupyterLabs über eine <em>Sidebar</em> verfügt, wo verschiedene Tabs zur Verfügung stehen (File browser, Running Terminals and Kernels, Table of Content, Extension Manager).</p>
+<p>Eine praktische Funktionalität ist der Extension Manager. Hiermit kann JupyterLabs mit <em>Extensions</em> erweitert werden. Beispielsweise empfehle ich die Extension „jupyterlab-variableinspector“ (<code class="docutils literal notranslate"><span class="pre">&#64;lckr/jupyterlab_variableinspector</span></code>). Details zu dieser Extension findet ihr auf dessen <a class="reference external" href="https://github.com/lckr/jupyterlab-variableInspector">Github Repository</a>.</p>
 <p>Um ein neues Notebook zu erstellen klickt ihr auf File &gt; New &gt; Notebook oder auf den entsprechenden Button im Launcher.</p>
 <div class="figure align-default" id="jupyterbook-lab">
 <img alt="../_images/jupyterbook-lab.png" src="../_images/jupyterbook-lab.png" />

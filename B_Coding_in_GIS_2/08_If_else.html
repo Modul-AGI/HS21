@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -52,7 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="Aufgabe 7: Zufallszahlen generieren" href="09_Zufallzahlen.html" />
+    <link rel="next" title="Aufgabe 8: Zufallszahlen generieren" href="09_Zufallzahlen.html" />
     <link rel="prev" title="Aufgabe 6: Function Advanced" href="07_Functions_II.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -230,7 +231,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09_Zufallzahlen.html">
-   Aufgabe 7: Zufallszahlen generieren
+   Aufgabe 8: Zufallszahlen generieren
   </a>
  </li>
  <li class="toctree-l1">
@@ -604,7 +605,10 @@
 <p>Zum Beispiel:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">alter</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># hier alter eingeben:</span>
+<span class="n">alter</span> <span class="o">=</span> <span class="mi">35</span>
+
+<span class="k">if</span> <span class="n">alter</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kesha: &#39;Tik Tok&#39;&quot;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">alter</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Destiny&#39;s Child: &#39;Say My Name&#39;&quot;</span><span class="p">)</span>
@@ -633,7 +637,7 @@
         <span class="n">song</span> <span class="o">=</span> <span class="s2">&quot;Mariah Carey: &#39;Vision of love&#39;&quot;</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">song</span> <span class="o">=</span> <span class="s2">&quot;Blondie: &#39;Call me&#39;&quot;</span>
-    <span class="k">return</span><span class="p">(</span><span class="s2">&quot;I suggest the song &quot;</span><span class="o">+</span><span class="n">song</span><span class="o">+</span><span class="s2">&quot;. Enjoy!&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot;I suggest the song &quot;</span><span class="o">+</span><span class="n">song</span><span class="o">+</span><span class="s2">&quot;. Enjoy!&quot;</span>
 
 
 <span class="n">suggest_song</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
@@ -650,17 +654,17 @@
 <p><a class="reference external" href="https://mermaid.live/edit#eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBW2FsdGVyIDwgMjBdIFxuICAgIEEtLT58eWVzfCBCW0tlc2hhOiAnVGlrIFRvayddXG4gICAgQS0tPnxub3wgQ1tBbHRlciA8IDMwXVxuICAgIEMtLT58eWVzfCBEW0Rlc3RpbnkncyBDaGlsZDogJ1NheSBNeSBOYW1lJ11cbiAgICBDLS0-fG5vfCBFW2FsdGVyIDwgNDBdXG4gICAgRS0tPnx5ZXN8IEZbTWFyaWFoIENhcmV5OiAnVmlzaW9uIG9mIGxvdmUnXVxuICAgIEUtLT58bm98IEdbQmxvbmRpZTogJ0NhbGwgbWUnXVxuICAiLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ"><img alt="" src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBW2FsdGVyIDwgMjBdIFxuICAgIEEtLT58eWVzfCBCW0tlc2hhOiAnVGlrIFRvayddXG4gICAgQS0tPnxub3wgQ1tBbHRlciA8IDMwXVxuICAgIEMtLT58eWVzfCBEW0Rlc3RpbnkncyBDaGlsZDogJ1NheSBNeSBOYW1lJ11cbiAgICBDLS0-fG5vfCBFW2FsdGVyIDwgNDBdXG4gICAgRS0tPnx5ZXN8IEZbTWFyaWFoIENhcmV5OiAnVmlzaW9uIG9mIGxvdmUnXVxuICAgIEUtLT58bm98IEdbQmxvbmRpZTogJ0NhbGwgbWUnXVxuICAiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9" /></a></p>
 <div class="section" id="ubung-7-1">
 <h2>Übung 7.1<a class="headerlink" href="#ubung-7-1" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Erweitere die Funktion <code class="docutils literal notranslate"><span class="pre">gruezi2</span></code> aus <a class="reference internal" href="05_Functions_I.html#gruezi2"><span class="std std-ref">Übung 5.2</span></a> mit einem weiteren Paramter namens „uhrzeit“. Die Funktion soll vor 18 Uhr (<code class="docutils literal notranslate"><span class="pre">uhrzeit</span> <span class="pre">&lt;</span> <span class="pre">18</span></code>) mit „Guten Tag“ und sonst mit „Guten Abend“ grüssen. Mache es dir einfach und berücksichtige dabei nur volle Stunden bzw. Stunden mit Dezimalminuten (also „Halb Neun“ wäre dann <code class="docutils literal notranslate"><span class="pre">8.5</span></code> und nicht <code class="docutils literal notranslate"><span class="pre">8:30</span></code>).</p>
+<p>Erstelle eine neue Funktion <code class="docutils literal notranslate"><span class="pre">gruezi3</span></code> die <code class="docutils literal notranslate"><span class="pre">gruezi</span></code> (aus <a class="reference internal" href="05_Functions_I.html#chap-functions1-ex-gruezi"><span class="std std-ref">Übung 5.1</span></a>) um einem weiteren Parameter <code class="docutils literal notranslate"><span class="pre">uhrzeit</span></code> erweitert. Die Funktion soll vor 18 Uhr (<code class="docutils literal notranslate"><span class="pre">uhrzeit</span> <span class="pre">&lt;</span> <span class="pre">18</span></code>) mit „Guten Tag“ und sonst mit „Guten Abend“ grüssen. Um es einfach zu halten: Die Zeitangbe muss in Dezimalzahlen erfolgen (also nicht <code class="docutils literal notranslate"><span class="pre">20:15</span> <span class="pre">Uhr</span></code> sondern <code class="docutils literal notranslate"><span class="pre">20.25</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># die Lösung sollte etwa folgendermasssen funktionieren:</span>
 
-<span class="n">gruezi2</span><span class="p">(</span><span class="s2">&quot;Van Rossum&quot;</span><span class="p">,</span> <span class="s2">&quot;Herr&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
+<span class="n">gruezi3</span><span class="p">(</span><span class="s2">&quot;Guido&quot;</span><span class="p">,</span> <span class="n">uhrzeit</span> <span class="o">=</span> <span class="mi">21</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Guten Abend, Herr Van Rossum&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Guten Abend Guido&#39;
 </pre></div>
 </div>
 </div>
@@ -695,19 +699,12 @@
 </tr>
 </tbody>
 </table>
-<p>Das Problem ist etwas schwierig zu Packen weil wir die Bandbreiten in eine Ja/Nein Logik überführen müssen. Überlege dir zuerst eine Ausführungslogik und schreibe danach die <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>und <code class="docutils literal notranslate"><span class="pre">else</span></code> Operationen. Im Dropdown unten ist unser Vorschlag.</p>
+<p>Das Problem ist etwas schwierig zu Packen weil wir die „von - bis“ Uhrzeiten in eine Ja/Nein Logik überführen müssen. Überlege dir zuerst eine Ausführungslogik und schreibe danach die <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>und <code class="docutils literal notranslate"><span class="pre">else</span></code> Operationen. Im Dropdown unten ist unser Vorschlag.</p>
 <div class="dropdown admonition tip">
 <p class="admonition-title">Tipp</p>
 <p><a class="reference external" href="https://mermaid.live/edit#eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBW3VocnplaXQgPCA1XSBcbiAgICBBLS0-fHllc3wgQltHdXRlIE5hY2h0XVxuICAgIEEtLT58bm98IENbVWhyemVpdCA8IDExXVxuICAgIEMtLT58eWVzfCBEW0d1dGVuIE1vcmdlbl1cbiAgICBDLS0-fG5vfCBFW1VocnplaXQgPCAxOF1cbiAgICBFLS0-fHllc3wgRltHdXRlbiBUYWddXG4gICAgRS0tPnxub3wgR1tVaHJ6ZWl0IDwgMjJdXG4gICAgRy0tPnx5ZXN8IEhbR3V0ZW4gQWJlbmRdXG4gICAgRy0tPnxub3wgSVtHdXRlIE5hY2h0XVxuICAiLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ"><img alt="" src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBW3VocnplaXQgPCA1XSBcbiAgICBBLS0-fHllc3wgQltHdXRlIE5hY2h0XVxuICAgIEEtLT58bm98IENbVWhyemVpdCA8IDExXVxuICAgIEMtLT58eWVzfCBEW0d1dGVuIE1vcmdlbl1cbiAgICBDLS0-fG5vfCBFW1VocnplaXQgPCAxOF1cbiAgICBFLS0-fHllc3wgRltHdXRlbiBUYWddXG4gICAgRS0tPnxub3wgR1tVaHJ6ZWl0IDwgMjJdXG4gICAgRy0tPnx5ZXN8IEhbR3V0ZW4gQWJlbmRdXG4gICAgRy0tPnxub3wgSVtHdXRlIE5hY2h0XVxuICAiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9" /></a></p>
 </div>
-<p>Teste die funktion mit folgenden Optionen</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">gruezi2</span><span class="p">(</span><span class="s2">&quot;Van Rossum&quot;</span><span class="p">,</span> <span class="s2">&quot;Herr&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">gruezi2</span><span class="p">(</span><span class="s2">&quot;Van Rossum&quot;</span><span class="p">,</span> <span class="s2">&quot;Herr&quot;</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
-<span class="n">gruezi2</span><span class="p">(</span><span class="s2">&quot;Van Rossum&quot;</span><span class="p">,</span> <span class="s2">&quot;Herr&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
-<span class="n">gruezi2</span><span class="p">(</span><span class="s2">&quot;Van Rossum&quot;</span><span class="p">,</span> <span class="s2">&quot;Herr&quot;</span><span class="p">,</span> <span class="mi">22</span><span class="p">)</span>
-<span class="n">gruezi2</span><span class="p">(</span><span class="s2">&quot;Van Rossum&quot;</span><span class="p">,</span> <span class="s2">&quot;Herr&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
+<p>Teste die funktion mit verschiedenen Optionen um sicher zu stellen, dass sie richtig funktioniert.</p>
 </div>
 <div class="section" id="id1">
 <h2>Übung 7.2<a class="headerlink" href="#id1" title="Link zu dieser Überschrift">¶</a></h2>
@@ -747,7 +744,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Der Output sollte etwa folgedermassen aussehen</span>
-<span class="n">bmi</span><span class="p">(</span><span class="mf">1.7</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span>
+<span class="n">bmi2</span><span class="p">(</span><span class="mf">1.7</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -802,7 +799,7 @@
         <a class="right-next" href="09_Zufallzahlen.html" title="weiter Seite">
             <div class="prevnext-info">
                 <p class="prevnext-label">weiter</p>
-                <p class="prevnext-title">Aufgabe 7: Zufallszahlen generieren</p>
+                <p class="prevnext-title">Aufgabe 8: Zufallszahlen generieren</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
