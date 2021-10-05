@@ -14,7 +14,7 @@ parts:
     - glob: B_Coding_in_GIS_2/*
   - caption: Coding in GIS III
     chapters:
-    - glob: B_Coding_in_GIS_3/* # leistungsnachweis und anhang fehlt noch
+    - glob: B_Coding_in_GIS_3/* # anhang fehlt noch
   - caption: Datenbanken I
     chapters:
     - glob: C_Datenbanken_1/*
