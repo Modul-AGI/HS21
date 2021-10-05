@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -72,6 +72,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/zhaw_lsfm_iunr_blau.jpg" class="logo" alt="logo">
       
@@ -282,23 +286,23 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_3/5_Zeckenstich_Simulation.html">
-   Aufgabe 13: Zeckenstich Simulation
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../B_Coding_in_GIS_3/6_GIS_in_Python.html">
    Input: GIS in Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../B_Coding_in_GIS_3/7_Raeumliche_Operationen.html">
-   Aufgabe 14: Räumliche Operationen
+   Aufgabe 14: GIS in Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../B_Coding_in_GIS_3/8_Spatial_Joins.html">
-   Aufgabe 14: Spatial Join
+   Aufgabe 15: Spatial Join
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_3/9_Leistungsnachweis.html">
+   Leistungsnachweis
   </a>
  </li>
 </ul>
@@ -576,7 +580,7 @@
 </div>
 <div class="section" id="ubung-3-1-projekt-vorbereiten">
 <span id="ex-osm-background"></span><h2>Übung 3.1: Projekt vorbereiten<a class="headerlink" href="#ubung-3-1-projekt-vorbereiten" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Starten Sie „QGIS Desktop 3.10.0 with GRASS 7.8.0“ und beginnen Sie ein neues Projekt mit dem CRS CH1903+ LV95 (EPSG 2056). Laden Sie den Datensatz „osm_highway_prepared.gpkg“ von letzter Woche. Wer den Datensatz von letzter Woche nicht auffinden kann, findet die Datei in <a class="reference internal" href="../D_Netzwerkanalyse_3/7_Anhang.html#table-datensaetze-netzwerkanalyse"><span class="std std-numref">Tab. 4</span></a>. Prüfen Sie, ob das CRS richtig erkannt wurde (Rechtsklick -&gt; Properties -&gt; Reiter Source -&gt; Set source coordinate reference system -&gt; Hier sollte EPSG 2056 stehen).</p>
+<p>Starten Sie „QGIS Desktop 3.10.0 with GRASS 7.8.0“ und beginnen Sie ein neues Projekt mit dem CRS CH1903+ LV95 (EPSG 2056). Laden Sie den Datensatz „osm_highway_prepared.gpkg“ von letzter Woche. Wer den Datensatz von letzter Woche nicht auffinden kann, findet die Datei in <a class="reference internal" href="../D_Netzwerkanalyse_3/7_Anhang.html#table-datensaetze-netzwerkanalyse"><span class="std std-numref">Tab. 5</span></a>. Prüfen Sie, ob das CRS richtig erkannt wurde (Rechtsklick -&gt; Properties -&gt; Reiter Source -&gt; Set source coordinate reference system -&gt; Hier sollte EPSG 2056 stehen).</p>
 <p>Wir brauchen zudem eine Hintergrundkarte zur Orientierung. Blenden Sie diese mit dem Plugin „QuickMapServices“ die Openstreetmap Hintergrundkarte ein (Web -&gt; QuickMapServices -&gt; OSM -&gt; OSM Standard) ein. Falls Sie diese Option nicht finden, müssen Sie das enstprechede Plugin „QuickMapServices“ installieren (siehe dazu <a class="reference internal" href="../D_Netzwerkanalyse_1/2_Vorbereitung.html#ex-network-plugins"><span class="std std-ref">Übung 5: Plugin installieren</span></a>).</p>
 <p>Die Hintergrundkarte dient lediglich zur Orientierung, die Farbe lenkt uns jedoch vom Netzwerk ab. Wechseln Sie deshalb den Darstellungsmodus auf Graustufen mittels Rechtklick auf den Layer „OSM Standard“ -&gt; Properties -&gt; Symbology -&gt; Grayscale Auswahl: „By lightness“.</p>
 </div>
@@ -654,7 +658,7 @@
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

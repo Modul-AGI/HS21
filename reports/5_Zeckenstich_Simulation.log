@@ -18,29 +18,23 @@ Traceback (most recent call last):
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 import pandas as pd
-import geopandas as gpd
-import matplotlib.pyplot as plt
-import descartes
 
-zeckenstiche_full = pd.read_csv("data/zeckenstiche_full.csv")
+def offset_coordinate(old, distance = 100):
+    import random
+    new = old + random.normalvariate(0,distance)
+    return new
 
-wald = gpd.read_file("data/wald.gpkg")
-zeckenstiche_gpd = gpd.GeoDataFrame(zeckenstiche_full,
-                                         geometry=gpd.points_from_xy(zeckenstiche_full['x'], zeckenstiche_full['y']),
-                                         crs = 2056) 
-
+zeckenstiche = pd.read_csv("data/zeckenstiche.csv")
 
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-[0;32m/tmp/ipykernel_29497/600820985.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      4[0m [0;32mimport[0m [0mdescartes[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      5[0m [0;34m[0m[0m
-[0;32m----> 6[0;31m [0mzeckenstiche_full[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mread_csv[0m[0;34m([0m[0;34m"data/zeckenstiche_full.csv"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      7[0m [0;34m[0m[0m
-[1;32m      8[0m [0mwald[0m [0;34m=[0m [0mgpd[0m[0;34m.[0m[0mread_file[0m[0;34m([0m[0;34m"data/wald.gpkg"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-
+[0;32m/tmp/ipykernel_41448/1231242015.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      6[0m     [0;32mreturn[0m [0mnew[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      7[0m [0;34m[0m[0m
+[0;32m----> 8[0;31m [0mzeckenstiche[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mread_csv[0m[0;34m([0m[0;34m"data/zeckenstiche.csv"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
 [0;32m~/miniconda3/envs/agi-jb/lib/python3.9/site-packages/pandas/util/_decorators.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
 [1;32m    309[0m                     [0mstacklevel[0m[0;34m=[0m[0mstacklevel[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 [1;32m    310[0m                 )
@@ -97,6 +91,6 @@ zeckenstiche_gpd = gpd.GeoDataFrame(zeckenstiche_full,
 [0m[1;32m    703[0m                 [0mhandle[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 [1;32m    704[0m                 [0mioargs[0m[0;34m.[0m[0mmode[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'data/zeckenstiche_full.csv'
-FileNotFoundError: [Errno 2] No such file or directory: 'data/zeckenstiche_full.csv'
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'data/zeckenstiche.csv'
+FileNotFoundError: [Errno 2] No such file or directory: 'data/zeckenstiche.csv'
 

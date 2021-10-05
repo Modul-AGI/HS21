@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aufgabe 14: Spatial Join &#8212; Angewandte Geoinformatik AGI</title>
+    <title>Aufgabe 15: Spatial Join &#8212; Angewandte Geoinformatik AGI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="Einleitung" href="../C_Datenbanken_1/1_Einleitung.html" />
-    <link rel="prev" title="Aufgabe 14: Räumliche Operationen" href="7_Raeumliche_Operationen.html" />
+    <link rel="next" title="Leistungsnachweis" href="9_Leistungsnachweis.html" />
+    <link rel="prev" title="Aufgabe 14: GIS in Python" href="7_Raeumliche_Operationen.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -72,6 +72,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/zhaw_lsfm_iunr_blau.jpg" class="logo" alt="logo">
       
@@ -282,23 +286,23 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="5_Zeckenstich_Simulation.html">
-   Aufgabe 13: Zeckenstich Simulation
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="6_GIS_in_Python.html">
    Input: GIS in Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="7_Raeumliche_Operationen.html">
-   Aufgabe 14: Räumliche Operationen
+   Aufgabe 14: GIS in Python
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Aufgabe 14: Spatial Join
+   Aufgabe 15: Spatial Join
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9_Leistungsnachweis.html">
+   Leistungsnachweis
   </a>
  </li>
 </ul>
@@ -558,13 +562,23 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-14-1">
-     Übung 14.1
+    <a class="reference internal nav-link" href="#ubung-15-1">
+     Übung 15.1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-14-2">
-     Übung 14.2
+    <a class="reference internal nav-link" href="#ubung-15-2">
+     Übung 15.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-15-3">
+     Übung 15.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-15-4">
+     Übung 15.4
     </a>
    </li>
   </ul>
@@ -580,8 +594,8 @@
         
               <div>
                 
-  <div class="section" id="aufgabe-14-spatial-join">
-<span id="chap-spatialjoin"></span><h1>Aufgabe 14: Spatial Join<a class="headerlink" href="#aufgabe-14-spatial-join" title="Link zu dieser Überschrift">¶</a></h1>
+  <div class="section" id="aufgabe-15-spatial-join">
+<span id="chap-spatialjoin"></span><h1>Aufgabe 15: Spatial Join<a class="headerlink" href="#aufgabe-15-spatial-join" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="theorie">
 <h2>Theorie<a class="headerlink" href="#theorie" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In dieser Aufgabe wollen wir für jeden Zeckenstich ermitteln, ob er sich im Wald befindet oder nicht. Den Wald Layer kennt ihr bereits aus dem Block „Datenqualität und Unsicherheit“ und wir haben ihn in <a class="reference internal" href="6_GIS_in_Python.html#chap-pythongis-formate"><span class="std std-ref">Geodatenformate</span></a> kurz angeschaut. Nutzen wir hier nochmal die Gelegenheit, um den Wald und die Zeckenstiche (siehe <a class="reference internal" href="../B_Coding_in_GIS_1/1_Einleitung.html#table-datensaetze"><span class="std std-numref">Tab. 1</span></a>) als Geodaten einzulesen und in einer grossem Plot zu visualisieren.</p>
@@ -769,18 +783,32 @@
 </div>
 <div class="section" id="ubungen">
 <h2>Übungen<a class="headerlink" href="#ubungen" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="ubung-14-1">
-<span id="ex-import-wald"></span><h3>Übung 14.1<a class="headerlink" href="#ubung-14-1" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="ubung-15-1">
+<span id="ex-import-wald"></span><h3>Übung 15.1<a class="headerlink" href="#ubung-15-1" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Lade das File „wald.gpgk“ (siehe <a class="reference internal" href="../B_Coding_in_GIS_1/1_Einleitung.html#table-datensaetze"><span class="std std-numref">Tab. 1</span></a>) herunter und speichere es in deiner Workings Directory. Importiere den Datensatz und speichere ihn in der Variable <code class="docutils literal notranslate"><span class="pre">wald</span></code>.</p>
 <p>Schau dir <code class="docutils literal notranslate"><span class="pre">wald</span></code> an (mit <code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">.plot()</span></code> etc.)</p>
 </div>
-<div class="section" id="ubung-14-2">
-<span id="ex-spatialjoin"></span><h3>Übung 14.2<a class="headerlink" href="#ubung-14-2" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Führe einen SpatialJoin zwischen <code class="docutils literal notranslate"><span class="pre">wald</span></code> und <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> durch. Vertausche die Reihenfolge (<code class="docutils literal notranslate"><span class="pre">left_df</span></code>, <code class="docutils literal notranslate"><span class="pre">right_df</span></code>) und schaue dir den Output an. Was ist hier passiert?</p>
+<div class="section" id="ubung-15-2">
+<span id="ex-spatialjoin"></span><h3>Übung 15.2<a class="headerlink" href="#ubung-15-2" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Führe einen SpatialJoin zwischen <code class="docutils literal notranslate"><span class="pre">wald</span></code> und <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> durch. Vertausche die Reihenfolge (<code class="docutils literal notranslate"><span class="pre">left_df</span></code>, <code class="docutils literal notranslate"><span class="pre">right_df</span></code>) und schaue dir den Output an. Wodurch unterscheiden sich die beiden outputs? Was sagt dir das über die Funktionsweise von <code class="docutils literal notranslate"><span class="pre">sjoin</span></code>?</p>
 <div class="attention admonition">
 <p class="admonition-title">Wichtig!</p>
 <p>Melde dich bei den Betreuern wenn der <em>SpatialJoin</em> bei dir nicht funktioniert und du eine Fehlermeldung bekommst.</p>
 </div>
+</div>
+<div class="section" id="ubung-15-3">
+<h3>Übung 15.3<a class="headerlink" href="#ubung-15-3" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Führe nun den SpatialJoin aus <a class="reference internal" href="#ex-spatialjoin"><span class="std std-ref">Übung 15.2</span></a> in der Reihenfolge aus, der dir am sinnvollsten erscheint. Weise den Output dieser Operation der Variabel <code class="docutils literal notranslate"><span class="pre">zeckenstiche_join</span></code> zu.</p>
+<p>Nutze nun die dazugewonnene Spalte <code class="docutils literal notranslate"><span class="pre">Wald_text</span></code> um die Anzahl Zeckenstich-Meldungen <em>im Wald</em> zu zählen. Dazu musst du wie folgt vorgehen:</p>
+<ol class="simple">
+<li><p>Entsprechende Spalte selektieren (siehe <a class="reference internal" href="../B_Coding_in_GIS_1/8_Tabellarische_Daten.html#ex-sel-col"><span class="std std-ref">Übung 4.5</span></a>)</p></li>
+<li><p>Werte in der Spalte mit „ja“ vergleichen</p></li>
+<li><p>Anzahl <code class="docutils literal notranslate"><span class="pre">True</span></code> mit <code class="docutils literal notranslate"><span class="pre">sum()</span></code> zählen (<code class="docutils literal notranslate"><span class="pre">True</span></code> entspricht immer <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code> entspricht immer <code class="docutils literal notranslate"><span class="pre">0</span></code>)</p></li>
+</ol>
+</div>
+<div class="section" id="ubung-15-4">
+<h3>Übung 15.4<a class="headerlink" href="#ubung-15-4" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Berechne nun <em>Anteil</em> der Zeckenstiche im Wald (gemessen an der Anzahl Zeckenstich-Meldungen total). Weise den Output der Variabel <code class="docutils literal notranslate"><span class="pre">anteil_wald</span></code> zu.</p>
 </div>
 </div>
 </div>
@@ -819,15 +847,15 @@
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">zurück</p>
-                <p class="prevnext-title">Aufgabe 14: Räumliche Operationen</p>
+                <p class="prevnext-title">Aufgabe 14: GIS in Python</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../C_Datenbanken_1/1_Einleitung.html" title="weiter Seite">
+        <a class="right-next" href="9_Leistungsnachweis.html" title="weiter Seite">
             <div class="prevnext-info">
                 <p class="prevnext-label">weiter</p>
-                <p class="prevnext-title">Einleitung</p>
+                <p class="prevnext-title">Leistungsnachweis</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
@@ -837,7 +865,7 @@
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

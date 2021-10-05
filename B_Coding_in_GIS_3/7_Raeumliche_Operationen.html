@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aufgabe 14: Räumliche Operationen &#8212; Angewandte Geoinformatik AGI</title>
+    <title>Aufgabe 14: GIS in Python &#8212; Angewandte Geoinformatik AGI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -53,7 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="Aufgabe 14: Spatial Join" href="8_Spatial_Joins.html" />
+    <link rel="next" title="Aufgabe 15: Spatial Join" href="8_Spatial_Joins.html" />
     <link rel="prev" title="Input: GIS in Python" href="6_GIS_in_Python.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -72,6 +72,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/zhaw_lsfm_iunr_blau.jpg" class="logo" alt="logo">
       
@@ -282,23 +286,23 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="5_Zeckenstich_Simulation.html">
-   Aufgabe 13: Zeckenstich Simulation
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="6_GIS_in_Python.html">
    Input: GIS in Python
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Aufgabe 14: Räumliche Operationen
+   Aufgabe 14: GIS in Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="8_Spatial_Joins.html">
-   Aufgabe 14: Spatial Join
+   Aufgabe 15: Spatial Join
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9_Leistungsnachweis.html">
+   Leistungsnachweis
   </a>
  </li>
 </ul>
@@ -616,23 +620,32 @@
         
               <div>
                 
-  <div class="section" id="aufgabe-14-raumliche-operationen">
-<span id="chap-raeumliche-operationen"></span><h1>Aufgabe 14: Räumliche Operationen<a class="headerlink" href="#aufgabe-14-raumliche-operationen" title="Link zu dieser Überschrift">¶</a></h1>
+  <div class="section" id="aufgabe-14-gis-in-python">
+<span id="chap-raeumliche-operationen"></span><h1>Aufgabe 14: GIS in Python<a class="headerlink" href="#aufgabe-14-gis-in-python" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="theorie">
 <h2>Theorie<a class="headerlink" href="#theorie" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Was bringt uns diese <em>Geo</em> Erweiterung? Mit <em>GeoDataFrames</em> sind nun alle räumliche Operationen möglich, die wir bereits aus ArcGIS kennen aber mit einfachen <em>DataFrames</em> noch nicht möglich waren. Ich möchte dies an ein paar Beispielen Demonstrieren.</p>
+<p>Was bringt uns diese <em>Geo</em> Erweiterung? Mit <em>GeoDataFrames</em> sind nun alle räumliche Operationen möglich, die wir bereits aus ArcGIS kennen aber mit einfachen <em>DataFrames</em> noch nicht möglich waren. Ich möchte dies an ein paar Beispielen Demonstrieren. Dazu müssen wir die Zeckenstiche in GeoDataFrame konvertiert und in einGeopackage exportiert haben, wie in <a class="reference internal" href="6_GIS_in_Python.html#chap-pythongis"><span class="std std-ref">Input: GIS in Python</span></a> beschrieben.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+
+<span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;data/zeckenstiche.gpkg&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="attention admonition">
 <p class="admonition-title">Wichtig</p>
 <ul class="simple">
 <li><p>Die verschiedenen räumlichen Operationen in Geopandas erwarten unterschiedlichen Input, deshalb müssen wir manchmal zwischen <em>Geometrien</em>, <em>Geoseries</em> und <em>GeoDataFrames</em> hin- und her konvertieren (siehe <a class="reference internal" href="6_GIS_in_Python.html#chap-pythongis-datenstruktur"><span class="std std-ref">Aufbau von GeoDataFrames</span></a>).</p></li>
-<li><p>Welche Operation welcher Datentyp braucht seht ihr in <a class="reference external" href="https://geopandas.org/">der Dokumentation</a>. Was für ein Datentyp eure Variabel ist seht ihr mit <code class="docutils literal notranslate"><span class="pre">type()</span></code>.</p></li>
-<li><p>Um <code class="docutils literal notranslate"><span class="pre">x</span></code> zu konvertieren (<code class="docutils literal notranslate"><span class="pre">crs</span></code> ggf. anpassen):</p>
-<ul>
-<li><p>von <em>Geometry</em> zu <em>Geoseries</em>: <code class="docutils literal notranslate"><span class="pre">gpd.GeoSeries(x,</span> <span class="pre">crs</span> <span class="pre">=</span> <span class="pre">2056)</span></code></p></li>
-<li><p>von <em>GeoSeries</em> zu <em>GeoDataFrame</em>: <code class="docutils literal notranslate"><span class="pre">gpd.GeoDataFrame(geometry</span> <span class="pre">=</span> <span class="pre">x,</span> <span class="pre">crs</span> <span class="pre">=</span> <span class="pre">2056)</span></code></p></li>
+<li><p>Welcher Datentyp eure Operation <em>braucht</em> seht ihr in <a class="reference external" href="https://geopandas.org/">der Dokumentation</a>. Welcher Datentyp ihr <em>habt</em> seht ihr mit <code class="docutils literal notranslate"><span class="pre">type()</span></code>.</p></li>
+<li><p>Um ein Objekt von einem Format in das andere zu konvertieren (angenommen das Objekt heisst <code class="docutils literal notranslate"><span class="pre">x</span></code>)</p></li>
 </ul>
-</li>
-</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>zecken_geoseries = gpd.GeoSeries(zeckenstiche[&quot;geometry&quot;])          # von GeoDataFrame zu Geoseries
+zecken_geodataframe = gpd.GeoDataFrame(geometry = zecken_geoseries) # von GeoSeries zurück zu GeoDataFrame
+``
+</pre></div>
+</div>
 </div>
 <div class="section" id="buffer">
 <h3>Buffer<a class="headerlink" href="#buffer" title="Link zu dieser Überschrift">¶</a></h3>
@@ -640,6 +653,16 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">buffered</span> <span class="o">=</span> <span class="n">zeckenstiche_gpd</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_46036</span><span class="o">/</span><span class="mf">3765764273.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">buffered</span> <span class="o">=</span> <span class="n">zeckenstiche_gpd</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;zeckenstiche_gpd&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -657,7 +680,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
 </pre></div>
 </div>
-<img alt="../_images/7_Raeumliche_Operationen_4_1.png" src="../_images/7_Raeumliche_Operationen_4_1.png" />
+<img alt="../_images/7_Raeumliche_Operationen_6_1.png" src="../_images/7_Raeumliche_Operationen_6_1.png" />
 </div>
 </div>
 </div>
@@ -668,7 +691,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeckenstiche_union</span> <span class="o">=</span> <span class="n">zeckenstiche_gpd</span><span class="p">[</span><span class="s2">&quot;geometry&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unary_union</span>
 
-<span class="nb">type</span><span class="p">(</span><span class="n">zeckenstiche_union</span><span class="p">)</span> <span class="c1"># Es handelt sich nun um den Typ &quot;geometry&quot;</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">zeckenstiche_union</span><span class="p">)</span> <span class="c1"># Es handelt sich nun um den Typ &quot;MultiPoint&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -734,7 +757,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:title={&#39;center&#39;:&#39;Envelope&#39;}&gt;
 </pre></div>
 </div>
-<img alt="../_images/7_Raeumliche_Operationen_14_1.png" src="../_images/7_Raeumliche_Operationen_14_1.png" />
+<img alt="../_images/7_Raeumliche_Operationen_16_1.png" src="../_images/7_Raeumliche_Operationen_16_1.png" />
 </div>
 </div>
 </div>
@@ -780,7 +803,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7_Raeumliche_Operationen_19_0.png" src="../_images/7_Raeumliche_Operationen_19_0.png" />
+<img alt="../_images/7_Raeumliche_Operationen_21_0.png" src="../_images/7_Raeumliche_Operationen_21_0.png" />
 </div>
 </div>
 </div>
@@ -804,7 +827,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
 </pre></div>
 </div>
-<img alt="../_images/7_Raeumliche_Operationen_27_1.png" src="../_images/7_Raeumliche_Operationen_27_1.png" />
+<img alt="../_images/7_Raeumliche_Operationen_29_1.png" src="../_images/7_Raeumliche_Operationen_29_1.png" />
 </div>
 </div>
 </div>
@@ -825,7 +848,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
 </pre></div>
 </div>
-<img alt="../_images/7_Raeumliche_Operationen_29_1.png" src="../_images/7_Raeumliche_Operationen_29_1.png" />
+<img alt="../_images/7_Raeumliche_Operationen_31_1.png" src="../_images/7_Raeumliche_Operationen_31_1.png" />
 </div>
 </div>
 </div>
@@ -834,7 +857,7 @@
 <p>Berechne das „Envelope“ von <code class="docutils literal notranslate"><span class="pre">zeckenstiche_gpd</span></code> anhand der obigen Beispielen. Speichere den Output als <code class="docutils literal notranslate"><span class="pre">zeckenstiche_envelope</span></code>.</p>
 <div class="dropdown admonition tip">
 <p class="admonition-title">Tipp</p>
-<p>Denk daran, dass du zuerst noch einen Union machen musst (siehe <a class="reference internal" href="#chap-raeumliche-operationen"><span class="std std-ref">Aufgabe 14: Räumliche Operationen</span></a>)</p>
+<p>Denk daran, dass du zuerst noch einen Union machen musst (siehe <a class="reference internal" href="#chap-raeumliche-operationen"><span class="std std-ref">Aufgabe 14: GIS in Python</span></a>)</p>
 </div>
 </div>
 <div class="section" id="ubung-14-6">
@@ -865,7 +888,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Symetrical Difference&#39;)
 </pre></div>
 </div>
-<img alt="../_images/7_Raeumliche_Operationen_34_1.png" src="../_images/7_Raeumliche_Operationen_34_1.png" />
+<img alt="../_images/7_Raeumliche_Operationen_36_1.png" src="../_images/7_Raeumliche_Operationen_36_1.png" />
 </div>
 </div>
 </div>
@@ -927,7 +950,7 @@
         <a class="right-next" href="8_Spatial_Joins.html" title="weiter Seite">
             <div class="prevnext-info">
                 <p class="prevnext-label">weiter</p>
-                <p class="prevnext-title">Aufgabe 14: Spatial Join</p>
+                <p class="prevnext-title">Aufgabe 15: Spatial Join</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
@@ -937,7 +960,7 @@
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

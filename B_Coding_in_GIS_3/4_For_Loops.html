@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -55,7 +55,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="Aufgabe 13: Zeckenstich Simulation" href="5_Zeckenstich_Simulation.html" />
+    <link rel="next" title="Input: GIS in Python" href="5_GIS_in_Python.html" />
     <link rel="prev" title="Aufgabe 11: for loop Basics" href="3_For_Loops.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -74,6 +74,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/zhaw_lsfm_iunr_blau.jpg" class="logo" alt="logo">
       
@@ -284,23 +288,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="5_Zeckenstich_Simulation.html">
-   Aufgabe 13: Zeckenstich Simulation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="6_GIS_in_Python.html">
+  <a class="reference internal" href="5_GIS_in_Python.html">
    Input: GIS in Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="7_Raeumliche_Operationen.html">
-   Aufgabe 14: Räumliche Operationen
+  <a class="reference internal" href="6_Raeumliche_Operationen.html">
+   Aufgabe 14: GIS in Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="8_Spatial_Joins.html">
-   Aufgabe 14: Spatial Join
+  <a class="reference internal" href="7_Spatial_Joins.html">
+   Aufgabe 15: Spatial Join
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8_Daten_Visualisieren.html">
+   Aufgabe 16: Daten visualisieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9_Leistungsnachweis.html">
+   Leistungsnachweis
   </a>
  </li>
 </ul>
@@ -655,6 +664,7 @@ We like to party!
 <span class="n">We</span> <span class="n">like</span> <span class="n">to</span> <span class="n">party</span>
 <span class="n">Who</span> <span class="n">likes</span> <span class="n">to</span> <span class="n">party</span>
 <span class="n">We</span> <span class="n">like</span> <span class="n">to</span> <span class="n">party</span>
+<span class="o">...</span>
 </pre></div>
 </div>
 </div>
@@ -721,10 +731,10 @@ We like to party!
 <h2>Übungen<a class="headerlink" href="#ubungen" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="ubung-12-1">
 <h3>Übung 12.1<a class="headerlink" href="#ubung-12-1" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Erstelle zwei Listen bestehend aus 3 Hundenamen (<code class="docutils literal notranslate"><span class="pre">hunde</span></code>) und 3 Katzennamen (<code class="docutils literal notranslate"><span class="pre">katzen</span></code>). Erstelle einen verschachtelten <em>For Loop</em>, wo jeder Hund jede Katze anbellt und jede Katze jeden Hund anfaucht.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Bruno</span> <span class="n">bellt</span> <span class="n">Greta</span> <span class="n">an</span>
-<span class="n">Greta</span> <span class="n">faucht</span> <span class="n">Bruno</span> <span class="n">an</span>
-<span class="n">Berta</span> <span class="n">bellt</span> <span class="n">Greta</span> <span class="n">an</span>
+<p>Erstelle zwei Listen bestehend aus 3 Hundenamen (<code class="docutils literal notranslate"><span class="pre">hunde</span></code>) und 3 Katzennamen (<code class="docutils literal notranslate"><span class="pre">katzen</span></code>). Erstelle einen verschachtelten <em>For Loop</em>, wo jeder Hund jede Katze beisst und jede Katze jeden Hund kratzt.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Bruno</span> <span class="n">beisst</span> <span class="n">Greta</span> <span class="n">und</span> <span class="n">Greta</span> <span class="n">kratzt</span>  <span class="n">Bruno</span>
+<span class="n">Berta</span> <span class="n">beisst</span> <span class="n">Greta</span> <span class="n">und</span> <span class="n">Greta</span> <span class="n">kratzt</span>  <span class="n">Berta</span>
+<span class="n">Helmi</span> <span class="n">beisst</span> <span class="n">Greta</span> <span class="n">und</span> <span class="n">Greta</span> <span class="n">kratzt</span>  <span class="n">Helmi</span>
 <span class="o">....</span>
 </pre></div>
 </div>
@@ -789,10 +799,10 @@ We like to party!
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="5_Zeckenstich_Simulation.html" title="weiter Seite">
+        <a class="right-next" href="5_GIS_in_Python.html" title="weiter Seite">
             <div class="prevnext-info">
                 <p class="prevnext-label">weiter</p>
-                <p class="prevnext-title">Aufgabe 13: Zeckenstich Simulation</p>
+                <p class="prevnext-title">Input: GIS in Python</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
@@ -802,7 +812,7 @@ We like to party!
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
