@@ -646,9 +646,8 @@
 <li><p>Welcher Datentyp eure Operation <em>braucht</em> seht ihr in <a class="reference external" href="https://geopandas.org/">der Dokumentation</a>. Welcher Datentyp ihr <em>habt</em> seht ihr mit <code class="docutils literal notranslate"><span class="pre">type()</span></code>.</p></li>
 <li><p>Um ein Objekt von einem Format in das andere zu konvertieren (angenommen das Objekt heisst <code class="docutils literal notranslate"><span class="pre">x</span></code>)</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>zecken_geoseries = gpd.GeoSeries(zeckenstiche[&quot;geometry&quot;])          # von GeoDataFrame zu Geoseries
-zecken_geodataframe = gpd.GeoDataFrame(geometry = zecken_geoseries) # von GeoSeries zurück zu GeoDataFrame
-``
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">zecken_geoseries</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">(</span><span class="n">zeckenstiche</span><span class="p">[</span><span class="s2">&quot;geometry&quot;</span><span class="p">])</span>          <span class="c1"># von GeoDataFrame zu Geoseries</span>
+<span class="n">zecken_geodataframe</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">geometry</span> <span class="o">=</span> <span class="n">zecken_geoseries</span><span class="p">)</span> <span class="c1"># von GeoSeries zurück zu GeoDataFrame</span>
 </pre></div>
 </div>
 </div>
@@ -664,7 +663,7 @@ zecken_geodataframe = gpd.GeoDataFrame(geometry = zecken_geoseries) # von GeoSer
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_58210</span><span class="o">/</span><span class="mf">3765764273.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_12874</span><span class="o">/</span><span class="mf">3765764273.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">buffered</span> <span class="o">=</span> <span class="n">zeckenstiche_gpd</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;zeckenstiche_gpd&#39; is not defined
