@@ -1,0 +1,9 @@
+graph TB
+    H{{Hast du eine conda environment erstellt?}}
+    H --nein--> I["Environment erstellen (4)"]
+    I --> J["Environment aktivieren (5)"]
+    H --Ja--> J
+    J --> K["Hast du jupyter lab installiert (6)?"]
+    K --ja--> L[Jupyter Lab starten]
+    K --nein--> M["Jupyter Lab installieren (7)"]
+    M --> L
