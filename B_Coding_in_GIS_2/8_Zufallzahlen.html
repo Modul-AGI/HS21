@@ -1,0 +1,990 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aufgabe 8: Zufallszahlen generieren &#8212; Angewandte Geoinformatik AGI</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Aufgabe 9: Funktionen in DataFrames" href="9_Funktionen_in_DataFrames.html" />
+    <link rel="prev" title="Aufgabe 7: If / Else" href="7_If_else.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/zhaw_lsfm_iunr_blau.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Angewandte Geoinformatik AGI</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Einleitung
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Datenqualität und Unsicherheit
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/2_Datengrundlage.html">
+   Datengrundlage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/3_Datenvorverarbeitung.html">
+   Datenvorverarbeitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/4_Unsicherheit-Zeckenstandorte.html">
+   Unsicherheit der gemeldeten Zeckenstichstandorte
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/5_Unschaerfe-des-Waldrandes.html">
+   Unschärfe des Waldrandes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/6_Automatisieren-Modelbuilder.html">
+   Automatisierung mit ModelBuilder
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../A_Unsicherheit/7_Leistungsnachweis.html">
+   Leistungsnachweis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS I
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/2_Python-Command-Prompt.html">
+   Python Command Prompt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/3_Primitive_Datentypen.html">
+   Aufgabe 1: Primitive Datentypen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/4_Komplexe_Datentypen.html">
+   Einstieg in komplexe Datentypen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/5_Listen.html">
+   Aufgabe 2: Listen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/6_JupyterNotebook.html">
+   Entwicklungsumgebung: Jupyter Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/7_Dictionary.html">
+   Aufgabe 3: Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_1/8_Tabellarische_Daten.html">
+   Aufgabe 4: Tabellarische Daten
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS II
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2_Conda.html">
+   Conda
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_JupyterLab.html">
+   JupyterLab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_Python_Module.html">
+   Python Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_Functions_I.html">
+   Aufgabe 5:
+   <em>
+    Function
+   </em>
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6_Functions_II.html">
+   Aufgabe 6:
+   <em>
+    Function
+   </em>
+   Advanced
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7_If_else.html">
+   Aufgabe 7: If / Else
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Aufgabe 8: Zufallszahlen generieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9_Funktionen_in_DataFrames.html">
+   Aufgabe 9: Funktionen in
+   <em>
+    DataFrames
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Coding in GIS III
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_3/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_3/2_For_Loops.html">
+   Aufgabe 10:
+   <em>
+    for loop
+   </em>
+   Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_3/3_For_Loops.html">
+   Aufgabe 11:
+   <em>
+    for loop
+   </em>
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_3/4_For_Loops.html">
+   Aufgabe 12:
+   <em>
+    for loops
+   </em>
+   Advanced
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_3/5_GIS_in_Python.html">
+   Input: GIS in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_3/6_Raeumliche_Operationen.html">
+   Aufgabe 14: GIS in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_3/7_Spatial_Joins.html">
+   Aufgabe 15: Spatial Join
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_3/8_Daten_Visualisieren.html">
+   Aufgabe 16: Daten visualisieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_3/9_Leistungsnachweis.html">
+   Leistungsnachweis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Datenbanken I
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_Datenbanken_1/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_Datenbanken_1/2_Uebung.html">
+   Übung
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Datenbanken II
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_Datenbanken_2/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_Datenbanken_2/2_Uebung.html">
+   Übungen
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Datenbanken III
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../C_Datenbanken_3/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Netzwerkanalyse I
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html">
+   Netzwerkanalyse I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_1/2_Vorbereitung.html">
+   Vorbereitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_1/3_QGIS.html">
+   Aufgabe 1: Operationen mit QGIS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_1/4_GRASS_GIS.html">
+   Aufgabe 2: Zentralitätsmasse berechnen
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Netzwerkanalyse II
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_2/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_2/1_Shortest_Path.html">
+   Aufgabe 3: Kürzeste Pfade (shortest path)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_2/2_Travelling_Salesman.html">
+   Aufgabe 4: Traveling Salesman
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Netzwerkanalyse III
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_3/1_Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_3/2_Entsorgungsstelle.html">
+   Aufgabe 5: Entsorgungsstelle
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_3/3_OEV-Gueteklassen.html">
+   Aufgabe 6: ÖV-Güteklassen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_3/4_Zentralitaetsmasse.html">
+   Aufgabe 7: Zentralitätsmasse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_3/5_Flaechen_verrechnen.html">
+   Aufgabe 8: Flächen verrechnen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_3/6_Leistungsnachweis.html">
+   Leistungsnachweis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../D_Netzwerkanalyse_3/7_Anhang.html">
+   Anhang
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Admin
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Anleitung_fuer_Dozierende.html">
+   Anleitung für Dozierende
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/B_Coding_in_GIS_2/8_Zufallzahlen.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Modul-AGI/HS21/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
+                    class="fab fa-github"></i>Repository</button></a>
+        
+        <a class="edit-button" href="https://github.com/Modul-AGI/HS21/edit/main/B_Coding_in_GIS_2/8_Zufallzahlen.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Bearbeite diese Seite"><i class="fas fa-pencil-alt"></i>vorschlagen zu bearbeiten</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theorie">
+   Theorie
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ubungen">
+   Übungen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-8-1">
+     Übung 8.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-8-2">
+     Übung 8.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-8-3">
+     Übung 8.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-8-4">
+     Übung 8.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-8-5">
+     Übung 8.5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-8-6">
+     Übung 8.6
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="aufgabe-8-zufallszahlen-generieren">
+<span id="chap-random-numbers"></span><h1>Aufgabe 8: Zufallszahlen generieren<a class="headerlink" href="#aufgabe-8-zufallszahlen-generieren" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="theorie">
+<h2>Theorie<a class="headerlink" href="#theorie" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Im Block „<em>Datenqualität und Unsicherheit</em>“ hattet ihr auch mit Zufallszahlen und Simulationen auseinandergesetzt. Programmiersprachen sind für eine solche Anwendung sehr gut geeignet, und deshalb werden wir in diesem Abschnitt eine Erweiterung zur Erstellung von Zufallszahlen kennenlernen. Diese Erweiterung lautet <code class="docutils literal notranslate"><span class="pre">random</span></code> und ist teil der <a class="reference external" href="https://en.wikibooks.org/wiki/Python_Programming/Standard_Library">„Python Standard Library“</a>, was bedeutet das wir dieses Erweiterung bereits installiert ist, und wir sie nicht installieren müssen um sie zu nutzen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Innerhalb vom <code class="docutils literal notranslate"><span class="pre">random</span></code> gibt es zahlreiche Funktionen um Zufallszahlen zu generieren, je nach dem was unsere Anforderungen an die Zufallszahl ist. Zum Beispiel könnte eine Anforderung sein, dass die Zahl innerhalb von einem bestimmten Bereich liegt (z.B. „<em>generiere eine Zufallszahl zwischen 1 und 9</em>“). Oder aber, dass sie eine ganze Zahl sein muss. Weiter könnte die Anforderung sein, dass sie aus einer bestimmten Verteilung kommen sollte, zum Beispiel einer Normalverteilung. In diesem letzten Fall müssen wir den Mittlwert sowie die Standartabweichung unserer Verteilung angeben.</p>
+<p>Um eine ganzzahlige Zufallszahl zwischen 1 und 9 zu generieren, können wir die Funktion <code class="docutils literal notranslate"><span class="pre">randrange()</span></code> nutzen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="n">start</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">stop</span> <span class="o">=</span> <span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wenn wir auf diese Weise mit <code class="docutils literal notranslate"><span class="pre">randrange()</span></code> immer wieder neue Zufallszahlen generieren fällt auf, dass die Verteilung der Zahlen ziemlich gleichmässig ist. Es ist also gleich wahrscheinlich eine 9 zu bekommen eine eine 1 oder eine 5. Die Zahlen kommen also aus einer „uniformen“ Verteilung. Um dies zu verdeutlichen generiere ich in den folgenden Codezeilen 100 Zufallszahlen zwischen 1 und 9 mit der Funktion <code class="docutils literal notranslate"><span class="pre">randrange</span></code> und visualisiere die Häufigkeit der einzelnen Zahlen in einem Histogramm.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># erstellt eine Liste von Zufallszahlen (lernen wir zu einem späteren Zeitpunkt)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># visualisiert die zufällig generierten Zahl in Form eines Histogramms (lernen wir ebenfalls später)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s2">&quot;hist&quot;</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">),</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">xticks</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;Frequency&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/8_Zufallzahlen_6_1.png" src="../_images/8_Zufallzahlen_6_1.png" />
+</div>
+</div>
+<p>Die Funktion <code class="docutils literal notranslate"><span class="pre">randrange()</span></code> generiert nur ganzzahlige Zufallszahlen. Wenn wir aber eine Zufallszahl mit Nachkommastellen braucen, verwenden wir die Funktion <code class="docutils literal notranslate"><span class="pre">uniform()</span></code>.</p>
+<p>Um Zufallszahlen aus einer „Normalverteilung“ zu erhalten, verwenden wir die Funktion <code class="docutils literal notranslate"><span class="pre">normalvariate</span></code>. Hier müssen wir den Mittelwert und die Standartabweichung dieser Verteilung angeben. Tatsächlich können wir bei dieser Variante keine Minimum- und Maximumwerte festlegen: Theoretisch könnte der Generator jeden erdenklichen Zahlenwert rausspucken, am wahrscheinlichsten ist jedoch eine Zahl nahe am angegebenen Mittelwert.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mu = Mittelwert, sigma = Standartabweichung</span>
+<span class="n">random</span><span class="o">.</span><span class="n">normalvariate</span><span class="p">(</span><span class="n">mu</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.6231634045105694
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wenn wir die obige Funktion 10’000x laufen lassen und uns das Histogramm der generierten Zahlen anschauen, dann zeichnet sich folgendes Bild ab.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">normalvariate</span><span class="p">(</span><span class="n">mu</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">)]</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s2">&quot;hist&quot;</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;Frequency&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/8_Zufallzahlen_10_1.png" src="../_images/8_Zufallzahlen_10_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="ubungen">
+<h2>Übungen<a class="headerlink" href="#ubungen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Nun wollen wir diesen Zufallszahlengenerator <code class="docutils literal notranslate"><span class="pre">random</span></code> nutzen um eine Funktion zu entwickeln, welche einen beliebigen Punkt (mit einer x-/y-Koordinate) zufällig in einem definierten Umkreis verschiebt. Unser Fernziel ist es, den simulierten Datensatz aus  „Datenqualität und Unsicherheit“ zu rekonstruieren (siehe unten). Der erste Schritt dorthin ist es, einen gemeldeten Punkt (rot in <a class="reference internal" href="#arcgiszecken"><span class="std std-numref">Abb. 11</span></a>) in einem definierten Umkreis zu verschieben.</p>
+<div class="figure align-default" id="id1">
+<span id="arcgiszecken"></span><img alt="../_images/arcgiszecken.jpg" src="../_images/arcgiszecken.jpg" />
+<p class="caption"><span class="caption-number">Abb. 11 </span><span class="caption-text">Ausschnitt der simulierten Zeckenstiche. Der rote Punkt stellt jeweils der gemeldete Zeckenstich dar, die blaue Punktwolke drum herum sind simulierte Punkte welche die Ungenauigkeit der Daten wiederspiegelt.</span><a class="headerlink" href="#id1" title="Link zu diesem Bild">¶</a></p>
+</div>
+<p>Das Ziel dieser Übung ist es also, dass wir eine Funktion entwickeln, die uns einen zufälligen Punkt in der Nähe eines Ursprungspunktes vorschlägt. Unser Vorgehen: Wir addieren jedem Koordinatenwert (<code class="docutils literal notranslate"><span class="pre">x</span></code>/<code class="docutils literal notranslate"><span class="pre">y</span></code>) des Ursprungspunktes einen Zufallswert, zum Beispiel zwischen -100 bis +100.</p>
+<div class="section" id="ubung-8-1">
+<h3>Übung 8.1<a class="headerlink" href="#ubung-8-1" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Bevor wir mit Koordinaten arbeiten wollt ihr euch zuerst mit dem Modul <code class="docutils literal notranslate"><span class="pre">random</span></code> vertraut machen. Importiere das Modul <code class="docutils literal notranslate"><span class="pre">random</span></code> und generiere eine Zufallszahl zwischen -100 und +100 aus einer uniformen Verteilung sowie aus einer Normalverteilung mit Mittelwert 100 und Standartabweichung 20.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">random</span><span class="o">.</span><span class="n">normalvariate</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>105.15246738773395
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ubung-8-2">
+<h3>Übung 8.2<a class="headerlink" href="#ubung-8-2" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nun wollen wir uns den Koordinaten zuwenden. Erstelle als erstes zwei Dummykoordinaten <code class="docutils literal notranslate"><span class="pre">x_start</span></code> und <code class="docutils literal notranslate"><span class="pre">y_start</span></code> mit jeweils dem Wert <code class="docutils literal notranslate"><span class="pre">0</span></code>. Diese sollen als „Ursprungskoordinaten“ dienen.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">x_start</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">y_start</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ubung-8-3">
+<h3>Übung 8.3<a class="headerlink" href="#ubung-8-3" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Generiere nun eine Zufallszahl, die aus einer Normalverteilung stammt und die <em>in etwa</em> zwischen -100 und +100 liegt. Weise diese Zahl der Variabel <code class="docutils literal notranslate"><span class="pre">x_offset</span></code> zu.
+Generiere danach eine zweite Zufallszahl (auf die gleiche Art) und weise diese <code class="docutils literal notranslate"><span class="pre">y_offset</span></code> zu.</p>
+<div class="dropdown admonition tip">
+<p class="admonition-title">Tipp</p>
+<p>Überlege dir, welcher <em>Mittelwert</em> Sinn macht um Werte zwischen -100 und +100 zu bekommen. Welche Zahl liegt zwischen -100 und +100?</p>
+<p>Überlege dir als nächstes, welche Standartabweichung sinnvoll wäre. Zur Erinnerung: Etwa 68% der Werte liegen inerhalb von +/- 1 Standartabweichung (SD), 95% innerhalb von +/- 2 SD, 99% innerhalb von 3 SD (siehe unten):</p>
+<div class="figure align-default" id="id2">
+<img alt="../_images/normalverteilung.jpg" src="../_images/normalverteilung.jpg" />
+<p class="caption"><span class="caption-number">Abb. 12 </span><span class="caption-text">Normalverteilung und die Anteile innerhalb von 1 Standartabweichung (Mittelwert <span class="math notranslate nohighlight">\(\mu\)</span> minus Standartabweichung <span class="math notranslate nohighlight">\(\sigma\)</span>), 2 Standartabweichungen (<span class="math notranslate nohighlight">\(\mu - 2\times\sigma)\)</span> und 2 Standartabweichungen (<span class="math notranslate nohighlight">\(\mu - 3\times\sigma)\)</span>. Quelle: <a class="reference external" href="https://www.cobocards.com/">cobocards</a></span><a class="headerlink" href="#id2" title="Link zu diesem Bild">¶</a></p>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="c1"># Normalverteilte Werte mit Mittelwert 0 und Standartabweichung 100  </span>
+<span class="c1"># Achtung: bei dieser Standartabweichung sind ca 30% der Werte &gt; 100!</span>
+<span class="n">x_offset</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">normalvariate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">y_offset</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">normalvariate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">x_offset</span>
+<span class="n">y_offset</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-49.84550284501804
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ubung-8-4">
+<h3>Übung 8.4<a class="headerlink" href="#ubung-8-4" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Addiere nun die Zufallszahlen <code class="docutils literal notranslate"><span class="pre">x_offset</span></code> und <code class="docutils literal notranslate"><span class="pre">y_offset</span></code> <strong>jeweils</strong> zu den Dummykoordinaten <code class="docutils literal notranslate"><span class="pre">x_start</span></code> und <code class="docutils literal notranslate"><span class="pre">y_start</span></code> und weise diese neuen Koordinaten <code class="docutils literal notranslate"><span class="pre">x_neu</span></code> und <code class="docutils literal notranslate"><span class="pre">y_neu</span></code> zu. Die neuen Werte stellen die leicht verschobenen Ursprungskoordinaten dar. In meinem Fall sind diese um 10.2 Meter nach Osten (positiver Wert) bzw. 4.4 Meter nach Süden (negativer Wert) verschoben worden.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">x_neu</span> <span class="o">=</span> <span class="n">x_start</span><span class="o">+</span><span class="n">x_offset</span>
+<span class="n">y_neu</span> <span class="o">=</span> <span class="n">y_start</span><span class="o">+</span><span class="n">y_offset</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_neu</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.246170309600945
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_neu</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-4.443904000288846
+</pre></div>
+</div>
+</div>
+</div>
+<p>Um den Output zu visualisieren, kreiere ich aus den Einzelwerten eine <em>pandas DataFrame</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mypoints</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;x&quot;</span><span class="p">:[</span><span class="n">x_start</span><span class="p">,</span><span class="n">x_neu</span><span class="p">],</span> 
+    <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">y_start</span><span class="p">,</span> <span class="n">y_neu</span><span class="p">],</span>
+    <span class="s2">&quot;typ&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;urprung&quot;</span><span class="p">,</span> <span class="s2">&quot;neu&quot;</span><span class="p">]</span>
+    <span class="p">})</span>
+<span class="n">mypoints</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+      <th>typ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>urprung</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10.24617</td>
+      <td>-4.443904</td>
+      <td>neu</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+
+<span class="n">mypoints</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s2">&quot;scatter&quot;</span><span class="p">,</span> <span class="n">xlim</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="n">ylim</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">],</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Ursprung (rot) und Simulation (blau)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:title={&#39;center&#39;:&#39;Ursprung (rot) und Simulation (blau)&#39;}, xlabel=&#39;x&#39;, ylabel=&#39;y&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/8_Zufallzahlen_25_1.png" src="../_images/8_Zufallzahlen_25_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="ubung-8-5">
+<span id="ex-offset-function"></span><h3>Übung 8.5<a class="headerlink" href="#ubung-8-5" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nun haben wir das zufällige Verschieben eines Einzelpunktes am Beispiel einer Dummykoordinaten (<code class="docutils literal notranslate"><span class="pre">0</span></code>/<code class="docutils literal notranslate"><span class="pre">0</span></code>) durchgespielt. In der nächsten Aufgabe (<a class="reference internal" href="9_Funktionen_in_DataFrames.html#chap-offset-dataframe"><span class="std std-ref">Aufgabe 9: Funktionen in DataFrames</span></a>) werden wir <em>alle</em> unsere Zeckenstichkoordinaten auf diese Weise zufällig verschieben um einen Simulierten Zeckenstichdatensatz ähnlich wie <a class="reference internal" href="#arcgiszecken"><span class="std std-numref">Abb. 11</span></a> zu erhalten.</p>
+<p>Dafür brauchen wir die eben erarbeiteten Einzelschritte als Funktion, um diese auf alle Zeckenstiche anwenden zu können. <strong>Erstelle jetzt eine Funktion namens <code class="docutils literal notranslate"><span class="pre">offset_coordinate</span></code> welche als Input eine <code class="docutils literal notranslate"><span class="pre">x</span></code> oder <code class="docutils literal notranslate"><span class="pre">y</span></code>-Achsenwert annimmt und eine leicht verschobene Wert zurück gibt.</strong> Integriere die Standartabweichung der Verteilung als optionalen Parameter mit dem Namen <code class="docutils literal notranslate"><span class="pre">distance</span></code> und einem Defaultwert von 100.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="k">def</span> <span class="nf">offset_coordinate</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">distance</span> <span class="o">=</span> <span class="mi">100</span><span class="p">):</span>
+    <span class="n">new</span> <span class="o">=</span> <span class="n">old</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">normalvariate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">distance</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">new</span>
+
+
+<span class="n">offset_coordinate</span><span class="p">(</span><span class="n">x_start</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16.79159802370436
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ubung-8-6">
+<span id="offset-vis"></span><h3>Übung 8.6<a class="headerlink" href="#ubung-8-6" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nun ist es wichtig, dass wir unser Resultat visuell überprüfen. Im Beispiel unten wende ich die in der letzten Übung erstellte Funktion <code class="docutils literal notranslate"><span class="pre">offset_coordinate()</span></code> 1’000x auf die Dummykoordinate an. Nutze <em>deine</em> Funktion <code class="docutils literal notranslate"><span class="pre">offset_coordinate</span></code> um eine Visualisierung gemäss unten stehendem beispiel zu machen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_neu_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">offset_coordinate</span><span class="p">(</span><span class="n">x_start</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)]</span>
+<span class="n">y_neu_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">offset_coordinate</span><span class="p">(</span><span class="n">y_start</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)]</span>
+
+<span class="c1"># Liste in eine Pandas DataFrame überführen</span>
+<span class="n">mysim</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="n">x_neu_list</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span><span class="n">y_neu_list</span><span class="p">})</span>
+
+<span class="n">mysim</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s2">&quot;scatter&quot;</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-318.5597408142399, 303.6705172410597, -412.3186754259741, 388.57577848318084)
+</pre></div>
+</div>
+<img alt="../_images/8_Zufallzahlen_29_1.png" src="../_images/8_Zufallzahlen_29_1.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./B_Coding_in_GIS_2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="7_If_else.html" title="zurück Seite">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">zurück</p>
+                <p class="prevnext-title">Aufgabe 7: If / Else</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="9_Funktionen_in_DataFrames.html" title="weiter Seite">
+            <div class="prevnext-info">
+                <p class="prevnext-label">weiter</p>
+                <p class="prevnext-title">Aufgabe 9: Funktionen in <em>DataFrames</em></p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Durch <a href="https://www.zhaw.ch/de/lsfm/institute-zentren/iunr/ecosystems-and-biodiversity/geoinformatik/">Research Group for Geoinformatics</a><br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

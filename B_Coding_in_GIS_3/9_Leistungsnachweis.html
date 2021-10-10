@@ -53,7 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="Einleitung" href="../C_Datenbanken_1/1_Einleitung.html" />
+    <link rel="next" title="Demo: Geodaten visualisieren" href="Anhang_1_GIS_Demo.html" />
     <link rel="prev" title="Aufgabe 16: Daten visualisieren" href="8_Daten_Visualisieren.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -191,27 +191,27 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/01_Einleitung.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/1_Einleitung.html">
    Einleitung
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/02_Conda.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/2_Conda.html">
    Conda
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/03_JupyterLab.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/3_JupyterLab.html">
    JupyterLab
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/04_Python_Module.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/4_Python_Module.html">
    Python Modules
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/05_Functions_I.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/5_Functions_I.html">
    Aufgabe 5:
    <em>
     Function
@@ -220,7 +220,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/07_Functions_II.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/6_Functions_II.html">
    Aufgabe 6:
    <em>
     Function
@@ -229,17 +229,17 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/08_If_else.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/7_If_else.html">
    Aufgabe 7: If / Else
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/09_Zufallzahlen.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/8_Zufallzahlen.html">
    Aufgabe 8: Zufallszahlen generieren
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../B_Coding_in_GIS_2/10_Funktionen_in_DataFrames.html">
+  <a class="reference internal" href="../B_Coding_in_GIS_2/9_Funktionen_in_DataFrames.html">
    Aufgabe 9: Funktionen in
    <em>
     DataFrames
@@ -308,6 +308,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Leistungsnachweis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Anhang_1_GIS_Demo.html">
+   Demo: Geodaten visualisieren
   </a>
  </li>
 </ul>
@@ -546,13 +551,13 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ziel">
-   Ziel
+  <a class="reference internal nav-link" href="#ziel-und-vorgehen">
+   Ziel und Vorgehen
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#inhalt">
-   Inhalt
+  <a class="reference internal nav-link" href="#anforderungen">
+   Anforderungen
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -578,19 +583,25 @@
                 
   <div class="section" id="leistungsnachweis">
 <h1>Leistungsnachweis<a class="headerlink" href="#leistungsnachweis" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Für den Leistungsnachweis von <em>Coding in GIS</em> werden wir der Anteil der Zeckenstiche im Wald unter der Berücksichtigung der Unsicherheit mit einer Monte Carlo Simulation ermitteln. Verbinde dafür dein Wissen über das Simulieren von Zeckensichmeldungen (<a class="reference internal" href="../B_Coding_in_GIS_2/10_Funktionen_in_DataFrames.html#chap-offset-dataframe"><span class="std std-ref">Aufgabe 9: Funktionen in DataFrames</span></a>) mit deinem Wissen über <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loops</span></code> (<a class="reference internal" href="3_For_Loops.html#forloops-2"><span class="std std-ref">Aufgabe 11: for loop Basics</span></a>
-und <a class="reference internal" href="4_For_Loops.html#forloops-3"><span class="std std-ref">Aufgabe 12: for loops Advanced</span></a>) um den Anteil der Zeckenstiche im Wald für diese Simulierten Punkte zu berechnen.</p>
-<div class="section" id="ziel">
-<h2>Ziel<a class="headerlink" href="#ziel" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Beantwortung der Frage „<em>Welcher Anteil der Zeckenstiche befinden sich im Wald</em>“ unter besonderer Berücksichtigung der Datenungenauigkeit.</p>
+<div class="section" id="ziel-und-vorgehen">
+<h2>Ziel und Vorgehen<a class="headerlink" href="#ziel-und-vorgehen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Für den Leistungsnachweis von <em>Coding in GIS</em> sollt ihr den Anteil der Zeckenstiche im Wald unter der Berücksichtigung der Unsicherheit mit einer Monte Carlo Simulation ermitteln.</p>
+<p>Gehe dazu wie folgt vor: Erstelle einen <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loop</span></code> (siehe <a class="reference internal" href="3_For_Loops.html#forloops-2"><span class="std std-ref">Aufgabe 11: for loop Basics</span></a>), welcher pro Iteration folgende Schritte ausführt:</p>
+<ol class="simple">
+<li><p>Schritt: Zeckenstiche auf der Basis von gemeldeten Stiche simulieren (siehe <a class="reference internal" href="../B_Coding_in_GIS_2/9_Funktionen_in_DataFrames.html#chap-offset-dataframe"><span class="std std-ref">Aufgabe 9: Funktionen in DataFrames</span></a>)) simulieren</p></li>
+<li><p>Schritt: Simulierte Zeckenstiche von pandas DataFrame in <em>geo</em>pandas <em>Geo</em>DataFrame umwandeln (siehe <a class="reference internal" href="5_GIS_in_Python.html#chap-pythongis-geodataframe"><span class="std std-ref">DataFrames &gt; GeoDataFrames</span></a>)</p></li>
+<li><p>Schritt: Der Anteil der Zeckenstiche im Wald Berechnen (siehe <a class="reference internal" href="7_Spatial_Joins.html#chap-spatialjoin"><span class="std std-ref">Aufgabe 15: Spatial Join</span></a>)</p></li>
+<li><p>Schritt: Das Resultat einer Liste hinzufügen (siehe <a class="reference internal" href="3_For_Loops.html#ex-for-loops-gruesse"><span class="std std-ref">Übung 11.1</span></a>)</p></li>
+</ol>
+<p>Nach der Beendigung des <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loops</span></code> kannst du die Resultate (verschiedene Anteilswerte, gespeichert in einer Liste) visualisieren (siehe <a class="reference internal" href="8_Daten_Visualisieren.html#chap-viz"><span class="std std-ref">Aufgabe 16: Daten visualisieren</span></a>).</p>
 </div>
-<div class="section" id="inhalt">
-<h2>Inhalt<a class="headerlink" href="#inhalt" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="anforderungen">
+<h2>Anforderungen<a class="headerlink" href="#anforderungen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Führe die Analyse folgendermassen durch:</p>
 <ul class="simple">
 <li><p>mit dem <strong>ganzen</strong> Datensatz <code class="docutils literal notranslate"><span class="pre">zeckenstiche_full.csv</span></code> (1’076 Meldungen, siehe <a class="reference internal" href="../B_Coding_in_GIS_1/1_Einleitung.html#table-datensaetze"><span class="std std-numref">Tab. 1</span></a>)</p></li>
 <li><p>mit mindestens 50 Iterationen</p></li>
-<li><p>mit drei verschiedenen Distanz-Werten (<code class="docutils literal notranslate"><span class="pre">distance</span> <span class="pre">=</span></code> in <a class="reference internal" href="../B_Coding_in_GIS_2/09_Zufallzahlen.html#ex-offset-function"><span class="std std-ref">Übung 8.5</span></a>).</p></li>
+<li><p>mit drei verschiedenen Distanz-Werten (<code class="docutils literal notranslate"><span class="pre">distance</span> <span class="pre">=</span></code> in <a class="reference internal" href="../B_Coding_in_GIS_2/8_Zufallzahlen.html#ex-offset-function"><span class="std std-ref">Übung 8.5</span></a>).</p></li>
 </ul>
 <p>Visualisiere für jeden Distanzwert die Verteilung der Anteile (z.B: mittels einem Boxplot)</p>
 </div>
@@ -602,13 +613,13 @@ und <a class="reference internal" href="4_For_Loops.html#forloops-3"><span class
 <li><p>Einleitung</p></li>
 <li><p>Material &amp; Methoden</p></li>
 <li><p>Resultate</p></li>
-<li><p>Diskussion“</p></li>
+<li><p>Diskussion</p></li>
 </ul>
-<p>Sorge dafür, dass der Bericht sauber und ordentlich daher kommt (vermeide zum Beispiel lange Python Messages im Bericht).</p>
+<p>Sorge dafür, dass der Bericht sauber und ordentlich daher kommt (vermeide zum Beispiel lange Python Messages im Bericht, entferne unnötigen Code).</p>
 </div>
 <div class="section" id="abgabeformat">
 <h2>Abgabeformat<a class="headerlink" href="#abgabeformat" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Ein html Export des Jupyter-Notebook Files (via <em>File &gt; Export Notebook as &gt; Export Notebook to html</em>). <strong>Wichtig:</strong> Zuerst alle Zellen ausführen (<em>Run &gt; Run all cells</em>)</p>
+<p>Das Jupyter-Notebook File via Moodle. <strong>Wichtig:</strong> Zuerst alle Zellen ausführen (<em>Run &gt; Restart Kernel and Run all cells…</em>). <strong>Notebooks, bei denen diese Schritt nicht ausgeführt wurde werden nicht akzeptiert!</strong></p>
 </div>
 </div>
 
@@ -651,10 +662,10 @@ und <a class="reference internal" href="4_For_Loops.html#forloops-3"><span class
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../C_Datenbanken_1/1_Einleitung.html" title="weiter Seite">
+        <a class="right-next" href="Anhang_1_GIS_Demo.html" title="weiter Seite">
             <div class="prevnext-info">
                 <p class="prevnext-label">weiter</p>
-                <p class="prevnext-title">Einleitung</p>
+                <p class="prevnext-title">Demo: Geodaten visualisieren</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
