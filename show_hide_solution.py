@@ -1,4 +1,5 @@
 import nbformat as nbf
+
 from glob import glob
 import re
 import os
@@ -68,7 +69,7 @@ def get_notebooks(globpattern_dirs = "[A-Z]_Coding_in_GIS_[1-9]", globpattern_fi
 notebooks_df = get_notebooks()
 
 
-notebooks_df = notebooks_df.assign(tag = lambda x: ["hide-cell" if y <= 2.05 else "remove-cell" for y in x["filenr"]])
+notebooks_df = notebooks_df.assign(tag = lambda x: ["hide-cell" if y <= 2.9 else "remove-cell" for y in x["filenr"]])
 
 notebooks_df
 
