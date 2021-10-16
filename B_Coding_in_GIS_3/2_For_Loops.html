@@ -310,6 +310,16 @@
    Leistungsnachweis
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Anhang_1_GIS_Demo.html">
+   Anhang 1: Geodaten visualisieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Anhang_2_Arcpy.html">
+   Anhang 2: ArcPy
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -672,10 +682,64 @@ Iteration 2
 <div class="section" id="ubung-10-1">
 <h3>Übung 10.1<a class="headerlink" href="#ubung-10-1" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Kopiere den ersten der beiden <em>Loops</em> und lasse ihn bei dir laufen. Spiele mit den Werten rum, um ein Gefühl für <em>For Loops</em> zu bekommen: Ergänze die Liste mit weiteren Zahlen, verändere den Namen der Platzhaltervariabel und verändere den Text, der in <code class="docutils literal notranslate"><span class="pre">print</span></code> ausgegeben wird.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="k">for</span> <span class="n">platzhalter</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Iteration&quot;</span><span class="p">,</span><span class="n">platzhalter</span><span class="p">)</span>
+    
+<span class="k">for</span> <span class="n">nonsense</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Iteration&quot;</span><span class="p">,</span><span class="n">nonsense</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">nonsense</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;wow&quot;</span><span class="p">,</span><span class="n">nonsense</span><span class="p">,</span> <span class="s2">&quot;cool&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iteration 0
+Iteration 1
+Iteration 2
+Iteration 5
+Iteration 10
+Iteration 0
+Iteration 1
+Iteration 2
+Iteration 5
+Iteration 10
+wow 0 cool
+wow 1 cool
+wow 2 cool
+wow 5 cool
+wow 10 cool
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="ubung-10-2">
 <span id="for-gruss"></span><h3>Übung 10.2<a class="headerlink" href="#ubung-10-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Konstruiere eine Liste bestehend aus 3 Namen und nenne diese Liste <code class="docutils literal notranslate"><span class="pre">namen</span></code>. Erstelle danach einen <em>for loop</em>, mit welcher jede Person in der Liste gegrüsst wird. Nutze dafür <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">namen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Il Buono&quot;</span><span class="p">,</span> <span class="s2">&quot;Il Brutto&quot;</span><span class="p">,</span> <span class="s2">&quot;Il Cattivo&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">namen</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ciao &quot;</span><span class="p">,</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ciao  Il Buono
+Ciao  Il Brutto
+Ciao  Il Cattivo
+</pre></div>
+</div>
+</div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Der Output könnte etwa so aussehen</span>
 
 <span class="n">Ciao</span>  <span class="n">Il</span> <span class="n">Buono</span>
@@ -687,6 +751,32 @@ Iteration 2
 <div class="section" id="ubung-10-3">
 <h3>Übung 10.3<a class="headerlink" href="#ubung-10-3" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Kopiere den zweiten <em>For Loop</em> (der mit <code class="docutils literal notranslate"><span class="pre">range</span></code>) und spiele hier mit den Werten herum. Verändere den <em>For Loop</em> so, dass er über die Werte von -5 bis +5 iteriert.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="c1"># Iteriert von -5 bis +5</span>
+<span class="k">for</span> <span class="n">platzhalter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Iteration&quot;</span><span class="p">,</span><span class="n">platzhalter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iteration -5
+Iteration -4
+Iteration -3
+Iteration -2
+Iteration -1
+Iteration 0
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="ubung-10-4">
 <h3>Übung 10.4<a class="headerlink" href="#ubung-10-4" title="Link zu dieser Überschrift">¶</a></h3>
@@ -695,6 +785,31 @@ Iteration 2
 <span class="n">Das</span> <span class="n">Quadrat</span> <span class="n">von</span> <span class="o">-</span><span class="mi">4</span> <span class="n">ist</span> <span class="mi">16</span>
 <span class="o">...</span>
 </pre></div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="k">for</span> <span class="n">platzhalter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Das Quadrat von&quot;</span><span class="p">,</span><span class="n">platzhalter</span><span class="p">,</span> <span class="s2">&quot;ist&quot;</span><span class="p">,</span><span class="n">platzhalter</span><span class="o">*</span><span class="n">platzhalter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Das Quadrat von -5 ist 25
+Das Quadrat von -4 ist 16
+Das Quadrat von -3 ist 9
+Das Quadrat von -2 ist 4
+Das Quadrat von -1 ist 1
+Das Quadrat von 0 ist 0
+Das Quadrat von 1 ist 1
+Das Quadrat von 2 ist 4
+Das Quadrat von 3 ist 9
+Das Quadrat von 4 ist 16
+Das Quadrat von 5 ist 25
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="ubung-10-5">
@@ -709,6 +824,31 @@ Who likes to party?
 <div class="dropdown admonition tip">
 <p class="admonition-title">Tipp</p>
 <p>Nutze dafür zwei verschiedene <code class="docutils literal notranslate"><span class="pre">print</span></code> Befehle auf zwei Zeilen.</p>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Who likes to party?&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We like to party!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Who likes to party?
+We like to party!
+Who likes to party?
+We like to party!
+Who likes to party?
+We like to party!
+Who likes to party?
+We like to party!
+Who likes to party?
+We like to party!
+</pre></div>
+</div>
+</div>
 </div>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">

@@ -310,6 +310,16 @@
    Leistungsnachweis
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Anhang_1_GIS_Demo.html">
+   Anhang 1: Geodaten visualisieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Anhang_2_Arcpy.html">
+   Anhang 2: ArcPy
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -670,6 +680,18 @@ I&#39;m a saint
 <div class="section" id="ubung-11-1">
 <span id="ex-for-loops-gruesse"></span><h3>Übung 11.1<a class="headerlink" href="#ubung-11-1" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Nehmen wir nochmals das Beispiel aus <a class="reference internal" href="2_For_Loops.html#for-gruss"><span class="std std-ref">Übung 10.2</span></a>. Erstelle nochmal ein Loop, wo drei Personen aus einer Liste gegrüsst werden. Diesmal sollen aber die drei Grüsse in einer Liste (z.B. <code class="docutils literal notranslate"><span class="pre">mylist</span></code>) gespeichert werden.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">mylist</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Il Buono&quot;</span><span class="p">,</span> <span class="s2">&quot;Il Brutto&quot;</span><span class="p">,</span> <span class="s2">&quot;Il Cattivo&quot;</span><span class="p">]:</span>
+    <span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Ciao &quot;</span><span class="o">+</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Das Resultat sieht dann so aus:</span>
@@ -687,6 +709,24 @@ I&#39;m a saint
 <div class="section" id="ubung-11-2">
 <span id="ex-loopoutput"></span><h3>Übung 11.2<a class="headerlink" href="#ubung-11-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der im Beispiel verwendete Refrain aus <a class="reference external" href="https://www.metrolyrics.com/bitch-lyrics-meredith-brooks.html">dem Lied „Bitch“ von Meredith Brooks</a> besteht bis auf zwei Zeilen aus Wiederholungen. Versuche mit <strong>zwei verschiedenen</strong>, aneinander gereihten <em>for loops</em> den ganzen Refrain in einer Liste zu speichern. Die beiden Teile die vom Muster Abweichen („<em>I do not feel ashamed</em>“ und „<em>You know you wouldn’t want it any other way</em>“) kannst du auch ausserhalb der Loops in die Listen einfügen (<code class="docutils literal notranslate"><span class="pre">append</span></code>).</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">refrain</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">rolle</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;bitch&quot;</span><span class="p">,</span><span class="s2">&quot;lover&quot;</span><span class="p">,</span><span class="s2">&quot;child&quot;</span><span class="p">,</span><span class="s2">&quot;mother&quot;</span><span class="p">,</span><span class="s2">&quot;sinner&quot;</span><span class="p">,</span><span class="s2">&quot;saint&quot;</span><span class="p">]:</span>
+    <span class="n">liedzeile</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m a &quot;</span><span class="o">+</span> <span class="n">rolle</span> 
+    <span class="n">refrain</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liedzeile</span><span class="p">)</span>
+<span class="n">refrain</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;I do not feel ashamed&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">rolle</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;your hell&quot;</span><span class="p">,</span><span class="s2">&quot;your dream&quot;</span><span class="p">,</span><span class="s2">&quot;nothing in between&quot;</span><span class="p">]:</span>
+    <span class="n">liedzeile</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m &quot;</span><span class="o">+</span> <span class="n">rolle</span> 
+    <span class="n">refrain</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liedzeile</span><span class="p">)</span>
+<span class="n">refrain</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;You know you wouldn&#39;t want it any other way&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Das Resultat sieht dann so aus:</span>

@@ -312,6 +312,16 @@
    Leistungsnachweis
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_3/Anhang_1_GIS_Demo.html">
+   Anhang 1: Geodaten visualisieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../B_Coding_in_GIS_3/Anhang_2_Arcpy.html">
+   Anhang 2: ArcPy
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -652,7 +662,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_13616</span><span class="o">/</span><span class="mf">3475113668.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_10906</span><span class="o">/</span><span class="mf">3475113668.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">sag_hallo</span><span class="p">()</span>
 
 <span class="ne">TypeError</span>: sag_hallo() missing 1 required positional argument: &#39;vorname&#39;
@@ -786,7 +796,7 @@ gruezi2(nachname, anrede)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_13616</span><span class="o">/</span><span class="mf">749504737.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_10906</span><span class="o">/</span><span class="mf">749504737.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># Wenn wir jetzt aber die Function ausführen wollen, entsteht die Fehlermeldung,</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># dass &quot;vorname&quot; fehlt (obwohl wir vorname ja schon definiert haben)</span>
 <span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">sag_hallo</span><span class="p">()</span>
@@ -985,13 +995,14 @@ def <span class = "grp1">sag_hallo</span>(<span class = "grp2">vorname</span>)<s
 </div>
 <div class="section" id="ubung-6-5">
 <h3>Übung 6.5<a class="headerlink" href="#ubung-6-5" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Erstelle eine Funktion <code class="docutils literal notranslate"><span class="pre">celsius_zu_farenheit</span></code>, welche eine beliebige Zahl von Grad Celsius in Grad Kelvin konvertiert. Zur Erinnerung: <em>Temperatur in °F = Temperatur in °C x 1,8 + 32</em>.</p>
+<p>Erstelle eine Funktion <code class="docutils literal notranslate"><span class="pre">celsius_zu_farenheit</span></code>, welche eine beliebige Zahl von Grad Celsius in Grad Farenheit konvertiert. Zur Erinnerung: <em>Temperatur in °F = Temperatur in °C x 1,8 + 32</em>.</p>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
 
-<span class="k">def</span> <span class="nf">celsius_in_farenheit</span><span class="p">(</span><span class="n">celsius</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">celsius</span><span class="o">*</span><span class="mf">1.8</span><span class="o">+</span><span class="mi">32</span>
+<span class="k">def</span> <span class="nf">celsius_zu_farenheit</span><span class="p">(</span><span class="n">celsius</span><span class="p">):</span>
+    <span class="n">farenheit</span> <span class="o">=</span> <span class="n">celsius</span><span class="o">*</span><span class="mf">1.8</span><span class="o">+</span><span class="mi">32</span>
+    <span class="k">return</span> <span class="n">farenheit</span>
 </pre></div>
 </div>
 </div>
@@ -1004,7 +1015,12 @@ def <span class = "grp1">sag_hallo</span>(<span class = "grp2">vorname</span>)<s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>77.0
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_10906</span><span class="o">/</span><span class="mf">1402707915.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">celsius_in_farenheit</span><span class="p">(</span><span class="n">celsius</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;celsius_in_farenheit&#39; is not defined
 </pre></div>
 </div>
 </div>

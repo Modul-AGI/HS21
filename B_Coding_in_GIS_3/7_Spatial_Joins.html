@@ -310,6 +310,16 @@
    Leistungsnachweis
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Anhang_1_GIS_Demo.html">
+   Anhang 1: Geodaten visualisieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Anhang_2_Arcpy.html">
+   Anhang 2: ArcPy
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -796,6 +806,25 @@
 <span id="ex-import-wald"></span><h3>Übung 15.1<a class="headerlink" href="#ubung-15-1" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Lade das File „wald.gpgk“ (siehe <a class="reference internal" href="../B_Coding_in_GIS_1/1_Einleitung.html#table-datensaetze"><span class="std std-numref">Tab. 1</span></a>) herunter und speichere es in deiner Workings Directory. Importiere den Datensatz und speichere ihn in der Variable <code class="docutils literal notranslate"><span class="pre">wald</span></code>.</p>
 <p>Schau dir <code class="docutils literal notranslate"><span class="pre">wald</span></code> an (mit <code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">.plot()</span></code> etc.)</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">wald</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;data/wald.gpkg&quot;</span><span class="p">)</span>
+
+<span class="n">wald</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">wald</span><span class="p">)</span>
+<span class="n">wald</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/7_Spatial_Joins_6_1.png" src="../_images/7_Spatial_Joins_6_1.png" />
+</div>
+</div>
 </div>
 <div class="section" id="ubung-15-2">
 <span id="ex-spatialjoin"></span><h3>Übung 15.2<a class="headerlink" href="#ubung-15-2" title="Link zu dieser Überschrift">¶</a></h3>
@@ -803,6 +832,162 @@
 <div class="attention admonition">
 <p class="admonition-title">Wichtig!</p>
 <p>Melde dich bei den Betreuern wenn der <em>SpatialJoin</em> bei dir nicht funktioniert und du eine Fehlermeldung bekommst.</p>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">gpd</span><span class="o">.</span><span class="n">sjoin</span><span class="p">(</span><span class="n">left_df</span> <span class="o">=</span> <span class="n">zeckenstiche_gpd</span><span class="p">,</span> <span class="n">right_df</span> <span class="o">=</span> <span class="n">wald</span><span class="p">)</span>
+<span class="n">gpd</span><span class="o">.</span><span class="n">sjoin</span><span class="p">(</span><span class="n">left_df</span> <span class="o">=</span> <span class="n">wald</span><span class="p">,</span> <span class="n">right_df</span> <span class="o">=</span> <span class="n">zeckenstiche_gpd</span><span class="p">)</span> 
+
+<span class="c1"># in beiden Fällen hat der Output geich viele Zeilen. In der ersten Variante ist die Geometrie</span>
+<span class="c1"># des Outputs &quot;Point&quot;, im zweiten Fall &quot;Multipolygon&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Shape_Area</th>
+      <th>Wald_text</th>
+      <th>geometry</th>
+      <th>index_right</th>
+      <th>ID</th>
+      <th>accuracy</th>
+      <th>x</th>
+      <th>y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2.380876e+08</td>
+      <td>nein</td>
+      <td>MULTIPOLYGON Z (((2692100.000 1256542.253 276....</td>
+      <td>0</td>
+      <td>2550</td>
+      <td>439.128951</td>
+      <td>2681116</td>
+      <td>1250648</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>2.380876e+08</td>
+      <td>nein</td>
+      <td>MULTIPOLYGON Z (((2692100.000 1256542.253 276....</td>
+      <td>1</td>
+      <td>10437</td>
+      <td>301.748542</td>
+      <td>2681092</td>
+      <td>1250672</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>2.380876e+08</td>
+      <td>nein</td>
+      <td>MULTIPOLYGON Z (((2692100.000 1256542.253 276....</td>
+      <td>3</td>
+      <td>8773</td>
+      <td>301.748542</td>
+      <td>2681111</td>
+      <td>1250683</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>2.380876e+08</td>
+      <td>nein</td>
+      <td>MULTIPOLYGON Z (((2692100.000 1256542.253 276....</td>
+      <td>2</td>
+      <td>9174</td>
+      <td>301.748542</td>
+      <td>2681128</td>
+      <td>1250683</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>2.380876e+08</td>
+      <td>nein</td>
+      <td>MULTIPOLYGON Z (((2692100.000 1256542.253 276....</td>
+      <td>4</td>
+      <td>2764</td>
+      <td>301.748529</td>
+      <td>2681131</td>
+      <td>1250692</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7.963237e+07</td>
+      <td>ja</td>
+      <td>MULTIPOLYGON Z (((2689962.355 1245335.250 644....</td>
+      <td>5</td>
+      <td>2513</td>
+      <td>301.748529</td>
+      <td>2681171</td>
+      <td>1250711</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7.963237e+07</td>
+      <td>ja</td>
+      <td>MULTIPOLYGON Z (((2689962.355 1245335.250 644....</td>
+      <td>6</td>
+      <td>9185</td>
+      <td>301.748542</td>
+      <td>2681107</td>
+      <td>1250712</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7.963237e+07</td>
+      <td>ja</td>
+      <td>MULTIPOLYGON Z (((2689962.355 1245335.250 644....</td>
+      <td>7</td>
+      <td>28521</td>
+      <td>301.748542</td>
+      <td>2681124</td>
+      <td>1250720</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7.963237e+07</td>
+      <td>ja</td>
+      <td>MULTIPOLYGON Z (((2689962.355 1245335.250 644....</td>
+      <td>8</td>
+      <td>26745</td>
+      <td>301.748542</td>
+      <td>2681117</td>
+      <td>1250725</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7.963237e+07</td>
+      <td>ja</td>
+      <td>MULTIPOLYGON Z (((2689962.355 1245335.250 644....</td>
+      <td>9</td>
+      <td>27391</td>
+      <td>301.748542</td>
+      <td>2681138</td>
+      <td>1250725</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </div>
 <div class="section" id="ubung-15-3">
@@ -814,10 +999,35 @@
 <li><p>Werte in der Spalte mit „ja“ vergleichen</p></li>
 <li><p>Anzahl <code class="docutils literal notranslate"><span class="pre">True</span></code> mit <code class="docutils literal notranslate"><span class="pre">sum()</span></code> zählen (<code class="docutils literal notranslate"><span class="pre">True</span></code> entspricht immer <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code> entspricht immer <code class="docutils literal notranslate"><span class="pre">0</span></code>)</p></li>
 </ol>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">zeckenstiche_join</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">sjoin</span><span class="p">(</span><span class="n">left_df</span> <span class="o">=</span> <span class="n">zeckenstiche_gpd</span><span class="p">,</span> <span class="n">right_df</span> <span class="o">=</span> <span class="n">wald</span><span class="p">)</span>
+
+<span class="nb">sum</span><span class="p">(</span><span class="n">zeckenstiche_join</span><span class="p">[</span><span class="s2">&quot;Wald_text&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;ja&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="ubung-15-4">
 <h3>Übung 15.4<a class="headerlink" href="#ubung-15-4" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Berechne nun <em>Anteil</em> der Zeckenstiche im Wald (gemessen an der Anzahl Zeckenstich-Meldungen total). Weise den Output der Variabel <code class="docutils literal notranslate"><span class="pre">anteil_wald</span></code> zu.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">anteil_wald</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">zeckenstiche_join</span><span class="p">[</span><span class="s2">&quot;Wald_text&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;ja&quot;</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">zeckenstiche_join</span><span class="p">[</span><span class="s2">&quot;Wald_text&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
