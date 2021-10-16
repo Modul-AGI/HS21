@@ -39,16 +39,18 @@ def add_tag(notebook,tag = "remove-cell", keyword = "# Musterlösung"):
 
 def glob_dict(coding_in_gis_dir, globpattern_files):
     notebooks = glob(os.path.join(coding_in_gis_dir, globpattern_files))
+    notebooks.sort()
+
     dirs = [os.path.dirname(x) for x in notebooks]
     pathnames = [os.path.basename(x) for x in notebooks]
 
-    filenr = [float(re.findall("_(\d*?)/", x)[0]+"."+re.findall("/(\d*?)_", x)[0]) for x in notebooks]
-
-
+    # filenr = [float(re.findall("_(\d*?)/", x)[0]+"."+re.findall("/(\d*?)_", x)[0]) for x in notebooks]
+    filenr = range(len(notebooks))
+    
     mydict = {
         "notebook":notebooks,
-        "dir":dirs, 
-        "filenr": filenr
+        "dir":dirs 
+        #"filenr": filenr
         }
     return mydict
 
@@ -61,7 +63,8 @@ def get_notebooks(globpattern_dirs = "[A-Z]_Coding_in_GIS_[1-9]", globpattern_fi
 
     files_df_list = [pd.DataFrame(x) for x in files_dict]
     files_df = pd.concat(files_df_list)
-    files_df = files_df.sort_values(by = "filenr")
+    files_df = files_df.sort_values(by = ["notebook"]) # this only works if dirs can be sorted alphabetical order
+    files_df["file_nr"] = range(len(files_df["notebook"])) 
 
     return files_df 
     
@@ -69,7 +72,7 @@ def get_notebooks(globpattern_dirs = "[A-Z]_Coding_in_GIS_[1-9]", globpattern_fi
 notebooks_df = get_notebooks()
 
 
-notebooks_df = notebooks_df.assign(tag = lambda x: ["hide-cell" if y <= 2.9 else "remove-cell" for y in x["filenr"]])
+notebooks_df = notebooks_df.assign(tag = lambda x: ["hide-cell" if y <= 27 else "remove-cell" for y in x["file_nr"]])
 
 notebooks_df
 
