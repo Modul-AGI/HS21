@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Angewandte Geoinformatik AGI</title>
+    <title>Übungen &#8212; Angewandte Geoinformatik AGI</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -360,10 +360,15 @@
   Datenbanken III
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_Einleitung.html">
    Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Übungen
   </a>
  </li>
 </ul>
@@ -554,7 +559,88 @@
                 <i class="fas fa-list"></i> Inhalt
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datenbankverbindung-zum-server-aufbauen">
+   2. Datenbankverbindung zum Server aufbauen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-1-wiederholung-datenbankverbindung-zum-server-in-pgadmin-herstellen">
+     Übung 1: (Wiederholung) Datenbankverbindung zum Server in pgAdmin herstellen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-2-wiederholung-datenbankverbindung-zum-server-in-arcgis-pro-herstellen">
+     Übung 2: (Wiederholung) Datenbankverbindung zum Server in ArcGIS Pro herstellen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abfragen-aus-der-datenbank-in-arcgis-pro-einbinden">
+   3.	Abfragen aus der Datenbank in ArcGIS Pro einbinden
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-3-werkzeug-make-query-table-anwenden">
+     Übung 3: Werkzeug «Make Query Table» anwenden
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-4-werkzeug-make-query-layer-anwenden">
+     Übung 4: Werkzeug «Make Query Layer» anwenden
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-5-werkzeug-create-database-view-anwenden">
+     Übung 5: Werkzeug «Create Database View» anwenden
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-6-optional-werkzeug-make-table-view">
+     Übung 6: (optional) Werkzeug «Make Table View»
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geoverarbeitung-in-der-datenbank-mit-arcgis-pro-und-sql">
+   4.	Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-7-geometrien-zusammenfuhren-mit-dissolve">
+     Übung 7: Geometrien zusammenführen mit «Dissolve»
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-8-puffer-um-geometrie-erstellen">
+     Übung 8: Puffer um Geometrie erstellen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-9-geometrien-uberschneiden-mit-intersect">
+     Übung 9: Geometrien überschneiden mit «Intersect»
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-10-flachen-berechnen-in-arcgis-pro-und-sql">
+     Übung 10: Flächen berechnen in ArcGIS Pro und SQL
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-11-geometrien-ausschneiden-mit-erase">
+     Übung 11: Geometrien ausschneiden mit «Erase»
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-12-geometrien-ausschneiden-mit-clip">
+     Übung 12: Geometrien ausschneiden mit «Clip»
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -566,7 +652,250 @@
         
               <div>
                 
-  
+  <div class="tex2jax_ignore mathjax_ignore section" id="ubungen">
+<h1>Übungen<a class="headerlink" href="#ubungen" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="datenbankverbindung-zum-server-aufbauen">
+<h2>2. Datenbankverbindung zum Server aufbauen<a class="headerlink" href="#datenbankverbindung-zum-server-aufbauen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In den nächsten Übungen wollen wir mit Daten unserer Pflanzendatenbank aus der ersten Datenbank‐Lektion
+vor 2 Wochen umgehen. Dazu versuchen Sie die Daten aus den einzelnen Tabellen zu verknüpfen und sinnvoll
+aufzubereiten, um Sie anschliessend im ArcGIS Pro einzubinden und zu visualisieren. Unsere
+Pflanzendatenbank hat hierbei immer den Namen «modulagi_pdb_hs21». Verwenden Sie, wenn nicht anders
+angegeben diese Datenbank.
+OPTIONAL: Es ist Ihnen selbst überlassen, ob Sie in den kommenden Übungen die bestehende Server
+Datenbank nutzen möchten oder Ihre eigene lokale Pflanzendatenbank. Die Übungen beziehen sich auf die
+Server Variante. Bei eigener Datenbank passen Sie die Datanbank Verbindungsparameter entsprechend an.
+Wie Sie Ihre eigene lokale Pflanzendatenbank aufsetzen ist in den Vorbereitungsübungen auf Moodle
+beschrieben.</p>
+<p><a class="reference external" href="https://moodle.zhaw.ch/pluginfile.php/206729/mod_resource/content/13/%C3%9Cbung_Datenbanken3_Vorbereitung_HS21.pdf">https://moodle.zhaw.ch/pluginfile.php/206729/mod_resource/content/13/Übung_Datenbanken3_Vorbereitung_HS21.pdf</a></p>
+<div class="section" id="ubung-1-wiederholung-datenbankverbindung-zum-server-in-pgadmin-herstellen">
+<h3>Übung 1: (Wiederholung) Datenbankverbindung zum Server in pgAdmin herstellen<a class="headerlink" href="#ubung-1-wiederholung-datenbankverbindung-zum-server-in-pgadmin-herstellen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In den folgenden Übungen wollen wir mit einer Datenbank auf einem ZHAW‐Server arbeiten. Hierzu erstellen
+wir zunächst eine Verbindung zu dieser Datenbank über pgAdmin. ACHTUNG: funktioniert nur im ZHAW Netz
+(VPN).</p>
+<ol>
+<li><p>Starten Sie pgAdmin.</p></li>
+<li><p>Im Dashboard klicken Sie auf NEW Server und geben die folgenden Verbindungsparameter ein:</p></li>
+<li><p>Register General: Name: svma‐s‐01323_modulagi_pdb_hs21_studentNr. Verwenden Sie dabei die Nr.
+Ihres zugewiesenen Benutzers.</p></li>
+<li><p>Register Connection:</p>
+<ul class="simple">
+<li><p>Host name/address: svma‐s‐<a class="reference external" href="http://01323.zhaw.ch">01323.zhaw.ch</a></p></li>
+<li><p>Port: 5432</p></li>
+<li><p>Maintenance database: modulagi_pdb_hs21</p></li>
+<li><p>studentNr (Verwenden Sie hier Ihren zugewiesenen Anmeldenamen)</p></li>
+<li><p>Passwort: (Verwenden Sie hier Ihr zugewiesenes Passwort)</p></li>
+</ul>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/49159820/139634939-ec46e7d4-6980-49ca-a3a1-2247b0fd380a.png" /></p>
+</li>
+<li><p>Alle anderen Einstellungen können belassen werden. Speichern Sie mit Klick auf Save.</p></li>
+<li><p>Lassen Sie sich nicht davon verunsichern, dass es bereits einige Einträge hat. Da auf dem Server bereits andere Datenbanken installiert sind, sehen Sie auch diese. Navigieren Sie zur Datenbank «modulagi_pdb_hs21» und verschaffen sich einen Überblick über die vorhandenen Tabellen usw..</p></li>
+<li><p>Verwenden Sie für alle folgenden Übungen diese Datenbankverbindung, wenn nichts anderes angegeben.</p></li>
+</ol>
+</div>
+<div class="section" id="ubung-2-wiederholung-datenbankverbindung-zum-server-in-arcgis-pro-herstellen">
+<h3>Übung 2: (Wiederholung) Datenbankverbindung zum Server in ArcGIS Pro herstellen<a class="headerlink" href="#ubung-2-wiederholung-datenbankverbindung-zum-server-in-arcgis-pro-herstellen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In den folgenden Übungen wollen wir mit einer Datenbank auf einem ZHAW-Server arbeiten. Hierzu erstellen wir zunächst eine Verbindung zu dieser Datenbank über ArcGIS Pro.</p>
+<ol>
+<li><p>Starten Sie ArcGIS Pro und erstellen Sie ein neues Projekt «Pflanzendatenbank_III».</p></li>
+<li><p>Sie können alle folgenden Übungen in diesem Projekt durchführen.</p></li>
+<li><p>Navigieren Sie im Catalog Fenster zum Eintrag Databases. Über das Kontextmenü (Rechtsklick) können Sie eine neue Datenbankverbindung herstellen.</p></li>
+<li><p>Verwenden Sie folgende Parameter:</p>
+<ul class="simple">
+<li><p>Database Platform: PostgreSQL</p></li>
+<li><p>Instance: <a class="reference external" href="http://svma-s-01323.zhaw.ch">svma-s-01323.zhaw.ch</a></p></li>
+<li><p>Authentication Type: Database authentication</p></li>
+<li><p>User Name: studentNr (Verwenden Sie Ihren zugewiesenen Benutzer)</p></li>
+<li><p>Password: (Verwenden Sie ihr zugewiesenes Passwort)</p></li>
+<li><p>Database: modulagi_pdb_hs21 (Achtung, auch hier sehen sie eine Reihe von anderen Datenbanken, Achten Sie darauf die korrekte Datenbank zu wählen)</p></li>
+</ul>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/49159820/139635144-03733a6c-097c-4b1e-a019-1c6c3e709098.png" /></p>
+</li>
+<li><p>Speichern Sie die Einstellungen mit Klick auf OK und geben der neuen Datenbankverbindung einen sinnvollen Namen.</p></li>
+<li><p>Verwenden Sie für alle folgenden Übungen diese Datenbankverbindung, wenn nichts anderes angegeben.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="abfragen-aus-der-datenbank-in-arcgis-pro-einbinden">
+<h2>3.	Abfragen aus der Datenbank in ArcGIS Pro einbinden<a class="headerlink" href="#abfragen-aus-der-datenbank-in-arcgis-pro-einbinden" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In den nächsten Übungen wollen wir mit den Daten in unserer Beispiel-Datenbank umgehen. Dazu versuchen wir die Daten aus den einzelnen Tabellen zu verknüpfen und sinnvoll aufzubereiten, um Sie anschliessend im ArcGIS Pro einzubinden und zu visualisieren. Unsere Pflanzendatenbank hat hierbei immer den Namen «modulagi_pdb_hs20». Verwenden Sie, wenn nicht anders angegeben diese Datenbank. Erstellen Sie zunächst noch einen beliebigen Ordner auf Ihrem Rechner in welchem wir die jeweiligen Ergebnisse speichern können. Sie finden ein Datenbankschema der Pflanzendatenbank auf dem Moodle. Dies hilft Ihnen beim Verständnis der Datenbank und seinen Beziehungen. Nutzen Sie auch die PostGIS Referenz, um die PostGIS Funktionen zu verstehen.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Datenbankschema: https://moodle.zhaw.ch/mod/resource/view.php?id=159530 
+PostGIS Referenz: https://postgis.net/docs/manual-3.0/reference.html 
+</pre></div>
+</div>
+<p>Wenn Sie sich bei den SQL-Befehlen nicht ganz sicher sind, so versuchen Sie schrittweise zum Ziel zu kommen. Formulieren Sie zunächst einen einfacheren Teil der Abfrage, z.B. nur Attribute aus einer Tabelle und fügen Sie dann die weiteren Attribute und/oder Tabellen schrittweise hinzu. Probieren Sie bei Bedarf nach jedem Zwischenschritt die Abfrage aus und schauen sich die Ergebnisse an.</p>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/49159820/139635281-6de05977-fd4c-4047-9b41-f8cd9edbe273.png" /></p>
+<p>Datenbankschema: Pflanzendatenbank (die gelben Schlüssel sind Primärschlüssel, die blauen Pfeile sind Fremdschlüssel).</p>
+<div class="section" id="ubung-3-werkzeug-make-query-table-anwenden">
+<h3>Übung 3: Werkzeug «Make Query Table» anwenden<a class="headerlink" href="#ubung-3-werkzeug-make-query-table-anwenden" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Das Werkzeug erstellt aus einer beliebigen Datenbankabfrage eine von ArcGIS Pro lesbare temporäre Tabelle. Dies ist immer dann sinnvoll, wenn z.B. nur eine Teilmenge aller Objekte gebraucht wird. Diese Teilmenge wird dabei in eine neue Tabelle geschrieben. HINWEIS: Die Tabelle wird nur temporär in dem Projekt abgelegt, d.h. es wird keine konkrete Datei geschrieben und auch keine neue Tabelle in der Datenbank erstellt, sondern nur die Abfrage im Projekt gespeichert.</p>
+<ol>
+<li><p>Starten Sie pgAdmin und verbinden Sie mit der Pflanzendatenbank «modulagi_pdb_hs21» mit Ihrem Benutzer studentNr.</p></li>
+<li><p>Probieren Sie folgende SQL-Abfrage zu formulieren.</p></li>
+<li><p>Suchen Sie alle Gattungen der Familie «Asteraceae». Zeigen Sie den Namen der Familie und den Namen der Gattung an.</p>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/49159820/139636566-b10a790a-cfcd-4ba8-a776-20eccba9c0c0.png" /></p>
+</li>
+<li><p>Starten Sie ArcGIS Pro und öffnen das Projekt «Pflanzendatenbank».</p></li>
+<li><p>Erstellen Sie eine neue Karte.</p></li>
+<li><p>Öffnen Sie das Werkzeug «Make Query Table»</p></li>
+<li><p>Wählen Sie die beteiligten Tabellen familien und gattungen (über die Datenbankverbindung)</p></li>
+<li><p>Wählen Sie die anzuzeigenden Felder name_familie und name_gattung</p></li>
+<li><p>Filtern Sie die Abfrage über die SQL-Expression nach ‘Asteraceae’. HINWEIS: Sie brauchen im Werkzeug nur den WHERE Teil der Abfrage ohne das Schlüsselwort WHERE eingeben. Achten Sie auch auf die verknüpften Schlüssel (id_familie) in beiden Tabellen. Sie können den WHERE Teil natürlich aus pgAdmin kopieren. Achten Sie in dem Fall darauf im Werkzeug auf die SQL-Ansicht umzustellen.</p></li>
+<li><p>Geben Sie der neuen Tabelle einen Namen.</p></li>
+<li><p>Prüfen Sie die Inhalte der neuen Tabelle. Vergleichen Sie mit dem Ergebnis aus pgAdmin.</p></li>
+<li><p>HINWEIS: «Make Query Table» erlaubt nur NICHT-räumliche Abfragen. Es können zwar Felder aus räumlichen Tabellen abgefragt werden, das Ergebnis ist aber immer eine einfache Tabelle und keine Feature Class.</p></li>
+</ol>
+</div>
+<div class="section" id="ubung-4-werkzeug-make-query-layer-anwenden">
+<h3>Übung 4: Werkzeug «Make Query Layer» anwenden<a class="headerlink" href="#ubung-4-werkzeug-make-query-layer-anwenden" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Das Werkzeug erstellt aus einer beliebigen Datenbankabfrage eine von ArcGIS Pro lesbare temporäre Feature Class. HINWEIS: Die Feature Class wird nur temporär in dem Projekt abgelegt, d.h. es wird keine konkrete Datei geschrieben und auch keine neue Tabelle in der Datenbank erstellt, sondern nur die Abfrage im Projekt gespeichert.</p>
+<ol>
+<li><p>Probieren Sie folgende SQL-Abfrage in pgAdmin zu formulieren.</p></li>
+<li><p>Suchen Sie den Standort aller Eichen (Gattung = Quercus). Zeigen Sie Gattung, Art und den Standort mit der objectid (Attribut shape + objectid).</p>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/49159820/139636807-09e7885d-4be3-409e-b373-fc66d858d3c4.png" /></p>
+</li>
+<li><p>Wechseln Sie zu ArcGIS Pro.</p></li>
+<li><p>Öffnen Sie das Werkzeug «Make Query Layer».</p></li>
+<li><p>Schreiben Sie das SQL-Query. TIPP: Sie können die Abfrage aus pgAdmin (Schritt 3) kopieren und hier wieder einfügen. Klicken Sie danach auf eine leere graue Fläche irgendwo im Werkzeug-Fenster damit das Kopierte angenommen wird.</p></li>
+<li><p>Die folgenden Einstellungen sollten dadurch dann automatisch gefunden werden.</p></li>
+<li><p>Achten Sie auf den korrekten Geometrietyp (Shape Type) und das Koordinatensystem, die SRID Nummer für das Schweizer Koordinatensystem CH1903+_LV95 lautet 2056.</p></li>
+<li><p>HINWEIS: Eine Abfrage mit dem Werkzeug «Make Query Layer» benötigt immer ein eindeutiges Identifizierungsfeld (Unique identifier Field(s)). In diesem Fall nutzen wir das Attribut «objectid». Achten Sie auch in den kommenden Abfragen auf ein solches ID-Feld.</p></li>
+<li><p>Schauen Sie sich den neuen Layer in der Karte an und werfen Sie auch einen Blick auf die Attributtabelle.</p></li>
+<li><p>Vergleichen Sie wieder mit dem Ergebnis aus pgAdmin.</p></li>
+<li><p>TIPP: Über das Kontextmenü des neuen Layers im Contents Fenster (Data -&gt; Export Features) können Sie den Layer auch dauerhaft z.B. als neue Feature Class in eine eigene Datenbank oder als neues Shapefile speichern.</p></li>
+</ol>
+</div>
+<div class="section" id="ubung-5-werkzeug-create-database-view-anwenden">
+<h3>Übung 5: Werkzeug «Create Database View» anwenden<a class="headerlink" href="#ubung-5-werkzeug-create-database-view-anwenden" title="Link zu dieser Überschrift">¶</a></h3>
+<p>«Create Database View» kann dazu benutzt werden, eine Sicht auf eine Tabelle zu erzeugen bzw. eine Abfrage in der Datenbank zu speichern. Hierbei wird dann nur eine Auswahl von Attributspalten und/oder Objekten zurückgegeben. Eine Sicht ist oft auch nützlich, um komplizierte Abfragen aus mehreren Tabellen in eine Tabelle «zusammen zu fassen», um dann einfacher darauf zugreifen zu können. HINWEIS: Die Sicht wird bei diesem Werkzeug, anders als in den beiden vorigen Werkzeugen, in der Datenbank gespeichert. D.h. es wird eine neue Tabelle bzw. View in der Datenbank erstellt.</p>
+<ol>
+<li><p>Probieren Sie folgende SQL-Abfrage in pgAdmin zu formulieren.</p></li>
+<li><p>Machen Sie eine Liste mit allen Pflanzen des Kurses «UÖ Stauden Gärtnerisch». Die Liste soll dabei die ID der Spezies, die Gattung, Art und Sorte der Pflanze sowie den Namen des Kurses und den Standort (Attribut shape) enthalten. Speichern Sie diese Abfrage als View mit dem Namen «pdb.view_kursliste_stauden_gaertnerisch_studentNr» in der Datenbank. (CREATE VIEW … AS SELECT…).</p></li>
+<li><p>HINWEIS: Mit zwei Minus Zeichen vor einer Zeile können Sie die Zeile auskommentieren.</p>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/49159820/139637024-732ba6d3-380b-49c2-a1dc-1eb7a8ea5476.png" /></p>
+</li>
+<li><p>Wechseln Sie zu ArcGIS Pro.</p></li>
+<li><p>Erneuern Sie die Datenbankverbindung (Refresh / F5), damit die neue View sichtbar ist.</p></li>
+<li><p>Eine View verhält sich wie eine neue Tabelle in ArcGIS Pro. Aus diesem Grund müsste die Tabelle eigentlich mit der Datenbank registriert werden. Sie erkennen dies auch in der Catalog Ansicht an dem nicht ausgefüllten Rechteck.</p>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/49159820/139637061-38fb81b6-7bba-4356-a09f-6618ecf271a1.png" /></p>
+</li>
+<li><p>Eine Registrierung bewirkt das Freischalten der Geodatenbank-Funktionen für diese Tabelle, damit auch neue Daten erfasst und bearbeitet werden können. Da Ihr Benutzer studentNr keine Berechtigungen zum Schreiben im Datenbankschema auf der Datenbank hat, kann die Tabelle jetzt nicht registriert werden. Da wir aber die Tabelle nur abfragen wollen ist dies nicht weiter schlimm.</p></li>
+<li><p>Öffnen Sie das Werkzeug «Create Database View».</p></li>
+<li><p>Speichern Sie mit dem Werkzeug eine identische Liste für den Kurs «UÖ Gehölze». Geben Sie der View den Namen «pdb.view_kursliste_gehoelze_studentNr». Sie können hierzu wieder das SQL-Select-Statement von oben kopieren (ohne den CREATE VIEW Teil) und den Kursnamen entsprechend anpassen.</p></li>
+<li><p>Schauen Sie sich das Ergebnis in der Attributtabelle und in der Karte an.</p></li>
+<li><p>Sie sehen an dieser Übung, dass nur der Datenbankbesitzer neue Tabellen erstellen und hinzufügen kann. Andere Benutzer wie der student1 können nur vorhandene Tabellen und Daten bearbeiten und ändern. Neue Tabellen können nur ohne Schreibberechtigung erstellt werden.</p></li>
+</ol>
+</div>
+<div class="section" id="ubung-6-optional-werkzeug-make-table-view">
+<h3>Übung 6: (optional) Werkzeug «Make Table View»<a class="headerlink" href="#ubung-6-optional-werkzeug-make-table-view" title="Link zu dieser Überschrift">¶</a></h3>
+<p>«Make Table View» kann dazu benutzt werden, um eine reduzierte Sicht auf eine Tabelle zu erzeugen. Hierbei wird dann nur eine Auswahl von Attributspalten (ohne Geometrie-Attribut) angezeigt. HINWEIS: Die Sicht wird nur temporär in dem Projekt abgelegt, d.h. es wird keine konkrete Datei geschrieben und auch keine neue Tabelle in der Datenbank erstellt, sondern nur die Abfrage im Projekt gespeichert.</p>
+<ol class="simple">
+<li><p>Starten Sie ArcGIS Pro und laden das Projekt mit dem Namen «Pflanzendatenbank»</p></li>
+<li><p>Öffnen Sie das Werkzeug «Make Table View».</p></li>
+<li><p>Erstellen Sie eine Abfrage wie in Übung 5 und filtern nach der Art «japonicum».</p></li>
+<li><p>Wählen Sie als Input Table die zuvor erstellte View, lassen Sie aber das Geometriefeld (shape) in der Abfrage weg und filtern über eine «new Expression» nach name_art = «japonicum».</p></li>
+<li><p>Lassen Sie sich die Attributtabelle der neuen Tabelle anzeigen.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="geoverarbeitung-in-der-datenbank-mit-arcgis-pro-und-sql">
+<h2>4.	Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL<a class="headerlink" href="#geoverarbeitung-in-der-datenbank-mit-arcgis-pro-und-sql" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In diesem Kapitel sollen konkrete Geoverarbeitungsoperationen in ArcGIS Pro und PostGIS/SQL gegenübergestellt werden. Dafür bearbeiten wir die entsprechende Fragestellung zunächst in ArcGIS Pro und stellen anschliessend die gleiche Funktion in PostGIS nach. Zur Visualisierung des Ergebnisses der SQL-Abfrage nutzen wir das Werkzeug «Make Query Layer» in ArcGIS Pro aus Übung 4.</p>
+<div class="section" id="ubung-7-geometrien-zusammenfuhren-mit-dissolve">
+<h3>Übung 7: Geometrien zusammenführen mit «Dissolve»<a class="headerlink" href="#ubung-7-geometrien-zusammenfuhren-mit-dissolve" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die importierten Flächen sind alle einem bestimmten Bereich zugeordnet. Um einen Überblick über die Grösse und Ausdehnung der Bereiche zu bekommen, möchten wir alle Flächen (Tabelle pdb.flaechen_shp) mit identischem Bereich (Attribut «name_bereich») zusammenführen.</p>
+<ol>
+<li><p>Führen Sie die Geometrien mit identischem Bereichsnamen (Attribut «name_bereich») zusammen. Verwenden Sie wieder die Verbindung mit dem Benutzer studentNr.</p>
+<ul class="simple">
+<li><p>Verwenden Sie das Werkzeug «Dissolve» in ArcGIS Pro. Nutzen Sie dabei Multipart Features. Speichern Sie das Ergebnis als neuen Layer. HINWEIS: Da Ihr Datenbankbenutzer studentNr keine Berechtigungen zum Speichern in der Server Datenbank hat, können Sie das Ergebnis lokal auf Ihrem Rechner in Ihrem Ordner oder einer eigenen Geodatenbank ablegen.</p></li>
+<li><p>Formulieren Sie jetzt die SQL Anfrage in pgAdmin (Verbindung wieder mit Benutzer studentNr). Verwenden Sie dabei die Funktion ST_UNION. Um nur gewünschte Flächen zu erhalten, sollten Sie das Ergebnis im SQL-Befehl nach dem Namen des Bereichs gruppieren (GROUP BY).</p></li>
+<li><p>Optional: Was passiert wenn das GROUP BY weggelassen würde? Probieren Sie es aus.</p></li>
+<li><p>Lassen Sie das Attribute name_bereich für die Flächen anzeigen.</p></li>
+<li><p>Zeigen Sie das Ergebnis mit «Make Query Layer» an und vergleichen mit dem ArcGIS Pro Resultat.</p></li>
+</ul>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/49159820/139637478-ec631b2c-dbac-4ab9-8bb1-b9fafd8c861c.png" /></p>
+</li>
+</ol>
+</div>
+<div class="section" id="ubung-8-puffer-um-geometrie-erstellen">
+<h3>Übung 8: Puffer um Geometrie erstellen<a class="headerlink" href="#ubung-8-puffer-um-geometrie-erstellen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Auf dem Campus sollen die Wege im Päoniengarten auf jeder Seite um 25cm verbreitert werden. Um die neuen Wege darzustellen, erstellen wir einen Puffer. Die Wegflächen finden Sie in der Datenbank in der Feature Class «wege_paeoniengarten».</p>
+<ol>
+<li><p>Legen Sie jeweils einen Puffer von beidseitig 25cm um das Wegenetz.</p>
+<ul class="simple">
+<li><p>Nutzen Sie dazu einmal das Werkzeug «Buffer» in ArcGIS Pro. Speichern Sie hierbei das Ergebnis.</p></li>
+<li><p>Nutzen Sie jetzt die POSTGIS Funktion ST_BUFFER in pgAdmin. Geben Sie auch die id der Flächen mit aus. HINWEIS: Achten Sie auf die Einheiten. Welche Einheit nimmt ST_BUFFER? Fragen Sie die Online-Hilfe.</p></li>
+</ul>
+</li>
+<li><p>Skizzieren Sie ihr Vorgehen in ArcGIS Pro und notieren ihren SQL-Befehl.</p></li>
+<li><p>Um das Ergebnis der PostGIS Funktion zu visualisieren, nutzen Sie das Werkzeug «Make Query Layer» mit Ihrer SQL Abfrage.</p></li>
+<li><p>Vergleichen Sie die Ergebnisse. Schauen Sie sich auch die Attribute an. Was fällt auf?</p>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/49159820/139638264-4e6b6b85-191e-4cdf-9e59-7b230314aaba.png" /></p>
+</li>
+</ol>
+</div>
+<div class="section" id="ubung-9-geometrien-uberschneiden-mit-intersect">
+<h3>Übung 9: Geometrien überschneiden mit «Intersect»<a class="headerlink" href="#ubung-9-geometrien-uberschneiden-mit-intersect" title="Link zu dieser Überschrift">¶</a></h3>
+<p>An einigen Stellen muss für die Verbreiterung des Weges die Fläche einiger Beete weichen. Ermitteln Sie die betroffenen Beete, welche Fläche für die neuen Wege abgeben müssen.</p>
+<ol>
+<li><p>Bilden Sie die Schnittmenge (Intersection) der gepufferten Wegfläche und der restlichen Flächen aus der Tabelle «pdb.flaechen».</p>
+<ul class="simple">
+<li><p>In ArcGIS Pro verwenden Sie dazu das Werkzeug «Pairwise Intersect». Sie können als Input entweder Ihr Ergebnis aus der vorigen Übung benutzen oder Sie verwenden den Datensatz «wege_paeoniengarten_buffer» aus der Datenbank. Speichern Sie das Ergebnis.</p></li>
+<li><p>Stellen Sie den SQL-Befehl mit Hilfe der Funktion «ST_INTERSECTION» für diese Abfrage in pgAdmin auf und visualisieren das Ergebnis wieder mit «Make Query Layer». Sie können als Input entweder den gespeicherten Puffer aus der vorigen Übung verwenden oder Sie verwenden den Datensatz «wege_paeoniengarten_buffer» aus der Datenbank. Probieren Sie ebenfalls einmal aus durch eine verschachtelte Abfrage den Puffer mit ST_BUFFER direkt einzubeziehen. Geben Sie in Ihrem SQL-Befehl auch die ID der Fläche mit aus.</p></li>
+</ul>
+</li>
+<li><p>Skizzieren Sie ihr Vorgehen in ArcGIS Pro und notieren ihren SQL-Befehl.</p></li>
+<li><p>Vergleichen Sie die Ergebnisse aus ArcGIS Pro und SQL. HINWEIS: Die SQL Funktion ST_INTERSECTION erzeugt immer eine so genannte Geometry Collection, auch wenn zwei Geometrien keine Schnittmenge aufweisen, gibt es einen dann leeren Eintrag. Aus diesem Grund zeigt das Ergebnis immer alle Geometrien an. Haben die Geometrien keine Schnittmenge, so ist die Geometrie leer. Um leere Geometrien auszuschliessen, sollte im WHERE-Abschnitt z.B. mit der Funktion ST_OVERLAPS oder der Funktion ST_INTERSECTS geprüft werden, ob die zwei Eingabe-Geometrien (Gepufferte Wege und sonstige Flächen) überhaupt irgendwo überlappen. Im ArcGIS Pro werden leere Geometrien automatisch vom Ergebnis abgeschnitten.</p>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/49159820/139638392-bd89ae94-061d-4ee4-bc6f-17ed40674620.png" /></p>
+</li>
+</ol>
+</div>
+<div class="section" id="ubung-10-flachen-berechnen-in-arcgis-pro-und-sql">
+<h3>Übung 10: Flächen berechnen in ArcGIS Pro und SQL<a class="headerlink" href="#ubung-10-flachen-berechnen-in-arcgis-pro-und-sql" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In der Übung 10 wurden Flächen ausgeschieden, welche von den betroffenen Beeten abgegeben werden müssen. Die genauen Flächengrössen sollen jetzt berechnet werden.</p>
+<ol>
+<li><p>Welche Beete müssen wie viel Fläche abgeben? Berechnen Sie die Fläche pro Beet in qm.</p>
+<ul class="simple">
+<li><p>Legen Sie dazu in ArcGIS Pro ein neues Feld in der Attributtabelle ihres gespeicherten Layers an und berechnen dort die jeweiligen Einzelflächen in qm (Calculate Geometry). Haben Sie das Ergebnis in einer Geodatenbank gespeichert gibt es bereits das Attribut shape_area mit der Fläche in qm.</p></li>
+<li><p>Erstellen Sie in pgAdmin eine Abfrage in SQL, welche ebenfalls die jeweiligen Einzelflächen in qm ausgibt. Ergänzen Sie dazu die SQL-Abfrage aus Übung 9 mit einem neuen Feld, welches die Fläche ausgibt. Wenden Sie dazu die Funktion ST_AREA auf das Geometriefeld an.</p></li>
+<li><p>Visualisieren Sie das Ergebnis erneut mit «Make Query Layer».</p></li>
+</ul>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/49159820/139638536-45da93b3-f2b3-43ae-847e-7df4c02b4efb.png" /></p>
+</li>
+</ol>
+</div>
+<div class="section" id="ubung-11-geometrien-ausschneiden-mit-erase">
+<h3>Übung 11: Geometrien ausschneiden mit «Erase»<a class="headerlink" href="#ubung-11-geometrien-ausschneiden-mit-erase" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Als nächstes wollen wir die grosse Hauptwege-Achse zu unseren Flächen hinzufügen. Hierzu haben wir eine weitere Feature Class in der Datenbank mit der Hauptwegeachse zur Verfügung. Leider enthält die Feature Class nur die Aussengrenzen des Weges. Da es auf dem Weg auch Beete gibt, wollen wir diese Beetflächen aus der Wegfläche ausschneiden.</p>
+<ol>
+<li><p>Schneiden Sie die Beetflächen aus der Wegeachse aus. Nutzen Sie dafür:</p>
+<ul class="simple">
+<li><p>In ArcGIS Pro das Werkzeug «Erase» und speichern das Ergebnis als neue Feature Class oder als Shapefile in Ihrem Ordner.</p></li>
+<li><p>Formulieren Sie in pgAdmin den SQL-Befehl mit der Funktion ST_DIFFERENCE und zeigen Sie das Resultat mit «Make Query Layer» auf der Karte. Geben Sie dabei zusätzlich die id der Fläche sowie die Attribute name_standort und name_bereich mit aus.</p></li>
+<li><p>HINWEIS: Diese Anfrage funktioniert in zwei Schritten mit einer verschachtelten Abfrage (aber trotzdem in einem SQL-Befehl). Um Polygone auszuschneiden, müssen wir zunächst alle Wegeflächen und alle sonstigen Flächen aus der Tabelle «flaechen_shp» zu jeweils einem Polygon zusammenfügen (ST_Union), damit wir nur noch zwei Flächen miteinander vergleichen müssen. Anschliessend werden die beiden Flächen dann mit dem Werkzeug ST_Difference untersucht.</p></li>
+<li><p>HINWEIS: Die Funktion ST_Difference berechnet für jedes eingeschlossene Polygon einmal die Differenzmenge aus der Wegefläche und allen eingeschlossenen Polygonen. Dadurch hat das Ergebnis eigentlich zu viele Einträge, für jedes eingeschlossene Polygon ein Eintrag, welche aber alle dieselbe Geometrie aufweisen. Der Parameter LIMIT 1 limitiert die Ausgabe auf ein Feature.</p></li>
+</ul>
+</li>
+<li><p>Vergleichen Sie die Ergebnisse.</p>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/49159820/139638703-5f93166b-3da1-47ca-9d2c-0d7303e63f7e.png" /></p>
+</li>
+</ol>
+</div>
+<div class="section" id="ubung-12-geometrien-ausschneiden-mit-clip">
+<h3>Übung 12: Geometrien ausschneiden mit «Clip»<a class="headerlink" href="#ubung-12-geometrien-ausschneiden-mit-clip" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Als nächstes möchten wir alle Pflanzen suchen, welche auf bereits kartierten Flächen stehen. Hierzu nehmen wir den Punktdatensatz der Pflanzen und verschneiden diesen mit den bereits vorhandenen Beet-Flächen.</p>
+<ol>
+<li><p>Suchen Sie alle Standorte (Punkte) der Pflanzen, welche auf kartierten Flächen stehen.</p>
+<ul class="simple">
+<li><p>In ArcGIS Pro verwenden Sie das Werkzeug «Clip» und schneiden damit überflüssige Punkte weg. Speichern Sie das Resultat in Ihrem Ordner. Alternativ würde auch ein «Select by Location» gehen.</p></li>
+<li><p>Formulieren Sie auch hierzu die SQL-Anfrage in pgAdmin, welche alle Punkte auf den Flächen zurückgibt. Sie können dazu wieder die Funktion ST_INTERSECTION nutzen. Achten Sie darauf, dass wir dabei wieder nur diejenigen Punkte haben wollen, welche auch wirklich in Beziehung zu den Flächen stehen. Diesen Filter müssen Sie im WHERE-Abschnitt bereitstellen. Verwenden Sie dafür diesmal die Funktion ST_INTERSECTS. Binden Sie ausserdem noch die Attribute id_pflanze (objectid) und id_spezies in die Ausgabe ein und sortieren die Liste danach anhand der id_pflanze.</p></li>
+</ul>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/49159820/139638838-e1f62225-cf01-4de9-9963-5469ab1c6bc1.png" /></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
