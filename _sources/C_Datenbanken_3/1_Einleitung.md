@@ -1,3 +1,10 @@
 # Einleitung
 
-bla bla bla
+
+```{admonition} Übungsziele
+:class: attention
+
+- Sie lernen die Abfragesprache SQL kennen.
+- Sie können Abfragen in SQL formulieren und dabei auch räumliche PostGIS Funktionen nutzen.
+- Sie lernen SQL‐Abfragen mit ArcGIS Pro Werkzeugen zu visualisieren.
+```
