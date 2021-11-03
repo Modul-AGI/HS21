@@ -13,7 +13,7 @@ Damit wir im ersten Teil von Netzwerkanalyse direkt loslegen können solltet ihr
 ```
 
 ## Übung 1: QGIS installieren
-Auf der QGIS Homepage [qgis.org](https://www.qgis.org/) finden Sie die aktuellen QGIS Versionen für Windows, Linux, Mac und weitere Betriebssysteme in 32 und 64 bit. Laden Sie den Standalone installer des "Longterm release (most stable)" QGIS Version herunter (aktuell 3.16.12), der für Ihre Architektur und Ihr Betriebssystem passt. Installieren Sie QGIS nach dem Download.
+Auf der QGIS Homepage [qgis.org](https://www.qgis.org/de/site/forusers/download.html) finden Sie die aktuellen QGIS Versionen für Windows, Linux, Mac und weitere Betriebssysteme in 32 und 64 bit. Laden Sie den Standalone installer des "Longterm release (most stable)" QGIS Version herunter (aktuell 3.16.12), der für Ihre Architektur und Ihr Betriebssystem passt. Installieren Sie QGIS nach dem Download.
 
 
 ```{figure} figures/qgis316.png
