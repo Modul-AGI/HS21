@@ -566,33 +566,28 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-2-qgis-aufstarten">
-   Übung 2: QGIS aufstarten
+  <a class="reference internal nav-link" href="#ubung-2-tutorials-anschauen">
+   Übung 2: Tutorials anschauen
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-3-tutorials-anschauen">
-   Übung 3: Tutorials anschauen
+  <a class="reference internal nav-link" href="#ubung-3-daten-importieren">
+   Übung 3: Daten importieren
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-4-daten-importieren">
-   Übung 4: Daten importieren
+  <a class="reference internal nav-link" href="#ubung-4-plugin-installieren">
+   Übung 4: Plugin installieren
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-5-plugin-installieren">
-   Übung 5: Plugin installieren
+  <a class="reference internal nav-link" href="#ubung-5-openstreetmap-vektordaten-herunterladen">
+   Übung 5: OpenStreetMap Vektordaten herunterladen
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-6-openstreetmap-vektordaten-herunterladen">
-   Übung 6: OpenStreetMap Vektordaten herunterladen
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-7-temporare-datei-abspeichern">
-   Übung 7: Temporäre Datei abspeichern
+  <a class="reference internal nav-link" href="#ubung-6-temporare-datei-abspeichern">
+   Übung 6: Temporäre Datei abspeichern
   </a>
  </li>
 </ul>
@@ -621,27 +616,30 @@
 </div>
 <div class="section" id="ubung-1-qgis-installieren">
 <h2>Übung 1: QGIS installieren<a class="headerlink" href="#ubung-1-qgis-installieren" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Auf der QGIS Homepage <a class="reference external" href="https://www.qgis.org/">qgis.org</a> finden Sie die aktuellen QGIS Versionen für Windows, Linux, Mac und weitere Betriebssysteme in 32 und 64 bit. Laden Sie den Standalone installer des „Longterm release (most stable)“ QGIS Version herunter (aktuell 3.10), der für Ihre Architektur und Ihr Betriebssystem passt. Installieren Sie QGIS nach dem Download.</p>
+<p>Auf der QGIS Homepage <a class="reference external" href="https://www.qgis.org/">qgis.org</a> finden Sie die aktuellen QGIS Versionen für Windows, Linux, Mac und weitere Betriebssysteme in 32 und 64 bit. Laden Sie den Standalone installer des „Longterm release (most stable)“ QGIS Version herunter (aktuell 3.16.12), der für Ihre Architektur und Ihr Betriebssystem passt. Installieren Sie QGIS nach dem Download.</p>
 <div class="figure align-default" id="qgisversion">
-<img alt="../_images/qgisVersion.jpg" src="../_images/qgisVersion.jpg" />
+<img alt="../_images/qgis316.png" src="../_images/qgis316.png" />
 <p class="caption"><span class="caption-number">Abb. 17 </span><span class="caption-text">QGIS Standalone Installer „Longterm release (most stable)“ auf <a class="reference external" href="http://qgis.org">qgis.org</a></span><a class="headerlink" href="#qgisversion" title="Link zu diesem Bild">¶</a></p>
 </div>
+<!-- ## Übung 2: QGIS aufstarten
+Nach der Installation starten Sie "QGIS Desktop 3.10.0 **with GRASS 7.8.0**". Der Zusatz "with GRASS" ist sehr wichtig, vor allem für die zukünftigen Aufgaben in Netzwerkanalyse I - III. Sollte den Link im Startmenü nicht verfügbar sein, können Sie die entsprechende exe-Datei auch an folgendem Ort finden: *C:\Program Files\QGIS 3.10\bin\qgis-bin-g7.exe*. Mit Rechtslick > an Startmenü anheften können Sie eine Verknüpfung mit der korrekten QGIS Version erstellen.
+
+Wechseln Sie als erstes die Sprache des Userinterface auf Englisch _(Einstellungen -> Optionen -> Allgemein -> Benutzeroberflächenübersetzung)_.
+
+
+```{figure} figures/qgisGrass.jpg
+:width: 300px
+:name: qgisgrass
+
+Achtet beim Aufstarten unbedingt darauf, dass QGIS **mit GRASS** GIS gestartet wird
+``` -->
 </div>
-<div class="section" id="ubung-2-qgis-aufstarten">
-<span id="chap-vorbereitung-aufstarten"></span><h2>Übung 2: QGIS aufstarten<a class="headerlink" href="#ubung-2-qgis-aufstarten" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Nach der Installation starten Sie „QGIS Desktop 3.10.0 <strong>with GRASS 7.8.0</strong>“. Der Zusatz „with GRASS“ ist sehr wichtig, vor allem für die zukünftigen Aufgaben in Netzwerkanalyse I - III. Sollte den Link im Startmenü nicht verfügbar sein, können Sie die entsprechende exe-Datei auch an folgendem Ort finden: <em>C:\Program Files\QGIS 3.10\bin\qgis-bin-g7.exe</em>. Mit Rechtslick &gt; an Startmenü anheften können Sie eine Verknüpfung mit der korrekten QGIS Version erstellen.</p>
-<p>Wechseln Sie als erstes die Sprache des Userinterface auf Englisch <em>(Einstellungen -&gt; Optionen -&gt; Allgemein -&gt; Benutzeroberflächenübersetzung)</em>.</p>
-<div class="figure align-default" id="qgisgrass">
-<a class="reference internal image-reference" href="../_images/qgisGrass.jpg"><img alt="../_images/qgisGrass.jpg" src="../_images/qgisGrass.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Abb. 18 </span><span class="caption-text">Achtet beim Aufstarten unbedingt darauf, dass QGIS <strong>mit GRASS</strong> GIS gestartet wird</span><a class="headerlink" href="#qgisgrass" title="Link zu diesem Bild">¶</a></p>
-</div>
-</div>
-<div class="section" id="ubung-3-tutorials-anschauen">
-<h2>Übung 3: Tutorials anschauen<a class="headerlink" href="#ubung-3-tutorials-anschauen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="ubung-2-tutorials-anschauen">
+<h2>Übung 2: Tutorials anschauen<a class="headerlink" href="#ubung-2-tutorials-anschauen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Schauen Sie sich danach zum Einstieg einzelne Videos vom Youtube Nutzer <a class="reference external" href="https://www.youtube.com/channel/UCKwC9hcJr-4mgsNUeJzMAvA/videos">Marshal Mappers</a> an. Erkunden Sie die Videos bis Sie die grundlegendsten Arbeitsschritte von QGIS (Daten importieren, Werkzeuge finden, Karte zu pdf exportieren) verstanden haben. Erstellen Sie dann ein neues Projekt (Projekt -&gt; New) und speichern Sie dieses direkt ab (Projekt -&gt; Save As..). Beachten Sie dazu die Empfehlungen zur Struktur (siehe <span class="xref std std-ref">chap-netzwerk-einleitung</span>).</p>
 </div>
-<div class="section" id="ubung-4-daten-importieren">
-<h2>Übung 4: Daten importieren<a class="headerlink" href="#ubung-4-daten-importieren" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="ubung-3-daten-importieren">
+<h2>Übung 3: Daten importieren<a class="headerlink" href="#ubung-3-daten-importieren" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Während Shapefiles im GIS-Unterricht bisher oft verwendet wurden zur Speicherung von Vectordaten, werden in QGIS vor allem Geopackage Dateien verwendet (.gpkg). QGIS kann Shapefiles durchaus lesen und schreiben, wir werden in den Übungen aber gleichwohl v.a. mit Geopackage Daten arbeiten. Geopackages sind eine alternative Methode, Vektordaten abzuspeichern. Sie beheben einige Defizite, die Shapefiles mit sich bringen. Siehe dazu auch die Website <a class="reference external" href="http://switchfromshapefile.org/">„Shapefiles must die“</a>.</p>
 <p>PS: Twitternutzer können auch einen spannenden Schlagabtausch der Benutzer <a class="reference external" href="https://twitter.com/shapefiIe">&#64;shapefile</a> versus <a class="reference external" href="https://twitter.com/geopackage1">&#64;geopackage1</a> und <a class="reference external" href="https://twitter.com/sfkeller">&#64;sfkeller</a> mitverfolgen.</p>
 <ol class="simple">
@@ -651,8 +649,8 @@
 <li><p><em>Symbologie folgendermassen ändern: Fläche transparent, Stadtgrenze schwarz</em></p></li>
 </ol>
 </div>
-<div class="section" id="ubung-5-plugin-installieren">
-<span id="ex-network-plugins"></span><h2>Übung 5: Plugin installieren<a class="headerlink" href="#ubung-5-plugin-installieren" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="ubung-4-plugin-installieren">
+<span id="ex-network-plugins"></span><h2>Übung 4: Plugin installieren<a class="headerlink" href="#ubung-4-plugin-installieren" title="Link zu dieser Überschrift">¶</a></h2>
 <p>QGIS wird von zahlreichen Einzelpersonen und Gruppen entwickelt. Aus diesem Grund ist die Software Modular aufgebaut, und nur ein Teil wird der Standard-Installation mitgeliefert. Für einige Funktionen müssen Erweiterungen (sogenannte „Plugins“), zusätzlich installiert werden. Installieren Sie das Plugin „QuickOSM“ um OpenStreetMap (OSM) Vektordaten rasch und einfach lokal abspeichern zu können.</p>
 <ol class="simple">
 <li><p>Reiter Plugins -&gt; Manage and Install Plugins</p></li>
@@ -661,20 +659,20 @@
 </ol>
 <p>Die wichtigsten Metadaten zu allen Plugins werden auf <a class="reference external" href="http://plugins.qgis.org">plugins.qgis.org</a> festgehalten. Dort findet man auch Links zur Projektseite, weiteren Dokumentation und ggf. Tutorials: Zu QuickOSM sind die Metadaten hier aufrufbar: <a class="reference external" href="https://plugins.qgis.org/plugins/QuickOSM/">https://plugins.qgis.org/plugins/QuickOSM/</a></p>
 </div>
-<div class="section" id="ubung-6-openstreetmap-vektordaten-herunterladen">
-<span id="ex-network-osmdownload"></span><h2>Übung 6: OpenStreetMap Vektordaten herunterladen<a class="headerlink" href="#ubung-6-openstreetmap-vektordaten-herunterladen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="ubung-5-openstreetmap-vektordaten-herunterladen">
+<span id="ex-network-osmdownload"></span><h2>Übung 5: OpenStreetMap Vektordaten herunterladen<a class="headerlink" href="#ubung-5-openstreetmap-vektordaten-herunterladen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Mit dem neuen Plugin „QuickOSM“ laden Sie nun den Strassendatensatz der Gemeinde Wädenswil herunter. Dies geschieht folgendermassen:</p>
 <ol class="simple">
 <li><p><em>Rechtsklick auf den Layer „Gemeinde_Waedenswil“</em> -&gt; <em>Zoom to layer</em></p></li>
 <li><p><em>Reiter Vektor</em> -&gt; <em>Quick OSM</em> -&gt; <em>Quick OSM</em></p></li>
 <li><p><em>Wählen Sie bei der Option key „highway“ und lassen value leer</em></p></li>
-<li><p><em>Wählen Sie Option „Extent of map canvas“</em></p></li>
+<li><p><em>Wählen Sie Option „Canvas Extent“</em></p></li>
 <li><p><em>Klicken Sie anschliessend auf „Run query“</em></p></li>
 </ol>
 <p>Das Query lädt nebst den Liniendaten auch noch Punkt- und Polygon-Daten herunter. Diese interessieren uns nicht und können entfernt werden (Rechtsklick -&gt; remove).</p>
 </div>
-<div class="section" id="ubung-7-temporare-datei-abspeichern">
-<h2>Übung 7: Temporäre Datei abspeichern<a class="headerlink" href="#ubung-7-temporare-datei-abspeichern" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="ubung-6-temporare-datei-abspeichern">
+<h2>Übung 6: Temporäre Datei abspeichern<a class="headerlink" href="#ubung-6-temporare-datei-abspeichern" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Outputs werden in QGIS standardmässig in einem Temp-Folder abgelegt. Diese Dateien werden nach Beendigung von QGIS gelöscht. Um die Daten auch zu einem späteren Zeitpunkt verwenden zu können, müssen sie an einem geeigneten Ort abgespeichert werden. Führen Sie diesen Schritt mit den eben beschafften OSM Strassendaten (nur Linien) aus. Im gleichen Schritt können Sie alle unnötigen Spalten von der sehr grossen Attributtabelle loswerden.</p>
 <ol class="simple">
 <li><p><em>Rechtsklick auf den temporären Linien-Layer</em> -&gt; <em>Export</em> -&gt; <em>Save Features As…</em></p></li>

@@ -586,18 +586,18 @@
 <p>Starten Sie „QGIS 3. 10 .0 with GRASS GIS 7. 8 .1“, beginnen Sie ein neues QGIS Projekt und speichern dies an einem geeigneten Ort (siehe Vorbereitungsübungen) ab. Weisen Sie dem Projekt das Koordinatensystem EPSG 2056 zu und importieren die Gemeindegrenze sowie die OSM Strassendaten aus der Vorbereitungsübung (siehe <a class="reference internal" href="../D_Netzwerkanalyse_3/7_Anhang.html#table-datensaetze-netzwerkanalyse"><span class="std std-numref">Tab. 4</span></a>).</p>
 <div class="tip admonition">
 <p class="admonition-title">Achtung!</p>
-<p>Achten Sie darauf, dass Sie „QGIS Desktop 3.10.0 <strong>with GRASS 7.8.0</strong>“ starten, ansonsten stehen ihnen die GRASS Erweiterungen nicht zur Verfügung (siehe <a class="reference internal" href="2_Vorbereitung.html#chap-vorbereitung-aufstarten"><span class="std std-ref">Übung 2: QGIS aufstarten</span></a>).</p>
+<p>Achten Sie darauf, dass Sie „QGIS Desktop 3.10.0 <strong>with GRASS 7.8.0</strong>“ starten, ansonsten stehen ihnen die GRASS Erweiterungen nicht zur Verfügung (siehe <span class="xref std std-ref">chap-vorbereitung-aufstarten</span>).</p>
 </div>
 <div class="section" id="ubung-1-1-daten-transformieren">
 <span id="ex-network-transfrom"></span><h2>Übung 1.1: Daten Transformieren<a class="headerlink" href="#ubung-1-1-daten-transformieren" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Die OSM Daten sind aktuell noch im Koordinatensystem WGS84 (EPSG 4326). Die Gemeindegrenze hingegen ist mit den neuen Schweizer Landeskoordinaten CH1903+ LV95 (EPSG 2056) abgespeichert. Wir wollen in unserer Analyse mit CH1903+ LV95 (EPSG 2056) arbeiten. Transformieren Sie dazu den Strassendatensatz in das Koordinatensystem CH1903+ LV95 (EPSG 2056). Nutzen Sie dazu das Tool „Reproject Layer“. <strong>Wichtig</strong>: Speichern Sie den Transformierten Strassendatensatz <em>in einer neuen Datei</em> (siehe <a class="reference internal" href="#savetofile"><span class="std std-numref">Abb. 20</span></a>)</p>
+<p>Die OSM Daten sind aktuell noch im Koordinatensystem WGS84 (EPSG 4326). Die Gemeindegrenze hingegen ist mit den neuen Schweizer Landeskoordinaten CH1903+ LV95 (EPSG 2056) abgespeichert. Wir wollen in unserer Analyse mit CH1903+ LV95 (EPSG 2056) arbeiten. Transformieren Sie dazu den Strassendatensatz in das Koordinatensystem CH1903+ LV95 (EPSG 2056). Nutzen Sie dazu das Tool „Reproject Layer“. <strong>Wichtig</strong>: Speichern Sie den Transformierten Strassendatensatz <em>in einer neuen Datei</em> (siehe <a class="reference internal" href="#savetofile"><span class="std std-numref">Abb. 19</span></a>)</p>
 <div class="figure align-default" id="qgistools">
 <img alt="../_images/ueb1_fig1.jpg" src="../_images/ueb1_fig1.jpg" />
-<p class="caption"><span class="caption-number">Abb. 19 </span><span class="caption-text">Viele wichtige Tools lassen sich über den Menü Bar aufrufen (v.a. „Vector“ und „Raster“). Die Tools lassen sich auch relativ rasch mit der Suchfunktion der „Processing Toolbox“ finden.</span><a class="headerlink" href="#qgistools" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 18 </span><span class="caption-text">Viele wichtige Tools lassen sich über den Menü Bar aufrufen (v.a. „Vector“ und „Raster“). Die Tools lassen sich auch relativ rasch mit der Suchfunktion der „Processing Toolbox“ finden.</span><a class="headerlink" href="#qgistools" title="Link zu diesem Bild">¶</a></p>
 </div>
 <div class="figure align-default" id="savetofile">
 <img alt="../_images/saveTo.jpg" src="../_images/saveTo.jpg" />
-<p class="caption"><span class="caption-number">Abb. 20 </span><span class="caption-text">Speichern Sie den neuen Strassendatensatz in einer <em>neuen</em> Datei, nicht als temporärer Layer. Normalerweise spielt dies keine Rolle, doch im Falle von „reproject“ entsteht beim Speichern als temporärer Layer ein Fehler.</span><a class="headerlink" href="#savetofile" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-number">Abb. 19 </span><span class="caption-text">Speichern Sie den neuen Strassendatensatz in einer <em>neuen</em> Datei, nicht als temporärer Layer. Normalerweise spielt dies keine Rolle, doch im Falle von „reproject“ entsteht beim Speichern als temporärer Layer ein Fehler.</span><a class="headerlink" href="#savetofile" title="Link zu diesem Bild">¶</a></p>
 </div>
 </div>
 <div class="section" id="ubung-1-2-daten-clippen">
