@@ -1,6 +1,6 @@
 # Aufgabe 1: Operationen mit QGIS
 
-Starten Sie "QGIS 3. 10 .0 with GRASS GIS 7. 8 .1", beginnen Sie ein neues QGIS Projekt und speichern dies an einem geeigneten Ort (siehe Vorbereitungsübungen) ab. Weisen Sie dem Projekt das Koordinatensystem EPSG 2056 zu und importieren die Gemeindegrenze sowie die OSM Strassendaten aus der Vorbereitungsübung (siehe {numref}`table-datensaetze-netzwerkanalyse`).
+Starten Sie "QGIS 3.16.12", beginnen Sie ein neues QGIS Projekt und speichern dies an einem geeigneten Ort (siehe Vorbereitungsübungen) ab. Weisen Sie dem Projekt das Koordinatensystem EPSG 2056 zu und importieren die Gemeindegrenze sowie die OSM Strassendaten aus der Vorbereitungsübung (siehe {numref}`table-datensaetze-netzwerkanalyse`).
 
 ````{admonition} Achtung!
 :class: tip
@@ -19,7 +19,6 @@ Die OSM Daten sind aktuell noch im Koordinatensystem WGS84 (EPSG 4326). Die Geme
 
 Viele wichtige Tools lassen sich über den Menü Bar aufrufen (v.a. "Vector" und "Raster"). Die Tools lassen sich auch relativ rasch mit der Suchfunktion der "Processing Toolbox" finden.
 ```
-
 
 
 
