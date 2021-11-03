@@ -32,7 +32,7 @@ zeckenstiche_gpd.explore()
 During handling of the above exception, another exception occurred:
 
 [0;31mImportError[0m                               Traceback (most recent call last)
-[0;32m/tmp/ipykernel_2078/2253043119.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_1956/2253043119.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mzeckenstiche_gpd[0m[0;34m.[0m[0mexplore[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/geopandas/geodataframe.py[0m in [0;36mexplore[0;34m(self, *args, **kwargs)[0m
