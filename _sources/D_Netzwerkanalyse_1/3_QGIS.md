@@ -2,12 +2,13 @@
 
 Starten Sie "QGIS 3.16.12", beginnen Sie ein neues QGIS Projekt und speichern dies an einem geeigneten Ort (siehe Vorbereitungsübungen) ab. Weisen Sie dem Projekt das Koordinatensystem EPSG 2056 zu und importieren die Gemeindegrenze sowie die OSM Strassendaten aus der Vorbereitungsübung (siehe {numref}`table-datensaetze-netzwerkanalyse`).
 
+<!--
 ````{admonition} Achtung!
 :class: tip
 
 Achten Sie darauf, dass Sie "QGIS Desktop 3.10.0 **with GRASS 7.8.0**" starten, ansonsten stehen ihnen die GRASS Erweiterungen nicht zur Verfügung (siehe {ref}`chap-vorbereitung-aufstarten`).
 
-````
+```` -->
 
 (ex-network-transfrom)=
 ## Übung 1.1: Daten Transformieren
