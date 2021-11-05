@@ -605,8 +605,17 @@ Achten Sie darauf, dass Sie "QGIS Desktop 3.10.0 **with GRASS 7.8.0**" starten, 
 </div>
 <div class="section" id="ubung-1-2-daten-clippen">
 <span id="ex-clip"></span><h2>Übung 1.2: Daten Clippen<a class="headerlink" href="#ubung-1-2-daten-clippen" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Zoomen sie auf die Gemeindegrenze (Layers Panel -&gt; Rechtsklick auf Datensatz -&gt; Zoom to layer“). Es ist ersichtlich, dass die Strassendaten über die Gemeindegrenze hinaus verlaufen. Wir möchten für die kommenden Übungen nur die Strassen, die <em>innerhalb</em> der Gemeinde Wädenswil liegen. Dazu müssen wir das Strassennetz mit der Gemeindegrenze verschneiden („clip“). Führen Sie das gleichnamige Werkzeug mit dem Input Layer „OSM_highway“ und dem Clip Layer „Stadt_ Waedenswil.gpkg“ aus. Speichern Sie die Ausgabe in einer neuen Datei.</p>
+<p>Zoomen sie auf die Gemeindegrenze (Layers Panel -&gt; Rechtsklick auf Datensatz -&gt; Zoom to layer“). Es ist ersichtlich, dass die Strassendaten über die Gemeindegrenze hinaus verlaufen. Wir möchten für die kommenden Übungen nur die Strassen, die <em>innerhalb</em> der Gemeinde Wädenswil liegen. Dazu müssen wir das Strassennetz mit der Gemeindegrenze verschneiden („clip“). Führen Sie das gleichnamige Werkzeug mit dem Input Layer „OSM_highway“ und dem Clip Layer „Gemeinde_Waedenswil.gpkg“ aus. Speichern Sie die Ausgabe in einer neuen Datei.</p>
 <p>Es gibt eine ganze Reihe Werkzeuge zum Begriff „clip“. Entscheiden Sie selbst, welches für diese Fragestellung geeignet ist.</p>
+<div class="tip admonition">
+<p class="admonition-title">Achtung!</p>
+<ul class="simple">
+<li><p>Achten Sie darauf, den neuen („clipped“) Datensatz das richtige Koordinatensystem zugewiesen wurde. Wenn nicht, gehe zu: Properties &gt; Source &gt; Assigned Coordinate Reference System (CRS), wähle the EPSG:2056 - CH1903+ / LV95 und klicke auf Apply</p></li>
+</ul>
+</div>
+<div class="figure align-default" id="checkcrs">
+<img alt="../_images/crs_apply.png" src="../_images/crs_apply.png" />
+</div>
 </div>
 </div>
 

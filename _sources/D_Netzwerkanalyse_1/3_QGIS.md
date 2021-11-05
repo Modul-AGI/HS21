@@ -31,6 +31,16 @@ Speichern Sie den neuen Strassendatensatz in einer *neuen* Datei, nicht als temp
 (ex-clip)=
 ## Übung 1.2: Daten Clippen
 
-Zoomen sie auf die Gemeindegrenze (Layers Panel -> Rechtsklick auf Datensatz -> Zoom to layer"). Es ist ersichtlich, dass die Strassendaten über die Gemeindegrenze hinaus verlaufen. Wir möchten für die kommenden Übungen nur die Strassen, die _innerhalb_ der Gemeinde Wädenswil liegen. Dazu müssen wir das Strassennetz mit der Gemeindegrenze verschneiden ("clip"). Führen Sie das gleichnamige Werkzeug mit dem Input Layer "OSM_highway" und dem Clip Layer "Stadt_ Waedenswil.gpkg" aus. Speichern Sie die Ausgabe in einer neuen Datei. 
+Zoomen sie auf die Gemeindegrenze (Layers Panel -> Rechtsklick auf Datensatz -> Zoom to layer"). Es ist ersichtlich, dass die Strassendaten über die Gemeindegrenze hinaus verlaufen. Wir möchten für die kommenden Übungen nur die Strassen, die _innerhalb_ der Gemeinde Wädenswil liegen. Dazu müssen wir das Strassennetz mit der Gemeindegrenze verschneiden ("clip"). Führen Sie das gleichnamige Werkzeug mit dem Input Layer "OSM_highway" und dem Clip Layer "Gemeinde_Waedenswil.gpkg" aus. Speichern Sie die Ausgabe in einer neuen Datei. 
 
 Es gibt eine ganze Reihe Werkzeuge zum Begriff "clip". Entscheiden Sie selbst, welches für diese Fragestellung geeignet ist.
+
+````{admonition} Achtung!
+:class: tip
+
+- Achten Sie darauf, den neuen ("clipped") Datensatz das richtige Koordinatensystem zugewiesen wurde. Wenn nicht, gehe zu: Properties > Source > Assigned Coordinate Reference System (CRS), wähle the EPSG:2056 - CH1903+ / LV95 und klicke auf Apply
+````
+
+```{figure} figures/crs_apply.png
+:name: checkCRS
+```
