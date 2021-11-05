@@ -34,7 +34,7 @@ zeckenstiche.explore(m = base, color = "red")
 During handling of the above exception, another exception occurred:
 
 [0;31mImportError[0m                               Traceback (most recent call last)
-[0;32m/tmp/ipykernel_2032/1063094436.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_2087/1063094436.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mbase[0m [0;34m=[0m [0mwald[0m[0;34m.[0m[0mexplore[0m[0;34m([0m[0mcolumn[0m [0;34m=[0m [0;34m"Wald_text"[0m[0;34m,[0m [0mcmap[0m [0;34m=[0m [0mmy_cmap[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m [0mzeckenstiche[0m[0;34m.[0m[0mexplore[0m[0;34m([0m[0mm[0m [0;34m=[0m [0mbase[0m[0;34m,[0m [0mcolor[0m [0;34m=[0m [0;34m"red"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
