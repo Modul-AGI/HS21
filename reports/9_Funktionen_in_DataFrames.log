@@ -27,7 +27,7 @@ zeckenstiche
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mValueError[0m                                Traceback (most recent call last)
-[0;32m/tmp/ipykernel_2013/4265754613.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_1884/4265754613.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0;31m# Musterlösung[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      2[0m [0;34m[0m[0m
 [0;32m----> 3[0;31m [0mzeckenstiche[0m[0;34m[[0m[0;34m"x_sim"[0m[0;34m][0m [0;34m=[0m [0mzeckenstiche[0m[0;34m[[0m[0;34m"x"[0m[0;34m][0m[0;34m.[0m[0mapply[0m[0;34m([0m[0moffset_coordinate[0m[0;34m,[0m [0mdistance[0m [0;34m=[0m [0mzeckenstiche[0m[0;34m[[0m[0;34m"accuracy"[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m

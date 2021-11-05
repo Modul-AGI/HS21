@@ -38,7 +38,7 @@ Es gibt eine ganze Reihe Werkzeuge zum Begriff "clip". Entscheiden Sie selbst, w
 ````{admonition} Achtung!
 :class: tip
 
-- Achten Sie darauf, den neuen ("clipped") Datensatz das richtige Koordinatensystem zugewiesen wurde. Wenn nicht, gehe zu: Properties > Source > Assigned Coordinate Reference System (CRS), wähle the EPSG:2056 - CH1903+ / LV95 und klicke auf Apply
+- Achten Sie darauf, dem neuen ("clipped") Datensatz das richtige Koordinatensystem zugewiesen wurde. Wenn nicht, gehe zu: Properties > Source > Assigned Coordinate Reference System (CRS), wähle the EPSG:2056 - CH1903+ / LV95 und klicke auf Apply
 ````
 
 ```{figure} figures/crs_apply.png
