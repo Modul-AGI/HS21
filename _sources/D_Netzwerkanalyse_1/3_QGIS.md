@@ -15,7 +15,7 @@ Achten Sie darauf, dass Sie "QGIS Desktop 3.10.0 **with GRASS 7.8.0**" starten, 
 
 Die OSM Daten sind aktuell noch im Koordinatensystem WGS84 (EPSG 4326). Die Gemeindegrenze hingegen ist mit den neuen Schweizer Landeskoordinaten CH1903+ LV95 (EPSG 2056) abgespeichert. Wir wollen in unserer Analyse mit CH1903+ LV95 (EPSG 2056) arbeiten. Transformieren Sie dazu den Strassendatensatz in das Koordinatensystem CH1903+ LV95 (EPSG 2056). Nutzen Sie dazu das Tool "Reproject Layer". **Wichtig**: Speichern Sie den Transformierten Strassendatensatz *in einer neuen Datei* (siehe {numref}`saveToFile`)
 
-```{figure} figures/ueb1_fig1.jpg
+```{figure} figures/reproject.png
 :name: qgistools
 
 Viele wichtige Tools lassen sich über den Menü Bar aufrufen (v.a. "Vector" und "Raster"). Die Tools lassen sich auch relativ rasch mit der Suchfunktion der "Processing Toolbox" finden.
