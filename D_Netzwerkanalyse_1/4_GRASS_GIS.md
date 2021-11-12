@@ -7,9 +7,9 @@ Die mächtigsten (aber nicht die einzigen[^plugins]) Netzwerkanalyse Werkzeuge i
 
 ## Übung 2.1: Topologie bereinigen
 
-Das OSM Strassennetz "osm_highway" ist topologisch nicht perfekt für unsere Zwecke vorbereitet. An Kreuzungen fehlen teilweise Knoten, welche ein "abbiegen" auf der Kreuzung ermöglich. Um diesen Umstand zu beheben, nutzen wir das Tool "v.clean" und führen damit die Operation "break" durch. Dadurch werden Linien an Kreuzungen unterbrochen. Diese Operation löst einige topologische Fehler, führt z.B. bei Brücken und Tunnels aber euch neue Unstimmigkeiten ein, die Sie an dieser Stelle aber getrost ignorieren können.
+Das OSM Strassennetz "osm_highway" ist topologisch nicht perfekt für unsere Zwecke vorbereitet. An Kreuzungen fehlen teilweise Knoten, welche ein "abbiegen" auf der Kreuzung ermöglich. Um diesen Umstand zu beheben, nutzen wir das Tool `v.clean` und führen damit die Operation "break" durch. Dadurch werden Linien an Kreuzungen unterbrochen. Diese Operation löst einige topologische Fehler, führt z.B. bei Brücken und Tunnels aber euch neue Unstimmigkeiten ein, die Sie an dieser Stelle aber getrost ignorieren können.
 
-1. Werkzeug "v.clean" auswählen
+1. Werkzeug `v.clean` auswählen
 2. Parameter:
     - _Layer to clean_ : Transformierter und geclippter OSM Strassendatensatz
     - _Cleaning tool_ : break
