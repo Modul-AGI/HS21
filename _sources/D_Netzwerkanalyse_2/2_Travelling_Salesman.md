@@ -1,8 +1,8 @@
-# Aufgabe 4: Traveling Salesman
+# Aufgabe 4: Traveling Salesperson
 
 Das Problem des Handlungsreisenden (engl. Traveling Salesman Problem) ist ein kombinatorisches Optimierungsproblem, in dem die Aufgabe darin besteht, eine Reihenfolge für den Besuch mehrerer Orte so zu wählen, dass keine Station außer der ersten mehr als einmal besucht wird, die gesamte Reisestrecke des Handlungsreisenden möglichst kurz und die erste Station gleich der letzten Station ist. 
 
-## Übung 4.1: Traveling Salesman für Campus Standorte
+## Übung 4.1: Traveling Salesperson für Campus Standorte
 
 Angenommen Sie sind ein Kurrierdienst und müssen ausgehend von der Halbinsel Au aus alle Campus Standorte der ZHAW Wädenswil besuchen. Sie wollen die Route so optimieren, dass Sie die kürzeste Route Sie das gleichnamige Tool (v.net.salesmen) um genau dieses Problem zu lösen.
 
@@ -20,9 +20,9 @@ Angenommen Sie sind ein Kurrierdienst und müssen ausgehend von der Halbinsel Au
 6. Betrachen Sie die Output daten.
 
 (ex-network-traveling-shops)=
-## Übung 4.2: Traveling Salesman für mehr Standorte
+## Übung 4.2: Traveling Salesperson für mehr Standorte
 
-Der Traveling-Salesman-Pfad für fünf Punkte zu berechnen ist relativ trivial und könnte "von Hand" gerechnet werden. Anspruchsvoller wird es jedoch, wenn sich die Anzahl der Standorte erhöht. Nehmen wir an, Sie wollen eine Einkaufstour durch alle Läden in Wädenswil machen: Nutzen Sie die OSM Daten und v.net.salesman und eine sinnvolle Route zu berechnen.  
+Der Traveling-Salesperson-Pfad für fünf Punkte zu berechnen ist relativ trivial und könnte "von Hand" gerechnet werden. Anspruchsvoller wird es jedoch, wenn sich die Anzahl der Standorte erhöht. Nehmen wir an, Sie wollen eine Einkaufstour durch alle Läden in Wädenswil machen: Nutzen Sie die OSM Daten und v.net.salesman und eine sinnvolle Route zu berechnen.  
 
 1. OSM Daten der Läden laden: Vector -> QuickOSM -> QuickOSM
 2. key "shop" -> Run query sowie Gebiet wählen (siehe dazu {ref}`ex-network-osmdownload`)
@@ -30,9 +30,9 @@ Der Traveling-Salesman-Pfad für fünf Punkte zu berechnen ist relativ trivial u
 4. v.net.salesman mit diesen Standorten durchführen
 
 (ex-network-traveling-buildings)=
-## Übung 4.3 (fakultativ, Guezli-Challenge): Traveling Salesman für noch mehr Standorte
+## Übung 4.3 (fakultativ, Guezli-Challenge): Traveling Salesperson für noch mehr Standorte
 
-Um unsere Rechenmaschine richtig herauszufordern, können wir den Traveling Salesmen Pfad für alle Gebäudestandorte in Wädenswil berechnen. Nutzen Sie hierzu QuickOSM um "building" herrunterzuladen. Reprojizieren Sie die Polygon-Daten in CRS 2056 und konvertieren Sie diese in Punkte, indem Sie das Centroid pro Polygon berechnen (Tool "Polygon Centroids"). Berechnen Sie anschliessend den Traveling Salesman. Ermitteln Sie die Gesamtdistanz dieses Pfades, indem Sie mit dem Field Calculator die Länge pro Segment rechnen (length) und anschliessend die Summe aller Längen ermitteln (View -> Panels -> Statistic). **Wer zuerst die korrekte Distanz in den Chat schreibt, wird mit Ruhm und Ehre belohnt und zur/zum "AGI Studentin/Student des Tages" erkürt!**
+Um unsere Rechenmaschine richtig herauszufordern, können wir den Traveling Salesmen Pfad für alle Gebäudestandorte in Wädenswil berechnen. Nutzen Sie hierzu QuickOSM um "building" herrunterzuladen. Reprojizieren Sie die Polygon-Daten in CRS 2056 und konvertieren Sie diese in Punkte, indem Sie das Centroid pro Polygon berechnen (Tool "Polygon Centroids"). Berechnen Sie anschliessend den Traveling Salesperson. Ermitteln Sie die Gesamtdistanz dieses Pfades, indem Sie mit dem Field Calculator die Länge pro Segment rechnen (length) und anschliessend die Summe aller Längen ermitteln (View -> Panels -> Statistic). **Wer zuerst die korrekte Distanz in den Chat schreibt, wird mit Ruhm und Ehre belohnt und zur/zum "AGI Studentin/Student des Tages" erkürt!**
 
 ```{note}
 - Für viele klassische Fragestellungen (z.B. shortest path, traveling salesmen) bietet QGIS / GRASS 
