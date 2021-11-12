@@ -3,7 +3,7 @@
 ````{admonition} Achtung!
 :class: tip
 
-- Achten Sie darauf, dass Sie "QGIS Desktop 3.10.0 **with GRASS 7.8.0**" starten, ansonsten stehen ihnen die GRASS Erweiterungen nicht zur Verfügung  (siehe {ref}`chap-vorbereitung-aufstarten`).
+- Achten Sie darauf, dass Sie "QGIS Desktop 3.16.12" starten.
 - Standartmässig werden Dateien als Temporäre Files abgespeichert, die nach dem Schliessen von QGIS gelöscht werden. Um einen Output an einem festgelegten Ort abzuspeichern muss der Output definieret werden. Dazu klickt man neben [Save to temporary file] auf die drei Punkte und wählt "Save to File" aus.
 
 ````
@@ -14,7 +14,7 @@
 (ex-osm-background)=
 ## Übung 3.1: Projekt vorbereiten
 
-Starten Sie "QGIS Desktop 3.10.0 with GRASS 7.8.0" und beginnen Sie ein neues Projekt mit dem CRS CH1903+ LV95 (EPSG 2056). Laden Sie den Datensatz "osm_highway_prepared.gpkg" von letzter Woche. Wer den Datensatz von letzter Woche nicht auffinden kann, findet die Datei in {numref}`table-datensaetze-netzwerkanalyse`. Prüfen Sie, ob das CRS richtig erkannt wurde (Rechtsklick -> Properties -> Reiter Source -> Set source coordinate reference system -> Hier sollte EPSG 2056 stehen).
+Starten Sie "QGIS Desktop 3.16.12" und beginnen Sie ein neues Projekt mit dem CRS CH1903+ LV95 (EPSG 2056). Laden Sie den Datensatz "osm_highway_prepared.gpkg" von letzter Woche. Wer den Datensatz von letzter Woche nicht auffinden kann, findet die Datei in {numref}`table-datensaetze-netzwerkanalyse`. Prüfen Sie, ob das CRS richtig erkannt wurde (Rechtsklick -> Properties -> Reiter Source -> Set source coordinate reference system -> Hier sollte EPSG 2056 stehen).
 
 Wir brauchen zudem eine Hintergrundkarte zur Orientierung. Blenden Sie diese mit dem Plugin "QuickMapServices" die Openstreetmap Hintergrundkarte ein (Web -> QuickMapServices -> OSM -> OSM Standard) ein. Falls Sie diese Option nicht finden, müssen Sie das enstprechede Plugin "QuickMapServices" installieren (siehe dazu {ref}`ex-network-plugins`).
 
@@ -35,7 +35,7 @@ Visualisieren Sie nun den neuen Layer "Shortest Path" so, dass er gut ersichtlic
 
 Nun wollen wir diese Route mit derjenigen eines professionellen Routing Services vergleichen. https://maps.openrouteservice.org/ bietet ihre Dienste bis zu einem bestimmten Kontingent kostenlos an. Installieren Sie das Plug-In "ORS Tools" um diesen Service zu nutzen.
 
-Führen Sie das Tool nach der Installation via Web -> ORS Tools -> ORS Tools aus. Fügen Sie bei Settings ( ) ->  "API Key" folgenden Schlüssel ein: 5b3ce3597851110001cf6248f9c611a9ae8e412680da785e49ae34af
+Führen Sie das Tool nach der Installation via Web -> ORS Tools -> ORS Tools aus. Fügen Sie bei Settings ( ) ->  "API Key" folgenden Schlüssel ein: 5b3ce3597851110001cf6248435b5e715b1444afad6510cc04475d96
 
 Über diesen Schlüssel wird sichergestellt, dass die Anzahl Abfragen pro Minute und Tag ein gewisses Maximum nicht überschreiten.
 
