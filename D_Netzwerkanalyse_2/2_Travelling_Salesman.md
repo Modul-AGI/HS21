@@ -1,6 +1,6 @@
 # Aufgabe 4: Traveling Salesperson
 
-Das Problem des Handlungsreisenden (engl. Traveling Salesman Problem) ist ein kombinatorisches Optimierungsproblem, in dem die Aufgabe darin besteht, eine Reihenfolge für den Besuch mehrerer Orte so zu wählen, dass keine Station außer der ersten mehr als einmal besucht wird, die gesamte Reisestrecke des Handlungsreisenden möglichst kurz und die erste Station gleich der letzten Station ist. 
+Das Problem des Handlungsreisenden (engl. Traveling Salesperson Problem) ist ein kombinatorisches Optimierungsproblem, in dem die Aufgabe darin besteht, eine Reihenfolge für den Besuch mehrerer Orte so zu wählen, dass keine Station außer der ersten mehr als einmal besucht wird, die gesamte Reisestrecke des Handlungsreisenden möglichst kurz und die erste Station gleich der letzten Station ist. 
 
 ## Übung 4.1: Traveling Salesperson für Campus Standorte
 
@@ -32,7 +32,7 @@ Der Traveling-Salesperson-Pfad für fünf Punkte zu berechnen ist relativ trivia
 (ex-network-traveling-buildings)=
 ## Übung 4.3 (fakultativ, Guezli-Challenge): Traveling Salesperson für noch mehr Standorte
 
-Um unsere Rechenmaschine richtig herauszufordern, können wir den Traveling Salesmen Pfad für alle Gebäudestandorte in Wädenswil berechnen. Nutzen Sie hierzu QuickOSM um "building" herrunterzuladen. Reprojizieren Sie die Polygon-Daten in CRS 2056 und konvertieren Sie diese in Punkte, indem Sie das Centroid pro Polygon berechnen (Tool "Polygon Centroids"). Berechnen Sie anschliessend den Traveling Salesperson. Ermitteln Sie die Gesamtdistanz dieses Pfades, indem Sie mit dem Field Calculator die Länge pro Segment rechnen (length) und anschliessend die Summe aller Längen ermitteln (View -> Panels -> Statistic). **Wer zuerst die korrekte Distanz in den Chat schreibt, wird mit Ruhm und Ehre belohnt und zur/zum "AGI Studentin/Student des Tages" erkürt!**
+Um unsere Rechenmaschine richtig herauszufordern, können wir den Traveling Salesmen Pfad für alle Gebäudestandorte in Wädenswil berechnen. Nutzen Sie hierzu QuickOSM um "building" herrunterzuladen. Reprojizieren Sie die Polygon-Daten in CRS 2056 und konvertieren Sie diese in Punkte, indem Sie das Centroid pro Polygon berechnen (Tool "Polygon Centroids"). Berechnen Sie anschliessend den Traveling Salesperson. Ermitteln Sie die Gesamtdistanz dieses Pfades, indem Sie mit dem Field Calculator die Länge pro Segment rechnen (length) und anschliessend die Summe aller Längen ermitteln (View -> Statistical Summary). **Wer zuerst die korrekte Distanz in den Chat schreibt, wird mit Ruhm und Ehre belohnt und zur/zum "AGI Studentin/Student des Tages" erkürt!**
 
 ```{note}
 - Für viele klassische Fragestellungen (z.B. shortest path, traveling salesmen) bietet QGIS / GRASS 
