@@ -35,7 +35,7 @@ Visualisieren Sie nun den neuen Layer "Shortest Path" so, dass er gut ersichtlic
 
 Nun wollen wir diese Route mit derjenigen eines professionellen Routing Services vergleichen. https://maps.openrouteservice.org/ bietet ihre Dienste bis zu einem bestimmten Kontingent kostenlos an. Installieren Sie das Plug-In "ORS Tools" um diesen Service zu nutzen.
 
-Führen Sie das Tool nach der Installation via Web -> ORS Tools -> ORS Tools aus. Fügen Sie bei Settings ( ) ->  "API Key" folgenden Schlüssel ein: 5b3ce3597851110001cf6248f9c611a9ae8e412680da785e49ae34af
+Führen Sie das Tool nach der Installation via Web -> ORS Tools -> ORS Tools aus. Fügen Sie bei Settings ( ) ->  "API Key" folgenden Schlüssel ein: 5b3ce3597851110001cf6248435b5e715b1444afad6510cc04475d96
 
 Über diesen Schlüssel wird sichergestellt, dass die Anzahl Abfragen pro Minute und Tag ein gewisses Maximum nicht überschreiten.
 
