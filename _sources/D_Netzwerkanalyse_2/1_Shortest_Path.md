@@ -50,3 +50,10 @@ Mit klick auf dieses Symbol erscheint ORS Routing wieder
 Führen Sie die Berechnung mit "Apply" aus und vergleichen den resultierenden Pfad mit "Shortest Path" aus {ref}`ex-shortestpath`. Führen Sie die gleiche Berechnung mit verschiedenen Einstellungen durch (kürzeste Route, schnellste Route, Fahrrad, zu Fuss). Vergleichen Sie die unterschiedlichen Routen mit unserer eigenen Berechnung und visualisieren Sie diese in einer Karte.
 
 Berechnen Sie nun mit OSM Routing den kürzesten Pfad zwischen Campus Grüental und Campus Reidbach, auch wieder je einmal mit der Verkehrsmodalität Auto, Fahrrad und Fussweg. Vergleichen Sie die drei Resultate.
+
+````{admonition} Achtung!
+:class: tip
+
+Das `ORS Tools Plugin` bietet keine Möglichkeit, die blauen Linien zu entfernen, die die ausgewählten Punkte auf der Karte verbinden (https://github.com/GIScience/orstools-qgis-plugin/issues/120). Diese Linien sind temporär, d.h. sie werden beim nächsten Öffnen des QGIS-Projekts wieder verschwinden. Wenn Sie also Ihr Projekt neu starten, werden sie verschwinden.
+
+````
