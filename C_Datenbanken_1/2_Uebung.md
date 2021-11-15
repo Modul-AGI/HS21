@@ -1,7 +1,5 @@
 # Übung
 
-
-
 ## Anforderungen Pflanzendatenbank
 
 Sie sind ein Datenbank-Spezialist und werden vom Garten-Team der ZHAW beauftragt eine Datenbanklösung zur Pflege und Verwaltung der Pflanzenwelt auf dem Areal des Campus Grüental zu entwickeln. Hierbei sollen alle Pflanzen des Campus katalogisiert und für verschiedene Nutzergruppen über differenzierte Zugriffsmöglichkeiten mit verschiedenen Informationen zugänglich gemacht werden.
