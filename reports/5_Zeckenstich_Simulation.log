@@ -30,7 +30,7 @@ zeckenstiche = pd.read_csv("data/zeckenstiche.csv")
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1786/1231242015.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_1782/1231242015.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      6[0m     [0;32mreturn[0m [0mnew[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      7[0m [0;34m[0m[0m
 [0;32m----> 8[0;31m [0mzeckenstiche[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mread_csv[0m[0;34m([0m[0;34m"data/zeckenstiche.csv"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
