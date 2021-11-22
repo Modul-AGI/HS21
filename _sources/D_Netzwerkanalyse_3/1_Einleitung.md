@@ -15,7 +15,7 @@ Wir werden für jeden dieser drei Kriterien einen Rasterdatensatz kreieren, den 
 3. Gemeindegrenze Wädenswil ("Gemeinde_Waedenswil.gpkg", siehe {numref}`table-datensaetze-netzwerkanalyse`)
 4. Optional: OSM Hintergrundkarte grau eingefärbt (siehe {ref}`ex-osm-background`)
 
-**Achtung!:** Achten Sie darauf, dass Sie "QGIS Desktop 3.10.0 **with GRASS 7.8.0**" starten, ansonsten stehen ihnen die GRASS Erweiterungen nicht zur Verfügung  (siehe {ref}`chap-vorbereitung-aufstarten`).
+**Achtung!:** Achten Sie darauf, dass Sie "QGIS Desktop 3.16.12" starten. (siehe {ref}`chap-vorbereitung-aufstarten`).
 
 
 ```{admonition} Übungsziele

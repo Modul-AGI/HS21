@@ -9,8 +9,6 @@ Laden Sie den Datensatz "ÖV-Güteklassen ARE" herunter und importieren Sie ihn 
 ```{admonition} Tipp zum Herunterladen!
 :class: dropdown
 ![ÖV-Güteklassen](figures/openData.jpg)
-
-Der Link zum Datensatz befindet sich in der **readme.txt** Datei
 ```
 
 Clippen Sie den Datensatz mit der Gemeindegrenze von Wädenswil. Symbolisieren Sie den Datensatz anhand des Feldes "KLASSE" und betrachten Sie anschliessend die Attributtabelle.
