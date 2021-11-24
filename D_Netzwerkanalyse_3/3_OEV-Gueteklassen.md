@@ -54,7 +54,7 @@ if("KLASSE" = 'A' ,1,
 (ex-polygon-to-raster)=
 ## Übung 6.3: Polygon in Raster konvertieren
 
-Konvertieren Sie das Polygon nun in ein Raster mit dem SAGA-Werkzeug "Rasterize". Führen Sie das Tool mit Verweis auf die neu erstellte Spalte unter "Attribute" sowie der Zellgrösse 25 (Meter) aus. Falls das Tool nicht ausgeführt wird: lesen sie die Fehlermeldung und versuchen sie die Anweisung zu befolgen.
+Konvertieren Sie das Polygon nun in ein Raster mit dem SAGA-Werkzeug "Polygons to Raster". Führen Sie das Tool mit Verweis auf die neu erstellte Spalte unter "Attribute" sowie der Zellgrösse 25 (Meter) aus. Falls das Tool nicht ausgeführt wird: lesen sie die Fehlermeldung und versuchen sie die Anweisung zu befolgen.
 
 Beachten Sie, dass nun alle Bereiche in Wädenswil, die keiner Kategorie zugewiesen waren nun keinen Wert erhalten haben. Für unsere Abstufung bräuchten wir hier aber den Wert "5" (1 – 4 haben wir bereits zugewiesen). Benutzen Sie das Tool "r.null" um alle Null Werte in 5 zu konvertieren ("the value to replace the null value by").
 
