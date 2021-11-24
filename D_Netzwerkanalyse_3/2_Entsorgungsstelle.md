@@ -23,7 +23,7 @@ Um aus den Linien eine Oberfläche zu erhalten müssen wir die Kategorien aus de
 
 (ex-interpolate-points)=
 ## Übung 5.3: Punkte interpolieren
-Nun haben wir Punkte, die mit einer Interpolation in eine Oberfläche überführt werden können. Verwenden Sie dazu das Tool "Inverse Distance weighted Interpolation" (SAGA). Überlegen sie, was Sie interpolieren möchten und legen sie das entsprechende Feld in der Option "Attribute" fest. Zusätzlich können Sie folgende Parameter wählen:
+Nun haben wir Punkte, die mit einer Interpolation in eine Oberfläche überführt werden können. Verwenden Sie dazu das Tool "Inverse distance weighted" (SAGA). Überlegen sie, was Sie interpolieren möchten und legen sie das entsprechende Feld in der Option "Attribute" fest. Zusätzlich können Sie folgende Parameter wählen:
 
 - Distance Weighting: `[1] Inverse Distance to a power`
 - Cellsize: `25`
