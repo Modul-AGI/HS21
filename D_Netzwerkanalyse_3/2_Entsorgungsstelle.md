@@ -27,8 +27,6 @@ Nun haben wir Punkte, die mit einer Interpolation in eine Oberfläche überführ
 
 - Distance Weighting: `[1] Inverse Distance to a power`
 - Cellsize: `25`
-- Target Grid System: `[0] user defined`
-- Fit: `[0] nodes`
 
 Clippen sie den Output anschliessen auf die Gemeindegrenze mit dem Werkzeug "Clip Raster by mask layer". Speichern Sie den geclippten Layer mit dem Namen abfall_raster.tif in ihrem Projektordner. 
 
