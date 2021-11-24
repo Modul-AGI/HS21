@@ -58,6 +58,6 @@ Konvertieren Sie das Polygon nun in ein Raster mit dem SAGA-Werkzeug "Polygons t
 
 Beachten Sie, dass nun alle Bereiche in Wädenswil, die keiner Kategorie zugewiesen waren nun keinen Wert erhalten haben. Für unsere Abstufung bräuchten wir hier aber den Wert "5" (1 – 4 haben wir bereits zugewiesen). Benutzen Sie das Tool "r.null" um alle Null Werte in 5 zu konvertieren ("the value to replace the null value by").
 
-<!-- Clippen sie den Output anschliessen mit dem Werkezeug "Clip raster by mask layer". Aus bisher unerklärlichen Gründen werden nach diesem Schritt 0-Werte erzeugt (alle Bereiche innerhalb des Raster-Extent aber ausserhalb des Polygons). Diese sollten aber NULL sein, nicht 0. Führen Sie deshalb das Tool "r.null" nochmals aus und setzen Sie bei "List of cell values to be set to NULL" den Wert 0 ein. -->
+Clippen sie den Output anschliessen mit dem Werkezeug "Clip raster by mask layer". Aus bisher unerklärlichen Gründen werden nach diesem Schritt 0-Werte erzeugt (alle Bereiche innerhalb des Raster-Extent aber ausserhalb des Polygons). Diese sollten aber NULL sein, nicht 0. Führen Sie deshalb das Tool "r.null" nochmals aus und setzen Sie bei "List of cell values to be set to NULL" den Wert 0 ein.
 
 Speichern Sie den Output mit dem Namen oev_raster.tif in ihrem Projektordner und gruppieren Sie alle Layers im Zusammenhang mit den ÖV-Güteklassen.
