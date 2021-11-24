@@ -6,7 +6,7 @@ Da Sie aber auf keinen Fall an einer Durchfahrtsstrasse wohnen möchten, müssen
 
 ## Übung 7.2: Zentralitätsmasse in Fläche überführen
 
-Das gewählte Zentralitätsmass können wir nun ebenfalls mit dem Tool "Inverse distance weighted interpolation" (SAGA) in eine Oberfläche überführen. Führen sie das Tool analog {ref}`ex-interpolate-points`, mit dem gewählten Zenralitätsmass aus. Sie können die Parameter des Tools nach eigenem Gutdünken auch anpassen (wir empfehlen auf jedenfall die gleiche Output Cellsize von 25m zu verwenden um im Anschluss die Flächen miteinander verrechnen zu können).
+Das gewählte Zentralitätsmass können wir nun ebenfalls mit dem Tool "Inverse distance weighted" (SAGA) in eine Oberfläche überführen. Führen sie das Tool analog {ref}`ex-interpolate-points`, mit dem gewählten Zenralitätsmass aus. Sie können die Parameter des Tools nach eigenem Gutdünken auch anpassen (wir empfehlen auf jedenfall die gleiche Output Cellsize von 25m zu verwenden um im Anschluss die Flächen miteinander verrechnen zu können).
 
-Clippen sie anschliessend den Output anschliessen mit dem Werkezeug "Clip raster by Mask Layer" (GDAL). Speichern Sie den Output unter centrality_raster.tif in ihrem Projektordner und gruppieren Sie alle Layers im Zusammenhang mit den Zentralitätsmassen.
+Clippen sie anschliessend den Output anschliessen mit dem Werkezeug "Clip raster by Mask Layer" (GDAL). Speichern Sie den Output unter **centrality_raster.tif** in ihrem Projektordner und gruppieren Sie alle Layers im Zusammenhang mit den Zentralitätsmassen.
 

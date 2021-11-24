@@ -35,7 +35,7 @@ zeckenstiche_buffer.explore()
 During handling of the above exception, another exception occurred:
 
 [0;31mImportError[0m                               Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1955/4233950768.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_1969/4233950768.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      2[0m [0;34m[0m[0m
 [1;32m      3[0m [0mzeckenstiche_buffer[0m [0;34m=[0m [0mzeckenstiche[0m[0;34m.[0m[0mbuffer[0m[0;34m([0m[0;36m12[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 4[0;31m [0mzeckenstiche_buffer[0m[0;34m.[0m[0mexplore[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
