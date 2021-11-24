@@ -67,4 +67,4 @@ Beachten Sie, dass nun alle Bereiche in Wädenswil, die keiner Kategorie zugewie
 
 <!-- Clippen sie den Output anschliessen mit dem Werkezeug "Clip raster by mask layer". Aus bisher unerklärlichen Gründen werden nach diesem Schritt 0-Werte erzeugt (alle Bereiche innerhalb des Raster-Extent aber ausserhalb des Polygons). Diese sollten aber NULL sein, nicht 0. Führen Sie deshalb das Tool "r.null" nochmals aus und setzen Sie bei "List of cell values to be set to NULL" den Wert 0 ein. -->
 
-Speichern Sie den Output mit dem Namen oev_raster.tif in ihrem Projektordner und gruppieren Sie alle Layers im Zusammenhang mit den ÖV-Güteklassen.
+Speichern Sie den Output mit dem Namen **oev_raster.tif** in ihrem Projektordner und gruppieren Sie alle Layers im Zusammenhang mit den ÖV-Güteklassen.
