@@ -54,10 +54,17 @@ if("KLASSE" = 'A' ,1,
 (ex-polygon-to-raster)=
 ## Übung 6.3: Polygon in Raster konvertieren
 
-Konvertieren Sie das Polygon nun in ein Raster mit dem SAGA-Werkzeug "Polygons to Raster". Führen Sie das Tool mit Verweis auf die neu erstellte Spalte unter "Attribute" sowie der Zellgrösse 25 (Meter) aus. Falls das Tool nicht ausgeführt wird: lesen sie die Fehlermeldung und versuchen sie die Anweisung zu befolgen.
+Konvertieren Sie das Polygon nun in ein Raster mit Werkzeug "Rasterize (Vector To Raster)". Führen Sie das Tool mit den folgenden Einstellungen:
+
+- Field to use for a burn-in value: `KLASSE (numerisch)`
+- Output raster size units: `Georeferenced Units`
+- Width/Horizontal resolution: `25`
+- Height/Vertical resolution: `25`
+
+<!-- Verweis auf die neu erstellte Spalte unter "Attribute" sowie der Zellgrösse 25 (Meter) aus. Falls das Tool nicht ausgeführt wird: lesen sie die Fehlermeldung und versuchen sie die Anweisung zu befolgen. -->
 
 Beachten Sie, dass nun alle Bereiche in Wädenswil, die keiner Kategorie zugewiesen waren nun keinen Wert erhalten haben. Für unsere Abstufung bräuchten wir hier aber den Wert "5" (1 – 4 haben wir bereits zugewiesen). Benutzen Sie das Tool "r.null" um alle Null Werte in 5 zu konvertieren ("the value to replace the null value by").
 
-Clippen sie den Output anschliessen mit dem Werkezeug "Clip raster by mask layer". Aus bisher unerklärlichen Gründen werden nach diesem Schritt 0-Werte erzeugt (alle Bereiche innerhalb des Raster-Extent aber ausserhalb des Polygons). Diese sollten aber NULL sein, nicht 0. Führen Sie deshalb das Tool "r.null" nochmals aus und setzen Sie bei "List of cell values to be set to NULL" den Wert 0 ein.
+<!-- Clippen sie den Output anschliessen mit dem Werkezeug "Clip raster by mask layer". Aus bisher unerklärlichen Gründen werden nach diesem Schritt 0-Werte erzeugt (alle Bereiche innerhalb des Raster-Extent aber ausserhalb des Polygons). Diese sollten aber NULL sein, nicht 0. Führen Sie deshalb das Tool "r.null" nochmals aus und setzen Sie bei "List of cell values to be set to NULL" den Wert 0 ein. -->
 
 Speichern Sie den Output mit dem Namen oev_raster.tif in ihrem Projektordner und gruppieren Sie alle Layers im Zusammenhang mit den ÖV-Güteklassen.
