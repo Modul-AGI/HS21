@@ -1,7 +1,6 @@
 # Aufgabe 2: Zentralitätsmasse berechnen
 
 Die mächtigsten (aber nicht die einzigen[^plugins]) Netzwerkanalyse Werkzeuge in QGIS stammen aus dem eigenständigen GIS "GRASS GIS", welches bei der Installation von QGIS mitinstalliert wird. Diese können innerhalb von QGIS verwendet werden.
-<!-- Achsen Sie dabei, dass Sie die richtige QGIS Version öffnen (*mit GRASS*, siehe {ref}`chap-vorbereitung-aufstarten`). -->
 
 [^plugins]: Da QGIS wie bereits erwähnt von verschiedenen Personen und Gruppen entwickelt wird, gibt es auch Doppelspurigkeiten, die man so in einer kommerziellen Software wie ArcGIS weniger vorfindet. In dieser Hinsicht ist QGIS sehr ähnlich wie die Programmiersprachen R und Python.
 

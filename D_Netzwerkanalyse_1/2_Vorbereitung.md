@@ -13,7 +13,7 @@ Damit wir im ersten Teil von Netzwerkanalyse direkt loslegen können solltet ihr
 ```
 
 ## Übung 1: QGIS installieren
-Auf der QGIS Homepage [qgis.org](https://www.qgis.org/de/site/forusers/download.html) finden Sie die aktuellen QGIS Versionen für Windows, Linux, Mac und weitere Betriebssysteme in 32 und 64 bit. Laden Sie den Standalone installer des "Longterm release (most stable)" QGIS Version herunter (aktuell 3.16.12), der für Ihre Architektur und Ihr Betriebssystem passt. Installieren Sie QGIS nach dem Download.
+Auf der QGIS Homepage [qgis.org](https://www.qgis.org/de/site/forusers/download.html) finden Sie die aktuellen QGIS Versionen für Windows, Linux, Mac und weitere Betriebssysteme in 32 und 64 bit. Laden Sie den Standalone installer des "Longterm release (most stable)" herunter, der für Ihre Architektur und Ihr Betriebssystem passt. Installieren Sie QGIS nach dem Download.
 
 
 ```{figure} figures/qgis316.png
@@ -22,18 +22,7 @@ Auf der QGIS Homepage [qgis.org](https://www.qgis.org/de/site/forusers/download.
 QGIS Standalone Installer "Longterm release (most stable)" auf qgis.org
 ```
 (chap-vorbereitung-aufstarten)=
-<!-- ## Übung 2: QGIS aufstarten
-Nach der Installation starten Sie "QGIS Desktop 3.10.0 **with GRASS 7.8.0**". Der Zusatz "with GRASS" ist sehr wichtig, vor allem für die zukünftigen Aufgaben in Netzwerkanalyse I - III. Sollte den Link im Startmenü nicht verfügbar sein, können Sie die entsprechende exe-Datei auch an folgendem Ort finden: *C:\Program Files\QGIS 3.10\bin\qgis-bin-g7.exe*. Mit Rechtslick > an Startmenü anheften können Sie eine Verknüpfung mit der korrekten QGIS Version erstellen.
 
-Wechseln Sie als erstes die Sprache des Userinterface auf Englisch _(Einstellungen -> Optionen -> Allgemein -> Benutzeroberflächenübersetzung)_.
-
-
-```{figure} figures/qgisGrass.jpg
-:width: 300px
-:name: qgisgrass
-
-Achtet beim Aufstarten unbedingt darauf, dass QGIS **mit GRASS** GIS gestartet wird
-``` -->
 
 ## Übung 2: Tutorials anschauen
 
